@@ -51,13 +51,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: brass chair
+  name: латунный стул #A-13 Translation
   id: ChairBrass
   graph: Seat
   startNode: start
   targetNode: chairBrass
   category: construction-category-furniture
-  description: You sit in this. Either by will or force.
+  description: Вы сидите на этом. Будь то добровольно или принужденно. #A-13 Translation
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: brass_chair
@@ -169,23 +169,22 @@
   conditions:
     - !type:TileNotBlocked
 
-# A-13 anti nabeg
-#- type: construction
-#  name: ritual chair
-#  id: ChairRitual
-#  graph: RitualSeat
-#  startNode: start
-#  targetNode: chairRitual
-#  category: construction-category-furniture
-#  description: A strangely carved chair.
-#  icon:
-#    sprite: Structures/Furniture/chairs.rsi
-#    state: ritual
-#  objectType: Structure
-#  placementMode: SnapgridCenter
-#  canBuildInImpassable: false
-#  conditions:
-#    - !type:TileNotBlocked
+- type: construction
+  name: ритуальный стул #A-13 Translation
+  id: ChairRitual
+  graph: RitualSeat
+  startNode: start
+  targetNode: chairRitual
+  category: construction-category-furniture
+  description: Стул странной резьбы. #A-13 Translation
+  icon:
+    sprite: Structures/Furniture/chairs.rsi
+    state: ritual
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
 
 - type: construction
   name: складной стул #A-13 Translation
@@ -222,13 +221,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: wooden bench
+  name: деревянная скамейка #A-13 Translation
   id: ChairWoodBench
   graph: Seat
   startNode: start
   targetNode: chairWoodBench
   category: construction-category-furniture
-  description: Did you get a splinter? Well, at least it’s eco friendly.
+  description: Получили занозу? По крайней мере, она экологически чистая. #A-13 Translation
   icon:
     sprite: Structures/Furniture/chairs.rsi
     state: wooden-bench
@@ -359,13 +358,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: brass table
+  name: латунный стол #A-13 Translation
   id: TableBrass
   graph: Table
   startNode: start
   targetNode: TableBrass
   category: construction-category-furniture
-  description: A shiny, corrosion resistant brass table. Steampunk!
+  description: Блестящий, устойчивый к коррозии стол из латуни. Стимпанк! #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/brass.rsi
     state: full
@@ -410,13 +409,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy black table
+  name: красивый чёрный стол #A-13 Translation
   id: TableFancyBlack
   graph: Table
   startNode: start
   targetNode: TableFancyBlack
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/black.rsi
     state: full
@@ -427,13 +426,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy blue table
+  name: красивый синий стол #A-13 Translation
   id: TableFancyBlue
   graph: Table
   startNode: start
   targetNode: TableFancyBlue
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/blue.rsi
     state: full
@@ -444,13 +443,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy cyan table
+  name: красивый голубой стол #A-13 Translation
   id: TableFancyCyan
   graph: Table
   startNode: start
   targetNode: TableFancyCyan
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/cyan.rsi
     state: full
@@ -461,13 +460,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy green table
+  name: красивый зеленый стол #A-13 Translation
   id: TableFancyGreen
   graph: Table
   startNode: start
   targetNode: TableFancyGreen
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/green.rsi
     state: full
@@ -478,13 +477,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy orange table
+  name: красивый оранжевый стол #A-13 Translation
   id: TableFancyOrange
   graph: Table
   startNode: start
   targetNode: TableFancyOrange
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/orange.rsi
     state: full
@@ -495,13 +494,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy purple table
+  name: красивый фиолетовый стол #A-13 Translation
   id: TableFancyPurple
   graph: Table
   startNode: start
   targetNode: TableFancyPurple
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/purple.rsi
     state: full
@@ -512,13 +511,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy pink table
+  name: красивый розовый стол #A-13 Translation
   id: TableFancyPink
   graph: Table
   startNode: start
   targetNode: TableFancyPink
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/pink.rsi
     state: full
@@ -529,13 +528,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy red table
+  name: красивый красный стол #A-13 Translation
   id: TableFancyRed
   graph: Table
   startNode: start
   targetNode: TableFancyRed
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/red.rsi
     state: full
@@ -546,13 +545,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: fancy white table
+  name: красивый белый стол #A-13 Translation
   id: TableFancyWhite
   graph: Table
   startNode: start
   targetNode: TableFancyWhite
   category: construction-category-furniture
-  description: A table covered with a beautiful cloth.
+  description: Стол, накрытый красивой скатертью. #A-13 Translation
   icon:
     sprite: Structures/Furniture/Tables/Fancy/white.rsi
     state: full
@@ -736,8 +735,8 @@
     
 - type: construction
   id: CurtainsBlack
-  name: black curtains
-  description: Hides what others shouldn't see.
+  name: чёрные шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsBlack
@@ -751,8 +750,8 @@
 
 - type: construction
   id: CurtainsBlue
-  name: blue curtains
-  description: Hides what others shouldn't see.
+  name: синие шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsBlue
@@ -766,8 +765,8 @@
     
 - type: construction
   id: CurtainsCyan
-  name: cyan curtains
-  description: Hides what others shouldn't see.
+  name: голубые шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsCyan
@@ -781,8 +780,8 @@
     
 - type: construction
   id: CurtainsGreen
-  name: green curtains
-  description: Hides what others shouldn't see.
+  name: зелёные шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsGreen
@@ -796,8 +795,8 @@
     
 - type: construction
   id: CurtainsOrange
-  name: orange curtains
-  description: Hides what others shouldn't see.
+  name: оранжевые шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsOrange
@@ -811,8 +810,8 @@
     
 - type: construction
   id: CurtainsPink
-  name: pink curtains
-  description: Hides what others shouldn't see.
+  name: розовые шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsPink
@@ -826,8 +825,8 @@
     
 - type: construction
   id: CurtainsPurple
-  name: purple curtains
-  description: Hides what others shouldn't see.
+  name: фиолетовые шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsPurple
@@ -841,8 +840,8 @@
     
 - type: construction
   id: CurtainsRed
-  name: red curtains
-  description: Hides what others shouldn't see.
+  name: красные шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsRed
@@ -856,8 +855,8 @@
 
 - type: construction
   id: CurtainsWhite
-  name: white curtains
-  description: Hides what others shouldn't see.
+  name: белые шторы #A-13 Translation
+  description: Скрывает то, что другие не должны видеть. #A-13 Translation
   graph: Curtains
   startNode: start
   targetNode: CurtainsWhite

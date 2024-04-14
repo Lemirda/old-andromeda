@@ -19,12 +19,13 @@ using Robust.Shared.Player;
 using Robust.Shared.Toolshed;
 using Robust.Shared.Toolshed.Errors;
 using Robust.Shared.Utility;
-
+using Content.Server.Andromeda.AdministrationNotifications.GameTicking; //A-13 AdminNotifications
 
 namespace Content.Server.Administration.Managers
 {
     public sealed partial class AdminManager : IAdminManager, IPostInjectInit, IConGroupControllerImplementation
     {
+        [Dependency] private readonly IEntityManager _entityManager = default!; //A-13 AdminNotifications
         [Dependency] private readonly IPlayerManager _playerManager = default!;
         [Dependency] private readonly IServerDbManager _dbManager = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!;
@@ -342,7 +343,7 @@ namespace Content.Server.Administration.Managers
             }
             else if (e.NewStatus == SessionStatus.Disconnected)
             {
-                if (_admins.Remove(e.Session, out var reg ) && _cfg.GetCVar(CCVars.AdminAnnounceLogout))
+                if (_admins.TryGetValue(e.Session, out var reg ) && _cfg.GetCVar(CCVars.AdminAnnounceLogout)) //A-13 AdminNotifications
                 {
                     if (reg.Data.Stealth)
                     {
@@ -355,6 +356,12 @@ namespace Content.Server.Administration.Managers
                         _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-admin-logout-message",
                             ("name", e.Session.Name)));
                     }
+                    //A-13 AdminNotifications start
+                    var logoutEvent = new AdminLoggedOutEvent(e.Session);
+                    _entityManager.EventBus.RaiseEvent(EventSource.Local, logoutEvent);
+
+                    _admins.Remove(e.Session);
+                    //A-13 AdminNotifications end
                 }
             }
         }
@@ -398,6 +405,10 @@ namespace Content.Server.Administration.Managers
                         _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-admin-login-message",
                             ("name", session.Name)));
                     }
+                    //A-13 AdminNotifications start
+                    var loginEvent = new AdminLoggedInEvent(session);
+                    _entityManager.EventBus.RaiseEvent(EventSource.Local, loginEvent);
+                    //A-13 AdminNotifications end
                 }
 
                 SendPermsChangedEvent(session);

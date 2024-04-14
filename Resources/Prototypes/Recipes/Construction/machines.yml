@@ -13,7 +13,7 @@
     state: 4
 
 - type: construction
-  name: маркас машины #A-13 Translation
+  name: каркас машины #A-13 Translation
   description: Машина в стадии строительства. Нужно больше запчастей. #A-13 Translation
   id: MachineFrame
   graph: Machine

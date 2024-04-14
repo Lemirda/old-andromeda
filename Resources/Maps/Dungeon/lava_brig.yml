@@ -121,6 +121,18 @@ entities:
         version: 2
         nodes:
         - node:
+            cleanable: True
+            color: '#DA8BC9FF'
+            id: 6
+          decals:
+            2140: 32.757034,36.035404
+        - node:
+            cleanable: True
+            color: '#DA8BC9FF'
+            id: 9
+          decals:
+            2141: 33.11641,36.066654
+        - node:
             color: '#52B4E996'
             id: BotGreyscale
           decals:
@@ -2763,11 +2775,6 @@ entities:
       parent: 588
 - proto: BannerSecurity
   entities:
-  - uid: 553
-    components:
-    - type: Transform
-      pos: 30.5,8.5
-      parent: 588
   - uid: 1619
     components:
     - type: Transform
@@ -3133,6 +3140,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 24.5,48.5
       parent: 588
+- proto: BikeHornImplanter
+  entities:
+  - uid: 1070
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 30.706156,27.687836
+      parent: 588
 - proto: BlastDoor
   entities:
   - uid: 1600
@@ -3170,13 +3185,6 @@ entities:
     components:
     - type: Transform
       pos: 24.420084,44.539436
-      parent: 588
-- proto: BookSecurity
-  entities:
-  - uid: 522
-    components:
-    - type: Transform
-      pos: 32.41844,8.400207
       parent: 588
 - proto: BoxFolderBlack
   entities:
@@ -7249,19 +7257,19 @@ entities:
     - type: Transform
       pos: 21.5,43.5
       parent: 588
-- proto: ClothingBeltChampion
-  entities:
-  - uid: 1236
-    components:
-    - type: Transform
-      pos: 10.581136,39.53631
-      parent: 588
 - proto: ClothingEyesGlassesMeson
   entities:
   - uid: 1108
     components:
     - type: Transform
       pos: 25.666832,30.643515
+      parent: 588
+- proto: ClothingEyesVision
+  entities:
+  - uid: 1010
+    components:
+    - type: Transform
+      pos: 32.515953,8.591039
       parent: 588
 - proto: ClothingHandsGlovesNitrile
   entities:
@@ -7270,12 +7278,19 @@ entities:
     - type: Transform
       pos: 10.432637,44.476112
       parent: 588
-- proto: ClothingHeadBandRed
+- proto: ClothingHeadHatCatEarsRobot
   entities:
-  - uid: 1295
+  - uid: 997
     components:
     - type: Transform
-      pos: 12.571781,39.694115
+      pos: 12.630659,39.81972
+      parent: 588
+- proto: ClothingHeadHatCueball
+  entities:
+  - uid: 602
+    components:
+    - type: Transform
+      pos: 12.630659,39.147846
       parent: 588
 - proto: ClothingHeadHatFedoraBrown
   entities:
@@ -7324,6 +7339,13 @@ entities:
     - type: Transform
       pos: 34.666565,24.66942
       parent: 588
+- proto: ClothingNeckCloakFire
+  entities:
+  - uid: 522
+    components:
+    - type: Transform
+      pos: 24.470768,48.61274
+      parent: 588
 - proto: ClothingNeckLawyerbadge
   entities:
   - uid: 326
@@ -7352,6 +7374,14 @@ entities:
     - type: Transform
       pos: 13.396446,12.479115
       parent: 588
+- proto: ClothingOuterHardsuitLing
+  entities:
+  - uid: 1069
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 9.593026,43.40013
+      parent: 588
 - proto: ClothingOuterRobesJudge
   entities:
   - uid: 370
@@ -7373,6 +7403,27 @@ entities:
     - type: Transform
       pos: 18.586912,0.70824456
       parent: 588
+- proto: ClothingUnderwearBottomElegantpanties
+  entities:
+  - uid: 603
+    components:
+    - type: Transform
+      pos: 34.54426,35.285404
+      parent: 588
+- proto: ClothingUnderwearWarmbra
+  entities:
+  - uid: 968
+    components:
+    - type: Transform
+      pos: 34.77266,35.73853
+      parent: 588
+- proto: ClothingUnderwearWarmstockings
+  entities:
+  - uid: 604
+    components:
+    - type: Transform
+      pos: 34.14766,35.785404
+      parent: 588
 - proto: ClothingUniformJumpskirtColorMaroon
   entities:
   - uid: 1714
@@ -7386,6 +7437,13 @@ entities:
     components:
     - type: Transform
       pos: 10.645364,44.67479
+      parent: 588
+- proto: ClothingUniformJumpsuitRedGalaxy
+  entities:
+  - uid: 399
+    components:
+    - type: Transform
+      pos: 10.370498,39.60772
       parent: 588
 - proto: ClusterBangFull
   entities:
@@ -7534,6 +7592,21 @@ entities:
     - type: Transform
       pos: 14.5,47.5
       parent: 588
+- proto: DeathRattleImplanter
+  entities:
+  - uid: 376
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.5045595,42.48262
+      parent: 588
+- proto: DeathweedLeaves
+  entities:
+  - uid: 1022
+    components:
+    - type: Transform
+      pos: 31.504587,19.578388
+      parent: 588
 - proto: DebugSMES
   entities:
   - uid: 971
@@ -7589,6 +7662,17 @@ entities:
     - type: Transform
       pos: 22.5,38.5
       parent: 588
+    - type: DisposalUnit
+      nextFlush: 0
+      recentlyEjected:
+      - invalid
+    - type: ContainerContainer
+      containers:
+        disposals: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 511
 - proto: DonkpocketBoxSpawner
   entities:
   - uid: 526
@@ -8437,13 +8521,6 @@ entities:
     - type: Transform
       pos: 30.547388,48.16116
       parent: 588
-- proto: FoodBurgerMime
-  entities:
-  - uid: 399
-    components:
-    - type: Transform
-      pos: 10.958169,39.64943
-      parent: 588
 - proto: FoodPlateSmallPlastic
   entities:
   - uid: 529
@@ -8729,6 +8806,11 @@ entities:
     - type: Transform
       pos: 8.5,27.5
       parent: 588
+  - uid: 553
+    components:
+    - type: Transform
+      pos: 12.5,42.5
+      parent: 588
   - uid: 949
     components:
     - type: Transform
@@ -8790,11 +8872,6 @@ entities:
     components:
     - type: Transform
       pos: 14.5,34.5
-      parent: 588
-  - uid: 1467
-    components:
-    - type: Transform
-      pos: 12.5,42.5
       parent: 588
   - uid: 1469
     components:
@@ -8956,6 +9033,18 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 10.765976,19.912766
+      parent: 588
+- proto: LemonKa
+  entities:
+  - uid: 1011
+    components:
+    - type: Transform
+      pos: 31.504587,21.594013
+      parent: 588
+  - uid: 1028
+    components:
+    - type: Transform
+      pos: 30.550373,44.61888
       parent: 588
 - proto: Lighter
   entities:
@@ -9242,6 +9331,23 @@ entities:
     - type: Transform
       pos: 25.484175,4.4865713
       parent: 588
+- proto: PillAphrodisiac
+  entities:
+  - uid: 1030
+    components:
+    - type: Transform
+      pos: 14.327401,43.83763
+      parent: 588
+  - uid: 1032
+    components:
+    - type: Transform
+      pos: 14.468026,43.665756
+      parent: 588
+  - uid: 1035
+    components:
+    - type: Transform
+      pos: 14.749276,43.822006
+      parent: 588
 - proto: PillCanister
   entities:
   - uid: 1481
@@ -9261,12 +9367,42 @@ entities:
     - type: Transform
       pos: 14.537998,42.878975
       parent: 588
+- proto: PlasmaReinforcedWindowDirectional
+  entities:
+  - uid: 375
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 28.5,8.5
+      parent: 588
+- proto: PlushieGirl
+  entities:
+  - uid: 950
+    components:
+    - type: Transform
+      pos: 11.667373,39.717094
+      parent: 588
+- proto: PlushieLemirdSchoolGirl
+  entities:
+  - uid: 1068
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 13.561776,43.49388
+      parent: 588
 - proto: PlushieNuke
   entities:
   - uid: 1850
     components:
     - type: Transform
       pos: 22.519993,28.594225
+      parent: 588
+- proto: PlushieRD
+  entities:
+  - uid: 954
+    components:
+    - type: Transform
+      pos: 12.042373,39.67022
       parent: 588
 - proto: PortableFlasher
   entities:
@@ -11011,6 +11147,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 13.5,42.5
       parent: 588
+- proto: SlipperyBlob
+  entities:
+  - uid: 1029
+    components:
+    - type: Transform
+      pos: 29.503498,42.540756
+      parent: 588
 - proto: SMESBasic
   entities:
   - uid: 46
@@ -11038,6 +11181,14 @@ entities:
     - type: Transform
       pos: 20.5,46.5
       parent: 588
+- proto: SoapOmega
+  entities:
+  - uid: 511
+    components:
+    - type: Transform
+      parent: 1288
+    - type: Physics
+      canCollide: False
 - proto: SoapSyndie
   entities:
   - uid: 1856
@@ -11045,51 +11196,12 @@ entities:
     - type: Transform
       pos: 10.4890785,27.46785
       parent: 588
-- proto: SpaceCash100
-  entities:
-  - uid: 1243
-    components:
-    - type: Transform
-      pos: 11.887424,39.621456
-      parent: 588
-  - uid: 1244
-    components:
-    - type: Transform
-      pos: 11.759636,39.479546
-      parent: 588
-  - uid: 1296
-    components:
-    - type: Transform
-      pos: 12.100407,39.465355
-      parent: 588
-  - uid: 1297
-    components:
-    - type: Transform
-      pos: 12.100407,39.80594
-      parent: 588
-  - uid: 1298
-    components:
-    - type: Transform
-      pos: 11.688642,39.720795
-      parent: 588
-  - uid: 1299
-    components:
-    - type: Transform
-      pos: 11.4330635,39.57888
-      parent: 588
 - proto: Spear
   entities:
   - uid: 1834
     components:
     - type: Transform
       pos: 24.466219,48.441994
-      parent: 588
-- proto: SpeedLoaderMagnum
-  entities:
-  - uid: 950
-    components:
-    - type: Transform
-      pos: 28.703945,8.421182
       parent: 588
 - proto: StasisBed
   entities:
@@ -12354,12 +12466,27 @@ entities:
     - type: Transform
       pos: 22.543945,6.5464144
       parent: 588
+- proto: WeaponLauncherRocket
+  entities:
+  - uid: 988
+    components:
+    - type: Transform
+      pos: 28.378227,8.50717
+      parent: 588
 - proto: WeaponShotgunKammerer
   entities:
   - uid: 583
     components:
     - type: Transform
       pos: 26.57963,35.4414
+      parent: 588
+- proto: WeaponTurretHostile
+  entities:
+  - uid: 265
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 30.5,8.5
       parent: 588
 - proto: WindoorAssemblySecure
   entities:

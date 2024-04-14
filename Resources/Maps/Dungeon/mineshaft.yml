@@ -271,10 +271,45 @@ entities:
             52: 31,6
             53: 30,1
         - node:
+            cleanable: True
+            angle: 3.141592653589793 rad
+            color: '#B02E26FF'
+            id: arrow
+          decals:
+            59: 40.020077,20.738033
+            60: 40.00445,21.472408
+        - node:
+            cleanable: True
+            angle: 4.71238898038469 rad
+            color: '#B02E26FF'
+            id: arrow
+          decals:
+            61: 35.9107,18.003658
+        - node:
             color: '#FFFFFFFF'
             id: bushsnowb3
           decals:
             26: 26,30
+        - node:
+            cleanable: True
+            color: '#F9FFFEFF'
+            id: splatter
+          decals:
+            56: 26.353344,7.308707
+        - node:
+            cleanable: True
+            angle: 1.2042771838760873 rad
+            color: '#F9FFFEFF'
+            id: splatter
+          decals:
+            57: 25.212719,8.261832
+        - node:
+            cleanable: True
+            angle: 2.792526803190927 rad
+            color: '#F9FFFEFF'
+            id: splatter
+          decals:
+            58: 27.868969,6.902457
 - proto: AirlockMiningLocked
   entities:
   - uid: 5
@@ -374,6 +409,21 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 29.510723,32.467716
+      parent: 2
+- proto: BananiumHorn
+  entities:
+  - uid: 1142
+    components:
+    - type: Transform
+      parent: 1141
+    - type: Physics
+      canCollide: False
+- proto: Barricade
+  entities:
+  - uid: 1131
+    components:
+    - type: Transform
+      pos: 44.5,6.5
       parent: 2
 - proto: BarricadeBlock
   entities:
@@ -1661,6 +1711,27 @@ entities:
     - type: Transform
       pos: 16.5,13.5
       parent: 2
+- proto: ClothingEyesVision
+  entities:
+  - uid: 1115
+    components:
+    - type: Transform
+      pos: 9.499234,27.330418
+      parent: 2
+- proto: ClothingHeadHatBeretCargo
+  entities:
+  - uid: 1114
+    components:
+    - type: Transform
+      pos: 9.467984,27.78656
+      parent: 2
+- proto: ClothingHeadHatBeretHoSSponsor
+  entities:
+  - uid: 1121
+    components:
+    - type: Transform
+      pos: 31.4973,9.57698
+      parent: 2
 - proto: ClothingHeadHatCardborg
   entities:
   - uid: 834
@@ -1701,6 +1772,49 @@ entities:
     - type: Transform
       pos: 13.46296,18.77332
       parent: 2
+- proto: ClothingOuterCoatSpaceAsshole
+  entities:
+  - uid: 1141
+    components:
+    - type: Transform
+      pos: 13.780073,29.34053
+      parent: 2
+    - type: Storage
+      storedItems:
+        1142:
+          position: 0,0
+          _rotation: South
+        1143:
+          position: 1,0
+          _rotation: South
+        1144:
+          position: 2,0
+          _rotation: South
+        1145:
+          position: 2,1
+          _rotation: South
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
+          showEnts: False
+          occludes: True
+          ents:
+          - 1142
+          - 1143
+          - 1144
+          - 1145
+- proto: ClothingOuterHardsuitCargoElite
+  entities:
+  - uid: 1112
+    components:
+    - type: Transform
+      pos: 2.3011904,24.51147
+      parent: 2
+  - uid: 1113
+    components:
+    - type: Transform
+      pos: 2.7543154,24.51147
+      parent: 2
 - proto: ClothingOuterHardsuitSalvage
   entities:
   - uid: 933
@@ -1709,6 +1823,35 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 46.62351,4.5918055
       parent: 2
+    - type: GroupExamine
+      group:
+      - hoverMessage: ""
+        contextText: verb-examine-group-other
+        icon: /Textures/Interface/examine-star.png
+        components:
+        - Armor
+        - ClothingSpeedModifier
+        entries:
+        - message: Понижает вашу скорость на [color=yellow]25%[/color].
+          priority: 0
+          component: ClothingSpeedModifier
+        - message: >-
+            Обеспечивает следующую защиту:
+
+            - [color=yellow]Ударный[/color] урон снижается на [color=lightblue]30%[/color].
+
+            - [color=yellow]Режущий[/color] урон снижается на [color=lightblue]30%[/color].
+
+            - [color=yellow]Колющий[/color] урон снижается на [color=lightblue]50%[/color].
+
+            - [color=yellow]Радиационный[/color] урон снижается на [color=lightblue]70%[/color].
+
+            - [color=yellow]Кислотный[/color] урон снижается на [color=lightblue]30%[/color].
+
+            - [color=orange]Взрывной[/color] урон снижается на [color=lightblue]70%[/color].
+          priority: 0
+          component: Armor
+        title: null
 - proto: ClothingOuterRobesCult
   entities:
   - uid: 172
@@ -1733,6 +1876,76 @@ entities:
     - type: Transform
       pos: 27.4423,6.4601035
       parent: 2
+- proto: ClothingUnderwearBottomPantiesCap
+  entities:
+  - uid: 1144
+    components:
+    - type: Transform
+      parent: 1141
+    - type: Physics
+      canCollide: False
+- proto: ClothingUnderwearBottomPantiesDeathSquadSponsor
+  entities:
+  - uid: 1137
+    components:
+    - type: Transform
+      pos: 40.80426,18.144676
+      parent: 2
+- proto: ClothingUnderwearBottomPantiesLace
+  entities:
+  - uid: 1118
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 25.794317,27.614994
+      parent: 2
+  - uid: 1145
+    components:
+    - type: Transform
+      parent: 1141
+    - type: Physics
+      canCollide: False
+- proto: ClothingUnderwearBottomPantiesThong
+  entities:
+  - uid: 1116
+    components:
+    - type: Transform
+      pos: 26.481817,29.31812
+      parent: 2
+- proto: ClothingUnderwearTopDeathBraSponsor
+  entities:
+  - uid: 1138
+    components:
+    - type: Transform
+      pos: 40.24176,18.800926
+      parent: 2
+- proto: ClothingUnderwearToplaceBra
+  entities:
+  - uid: 1117
+    components:
+    - type: Transform
+      pos: 24.513067,28.552494
+      parent: 2
+- proto: ClothingUnderwearTopNekoBra
+  entities:
+  - uid: 1119
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 26.809942,29.864994
+      parent: 2
+- proto: ClothingUniformJumpsuitCargoExpert
+  entities:
+  - uid: 1110
+    components:
+    - type: Transform
+      pos: 0.25431538,30.620846
+      parent: 2
+  - uid: 1111
+    components:
+    - type: Transform
+      pos: 0.7230654,30.620846
+      parent: 2
 - proto: ClothingUniformJumpsuitGladiator
   entities:
   - uid: 614
@@ -1745,6 +1958,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 17.363964,27.571035
+      parent: 2
+- proto: ClothingUniformReallyBlackSuitSkirt
+  entities:
+  - uid: 1120
+    components:
+    - type: Transform
+      pos: 32.01392,9.557047
       parent: 2
 - proto: ConveyorBelt
   entities:
@@ -2815,17 +3035,17 @@ entities:
     - type: Transform
       pos: 29.534237,13.61823
       parent: 2
-- proto: FoodMeatBearCooked
+- proto: FoodMealBearsteak
   entities:
+  - uid: 581
+    components:
+    - type: Transform
+      pos: 17.676374,29.36359
+      parent: 2
   - uid: 612
     components:
     - type: Transform
-      pos: 17.658442,29.564983
-      parent: 2
-  - uid: 634
-    components:
-    - type: Transform
-      pos: 17.526375,29.71021
+      pos: 17.317,29.722965
       parent: 2
 - proto: FoodMeatRatdoubleKebab
   entities:
@@ -3312,6 +3532,13 @@ entities:
     - type: Transform
       pos: 40.5,7.5
       parent: 2
+- proto: MaterialBananium
+  entities:
+  - uid: 1135
+    components:
+    - type: Transform
+      pos: 39.486477,7.576422
+      parent: 2
 - proto: MaterialBananium1
   entities:
   - uid: 966
@@ -3335,6 +3562,13 @@ entities:
     components:
     - type: Transform
       pos: 13.508261,21.99531
+      parent: 2
+- proto: MedipenEpinephrine
+  entities:
+  - uid: 1109
+    components:
+    - type: Transform
+      pos: 45.50594,13.571283
       parent: 2
 - proto: MedkitAdvancedFilled
   entities:
@@ -3533,6 +3767,62 @@ entities:
     components:
     - type: Transform
       pos: 29.876812,28.272526
+      parent: 2
+- proto: PillAphrodisiac
+  entities:
+  - uid: 1123
+    components:
+    - type: Transform
+      pos: 27.460474,7.761832
+      parent: 2
+  - uid: 1124
+    components:
+    - type: Transform
+      pos: 26.554224,8.496207
+      parent: 2
+  - uid: 1125
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 26.476099,8.136832
+      parent: 2
+  - uid: 1126
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 27.694849,7.621207
+      parent: 2
+  - uid: 1127
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 27.226099,7.558707
+      parent: 2
+  - uid: 1128
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 27.069849,7.246207
+      parent: 2
+  - uid: 1129
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 26.210474,7.996207
+      parent: 2
+  - uid: 1130
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 26.647974,8.699332
+      parent: 2
+- proto: PlushieLemirdSchoolGirl
+  entities:
+  - uid: 1122
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 27.525152,8.652457
       parent: 2
 - proto: PlushieSlime
   entities:
@@ -4470,6 +4760,21 @@ entities:
     - type: Transform
       pos: 9.759932,33.75102
       parent: 2
+- proto: Sledgehammer
+  entities:
+  - uid: 1146
+    components:
+    - type: Transform
+      pos: 14.467573,29.512405
+      parent: 2
+- proto: SoapOmega
+  entities:
+  - uid: 1143
+    components:
+    - type: Transform
+      parent: 1141
+    - type: Physics
+      canCollide: False
 - proto: SpearBone
   entities:
   - uid: 643
@@ -5612,11 +5917,6 @@ entities:
     - type: Transform
       pos: 34.5,24.5
       parent: 2
-  - uid: 581
-    components:
-    - type: Transform
-      pos: 40.5,18.5
-      parent: 2
   - uid: 582
     components:
     - type: Transform
@@ -6044,6 +6344,13 @@ entities:
     - type: Transform
       pos: 38.5,34.5
       parent: 2
+- proto: WeaponBehonkerLaser
+  entities:
+  - uid: 1134
+    components:
+    - type: Transform
+      pos: 38.486477,6.685797
+      parent: 2
 - proto: WeaponPistolCHIMP
   entities:
   - uid: 617
@@ -6057,6 +6364,46 @@ entities:
     components:
     - type: Transform
       pos: 4.461401,13.497713
+      parent: 2
+- proto: WeaponSniperBarrettM82
+  entities:
+  - uid: 634
+    components:
+    - type: Transform
+      pos: 40.53566,18.522858
+      parent: 2
+- proto: WeaponTurretXeno
+  entities:
+  - uid: 1132
+    components:
+    - type: Transform
+      pos: 45.5,9.5
+      parent: 2
+  - uid: 1133
+    components:
+    - type: Transform
+      pos: 37.5,10.5
+      parent: 2
+  - uid: 1136
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 39.5,6.5
+      parent: 2
+  - uid: 1139
+    components:
+    - type: Transform
+      pos: 14.5,26.5
+      parent: 2
+  - uid: 1140
+    components:
+    - type: Transform
+      pos: 13.5,30.5
+      parent: 2
+  - uid: 1147
+    components:
+    - type: Transform
+      pos: 12.5,25.5
       parent: 2
 - proto: WeldingFuelTankFull
   entities:

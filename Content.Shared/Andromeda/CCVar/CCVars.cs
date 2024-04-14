@@ -27,5 +27,8 @@ namespace Content.Shared.Andromeda.CCVar
         /// </summary>
         public static readonly CVarDef<string> DiscordBanWebhook =
             CVarDef.Create("discord.ban_webhook", string.Empty, CVar.SERVERONLY);
+
+        public static readonly CVarDef<string> DiscordAdminWebhook =
+            CVarDef.Create("discord.admin_webhook", string.Empty, CVar.SERVERONLY);
     }
 }

@@ -6,7 +6,7 @@ Space Station 14 это ремейк SS13, который работает на 
 
 ## Ссылки
 
-[Наш Discord](https://discord.com/invite/CPacm3dfrA) | [Наша Вики](https://bit.ly/ss14andromeda13_wiki) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14)
+[Наш Discord](https://discord.gg/CuWu6kSznf) | [Наша Вики](https://bit.ly/ss14andromeda13_wiki) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14)
 
 ## Документация
 
@@ -14,7 +14,7 @@ Space Station 14 это ремейк SS13, который работает на 
 
 ## Контрибьют
 
-Мы рады принять вклад от любого человека. Заходите в [Discord](https://discord.gg/CPacm3dfrA), если хотите помочь. Там же можно сообщить о баге или проблеме.
+Мы рады принять вклад от любого человека. Заходите в [Discord](https://discord.gg/CuWu6kSznf), если хотите помочь. Там же можно сообщить о баге или проблеме.
 
 ## Сборка
 

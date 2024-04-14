@@ -23,24 +23,24 @@
   objectType: Item
   
 - type: construction
-  name: filled brass plate
+  name: заполненная латунная пластина
   id: TileBrassFilled
   graph: TilesBrass
   startNode: start
   targetNode: filledPlate
   category: construction-category-tiles
-  description: "Four pieces of brass station flooring, only compatible with brass plating."
+  description: "Четыре куска латунного напольного покрытия станции, совместимого только с латунным покрытием."
   icon: { sprite: Objects/Tiles/tile.rsi, state: brass-filled }
   objectType: Item
   
 - type: construction
-  name: smooth brass plate
+  name: гладкая латунная пластина #A-13 Translation
   id: TileBrassReebe
   graph: TilesBrass
   startNode: start
   targetNode: reebe
   category: construction-category-tiles
-  description: "Four pieces of smooth brass station flooring, only compatible with brass plating."
+  description: "Четыре куска гладкого латунного пола станции, совместимого только с латунным покрытием." #A-13 Translation
   icon: { sprite: Objects/Tiles/tile.rsi, state: reebe }
   objectType: Item
 

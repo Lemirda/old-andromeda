@@ -2417,6 +2417,14 @@ entities:
     - type: Transform
       pos: 33.5,16.5
       parent: 1653
+- proto: BananiumHorn
+  entities:
+  - uid: 1196
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 17.236242,15.010303
+      parent: 1653
 - proto: Barricade
   entities:
   - uid: 665
@@ -6359,6 +6367,13 @@ entities:
     - type: Transform
       pos: 4.5678988,24.535187
       parent: 1653
+- proto: CognizineChemistryBottle
+  entities:
+  - uid: 1599
+    components:
+    - type: Transform
+      pos: 20.341743,44.56282
+      parent: 1653
 - proto: ComfyChair
   entities:
   - uid: 774
@@ -6529,6 +6544,13 @@ entities:
     components:
     - type: Transform
       pos: 16.668823,9.400122
+      parent: 1653
+- proto: DeathRattleImplanter
+  entities:
+  - uid: 1383
+    components:
+    - type: Transform
+      pos: 24.491978,15.392013
       parent: 1653
 - proto: DisposalTrunk
   entities:
@@ -6930,6 +6952,18 @@ entities:
     - type: Transform
       pos: 36.5,38.5
       parent: 1653
+- proto: FoodAmbrosiaDeus
+  entities:
+  - uid: 713
+    components:
+    - type: Transform
+      pos: 15.483121,8.567106
+      parent: 1653
+  - uid: 729
+    components:
+    - type: Transform
+      pos: 15.498746,9.582731
+      parent: 1653
 - proto: FoodBanana
   entities:
   - uid: 1189
@@ -6946,13 +6980,6 @@ entities:
     components:
     - type: Transform
       pos: 21.644592,15.498887
-      parent: 1653
-- proto: FoodSoupMonkey
-  entities:
-  - uid: 1196
-    components:
-    - type: Transform
-      pos: 19.514566,14.517001
       parent: 1653
 - proto: FoodTinBeans
   entities:
@@ -7184,11 +7211,6 @@ entities:
     - type: Transform
       pos: 13.5,47.5
       parent: 1653
-  - uid: 542
-    components:
-    - type: Transform
-      pos: 11.5,47.5
-      parent: 1653
   - uid: 1013
     components:
     - type: Transform
@@ -7213,6 +7235,13 @@ entities:
     components:
     - type: Transform
       pos: 33.5,9.5
+      parent: 1653
+- proto: GeneratorRTGDamaged
+  entities:
+  - uid: 619
+    components:
+    - type: Transform
+      pos: 11.5,47.5
       parent: 1653
 - proto: Girder
   entities:
@@ -7350,6 +7379,11 @@ entities:
     - type: Transform
       pos: 19.503967,13.342637
       parent: 1653
+  - uid: 1538
+    components:
+    - type: Transform
+      pos: 11.46905,12.475278
+      parent: 1653
 - proto: LandMineModular
   entities:
   - uid: 1121
@@ -7387,33 +7421,6 @@ entities:
     components:
     - type: Transform
       pos: 16.496948,9.603247
-      parent: 1653
-- proto: LifeweedLeaves
-  entities:
-  - uid: 1379
-    components:
-    - type: Transform
-      pos: 15.455196,8.634497
-      parent: 1653
-  - uid: 1380
-    components:
-    - type: Transform
-      pos: 15.455196,8.634497
-      parent: 1653
-  - uid: 1383
-    components:
-    - type: Transform
-      pos: 15.455196,8.634497
-      parent: 1653
-  - uid: 1384
-    components:
-    - type: Transform
-      pos: 15.455196,8.634497
-      parent: 1653
-  - uid: 1472
-    components:
-    - type: Transform
-      pos: 15.455196,8.634497
       parent: 1653
 - proto: LockerElectricalSuppliesFilled
   entities:
@@ -7521,6 +7528,13 @@ entities:
     components:
     - type: Transform
       pos: 30.5,0.5
+      parent: 1653
+- proto: MaterialBananium
+  entities:
+  - uid: 1384
+    components:
+    - type: Transform
+      pos: 17.564367,14.588428
       parent: 1653
 - proto: MaterialBiomass
   entities:
@@ -7652,6 +7666,13 @@ entities:
     - type: Transform
       pos: 27.480967,22.500828
       parent: 1653
+- proto: MuteToxinChemistryBottle
+  entities:
+  - uid: 1637
+    components:
+    - type: Transform
+      pos: 20.716743,44.547195
+      parent: 1653
 - proto: NitrousOxideCanister
   entities:
   - uid: 834
@@ -7740,6 +7761,18 @@ entities:
     - type: Transform
       pos: 34.5,36.5
       parent: 1653
+  - uid: 1536
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 10.5,14.5
+      parent: 1653
+  - uid: 1537
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 12.5,14.5
+      parent: 1653
 - proto: PlasmaTankFilled
   entities:
   - uid: 1473
@@ -7760,18 +7793,6 @@ entities:
     components:
     - type: Transform
       pos: 28.542555,0.5099404
-      parent: 1653
-- proto: PlushieSpaceLizard
-  entities:
-  - uid: 713
-    components:
-    - type: Transform
-      pos: 10.508222,14.448289
-      parent: 1653
-  - uid: 820
-    components:
-    - type: Transform
-      pos: 12.476972,14.557664
       parent: 1653
 - proto: PortableGeneratorPacman
   entities:
@@ -8467,6 +8488,14 @@ entities:
     - type: Transform
       pos: 20.5,46.5
       parent: 1653
+- proto: ProtolatheHyperConvectionMachineCircuitboard
+  entities:
+  - uid: 1539
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.4207904,46.51901
+      parent: 1653
 - proto: Rack
   entities:
   - uid: 659
@@ -8738,6 +8767,14 @@ entities:
     - type: Transform
       pos: 42.607162,12.70194
       parent: 1653
+- proto: ResearchAndDevelopmentServerMachineCircuitboard
+  entities:
+  - uid: 1535
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 12.550611,14.347406
+      parent: 1653
 - proto: ResearchDisk
   entities:
   - uid: 1625
@@ -8775,13 +8812,6 @@ entities:
     components:
     - type: Transform
       pos: 10.533063,27.58727
-      parent: 1653
-- proto: RPED
-  entities:
-  - uid: 1646
-    components:
-    - type: Transform
-      pos: 32.49994,15.5244
       parent: 1653
 - proto: SalvageCanisterSpawner
   entities:
@@ -8912,6 +8942,13 @@ entities:
     - type: DeviceLinkSink
       links:
       - 583
+- proto: ShuttleGunPerforatorCircuitboard
+  entities:
+  - uid: 1379
+    components:
+    - type: Transform
+      pos: 12.581861,14.738031
+      parent: 1653
 - proto: SignalButton
   entities:
   - uid: 583
@@ -9118,6 +9155,13 @@ entities:
     - type: Transform
       pos: 30.5,8.5
       parent: 1653
+- proto: SpawnMechHonker
+  entities:
+  - uid: 542
+    components:
+    - type: Transform
+      pos: 19.5,15.5
+      parent: 1653
 - proto: SprayBottleSpaceCleaner
   entities:
   - uid: 720
@@ -9127,15 +9171,23 @@ entities:
       parent: 1653
 - proto: SprayBottleWater
   entities:
-  - uid: 1169
-    components:
-    - type: Transform
-      pos: 17.482958,14.735751
-      parent: 1653
   - uid: 1573
     components:
     - type: Transform
       pos: 30.7552,12.830012
+      parent: 1653
+- proto: StatueBananiumClown
+  entities:
+  - uid: 820
+    components:
+    - type: Transform
+      pos: 18.5,15.5
+      parent: 1653
+  - uid: 1169
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 20.5,15.5
       parent: 1653
 - proto: Stool
   entities:
@@ -9785,6 +9837,12 @@ entities:
     - type: Transform
       pos: 18.5,44.5
       parent: 1653
+  - uid: 1472
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 20.5,44.5
+      parent: 1653
 - proto: TableWood
   entities:
   - uid: 666
@@ -9936,11 +9994,6 @@ entities:
       parent: 1653
 - proto: UnfinishedMachineFrame
   entities:
-  - uid: 619
-    components:
-    - type: Transform
-      pos: 20.5,44.5
-      parent: 1653
   - uid: 1341
     components:
     - type: Transform
@@ -9969,13 +10022,6 @@ entities:
     components:
     - type: Transform
       pos: 24.538218,15.750836
-      parent: 1653
-- proto: VehicleJanicartDestroyed
-  entities:
-  - uid: 729
-    components:
-    - type: Transform
-      pos: 6.5,25.5
       parent: 1653
 - proto: VendingMachineCigs
   entities:
@@ -10429,6 +10475,13 @@ entities:
     components:
     - type: Transform
       pos: 7.5,3.5
+      parent: 1653
+- proto: WeaponTeslaGun
+  entities:
+  - uid: 1380
+    components:
+    - type: Transform
+      pos: 10.547531,14.588428
       parent: 1653
 - proto: Welder
   entities:

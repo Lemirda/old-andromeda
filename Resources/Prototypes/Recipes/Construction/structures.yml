@@ -35,13 +35,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: wall gear
+  name: каркас-шестерня #A-13 Translation
   id: ClockworkGirder
   graph: ClockworkGirder
   startNode: start
   targetNode: clockGirder
   category: construction-category-structures
-  description: A large gear with mounting brackets for additional plating.
+  description: Большой редуктор с кронштейнами для крепления дополнительной обшивки. #A-13 Translation
   icon:
     sprite: /Textures/Structures/Walls/clock.rsi
     state: wall_gear
@@ -89,13 +89,13 @@
     - !type:TileNotBlocked    
 
 - type: construction
-  name: clock wall
+  name: заводная стена #A-13 Translation
   id: WallClock
   graph: ClockworkGirder
   startNode: start
   targetNode: clockworkWall
   category: construction-category-structures
-  description: Keeps the air in and the greytide out.
+  description: Удерживает воздух внутри, а ассистентов снаружи #A-13 Translation
   icon:
     sprite: Structures/Walls/clock.rsi
     state: full
@@ -323,13 +323,13 @@
   canRotate: false
 
 - type: construction
-  name: clockwork grille
+  name: заводная решетка #A-13 Translation
   id: ClockGrille
   graph: ClockGrille
   startNode: start
   targetNode: clockGrille
   category: construction-category-structures
-  description: A flimsy framework of iron rods assembled in traditional ratvarian fashion.
+  description: Хлипкий каркас из железных прутьев, собранный традиционным ратварианским способом. #A-13 Translation
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
@@ -358,13 +358,13 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: diagonal clockwork grille
+  name: диагональная заводная решетка #A-13 Translation
   id: ClockworkGrilleDiagonal
   graph: GrilleDiagonal
   startNode: start
   targetNode: clockworkGrilleDiagonal
   category: construction-category-structures
-  description: A flimsy framework of iron rods assembled in traditional ratvarian fashion.
+  description: Хлипкий каркас из железных прутьев, собранный традиционным ратварианским способом. #A-13 Translation
   conditions:
     - !type:TileNotBlocked
       failIfSpace: false
@@ -468,13 +468,13 @@
   canRotate: false
 
 - type: construction
-  name: clockwork window
+  name: заводное окно #A-13 Translation
   id: ClockworkWindow
   graph: Window
   startNode: start
   targetNode: clockworkWindow
   category: construction-category-structures
-  description: Clear and tough, with a golden tint.
+  description: Чистое и крепкое, с золотистым оттенком. #A-13 Translation
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -487,13 +487,13 @@
   canRotate: false
 
 - type: construction
-  name: diagonal clockwork window
+  name: диагональное заводное окно #A-13 Translation
   id: ClockworkWindowDiagonal
   graph: WindowDiagonal
   startNode: start
   targetNode: clockworkWindowDiagonal
   category: construction-category-structures
-  description: Clear and tough, with a golden tint.
+  description: Чистое и крепкое, с золотистым оттенком. #A-13 Translation
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -634,13 +634,13 @@
   placementMode: SnapgridCenter
 
 - type: construction
-  name: directional clockwork window
+  name: направленное заводное окно #A-13 Translation
   id: WindowClockworkDirectional
   graph: WindowDirectional
   startNode: start
   targetNode: windowClockworkDirectional
   category: construction-category-structures
-  description: Clear and tough, with a golden tint.
+  description: Чистое и крепкое, с золотистым оттенком. #A-13 Translation
   canBuildInImpassable: true
   conditions:
     - !type:EmptyOrWindowValidInTile
@@ -1071,13 +1071,13 @@
 
 #Wooden fence high
 - type: construction
-  name: wooden high fence
+  name: прямой высокий деревянный забор #A-13 Translation
   id: FenceWood
   graph: FenceWood
   startNode: start
   targetNode: straight
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: straight
@@ -1088,13 +1088,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden high fence end
+  name: конец высокого деревянного забора #A-13 Translation
   id: FenceWoodEnd
   graph: FenceWood
   startNode: start
   targetNode: end
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: end
@@ -1105,13 +1105,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden high fence corner
+  name: угол высокого деревянного забора #A-13 Translation
   id: FenceWoodCorner
   graph: FenceWood
   startNode: start
   targetNode: corner
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: corner
@@ -1122,13 +1122,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden high fence t-junction
+  name: Т-образный высокий деревянный забор #A-13 Translation
   id: FenceWoodTJunction
   graph: FenceWood
   startNode: start
   targetNode: tjunction
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: tjunction
@@ -1139,13 +1139,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden high fence gate
+  name: ворота высокого деревянного забора #A-13 Translation
   id: FenceWoodGate
   graph: FenceWood
   startNode: start
   targetNode: gate
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: door_closed
@@ -1157,13 +1157,13 @@
 
 #Wooden fence small
 - type: construction
-  name: wooden small fence
+  name: прямой маленький деревянный забор #A-13 Translation
   id: FenceWoodSmall
   graph: FenceWood
   startNode: start
   targetNode: straight_small
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: straight_small
@@ -1174,13 +1174,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden small fence end
+  name: конец маленького деревянного забора #A-13 Translation
   id: FenceWoodEndSmall
   graph: FenceWood
   startNode: start
   targetNode: end_small
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: end_small
@@ -1191,13 +1191,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden small fence corner
+  name: угол маленького деревянного забора #A-13 Translation
   id: FenceWoodCornerSmall
   graph: FenceWood
   startNode: start
   targetNode: corner_small
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: corner_small
@@ -1208,13 +1208,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden small fence t-junction
+  name: Т-образный маленький деревянный забор #A-13 Translation
   id: FenceWoodTJunctionSmall
   graph: FenceWood
   startNode: start
   targetNode: tjunction_small
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: tjunction_small
@@ -1225,13 +1225,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: wooden small fence gate
+  name: ворота маленького деревянного забора #A-13 Translation
   id: FenceWoodGateSmall
   graph: FenceWood
   startNode: start
   targetNode: gate_small
   category: construction-category-structures
-  description: Part of a wooden fence meant to cordon off areas.
+  description: Часть деревянного забора, предназначенного для ограждения территории. #A-13 Translation
   icon:
     sprite: Structures/Walls/wooden_fence.rsi
     state: door_closed_small
@@ -1277,13 +1277,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: pinion airlock
+  name: заводной шлюз #A-13 Translation
   id: PinionAirlock
   graph: PinionAirlock
   startNode: start
   targetNode: airlock
   category: construction-category-structures
-  description: It opens, it closes, and maybe crushes you.
+  description: Он стеклянный, открывается и закрывается, возможно раздавит вас. #A-13 Translation
   icon:
     sprite: Structures/Doors/Airlocks/Standard/clockwork_pinion.rsi
     state: assembly
@@ -1294,13 +1294,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: glass pinion airlock
+  name: заводной стеклянный шлюз #A-13 Translation
   id: PinionAirlockGlass
   graph: PinionAirlock
   startNode: start
   targetNode: glassAirlock
   category: construction-category-structures
-  description: It opens, it closes, and maybe crushes you.
+  description: Он стеклянный, открывается и закрывается, возможно раздавит вас. #A-13 Translation
   icon:
     sprite: Structures/Doors/Airlocks/Glass/clockwork_pinion.rsi
     state: assembly
@@ -1381,13 +1381,13 @@
     - !type:TileNotBlocked
 
 - type: construction
-  name: clockwork windoor
+  name: раздвижное заводное окно #A-13 Translation
   id: ClockworkWindoor
   graph: Windoor
   startNode: start
   targetNode: windoorClockwork
   category: construction-category-structures
-  description: It opens, it closes, and you can see through it! This one looks tough.
+  description: Оно открывается, оно закрывается, и вы можете видеть сквозь него! Выглядит прочно. #A-13 Translation
   icon:
     sprite: Structures/Doors/Windoors/clockwork_windoor.rsi
     state: closed

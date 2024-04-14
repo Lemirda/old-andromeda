@@ -63,10 +63,10 @@ public sealed partial class EmergencyShuttleSystem
     /// </summary>
     private float _authorizeTime;
 
-    private float _AndromedaEmergency60 = 60; // Andromeda Emergency
-    private float _AndromedaEmergency30 = 30; // Andromeda Emergency
-    private float trashcheck60 = 0; // Andromeda Emergency
-    private float trashcheck30 = 0; // Andromeda Emergency
+    private float _andromedaEmergency60 = 60; // Andromeda Emergency
+    private float _andromedaEmergency30 = 30; // Andromeda Emergency
+    private float _trashcheck60 = 0; // Andromeda Emergency
+    private float _trashcheck30 = 0; // Andromeda Emergency
 
     private CancellationTokenSource? _roundEndCancelToken;
 
@@ -160,34 +160,29 @@ public sealed partial class EmergencyShuttleSystem
             if (!EarlyLaunchAuthorized)
                 AnnounceLaunch();
         }
-
-        // Andromeda Emergency
-        if (!_launchedShuttles && _consoleAccumulator <= _AndromedaEmergency60 && trashcheck60 == 0)
+        // Andromeda Emergency start
+        if (!_launchedShuttles && !_announced && _consoleAccumulator <= _andromedaEmergency60 && _trashcheck60 == 0)
         {
-            if (_announced == false)
-            {
-                _chatSystem.DispatchGlobalAnnouncement(
-                    Loc.GetString("emergency-shuttle-andromeda-60", ("AndromedaEmergency60", $"{_AndromedaEmergency60:0}")),
-                    playSound: false,
-                    colorOverride: DangerColor);
-                _audio.PlayGlobal("/Audio/Announcements/announce.ogg", Filter.Broadcast(), recordReplay: true);
-                trashcheck60++;
-            }
+            _chatSystem.DispatchGlobalAnnouncement(
+                Loc.GetString("emergency-shuttle-andromeda-60", ("AndromedaEmergency60", $"{_andromedaEmergency60:0}")),
+                playSound: false,
+                colorOverride: DangerColor);
+            _audio.PlayGlobal("/Audio/Announcements/announce.ogg", Filter.Broadcast(), recordReplay: true);
+            _trashcheck60++;
         }
-
-        // Andromeda Emergency
-        if (!_launchedShuttles && _consoleAccumulator <= _AndromedaEmergency30 && trashcheck30 == 0)
+        if (!_launchedShuttles && _consoleAccumulator <= _andromedaEmergency30 && _trashcheck30 == 0)
         {
             if (_announced == false)
             {
                 _chatSystem.DispatchGlobalAnnouncement(
-                  Loc.GetString("emergency-shuttle-andromeda-30", ("AndromedaEmergency30", $"{_AndromedaEmergency30:0}")),
+                  Loc.GetString("emergency-shuttle-andromeda-30", ("AndromedaEmergency30", $"{_andromedaEmergency30:0}")),
                   playSound: false,
                   colorOverride: DangerColor);
                 _audio.PlayGlobal("/Audio/Announcements/announce.ogg", Filter.Broadcast(), recordReplay: true);
-                trashcheck30++;
+                _trashcheck30++;
             }
         }
+        // Andromeda Emergency end
 
         // Imminent departure
         if (!_launchedShuttles && _consoleAccumulator <= ShuttleSystem.DefaultStartupTime)
@@ -357,8 +352,8 @@ public sealed partial class EmergencyShuttleSystem
         ShuttlesLeft = false;
         _launchedShuttles = false;
         _consoleAccumulator = float.MinValue;
-        trashcheck60 = 0; // Andromeda Emergency
-        trashcheck30 = 0; // Andromeda Emergency
+        _trashcheck60 = 0; // Andromeda Emergency
+        _trashcheck30 = 0; // Andromeda Emergency
         EarlyLaunchAuthorized = false;
         EmergencyShuttleArrived = false;
         TransitTime = MinimumTransitTime + (MaximumTransitTime - MinimumTransitTime) * _random.NextFloat();

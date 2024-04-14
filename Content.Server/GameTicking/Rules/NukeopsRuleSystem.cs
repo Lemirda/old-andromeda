@@ -38,7 +38,6 @@ using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using Content.Shared.Store;
 using Content.Shared.Tag;
-using Content.Shared.Zombies;
 using Robust.Server.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Map;
@@ -47,7 +46,6 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using System.Linq;
-using Content.Server.Corvax.Sponsors; // Andromeda SponsorAntag
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -73,7 +71,6 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
     [Dependency] private readonly StoreSystem _store = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly AntagSelectionSystem _antagSelection = default!;
-    [Dependency] private readonly SponsorsManager _sponsors = default!; // A-13
 
     private ISawmill _sawmill = default!;
 
@@ -207,7 +204,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
             }
         }
 
-        ev.AddLine(Loc.GetString("nukeops-list-start"));
+        //ev.AddLine(Loc.GetString("nukeops-list-start"));
 
         var nukiesQuery = EntityQueryEnumerator<NukeopsRoleComponent, MindContainerComponent>();
         while (nukiesQuery.MoveNext(out var nukeopsUid, out _, out var mindContainer))
@@ -458,7 +455,7 @@ public sealed class NukeopsRuleSystem : GameRuleSystem<NukeopsRuleComponent>
             if (Transform(uid).MapID != Transform(nukieRule.NukieOutpost.Value).MapID) // Will receive bonus TC only on their start outpost
                 continue;
 
-            _store.TryAddCurrency(new () { { TelecrystalCurrencyPrototype, nukieRule.WarTCAmountPerNukie } }, uid, component);
+            _store.TryAddCurrency(new() { { TelecrystalCurrencyPrototype, nukieRule.WarTCAmountPerNukie } }, uid, component);
 
             var msg = Loc.GetString("store-currency-war-boost-given", ("target", uid));
             _popupSystem.PopupEntity(msg, uid);

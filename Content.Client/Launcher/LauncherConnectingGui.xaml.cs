@@ -47,7 +47,7 @@ namespace Content.Client.Launcher
             ChangeLoginTip();
             ReconnectButton.OnPressed += ReconnectButtonPressed;
             RetryButton.OnPressed += ReconnectButtonPressed;
-            DiscordButton.OnPressed += _ => IoCManager.Resolve<IUriOpener>().OpenUri("https://discord.gg/CPacm3dfrA"); // A-13
+            DiscordButton.OnPressed += _ => IoCManager.Resolve<IUriOpener>().OpenUri("https://discord.gg/CuWu6kSznf"); // A-13
             ExitButton.OnPressed += _ => _state.Exit();
 
             var addr = state.Address;

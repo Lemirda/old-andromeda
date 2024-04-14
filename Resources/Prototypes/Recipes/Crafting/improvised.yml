@@ -164,14 +164,14 @@
     state: icon
 
 - type: construction
-  name: improvised shotgun shell
+  name: импровизированный патрон для дробовика #A-13 Translation
   id: ShellShotgunImprovised
   graph: ImprovisedShotgunShellGraph
   startNode: start
   targetNode: shell
   category: construction-category-weapons
   objectType: Item
-  description: A homemade shotgun shell that shoots painful glass shrapnel. The spread is so wide that it couldn't hit the broad side of a Barn
+  description: Самодельный патрон для дробовика, стреляющий болезненными стеклянными осколками. Распространение настолько велико, что не может поразить широкую сторону сарая. #A-13 Translation
   icon:
     sprite: Objects/Weapons/Guns/Ammunition/Casings/shotgun_shell.rsi
     state: improvised
@@ -229,14 +229,14 @@
   objectType: Item
 
 - type: construction
-  name: pipe bomb
+  name: самодельная бомба #A-13 Translation
   id: pipebomb
   graph: PipeBomb
   startNode: start
   targetNode: pipebomb
   category: construction-category-weapons
   objectType: Item
-  description: An improvised explosive made from pipes and wire.
+  description: Самодельное взрывчатое вещество, сделанное из труб и проволоки. #A-13 Translation
   icon:
     sprite: Objects/Weapons/Bombs/pipebomb.rsi
     state: icon

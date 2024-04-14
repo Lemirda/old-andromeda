@@ -40,7 +40,7 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
     [Dependency] private readonly SharedJobSystem _jobs = default!;
     [Dependency] private readonly ObjectivesSystem _objectives = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SponsorsManager _sponsors = default!; // A-13 SponsorAntag
+    [Dependency] private readonly SponsorsManager _sponsorsManager = default!; // A-13 SponsorAntag
 
     private int PlayersPerTraitor => _cfg.GetCVar(CCVars.TraitorPlayersPerTraitor);
     private int MaxTraitors => _cfg.GetCVar(CCVars.TraitorMaxTraitors);
@@ -113,7 +113,6 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
             return;
 
         var traitorsToSelect = _antagSelection.CalculateAntagCount(_playerManager.PlayerCount, PlayersPerTraitor, MaxTraitors);
-
         var selectedTraitors = _antagSelection.ChooseAntags(traitorsToSelect, eligiblePlayers);
 
         MakeTraitor(selectedTraitors, component);
@@ -260,7 +259,9 @@ public sealed class TraitorRuleSystem : GameRuleSystem<TraitorRuleComponent>
                 chance = 1;
 
             // A-13 SponsorAntag start
-            if (_sponsors.TryGetInfo(ev.Player.UserId, out var sponsor) && sponsor.ExtraSlots == 7) // Cringe check until Tehnox update our service
+            // Замените проверку на эту, если необходимо сделать тесты, соответственно изменив "Ваш UserId":
+            //if (ev.Player.UserId == new Guid("{Ваш UserId}")) 
+            if (_sponsorsManager.TryGetInfo(ev.Player.UserId, out var sponsor) && sponsor.ExtraSlots == 7)
                 chance = 1;
             // A-13 SponsorAntag end
 

@@ -19,12 +19,10 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using System.Linq;
-using Content.Shared.Database;
-using Robust.Shared.Asynchronous;
 using Content.Server.Voting.Managers;
 using Content.Shared.Voting;
 using Content.Shared.CCVar;
+using System.Text.RegularExpressions; //A-13 AnnonceRoundUpdate
 
 namespace Content.Server.GameTicking
 {
@@ -310,7 +308,6 @@ namespace Content.Server.GameTicking
             RunLevel = GameRunLevel.PostRound;
 
             ShowRoundEndScoreboard(text);
-            SendRoundEndDiscordMessage();
         }
 
         public void ShowRoundEndScoreboard(string text = "")
@@ -411,9 +408,36 @@ namespace Content.Server.GameTicking
 
             _replayRoundPlayerInfo = listOfPlayerInfoFinal;
             _replayRoundText = roundEndText;
+            var roundEndSummary = GenerateRoundEndSummary(gamemodeTitle, roundEndText, listOfPlayerInfoFinal); //A-13 AnnonceRoundUpdate
+            SendRoundEndDiscordMessage(roundEndSummary); //A-13 AnnonceRoundUpdate
         }
 
-        private async void SendRoundEndDiscordMessage()
+        //A-13 AnnonceRoundUpdate start
+        private string ConvertBBCodeToMarkdown(string text)
+        {
+            text = Regex.Replace(text, @"\[.*?\]", "**");
+
+            return text;
+        }
+
+        private string GenerateRoundEndSummary(string gamemodeTitle, string roundEndText, RoundEndMessageEvent.RoundEndPlayerInfo[] playerInfoArray)
+        {
+            var roundEndTextMarkdown = ConvertBBCodeToMarkdown(roundEndText);
+            var stringBuilder = new System.Text.StringBuilder();
+            stringBuilder.AppendLine($"**Режим**: {gamemodeTitle}\n");
+            stringBuilder.AppendLine($"**Информация**: {roundEndTextMarkdown}\n");
+            stringBuilder.AppendLine($"**Игроки**:\n");
+
+            foreach (var playerInfo in playerInfoArray)
+            {
+                stringBuilder.AppendLine($"*{playerInfo.PlayerOOCName}* '**{playerInfo.PlayerICName}**' в роли: {playerInfo.Role}");
+            }
+
+            return stringBuilder.ToString();
+        }
+        //A-13 AnnonceRoundUpdate end
+
+        private async void SendRoundEndDiscordMessage(string roundEndSummary) //A-13 AnnonceRoundUpdate
         {
             try
             {
@@ -421,13 +445,12 @@ namespace Content.Server.GameTicking
                     return;
 
                 var duration = RoundDuration();
-                var content = Loc.GetString("discord-round-notifications-end",
-                    ("id", RoundId),
-                    ("hours", Math.Truncate(duration.TotalHours)),
-                    ("minutes", duration.Minutes),
-                    ("seconds", duration.Seconds));
+                //A-13 AnnonceRoundUpdate start
+                var content = $"**Раунд завершен!**\n" +
+                              $"**Продолжительность**: {Math.Truncate(duration.TotalHours)} часов {duration.Minutes} минут {duration.Seconds} секунд\n" +
+                              $"{roundEndSummary}";
                 var payload = new WebhookPayload { Content = content };
-
+                //A-13 AnnonceRoundUpdate end
                 await _discord.CreateMessage(_webhookIdentifier.Value, payload);
 
                 if (DiscordRoundEndRole == null)

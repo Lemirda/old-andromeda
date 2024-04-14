@@ -1444,6 +1444,16 @@
   entity: ClothingUnderwearSocksFishnettights
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingUnderwearWarmbraLoadout
+  entity: ClothingUnderwearWarmbra
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUnderwearWarmstockingsLoadout
+  entity: ClothingUnderwearWarmstockings
+  sponsorOnly: true
+
 #solevoitoropiga
 - type: loadout
   id: ClothingUnderwearBottomPantiesDeathSquadSponsorLoadout
@@ -1453,6 +1463,16 @@
 - type: loadout
   id: ClothingUnderwearTopDeathBraSponsorLoadout
   entity: ClothingUnderwearTopDeathBraSponsor
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingShoesSchoolWhiteLoadout
+  entity: ClothingShoesSchoolWhite
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingUniformJumpskirtSchoolLoadout
+  entity: ClothingUniformJumpskirtSchool
   sponsorOnly: true
 
 #Kivchik
