@@ -93,3 +93,18 @@
     - ClothMade
     - HamsterWearable
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatDetectiveDarkSponsor
+  name: кожаный плащ
+  description: Выглядит солидно.
+  suffix: Спонсор
+  components:
+    - type: Sprite
+      sprite: Corvax/Clothing/OuterClothing/Coats/noirdet.rsi
+    - type: Clothing
+      sprite: Corvax/Clothing/OuterClothing/Coats/noirdet.rsi
+    - type: StorageFill
+      contents:
+        - id: SmokingPipeFilledTobacco

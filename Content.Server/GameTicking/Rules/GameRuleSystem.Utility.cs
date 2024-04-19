@@ -5,6 +5,7 @@ using Robust.Shared.Collections;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Random;
+using System.Linq; // A-13
 
 namespace Content.Server.GameTicking.Rules;
 
@@ -105,7 +106,7 @@ public abstract partial class GameRuleSystem<T> where T: IComponent
             return false;
         }
 
-        targetGrid = RobustRandom.Pick(possibleTargets);
+        targetGrid = possibleTargets.First(); // A-13 spawn events only at station
 
         if (!TryComp<MapGridComponent>(targetGrid, out var gridComp))
             return false;
