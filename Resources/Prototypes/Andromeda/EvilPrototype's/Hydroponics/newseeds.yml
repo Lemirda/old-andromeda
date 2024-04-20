@@ -8,7 +8,7 @@
   productPrototypes:
     - MeatWheatBushel
   lifespan: 25
-  maturation: 12
+  maturation: 9
   production: 3
   yield: 2
   potency: 5
