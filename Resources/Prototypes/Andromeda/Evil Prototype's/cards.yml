@@ -1,0 +1,1943 @@
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardJokerRed
+  name: playablecard
+  suffix: Joker, PlayableCards, Red
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redjoker
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redjoker-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redjoker}
+        front:
+          True: {state: redjoker}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardJokerBlack
+  name: playablecard
+  suffix: Joker, PlayableCards, Black
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackjoker
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackjoker-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackjoker}
+        front:
+          True: {state: blackjoker}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardAceRedB
+  name: playablecard
+  suffix: Ace, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redaceb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redaceb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redaceb}
+        front:
+          True: {state: redaceb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardAceBlackP
+  name: playablecard
+  suffix: Ace, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackacep
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackacep-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackacep}
+        front:
+          True: {state: blackacep}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardAceRedC
+  name: playablecard
+  suffix: Ace, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redacec
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redacec-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redacec}
+        front:
+          True: {state: redacec}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardAceBlackT
+  name: playablecard
+  suffix: Ace, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackacet
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackacet-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackacet}
+        front:
+          True: {state: blackacet}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardKingRedC
+  name: playablecard
+  suffix: King, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redkingc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redkingc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redkingc}
+        front:
+          True: {state: redkingc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardKingBlackP
+  name: playablecard
+  suffix: King, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackkingp
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackkingp-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackkingp}
+        front:
+          True: {state: blackkingp}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardKingRedB
+  name: playablecard
+  suffix: King, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redkingb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redkingb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redkingb}
+        front:
+          True: {state: redkingb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardKingBlackT
+  name: playablecard
+  suffix: King, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackkingt
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackkingt-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackkingt}
+        front:
+          True: {state: blackkingt}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardQueenRedC
+  name: playablecard
+  suffix: Queen, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redqueenc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redqueenc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redqueenc}
+        front:
+          True: {state: redqueenc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardQueenBlackT
+  name: playablecard
+  suffix: Queen, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackqueent
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackqueent-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackqueent}
+        front:
+          True: {state: blackqueent}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardQueenRedB
+  name: playablecard
+  suffix: Queen, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redqueenb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redqueenb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redqueenb}
+        front:
+          True: {state: redqueenb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardQueenBlackP
+  name: playablecard
+  suffix: Queen, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackqueenp
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackqueenp-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackqueenp}
+        front:
+          True: {state: blackqueenp}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardJackRedB
+  name: playablecard
+  suffix: Jack, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redjackb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redjackb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redjackb}
+        front:
+          True: {state: redjackb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardJackBlackT
+  name: playablecard
+  suffix: Jack, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackjackt
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackjackt-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackjackt}
+        front:
+          True: {state: blackjackt}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardJackRedC
+  name: playablecard
+  suffix: Jack, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redjackc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redjackc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redjackc}
+        front:
+          True: {state: redjackc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardJackBlackP
+  name: playablecard
+  suffix: Jack, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackjackp
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackjackp-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackjackp}
+        front:
+          True: {state: blackjackp}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardTenRedB
+  name: playablecard
+  suffix: Ten, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redtenb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redtenb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redtenb}
+        front:
+          True: {state: redtenb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardTenBlackP
+  name: playablecard
+  suffix: Ten, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blacktenp
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blacktenp-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blacktenp}
+        front:
+          True: {state: blacktenp}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardTenRedC
+  name: playablecard
+  suffix: Ten, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redtenc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redtenc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redtenc}
+        front:
+          True: {state: redtenc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardTenBlackT
+  name: playablecard
+  suffix: Ten, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blacktent
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blacktent-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blacktent}
+        front:
+          True: {state: blacktent}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardNineRedB
+  name: playablecard
+  suffix: Nine, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: rednineb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: rednineb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: rednineb}
+        front:
+          True: {state: rednineb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardNineBlackP
+  name: playablecard
+  suffix: Nine, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackninep
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackninep-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackninep}
+        front:
+          True: {state: rednineb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardNineRedC
+  name: playablecard
+  suffix: Nine, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redninec
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redninec-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redninec}
+        front:
+          True: {state: redninec}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardNineBlackT
+  name: playablecard
+  suffix: Nine, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackninet
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackninet-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackninet}
+        front:
+          True: {state: blackninet}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardEightRedB
+  name: playablecard
+  suffix: Eight, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redeightb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redeightb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redeightb}
+        front:
+          True: {state: redeightb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardEightBlackP
+  name: playablecard
+  suffix: Eight, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackeightp
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackeightp-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackeightp}
+        front:
+          True: {state: blackeightp}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardEightRedC
+  name: playablecard
+  suffix: Eight, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redeightc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redeightc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redeightc}
+        front:
+          True: {state: redeightc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardEightBlackT
+  name: playablecard
+  suffix: Eight, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackeightt
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackeightt-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackeightt}
+        front:
+          True: {state: blackeightt}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardSevenRedB
+  name: playablecard
+  suffix: Seven, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redsevenb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redsevenb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redsevenb}
+        front:
+          True: {state: redsevenb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardSevenBlackP
+  name: playablecard
+  suffix: Seven, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blacksevenp
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blacksevenp-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blacksevenp}
+        front:
+          True: {state: blacksevenp}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardSevenRedC
+  name: playablecard
+  suffix: Seven, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redsevenc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redsevenc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redsevenc}
+        front:
+          True: {state: redsevenc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardSevenBlackT
+  name: playablecard
+  suffix: Seven, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blacksevent
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blacksevent-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blacksevent}
+        front:
+          True: {state: blacksevent}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardSixRedB
+  name: playablecard
+  suffix: Six, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redsixb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redsixb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redsixb}
+        front:
+          True: {state: redsixb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardSixBlackP
+  name: playablecard
+  suffix: Six, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blacksixp
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blacksixp-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blacksixp}
+        front:
+          True: {state: blacksixp}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardSixRedC
+  name: playablecard
+  suffix: Six, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redsixc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redsixc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redsixc}
+        front:
+          True: {state: redsixc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardSixBlackT
+  name: playablecard
+  suffix: Six, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blacksixt
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blacksixt-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blacksixt}
+        front:
+          True: {state: blacksixt}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardFiveRedB
+  name: playablecard
+  suffix: Five, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redfiveb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redfiveb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redfiveb}
+        front:
+          True: {state: redfiveb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardFiveBlackP
+  name: playablecard
+  suffix: Five, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackfivep
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackfivep-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackfivep}
+        front:
+          True: {state: blackfivep}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardFiveRedC
+  name: playablecard
+  suffix: Five, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redfivec
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redfivec-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redfivec}
+        front:
+          True: {state: redfivec}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardFiveBlackT
+  name: playablecard
+  suffix: Five, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackfivet
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackfivet-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackfivet}
+        front:
+          True: {state: blackfivet}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardFourRedB
+  name: playablecard
+  suffix: Four, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redfourb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redfourb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redfourb}
+        front:
+          True: {state: redfourb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardFourBlackP
+  name: playablecard
+  suffix: Four, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackfourp
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackfourp-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackfourp}
+        front:
+          True: {state: blackfourp}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardFourRedC
+  name: playablecard
+  suffix: Four, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redfourc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redfourc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redfourc}
+        front:
+          True: {state: redfourc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardFourBlackT
+  name: playablecard
+  suffix: Four, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackfourt
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackfourt-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackfourt}
+        front:
+          True: {state: blackfourt}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardThreeRedB
+  name: playablecard
+  suffix: Three, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redthreeb
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redthreeb-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redthreeb}
+        front:
+          True: {state: redthreeb}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardThreeBlackP
+  name: playablecard
+  suffix: Three, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackthreep
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackthreep-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackthreep}
+        front:
+          True: {state: blackthreep}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardThreeRedC
+  name: playablecard
+  suffix: Three, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redthreec
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redthreec-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redthreec}
+        front:
+          True: {state: redthreec}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardThreeBlackT
+  name: playablecard
+  suffix: Three, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blackthreet
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blackthreet-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blackthreet}
+        front:
+          True: {state: blackthreet}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardTwoRedB
+  name: playablecard
+  suffix: Two, PlayableCards, Diamonds
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redtwob
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redtwob-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redtwob}
+        front:
+          True: {state: redtwob}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardTwoBlackP
+  name: playablecard
+  suffix: Two, PlayableCards, Spades
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blacktwop
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blacktwop-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blacktwop}
+        front:
+          True: {state: blacktwop}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardTwoRedC
+  name: playablecard
+  suffix: Two, PlayableCards, Hearts
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: redtwoc
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: redtwoc-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: redtwoc}
+        front:
+          True: {state: redtwoc}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: PlayableCardTwoBlackT
+  name: playablecard
+  suffix: Two, PlayableCards, Clubs
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\playablecard.rsi
+    layers:
+    - state: blacktwot
+      map: ["front"]
+    - state: back
+      map: ["base"]
+  - type: Item
+    sprite: Andromeda\Evil\playablecard.rsi
+    size: Tiny
+  - type: Appearance
+  - type: FoldableCard
+    Description: blacktwot-description
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedCardVisuals.State:
+        base:
+          True: {state: back}
+          False: {state: blacktwot}
+        front:
+          True: {state: blacktwot}
+          False: {state: back}
+  - type: Tag
+    tags:
+    - PlayableCard
+
+- type: entity
+  id: CardBin
+  parent: [ BaseStorageItem, BaseBagOpenClose ]
+  name: card box
+  suffix: Пустой, Андромеда
+  description: What secrets lie at the bottom of its endless stack?
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\cardbin.rsi
+    layers:
+    - state: closed
+    - state: open
+      map: ["openLayer"]
+      visible: false
+    - state: card1
+      map: ["card1"]
+      sprite: Andromeda\Evil\cardbin.rsi
+      visible: false
+    - state: card2
+      map: ["card2"]
+      sprite: Andromeda\Evil\cardbin.rsi
+      visible: false
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,5,8
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - belt
+  - type: Storage
+    maxItemSize: Small
+    quickInsert: true
+    areaInsert: true
+    grid:
+    - 0,0,5,8
+    whitelist:
+      tags:
+        - PlayableCard
+  - type: Tag
+    tags:
+    - BoxCardboard
+  - type: ItemCounter
+    count:
+      tags: [PlayableCard]
+    composite: true
+    layerStates:
+    - card1
+    - card2
+  - type: Appearance
+  - type: Dumpable
+
+- type: entity
+  noSpawn: true
+  parent: CardBin
+  id: CardBinFool
+  name: колода карт (дурак)
+  suffix: Заполненный, Андромеда
+  components:
+  - type:  StorageFill
+    contents:
+    - id: PlayableCardAceRedC
+    - id: PlayableCardAceBlackT
+    - id: PlayableCardAceRedB
+    - id: PlayableCardAceBlackP
+    - id: PlayableCardKingRedC
+    - id: PlayableCardKingBlackT
+    - id: PlayableCardKingRedB
+    - id: PlayableCardKingBlackP
+    - id: PlayableCardQueenRedC
+    - id: PlayableCardQueenBlackT
+    - id: PlayableCardQueenRedB
+    - id: PlayableCardQueenBlackP
+    - id: PlayableCardJackRedC
+    - id: PlayableCardJackBlackT
+    - id: PlayableCardJackRedB
+    - id: PlayableCardJackBlackP
+    - id: PlayableCardTenRedC
+    - id: PlayableCardTenBlackT
+    - id: PlayableCardTenRedB
+    - id: PlayableCardTenBlackP
+    - id: PlayableCardNineRedC
+    - id: PlayableCardNineBlackT
+    - id: PlayableCardNineRedB
+    - id: PlayableCardNineBlackP
+    - id: PlayableCardEightRedC
+    - id: PlayableCardEightBlackT
+    - id: PlayableCardEightRedB
+    - id: PlayableCardEightBlackP
+    - id: PlayableCardSevenRedC
+    - id: PlayableCardSevenBlackT
+    - id: PlayableCardSevenRedB
+    - id: PlayableCardSevenBlackP
+    - id: PlayableCardSixRedC
+    - id: PlayableCardSixBlackT
+    - id: PlayableCardSixRedB
+    - id: PlayableCardSixBlackP
+
+- type: entity
+  noSpawn: true
+  parent: CardBin
+  id: CardBinPoker
+  name: колода карт (покер)
+  suffix: Заполненный, Андромеда
+  components:
+  - type:  StorageFill
+    contents:
+    - id: PlayableCardJokerRed
+    - id: PlayableCardJokerBlack
+    - id: PlayableCardAceRedC
+    - id: PlayableCardAceBlackT
+    - id: PlayableCardAceRedB
+    - id: PlayableCardAceBlackP
+    - id: PlayableCardKingRedC
+    - id: PlayableCardKingBlackT
+    - id: PlayableCardKingRedB
+    - id: PlayableCardKingBlackP
+    - id: PlayableCardQueenRedC
+    - id: PlayableCardQueenBlackT
+    - id: PlayableCardQueenRedB
+    - id: PlayableCardQueenBlackP
+    - id: PlayableCardJackRedC
+    - id: PlayableCardJackBlackT
+    - id: PlayableCardJackRedB
+    - id: PlayableCardJackBlackP
+    - id: PlayableCardTenRedC
+    - id: PlayableCardTenBlackT
+    - id: PlayableCardTenRedB
+    - id: PlayableCardTenBlackP
+    - id: PlayableCardNineRedC
+    - id: PlayableCardNineBlackT
+    - id: PlayableCardNineRedB
+    - id: PlayableCardNineBlackP
+    - id: PlayableCardEightRedC
+    - id: PlayableCardEightBlackT
+    - id: PlayableCardEightRedB
+    - id: PlayableCardEightBlackP
+    - id: PlayableCardSevenRedC
+    - id: PlayableCardSevenBlackT
+    - id: PlayableCardSevenRedB
+    - id: PlayableCardSevenBlackP
+    - id: PlayableCardSixRedC
+    - id: PlayableCardSixBlackT
+    - id: PlayableCardSixRedB
+    - id: PlayableCardSixBlackP
+    - id: PlayableCardFiveRedB
+    - id: PlayableCardFiveBlackP
+    - id: PlayableCardFiveRedC
+    - id: PlayableCardFiveBlackT
+    - id: PlayableCardFourRedB
+    - id: PlayableCardFourBlackP
+    - id: PlayableCardFourRedC
+    - id: PlayableCardFourBlackT
+    - id: PlayableCardThreeRedB
+    - id: PlayableCardThreeBlackP
+    - id: PlayableCardThreeRedC
+    - id: PlayableCardThreeBlackT
+    - id: PlayableCardTwoRedB
+    - id: PlayableCardTwoBlackP
+    - id: PlayableCardTwoRedC
+    - id: PlayableCardTwoBlackT
