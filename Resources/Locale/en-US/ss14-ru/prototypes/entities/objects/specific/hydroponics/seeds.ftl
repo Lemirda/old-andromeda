@@ -108,3 +108,5 @@ ent-PumpkinSeeds = packet of pumpkin seeds
     .desc = { ent-SeedBase.desc }
 ent-CottonSeeds = packet of cotton seeds
     .desc = { ent-SeedBase.desc }
+ent-MeatWheatSeeds = packet of meatwheat seeds
+    .desc = { ent-SeedBase.desc }

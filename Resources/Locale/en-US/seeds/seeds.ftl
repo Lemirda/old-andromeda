@@ -111,3 +111,5 @@ seeds-pumpkin-name = pumpkin
 seeds-pumpkin-display-name = pumpkins
 seeds-cotton-name = cotton
 seeds-cotton-display-name = cotton plant
+seeds-meatwheat-name = meatwheat
+seeds-meatwheat-display-name = meatwheat stalks

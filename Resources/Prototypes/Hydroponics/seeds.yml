@@ -37,6 +37,12 @@
       requiredMaxHealth: 150
       requiredMutationLevel: 0
       requiredReagent: Rice
+    meatwheat:
+      requiredMinPotency: 68
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 100
+      requiredReagent: UncookedAnimalProteins
 
 - type: seed
   id: oat
