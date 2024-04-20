@@ -30,6 +30,7 @@
       requiredMinHealth: 0
       requiredMaxHealth: 40
       requiredMutationLevel: 0
+      requiredReagent: Oat
     rice:
       requiredMinPotency: 30
       requiredMaxPotency: 100
