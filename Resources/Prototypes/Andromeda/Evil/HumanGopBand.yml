@@ -1,0 +1,189 @@
+- type: entity
+  id: MobGop
+  name: гопник
+  suffix: Андромеда
+  parent: MobSalvager
+  components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: gop
+    - type: RandomMetadata
+      nameSegments: [ corvax_names_death_commando ]
+    - type: Loadout
+      prototypes: [ MobGopGear ]
+    - type: InitialInfectedExempt
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackKingStation
+  id: ClothingBackpackKingStationFilledGopnik
+  suffix: Заполненный, Андромеда
+  components:
+  - type:  StorageFill
+    contents:
+      - id: DrinkVodkaBottleFull
+      - id: DrinkVodkaGlass
+      - id: CigPackGreen
+      - id: CheapLighter
+      - id: FoodSnackSemki
+      - id: FoodBreadPlain
+
+- type: startingGear
+  id: MobGopGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitKingStation
+    back: ClothingBackpackKingStationFilledGopnik
+    shoes: ClothingShoesColorBlack
+    mask: ClothingMaskNeckGaiter
+    head: ClothingHeadHatKingStation
+  inhand:
+    - ScalpelShiv
+
+- type: entity
+  name: заключённый
+  parent: MobGop
+  id: MobGopPrisoner
+  suffix: Андромеда
+  components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: prisoner
+    - type: Loadout
+      prototypes: [ MobGopPrisonerGear ]
+    - type: InitialInfectedExempt
+
+- type: startingGear
+  id: MobGopPrisonerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorBlack
+  inhand:
+    - ScalpelShiv
+
+- type: entity
+  name: карманник
+  parent: MobGop
+  id: MobGopPickpocket
+  suffix: Андромеда
+  components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: pickpocket
+    - type: Loadout
+      prototypes: [ MobGopPickpocketGear ]
+    - type: InitialInfectedExempt
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackKingStation
+  id: ClothingBackpackKingStationFilledPP
+  suffix: Заполненный, Андромеда
+  components:
+  - type:  StorageFill
+    contents:
+      - id: DrinkVodkaBottleFull
+      - id: DrinkVodkaGlass
+      - id: CigPackGreen
+      - id: CheapLighter
+      - id: FoodSnackSemki
+      - id: FoodBreadPlain
+      - id: BookSecurity
+      - id: BookHowToSurvive
+      - id: DrinkAbsintheBottleFull
+      - id: SpaceCash100
+      - id: IngotGold1
+
+- type: startingGear
+  id: MobGopPickpocketGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitKingStation
+    back: ClothingBackpackKingStationFilledPP
+    shoes: ClothingShoesColorBlack
+    belt: ClothingBeltUtilityFilled
+    mask: ClothingMaskNeckGaiter
+    head: ClothingHeadHatKingStation
+    gloves: ClothingHandsGlovesFingerlessInsulated
+    outerClothing: ClothingOuterBlackHoodie
+  inhand:
+    - ScalpelShiv
+
+- type: entity
+  name: вышибала
+  parent: MobGop
+  id: MobGopSecurity
+  suffix: Андромеда
+  components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: security
+    - type: Loadout
+      prototypes: [ MobGopSecurityGear ]
+    - type: InitialInfectedExempt
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackKingStationRed
+  name: красный рюкзак гопника
+  description: Скорее всего тут раньше было много украденного, до прихода в бриг.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/kingstationbackpackred.rsi
+
+- type: entity
+  noSpawn: true
+  parent: ClothingBackpackKingStationRed
+  id: ClothingBackpackKingStationRedFilledGopnik
+  suffix: Заполненный, Андромеда
+  components:
+  - type:  StorageFill
+    contents:
+      - id: KitchenKnife
+      - id: WeaponShotgunImprovisedLoaded
+      - id: DrinkVodkaBottleFull
+      - id: DrinkVodkaGlass
+      - id: CigPackGreen
+      - id: CheapLighter
+      - id: FoodSnackSemki
+      - id: FoodBreadPlain
+      - id: Handcuffs
+
+- type: startingGear
+  id: MobGopSecurityGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitKingStation
+    back: ClothingBackpackKingStationRedFilledGopnik
+    eyes: ClothingEyesGlassesCheapSunglasses
+    outerClothing: ClothingOuterArmorSteel
+    shoes: ClothingShoesColorBlack
+    belt: ClothingBeltUtilityFilled
+    head: ClothingHeadHatKingStation
+    gloves: ClothingHandsGlovesFingerless
+  inhand:
+    - CrowbarRed
+
+- type: entity
+  name: главарь
+  parent: MobGop
+  id: MobGopLeader
+  suffix: Андромеда
+  components:
+    - type: Icon
+      sprite: Andromeda/Evil/gopband.rsi
+      state: leader
+    - type: Loadout
+      prototypes: [ MobGopLeaderGear ]
+    - type: InitialInfectedExempt
+
+- type: startingGear
+  id: MobGopLeaderGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitKingStation
+    back: ClothingBackpackKingStationFilledGopnik
+    shoes: ClothingShoesColorBlack
+    belt: ClothingBeltUtilityFilled
+    neck: ClothingNeckBling
+    head: ClothingHeadHatFancyCrown
+    outerClothing: ClothingOuterCoatGentle
+  inhand:
+    - Cutlass
