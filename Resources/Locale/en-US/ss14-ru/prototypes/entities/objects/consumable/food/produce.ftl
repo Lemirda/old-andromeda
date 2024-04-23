@@ -126,5 +126,3 @@ ent-FoodPumpkin = pumpkin
     .desc = A large, orange... berry. Seriously.
 ent-CottonBol = cotton boll
     .desc = Moth people's favorite snack, and just as fluffy as them.
-ent-MeatWheatBushel = meat wheat bushel
-    .desc = Wait... meaty?

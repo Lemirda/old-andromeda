@@ -1,8 +1,8 @@
 - type: seed
   id: meatwheat
-  name: seeds-meatwheat-name
+  name: мясная пшеница
   noun: seeds-noun-seeds
-  displayName: seeds-meatwheat-display-name
+  displayName: стебли мясной пшеницы
   plantRsi: Andromeda\Evil\meatwheat.rsi
   packetPrototype: MeatWheatSeeds
   productPrototypes:
@@ -21,7 +21,7 @@
 
 - type: entity
   parent: SeedBase
-  name: packet of meatwheat seeds
+  name: пакет семян (мясная пшеница)
   id: MeatWheatSeeds
   components:
     - type: Seed
@@ -30,8 +30,8 @@
       sprite: Andromeda\Evil\meatwheat.rsi
 
 - type: entity
-  name: meat wheat bushel
-  description: Wait... meaty?
+  name: сноп мясной пшеницы
+  description: Странно... мясное?
   id: MeatWheatBushel
   parent: FoodProduceBase
   components:

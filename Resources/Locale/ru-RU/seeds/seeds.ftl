@@ -110,5 +110,3 @@ seeds-pumpkin-name = тыква
 seeds-pumpkin-display-name = тыква
 seeds-cotton-name = хлопок
 seeds-cotton-display-name = куст хлопка
-seeds-meatwheat-name = мясная пшеница
-seeds-meatwheat-display-name = стебли мясной пшеницы

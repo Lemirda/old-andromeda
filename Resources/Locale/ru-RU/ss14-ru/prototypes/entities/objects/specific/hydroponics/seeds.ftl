@@ -108,5 +108,3 @@ ent-PumpkinSeeds = пакет семян (тыква)
     .desc = { ent-SeedBase.desc }
 ent-CottonSeeds = пакет семян (хлопок)
     .desc = { ent-SeedBase.desc }
-ent-MeatWheatSeeds = пакет семян (мясная пшеница)
-    .desc = { ent-SeedBase.desc }
