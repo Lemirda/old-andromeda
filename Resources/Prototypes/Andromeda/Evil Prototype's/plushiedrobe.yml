@@ -1,0 +1,73 @@
+- type: entity
+  parent: VendingMachine
+  id: PlushieDrobe
+  name: плюшемат
+  description: Вступите в прекрасных мир плюшевых игрушек, рай для любителей игр и милоты.
+  components:
+  - type: VendingMachine
+    pack: PlushieDrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Advertise
+    pack: PlushieDrobeAds
+  - type: Speech
+  - type: Sprite
+    sprite: Andromeda\Evil\plushiedrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: advertisementsPack
+  id: PlushieDrobeAds
+  advertisements:
+    - Осветите ваш день, вместе с новыми пушистыми друзьями!
+    - Обнимашки начинаются здесь!
+    - Поддайся плюшевому искушению!
+    - Ты не выдержишь их милоты!
+    - Внимание! Передоз милотой!
+    - Мягче не бывает!
+
+- type: vendingMachineInventory
+  id: PlushieDrobeInventory
+  startingInventory:
+    PlushieCarp: 1
+    PlushieHoloCarp: 1
+    PlushieMagicarp: 1
+    PlushieRainbowCarp: 1
+    PlushieSharkGrey: 1
+    PlushieSharkBlue: 1
+    PlushieSharkPink: 1
+    PlushieBear: 1
+    PlushieMaleToy: 1
+    PlushieMaleAndGun: 1
+    PlushieRatvar: 1
+    PlushieNar: 1
+    PlushieArachnid: 1
+    PlushieAtmosian: 1
+    PlushieXeno: 1
+    PlushieBee: 1
+    PlushieRGBee: 1
+    PlushieHampter: 1
+    PlushiePenguin: 1
+    PlushieLizard: 1
+    PlushieSpaceLizard: 1
+    PlushieVox: 1
+    PlushieSlime: 1
+    PlushieRouny: 1 
+    PlushieMoth: 1
+    PlushieDiona: 1
+    MrChips: 1
+    MrDips: 1
+    BeachBall: 1
+    Basketball: 1
+    Football: 1
+    ToyHammer: 1
+    PonderingOrb: 1
+    CrayonBox: 2
+    CrayonRainbow: 1
