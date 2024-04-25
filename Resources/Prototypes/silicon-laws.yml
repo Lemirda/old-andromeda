@@ -172,3 +172,39 @@
     NTDefault: 1
     Drone: 0.5
     Ninja: 0.25
+
+# Mr.Proper laws
+- type: siliconLaw
+  id: Proper1
+  order: 1
+  lawString: laws-proper-borg-1
+
+- type: siliconLaw
+  id: Proper2
+  order: 2
+  lawString: laws-proper-borg-2
+
+- type: siliconLaw
+  id: Proper3
+  order: 3
+  lawString: laws-proper-borg-3
+
+- type: siliconLaw
+  id: Proper4
+  order: 4
+  lawString: laws-proper-borg-4
+
+- type: siliconLaw
+  id: Proper5
+  order: 5
+  lawString: laws-proper-borg-5
+
+- type: siliconLawset
+  id: Proper
+  laws:
+  - Proper1
+  - Proper2
+  - Proper3
+  - Proper4
+  - Proper5
+  obeysTo: laws-owner-proper-dad

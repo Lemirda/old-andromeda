@@ -1,0 +1,19 @@
+- type: entity
+  name: мега-космический очиститель
+  id: GigaSprayBottle
+  parent: MegaSprayBottle
+  suffix: Андромеда
+  description: Очень вместительное, очень мощное, только для Богов чистоты.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 10000
+        reagents:
+        - ReagentId: SpaceCleaner
+          Quantity: 10000
+  - type: Spray
+    transferAmount: 50
+    sprayedPrototype: BigVapor
+    sprayVelocity: 3
+    sprayDistance: 10

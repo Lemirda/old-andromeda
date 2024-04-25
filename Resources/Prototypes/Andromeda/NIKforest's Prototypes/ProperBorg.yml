@@ -1,0 +1,71 @@
+- type: entity
+  id: BorgChassisProper
+  parent: BaseBorgChassisNT
+  name: киборг-Пропер
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Mobs/Silicon/properborg.rsi
+    layers:
+    - state: proper
+    - state: proper_e_r
+      map: ["enum.BorgVisualLayers.Light"]
+      shader: unshaded
+      visible: false
+    - state: proper_l
+      shader: unshaded
+      map: ["light"]
+      visible: false
+  - type: BorgChassis
+    maxModules: 5
+    moduleWhitelist:
+      tags:
+      - BorgModuleGeneric
+      - BorgModuleProper
+    hasMindState: proper_e
+    noMindState: proper_e_r
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 4.0
+  - type: StaticPrice
+    price: 30000
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Critical
+      250: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+    showOverlays: false
+    allowRevives: true
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Engineering
+    - Medical
+    - Command
+    - Security
+    - Service
+    - Binary
+    - Common
+    - Science
+  - type: ActiveRadio
+    channels:
+    - Engineering
+    - Medical
+    - Command
+    - Security
+    - Service
+    - Binary
+    - Common
+    - Science
+  - type: AccessReader
+    access: [["Engineering"], ["Command"], ["Research"], ["Security"], ["Medical"], ["Service"]]
+  - type: Inventory
+    templateId: borgShort
+  - type: Repairable
+    doAfterDelay: 10
+    allowSelfRepair: true
+  - type: SiliconLawProvider
+    laws: Proper

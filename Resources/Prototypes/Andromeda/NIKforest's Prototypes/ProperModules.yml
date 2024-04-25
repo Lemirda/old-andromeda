@@ -1,0 +1,110 @@
+- type: entity
+  id: BaseBorgProperModule
+  parent: BaseItem
+  name: borg module
+  description: A piece of tech that gives cyborgs new abilities.
+  suffix: Андромеда
+  abstract: true
+  components:
+  - type: Item
+    storedRotation: -90
+  - type: Sprite
+    sprite: Andromeda/Objects/Specific/Robotics/propermoduls.rsi
+  - type: BorgModule
+  - type: StaticPrice
+    price: 30000
+  - type: Tag
+    tags:
+    - BorgModuleGeneric
+  - type: GuideHelp
+    guides:
+      - Cyborgs
+
+- type: entity
+  id: BaseBorgModuleProper
+  parent: BaseBorgProperModule
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - BorgModuleProper
+
+- type: entity
+  id: BorgModuleCleanProper
+  parent: [ BaseBorgModuleProper, BaseProviderBorgModule ]
+  name: Чистящий модуль пропера
+  components:
+  - type: Sprite
+    layers:
+    - state: proper
+    - state: icon-mopproper
+  - type: ItemBorgModule
+    items:
+    - AdvMopItem
+    - GigaSprayBottle
+
+- type: entity
+  id: BorgModuleBagProper
+  parent: [ BaseBorgModuleProper, BaseProviderBorgModule ]
+  name: Сборный модуль пропера
+  components:
+  - type: Sprite
+    layers:
+    - state: proper
+    - state: icon-properbags
+  - type: ItemBorgModule
+    items:
+    - TrashBag
+    - BooksBag
+    - OreBag
+    - PlantBag
+    - ChemBag
+
+- type: entity
+  id: BorgModuleKillerProper
+  parent: [ BaseBorgModuleProper, BaseProviderBorgModule ]
+  name: Смертельный модуль пропера
+  components:
+  - type: Sprite
+    layers:
+    - state: proper
+    - state: icon-properdead
+  - type: ItemBorgModule
+    items:
+    - EnergySword
+    - WeaponAdvancedLaser
+
+- type: entity
+  id: BorgModuleWayCleanerProper
+  parent: [ BaseBorgModuleProper, BaseProviderBorgModule ]
+  name: Очищающий путь модуль пропера
+  components:
+  - type: Sprite
+    layers:
+    - state: proper
+    - state: icon-properway
+  - type: ItemBorgModule
+    items:
+    - MiningDrill
+    - FireAxe
+
+- type: entity
+  id: BorgModuleWayFixProper
+  parent: [ BaseBorgModuleProper, BaseProviderBorgModule ]
+  name: Очищающий путь модуль пропера
+  components:
+  - type: Sprite
+    layers:
+    - state: proper
+    - state: icon-properfixway
+  - type: ItemBorgModule
+    items:
+    - SheetSteelLingering
+    - SheetGlassLingering
+    - PartRodMetalLingering
+    - FloorTileItemSteelLingering
+    - SheetPlasteel
+    - SheetRGlass
+    - Omnitool
+    - Multitool
+    - WelderExperimental
