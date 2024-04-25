@@ -5,7 +5,7 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Mobs/Silicon/properborg.rsi
+    sprite: Andromeda/NIKforest/properborg.rsi
     layers:
     - state: proper
     - state: proper_e_r

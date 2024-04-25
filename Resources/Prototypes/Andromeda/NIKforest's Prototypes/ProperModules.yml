@@ -9,7 +9,7 @@
   - type: Item
     storedRotation: -90
   - type: Sprite
-    sprite: Andromeda/Objects/Specific/Robotics/propermoduls.rsi
+    sprite: Andromeda/NIKforest/propermoduls.rsi
   - type: BorgModule
   - type: StaticPrice
     price: 30000
