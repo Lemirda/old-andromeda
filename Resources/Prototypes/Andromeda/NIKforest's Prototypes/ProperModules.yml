@@ -99,12 +99,12 @@
     - state: icon-properfixway
   - type: ItemBorgModule
     items:
-    - SheetSteelLingering
-    - SheetGlassLingering
-    - PartRodMetalLingering
-    - FloorTileItemSteelLingering
-    - SheetPlasteel
-    - SheetRGlass
+    - SheetSteelLingering0
+    - SheetGlassLingering0
+    - PartRodMetalLingering0
+    - FloorTileItemSteelLingering0
+    - SheetPlasteel0
+    - SheetRGlass0
     - Omnitool
     - Multitool
     - WelderExperimental
