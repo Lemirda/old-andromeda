@@ -1,0 +1,75 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushiePaintor
+  name: плюшевый грустный художник
+  description: Это маленький плюшевый художник, ваш грустный брат по рисованию. Он вам с радостью поможет.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushiepaintor.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushiepaintor.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,1,1
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: PointLight
+    netsync: false
+    radius: 2.5
+    energy: 1.0
+    color: "#9932CC"
+  - type:  StorageFill
+    contents:
+      - id: SprayPaintPurple
+      - id: CrayonPurple
+      - id: CrayonRainbow
+#Добавить кастомные звуки художнику
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieSelectionist
+  name: плюшевый селекционер
+  description: Растрепанный исследователь-ботаник, весь в работе над селекцией растений.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushieselectionist.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushieselectionist.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,1,1
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: PointLight
+    netsync: false
+    radius: 2.5
+    energy: 1.0
+    color: "#55eb63"
+#Подумать над унимакльным своством или кармашком
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieUna
+  name: плюшевая унати
+  description: Эта маленькая унати всегда придёт к Вам на помощь, чтобы спасти от одиночества.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushieuna.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushieuna.rsi
+#Добавить звуки крики унатхов

@@ -1,19 +1,19 @@
 - type: entity
   parent: VendingMachine
-  id: PlushieDrobe
-  name: плюшемат
-  description: Вступите в прекрасных мир плюшевых игрушек, рай для любителей игр и милоты.
+  id: HugsDrobe
+  name: обнимат
+  description: Если долго всматриваться в нашу плюшемягкую бездну, можно сгинуть в ней... От умиления!
   components:
   - type: VendingMachine
-    pack: PlushieDrobeInventory
+    pack: HugsDrobeInventory
     offState: off
     brokenState: broken
     normalState: normal-unshaded
   - type: Advertise
-    pack: PlushieDrobeAds
+    pack: HugsDrobeAds
   - type: Speech
   - type: Sprite
-    sprite: Andromeda\Evil\plushiedrobe.rsi
+    sprite: Andromeda\Evil\hugsdrobe.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -24,50 +24,71 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 - type: advertisementsPack
-  id: PlushieDrobeAds
+  id: HugsDrobeAds
   advertisements:
-    - Осветите ваш день, вместе с новыми пушистыми друзьями!
-    - Обнимашки начинаются здесь!
-    - Поддайся плюшевому искушению!
-    - Ты не выдержишь их милоты!
-    - Внимание! Передоз милотой!
-    - Мягче не бывает!
+    - Подходят для шуточной драки!
+    - Мягче подушки!
+    - Лучший друг для сна!
+    - Порадуйте свою любовь!
+    - Собери их всех!
+  thankyous:
+    - Можно и смотреть, и лапать!
+    - Завораживающе милы!
+    - Слышали их крик?
+    - Наши игрушки на девяносто процентов состоят из доброты и на десять - из плутония! ... Шутка!
+    - И никаких мстительных духов внутри!
+    - Отталкивают грязь, воду, кровь, кровь, пыль!
+    - Мягче только стены моей комнаты!
+    - Широкая палитра цветов от FFFAFA до 808080!
+    - Безбашенно восхитительны!
+    - Не отрывайте им головы!
+    - Раздолби мою плюшевую пизду!
 
 - type: vendingMachineInventory
-  id: PlushieDrobeInventory
+  id: HugsDrobeInventory
   startingInventory:
-    PlushieCarp: 1
-    PlushieHoloCarp: 1
-    PlushieMagicarp: 1
-    PlushieRainbowCarp: 1
-    PlushieSharkGrey: 1
-    PlushieSharkBlue: 1
-    PlushieSharkPink: 1
-    PlushieBear: 1
-    PlushieMaleToy: 1
-    PlushieMaleAndGun: 1
-    PlushieRatvar: 1
-    PlushieNar: 1
-    PlushieArachnid: 1
-    PlushieAtmosian: 1
-    PlushieXeno: 1
-    PlushieBee: 1
-    PlushieRGBee: 1
-    PlushieHampter: 1
-    PlushiePenguin: 1
-    PlushieLizard: 1
-    PlushieSpaceLizard: 1
-    PlushieVox: 1
-    PlushieSlime: 1
-    PlushieRouny: 1 
-    PlushieMoth: 1
-    PlushieDiona: 1
-    MrChips: 1
-    MrDips: 1
-    BeachBall: 1
-    Basketball: 1
-    Football: 1
-    ToyHammer: 1
-    PonderingOrb: 1
-    CrayonBox: 2
-    CrayonRainbow: 1
+#Различная приятная мелочь
+    PlushieXeno: 2
+    PlushieBee: 2
+    PlushieRGBee: 2
+    PlushieHampter: 2
+    PlushiePenguin: 2
+    PlushieLizard: 2
+    PlushieSnake: 2
+    PlushieSpaceLizard: 2
+    PlushieVox: 2
+    PlushieSlime: 2
+    PlushieRouny: 2 
+    PlushieMoth: 2
+    PlushieDiona: 2
+#Рыбки
+    PlushieCarp: 2
+    PlushieHoloCarp: 2
+    PlushieMagicarp: 2
+    PlushieRainbowCarp: 2
+    PlushieSharkGrey: 2
+    PlushieSharkBlue: 2
+    PlushieSharkPink: 2
+#Божества и человеки
+    PlushieBear: 2
+    PlushieMaleToy: 2
+    PlushieMaleAndGun: 2
+    PlushieRatvar: 2
+    PlushieNar: 2
+    MrChips: 2
+    MrDips: 2
+    PlushieArachnid: 2
+    PlushieAtmosian: 2
+    PlushieScientist: 1
+    PlushieGirl: 1
+    PlushieRD: 1
+    PlushiePaintor: 1
+    PlushieSelectionist: 1
+#Различная плюшевая мелочевка
+    BeachBall: 2
+    Basketball: 2
+    Football: 2
+    ToyHammer: 2
+    PonderingOrb: 2
+    CrayonBox: 3
+    CrayonRainbow: 2
