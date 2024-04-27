@@ -3,6 +3,7 @@
   name: мясная пшеница
   noun: seeds-noun-seeds
   displayName: стебли мясной пшеницы
+  suffix: Андромеда
   plantRsi: Andromeda\Evil\meatwheat.rsi
   packetPrototype: MeatWheatSeeds
   productPrototypes:
@@ -22,6 +23,7 @@
 - type: entity
   parent: SeedBase
   name: пакет семян (мясная пшеница)
+  suffix: Андромеда
   id: MeatWheatSeeds
   components:
     - type: Seed
@@ -32,6 +34,7 @@
 - type: entity
   name: сноп мясной пшеницы
   description: Странно... мясное?
+  suffix: Андромеда
   id: MeatWheatBushel
   parent: FoodProduceBase
   components:

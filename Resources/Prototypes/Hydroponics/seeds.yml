@@ -24,7 +24,7 @@
       Max: 20
       PotencyDivisor: 20
   evolveTable:
-    meatwheat:
+    meatwheat: #A-13 MeatWheatseed
       requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 80
