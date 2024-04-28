@@ -1,0 +1,221 @@
+- type: entity # Плюшевый СэдБрат
+  parent: BasePlushie
+  id: PlushiePaintor
+  name: плюшевый грустный художник
+  description: Это маленький плюшевый художник, ваш грустный брат по рисованию. Он вам с радостью поможет.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushiepaintor.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushiepaintor.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,1,1
+    whitelist:
+      components:
+        - Paint
+        - Crayon
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#9932CC"
+  - type:  StorageFill
+    contents:
+      - id: SprayPaintPurple
+      - id: CrayonPurple
+      - id: CrayonRainbow
+  - type: EmitSoundOnLand #Переделать
+    sound:
+      collection: PaintorThrow
+  - type: EmitSoundOnActivate #Переделать
+    sound:
+      collection: PaintorActivate
+  - type: EmitSoundOnUse #Переделать
+    sound:
+      collection: PaintorUse
+  - type: Clothing
+    quickEquip: false
+    sprite: Andromeda\Evil\plushiepaintor.rsi
+    slots:
+    - HEAD
+
+- type: soundCollection #Переделать
+  id: PaintorThrow
+  files:
+  - /Audio/Andromeda/Evil/SoundCollection/PlushiePaintor/pain.ogg
+- type: soundCollection #Переделать
+  id: PaintorActivate
+  files:
+  - /Audio/Andromeda/Evil/SoundCollection/PlushiePaintor/painting.ogg
+- type: soundCollection #Переделать
+  id: PaintorUse
+  files:
+  - /Audio/Andromeda/Evil/SoundCollection/PlushiePaintor/karandash.ogg
+
+- type: entity # Плюшевый Жук
+  parent: BasePlushie
+  id: PlushieSelectionist
+  name: плюшевый селекционер
+  description: Растрепанный исследователь-ботаник, весь в работе над селекцией растений.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushieselectionist.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushieselectionist.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,0,0
+    whitelist:
+      components:
+        - Produce
+        - Seed
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#55eb63"
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/toy_rustle.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: \Audio\Voice\Human\malescream_1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/toy_rustle.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/Toys/toy_rustle.ogg
+  - type: Clothing
+    quickEquip: false
+    sprite: Andromeda\Evil\plushieselectionist.rsi
+    slots:
+    - HEAD
+
+- type: entity # Плюшевая Азала
+  parent: BasePlushie
+  id: PlushieUna
+  name: плюшевая унати
+  description: Эта маленькая унати всегда придёт к Вам на помощь, чтобы спасти от одиночества.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushieuna.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushieuna.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Animals/lizard_happy.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Voice/Reptilian/Reptilian_scream.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Animals/lizard_happy.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Voice/Reptilian/Reptilian_scream.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Reptilian/Reptilian_scream.ogg
+
+- type: entity # Плюшевый кадет (Котико)
+  parent: BasePlushie
+  id: PlushieCadet
+  name: плюшевый кадет
+  description: Не обманывайтесь её глупой мордочкой, эта унати стоит на страже закона! ... И ... возможно на вашем лице, если вы этот закон нарушили!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushiecadet.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushiecadet.rsi
+
+- type: entity # Плюшевый авантюрист (s6766)
+  parent: BasePlushie
+  id: PlushieAdv
+  name: плюшевый авантюрист
+  description: От него веет жаждой приключений и карпами. Еще на 30% мягче!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushieadv.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushieadv.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: \Audio\Andromeda\Voice\Talk\vulp_exclaim.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: \Audio\Andromeda\Voice\Talk\vulp_exclaim.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: \Audio\Andromeda\Voice\Talk\vulp_exclaim.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: \Audio\Andromeda\Voice\Talk\vulp_exclaim.ogg
+
+- type: entity # Плюшевая ученая -  фелинидка
+  parent: BasePlushie
+  id: PlushieFelSci
+  name: плюшевая научная ассистентка
+  description: От неё веет жаждой знаний.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushiefelsci.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushiefelsci.rsi
+
+- type: entity # Плюшевый кобольд
+  parent: BasePlushie
+  id: PlushieCob
+  name: плюшевый кобольд
+  description: Милая плюшевая игрушка.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushiecob.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushiecob.rsi
+
+- type: entity # Плюшевая каргонианка
+  parent: BasePlushie
+  id: PlushieCarGirl
+  name: плюшевая каргонианка
+  description: Милая плюшевая игрушка.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda\Evil\plushiecargirl.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda\Evil\plushiecargirl.rsi
