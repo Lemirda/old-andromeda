@@ -188,3 +188,12 @@
   category: cargoproduct-category-name-service
   group: market
 
+- type: cargoProduct # А-13 ОбниМат
+  id: HugsDrobe
+  icon:
+    sprite: Andromeda\Evil\hugsdrobe.rsi
+    state: off
+  product: HugsDrobe
+  cost: 2000
+  category: cargoproduct-category-name-service
+  group: market
