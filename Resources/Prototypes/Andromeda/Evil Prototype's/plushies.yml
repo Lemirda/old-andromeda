@@ -83,18 +83,6 @@
     radius: 1.5
     energy: 1.0
     color: "#55eb63"
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Items/Toys/toy_rustle.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: \Audio\Voice\Human\malescream_1.ogg
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Items/Toys/toy_rustle.ogg
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Items/Toys/toy_rustle.ogg
   - type: Clothing
     quickEquip: false
     sprite: Andromeda\Evil\plushieselectionist.rsi
