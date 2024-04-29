@@ -188,7 +188,8 @@
   category: cargoproduct-category-name-service
   group: market
 
-- type: cargoProduct # А-13 ОбниМат
+# А-13 ОбниМат start
+- type: cargoProduct
   id: HugsDrobe
   icon:
     sprite: Andromeda\Evil\hugsdrobe.rsi
@@ -197,3 +198,4 @@
   cost: 2000
   category: cargoproduct-category-name-service
   group: market
+# А-13 ОбниМат end
