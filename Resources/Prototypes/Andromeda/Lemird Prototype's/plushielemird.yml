@@ -28,6 +28,11 @@
   - type: EmitSoundOnActivate
     sound:
       collection: PlushieLemird
+  - type: Clothing
+    quickEquip: false
+    sprite: Andromeda/Lemird/plushielemird.rsi
+    slots:
+    - HEAD
 
 - type: soundCollection
   id: PlushieLemird

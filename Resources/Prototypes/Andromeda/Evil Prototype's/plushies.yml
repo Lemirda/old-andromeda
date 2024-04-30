@@ -83,11 +83,6 @@
     radius: 1.5
     energy: 1.0
     color: "#55eb63"
-  - type: Clothing
-    quickEquip: false
-    sprite: Andromeda\Evil\plushieselectionist.rsi
-    slots:
-    - HEAD
 
 - type: entity
   parent: BasePlushie

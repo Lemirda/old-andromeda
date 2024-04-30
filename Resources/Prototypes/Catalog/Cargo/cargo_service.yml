@@ -195,7 +195,7 @@
     sprite: Andromeda\Evil\hugsdrobe.rsi
     state: off
   product: HugsDrobe
-  cost: 2000
+  cost: 8000
   category: cargoproduct-category-name-service
   group: market
 # А-13 ОбниМат end

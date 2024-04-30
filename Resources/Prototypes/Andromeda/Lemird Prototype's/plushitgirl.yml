@@ -7,7 +7,16 @@
   components:
   - type: Sprite
     sprite: Andromeda/Lemird/plushiegirl.rsi
-    state: icon
+    layers:
+    - map: [ "enum.DamageStateVisualLayers.Base" ]
+      state: icon
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: glow
   - type: Item
     size: Small
     sprite: Andromeda/Lemird/plushiegirl.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#45a3ea"
