@@ -188,6 +188,17 @@
   category: cargoproduct-category-name-service
   group: market
 
+# А-13 Плант-О-Мат start
+- type: cargoProduct
+  id: VendingMachinePottedPlant
+  icon:
+    sprite: Andromeda\Evil\plantmatte.rsi
+    state: off
+  product: VendingMachinePottedPlant
+  cost: 6500
+  category: cargoproduct-category-name-service
+  group: market
+# А-13 Плант-О-Мат end
 # А-13 ОбниМат start
 - type: cargoProduct
   id: HugsDrobe
