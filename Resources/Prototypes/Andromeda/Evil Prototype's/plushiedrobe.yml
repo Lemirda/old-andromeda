@@ -2,7 +2,7 @@
   parent: VendingMachine
   id: HugsDrobe
   name: ОбниМат
-  description: Если долго всматриваться в нашу плюше-мягкую бездну, то можно сгибнуть от умиления!
+  description: Если долго всматриваться в эту плюше-мягкую бездну, то можно сгибнуть от умиления!
   components:
   - type: VendingMachine
     pack: HugsDrobeInventory
