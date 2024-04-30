@@ -6,7 +6,7 @@ using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
 
-namespace Content.Shared.FoldableCard;
+namespace Content.Shared.Andromeda.PlayableCards;
 
 public sealed class FoldableCardSystem : EntitySystem
 {
@@ -30,11 +30,13 @@ public sealed class FoldableCardSystem : EntitySystem
     {
         args.PushMarkup(Loc.GetString(component.CurrentDescription));
     }
+
     private void UseInHand(EntityUid uid, FoldableCardComponent component, UseInHandEvent args)
     {
         component.IsFolded = !component.IsFolded;
         SetFolded(uid, component, component.IsFolded);
     }
+
     private void OnGetState(EntityUid uid, FoldableCardComponent component, ref ComponentGetState args)
     {
         args.State = new FoldableCardComponentState(component.IsFolded);
@@ -54,9 +56,6 @@ public sealed class FoldableCardSystem : EntitySystem
         SetFolded(uid, component, component.IsFolded);
     }
 
-    /// <summary>
-    /// Returns false if the entity isn't foldable.
-    /// </summary>
     public bool IsFolded(EntityUid uid, FoldableCardComponent? component = null)
     {
         if (!Resolve(uid, ref component))
@@ -65,9 +64,6 @@ public sealed class FoldableCardSystem : EntitySystem
         return component.IsFolded;
     }
 
-    /// <summary>
-    /// Set the folded state of the given <see cref="FoldableCardComponent"/>
-    /// </summary>
     public void SetFolded(EntityUid uid, FoldableCardComponent component, bool folded)
     {
         if (folded)
@@ -98,9 +94,6 @@ public sealed class FoldableCardSystem : EntitySystem
         return !ev.Cancelled;
     }
 
-    /// <summary>
-    /// Try to fold/unfold
-    /// </summary>
     public bool TrySetFolded(EntityUid uid, FoldableCardComponent comp, bool state)
     {
         if (state == comp.IsFolded)
@@ -144,9 +137,5 @@ public sealed class FoldableCardSystem : EntitySystem
     }
 }
 
-/// <summary>
-/// Event raised on an entity to determine if it can be folded.
-/// </summary>
-/// <param name="Cancelled"></param>
 [ByRefEvent]
 public record struct FoldAttemptEvent(bool Cancelled = false);

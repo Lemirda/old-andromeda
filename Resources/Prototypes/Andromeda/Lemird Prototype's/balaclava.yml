@@ -1,0 +1,16 @@
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskBalaclava
+  name: балаклава
+  description: Головной убор закрывающий голову, лоб и лицо, оставляя небольшую прорезь для глаз и рта.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Lemird/balaclava.rsi
+  - type: Clothing
+    sprite: Andromeda/Lemird/balaclava.rsi
+  - type: IngestionBlocker
+  - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - WhitelistChameleon

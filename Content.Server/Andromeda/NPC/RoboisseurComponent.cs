@@ -289,6 +289,7 @@ namespace Content.Server.Roboisseur.Roboisseur
             "FoodDonkpocketPizzaWarm",
             "FoodBurgerMothRoach",
             "FoodBurgerBear",
+            "FoodSaladOlivie"
         };
     }
 }

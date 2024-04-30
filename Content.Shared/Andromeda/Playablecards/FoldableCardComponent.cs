@@ -1,7 +1,7 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.FoldableCard;
+namespace Content.Shared.Andromeda.PlayableCards;
 
 /// <summary>
 /// Used to create "foldable structures" that you can pickup like an item when folded. Used for rollerbeds and wheelchairs.

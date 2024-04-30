@@ -7,7 +7,7 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkArmor
+  - UplinkWearables
   conditions:
   - !type:StoreWhitelistCondition
     whitelist:
@@ -23,7 +23,7 @@
   cost:
     Telecrystal: 15
   categories:
-  - UplinkBundles
+  - UplinkWeaponry
 
 - type: listing
   id: UplinkChainsaw
@@ -34,7 +34,7 @@
   cost:
     Telecrystal: 7
   categories:
-  - UplinkWeapons
+  - UplinkWeaponry
 
 - type: listing
   id: UplinkWeaponMakarov
@@ -45,7 +45,7 @@
   cost:
     Telecrystal: 5
   categories:
-  - UplinkWeapons
+  - UplinkWeaponry
 
 - type: listing
   id: UplinkMagazinePistols9x18

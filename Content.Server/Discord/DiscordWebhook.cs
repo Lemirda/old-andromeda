@@ -3,6 +3,8 @@ using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
+using System.IO; //A-13 WebhookFile
+using System.Net.Http.Headers; //A-13 WebhookFile
 
 namespace Content.Server.Discord;
 
@@ -100,4 +102,31 @@ public sealed class DiscordWebhook : IPostInjectInit
     {
         _sawmill = _log.GetSawmill("DISCORD");
     }
+
+    //A-13 WebhookFile start
+    public async Task<HttpResponseMessage> CreateMessageWithFile(WebhookIdentifier identifier, string content, Stream fileStream, string fileName)
+    {
+        var url = GetUrl(identifier);
+
+        if (!fileName.EndsWith(".txt"))
+        {
+            fileName += ".txt";
+        }
+
+        using var form = new MultipartFormDataContent();
+        using var stringContent = new StringContent(content);
+        using var streamContent = new StreamContent(fileStream);
+        streamContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+        {
+            Name = "file",
+            FileName = fileName
+        };
+        streamContent.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
+
+        form.Add(stringContent, "content");
+        form.Add(streamContent, "file");
+
+        return await _http.PostAsync(url, form);
+    }
+    //A-13 WebhookFile end
 }

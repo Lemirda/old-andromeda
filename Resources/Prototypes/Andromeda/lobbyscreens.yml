@@ -17,3 +17,8 @@
 - type: lobbyBackground
   id: SexyHOP
   background: /Textures/Andromeda/LobbyScreens/sexy-hop.jpg
+
+- type: lobbyBackground
+  id: ThisIsFine
+  background: /Textures/Andromeda/LobbyScreens/this-is-fine.png
+

@@ -50,7 +50,7 @@
     thresholds:
       0: Alive
       # used for health display its not possible to actually fall into crit
-      200: Dead
+      75: Dead
   # fire!!!!
   - type: Flammable
     damage:
@@ -74,7 +74,7 @@
     - trigger:
         !type:DamageTypeTrigger
         damageType: Heat
-        damage: 100
+        damage: 75
       behaviors:
       - !type:PopupBehavior
         popup: terminator-endoskeleton-burn-popup
@@ -82,7 +82,7 @@
       - !type:GibBehavior
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 75
       behaviors:
       - !type:PopupBehavior
         popup: terminator-endoskeleton-gib-popup
@@ -142,7 +142,7 @@
     thresholds:
       0: Alive
       # gibbed at 200 so cant go crit
-      200: Dead
+      250: Dead
   # incase some weird stuff happens and the crew adopts a terminator
   - type: Repairable
     doAfterDelay: 15
@@ -162,7 +162,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 200
+        damage: 250
       behaviors:
       - !type:PlaySoundBehavior
         # endoSKELETON

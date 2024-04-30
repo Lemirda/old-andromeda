@@ -38,7 +38,7 @@
   - type: ItemSlots
     slots:
       cell_slot:
-        name: power-cell-slot-component-slot-name-default 
+        name: power-cell-slot-component-slot-name-default
 
 - type: entity
   id: SpyCrewMonitor
@@ -64,12 +64,12 @@
   - type: ItemSlots
     slots:
       cell_slot:
-        name: power-cell-slot-component-slot-name-default 
+        name: power-cell-slot-component-slot-name-default
 
 - type: entity
   id: SyndiCrewMonitor
-  name: syndicate crew monitor
-  description: The syndicated version of crew monitor, intercepts information from the server.
+  name: кроваво-красный портативный монитор экипажа
+  description: Ручной монитор экипажа, отображающий состояние датчиков костюма.
   parent: HandheldCrewMonitor
   components:
   - type: Sprite
@@ -88,5 +88,4 @@
   - type: ItemSlots
     slots:
       cell_slot:
-        name: power-cell-slot-component-slot-name-default 
-  
+        name: power-cell-slot-component-slot-name-default

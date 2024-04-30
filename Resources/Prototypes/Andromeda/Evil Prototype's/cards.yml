@@ -1784,7 +1784,7 @@
     - PlayableCard
 
 - type: entity
-  noSpawn: false
+  noSpawn: true
   parent: BaseItem
   id: PlayableCardSindiJack
   name: playablecard
@@ -1833,7 +1833,7 @@
     - PlayableCard
 
 - type: entity
-  noSpawn: false
+  noSpawn: true
   parent: BaseItem
   id: PlayableCardSindiJackRed
   name: playablecard
@@ -1886,6 +1886,7 @@
     - PlayableCard
 
 - type: entity
+  noSpawn: true
   id: CardBin
   parent: [ BaseStorageItem, BaseBagOpenClose ]
   name: card box
@@ -1936,6 +1937,7 @@
   - type: Dumpable
 
 - type: entity
+  noSpawn: true
   id: CardBin2
   parent: CardBin
   name: колода карт
@@ -1962,8 +1964,8 @@
   noSpawn: false
   parent: CardBin
   id: CardBinFool
-  name: колода карт (дурак)
-  suffix: Заполненный, Андромеда
+  name: обычная колода карт
+  suffix: Андромеда, Заполненный
   components:
   - type:  StorageFill
     contents:
@@ -2008,8 +2010,8 @@
   noSpawn: false
   parent: CardBin2
   id: CardBinPoker
-  name: колода карт (покер)
-  suffix: Заполненный, Андромеда
+  name: покерная колода карт
+  suffix: Андромеда, Заполненный
   components:
   - type:  StorageFill
     contents:
@@ -2072,7 +2074,7 @@
   noSpawn: false
   parent: ClothingBackpackSatchelLeather
   id: ClothingBackpackSatchelLeatherDealer
-  name: набор для покера
+  name: набор карточного дилера
   suffix: Заполненный, Андромеда
   components:
   - type:  StorageFill
@@ -2097,6 +2099,7 @@
 - type: stack
   id: PokerChipsVStack
   name: покерные фишки 5
+  suffix: Андромеда
   icon: { sprite: "/Andromeda/Evil/pokerchipsv.rsi", state: poker5 }
   spawn: PokerChipsVStack1
   maxCount: 5
@@ -2105,6 +2108,7 @@
 - type: stack
   id: PokerChipsXStack
   name: покерные фишки 10
+  suffix: Андромеда
   icon: { sprite: "/Andromeda/Evil/pokerchipsx.rsi", state: poker5 }
   spawn: PokerChipsXStack1
   maxCount: 5
@@ -2113,6 +2117,7 @@
 - type: stack
   id: PokerChipsLStack
   name: покерные фишки 50
+  suffix: Андромеда
   icon: { sprite: "/Andromeda/Evil/pokerchipsl.rsi", state: poker5 }
   spawn: PokerChipsLStack1
   maxCount: 5
@@ -2121,6 +2126,7 @@
 - type: stack
   id: PokerChipsCStack
   name: покерные фишки 100
+  suffix: Андромеда
   icon: { sprite: "/Andromeda/Evil/pokerchipsc.rsi", state: poker5 }
   spawn: PokerChipsCStack1
   maxCount: 5
@@ -2129,6 +2135,7 @@
 - type: stack
   id: PokerChipsDStack
   name: покерные фишки 500
+  suffix: Андромеда
   icon: { sprite: "/Andromeda/Evil/pokerchipsd.rsi", state: poker5 }
   spawn: PokerChipsDStack1
   maxCount: 5
@@ -2137,16 +2144,16 @@
 - type: stack
   id: PokerChipsMStack
   name: покерные фишки 1000
+  suffix: Андромеда
   icon: { sprite: "/Andromeda/Evil/pokerchipsm.rsi", state: poker5 }
   spawn: PokerChipsMStack1
   maxCount: 5
   itemSize: 1
 
 - type: entity
-  noSpawn: true
   id: PokerChipsV
   name: покерные фишки (5 кредитов)
-  suffix: Андромеда, Фишки
+  suffix: Андромеда
   parent: BaseTabletopPiece
   abstract: true
   components:
@@ -2172,10 +2179,9 @@
     - poker5
 
 - type: entity
-  noSpawn: true
   id: PokerChipsX
   name: покерные фишки (10 кредитов)
-  suffix: Андромеда, Фишки
+  suffix: Андромеда
   parent: BaseTabletopPiece
   abstract: true
   components:
@@ -2201,10 +2207,9 @@
     - poker5
 
 - type: entity
-  noSpawn: true
   id: PokerChipsL
   name: покерные фишки (50 кредитов)
-  suffix: Андромеда, Фишки
+  suffix: Андромеда
   parent: BaseTabletopPiece
   abstract: true
   components:
@@ -2230,10 +2235,9 @@
     - poker5
 
 - type: entity
-  noSpawn: true
   id: PokerChipsC
   name: покерные фишки (100 кредитов)
-  suffix: Андромеда, Фишки
+  suffix: Андромеда
   parent: BaseTabletopPiece
   abstract: true
   components:
@@ -2259,10 +2263,9 @@
     - poker5
 
 - type: entity
-  noSpawn: true
   id: PokerChipsD
   name: покерные фишки (500 кредитов)
-  suffix: Андромеда, Фишки
+  suffix: Андромеда
   parent: BaseTabletopPiece
   abstract: true
   components:
@@ -2288,10 +2291,9 @@
     - poker5
 
 - type: entity
-  noSpawn: true
   id: PokerChipsM
   name: покерные фишки (1000 кредитов)
-  suffix: Андромеда, Фишки
+  suffix: Андромеда
   parent: BaseTabletopPiece
   abstract: true
   components:

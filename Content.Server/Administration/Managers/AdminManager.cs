@@ -343,26 +343,28 @@ namespace Content.Server.Administration.Managers
             }
             else if (e.NewStatus == SessionStatus.Disconnected)
             {
-                if (_admins.TryGetValue(e.Session, out var reg ) && _cfg.GetCVar(CCVars.AdminAnnounceLogout)) //A-13 AdminNotifications
+                //A-13 AdminNotifications start
+                if (_admins.TryGetValue(e.Session, out var reg))
                 {
-                    if (reg.Data.Stealth)
-                    {
-                        _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-admin-logout-message",
-                            ("name", e.Session.Name)), flagWhitelist: AdminFlags.Stealth);
-
-                    }
-                    else
-                    {
-                        _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-admin-logout-message",
-                            ("name", e.Session.Name)));
-                    }
-                    //A-13 AdminNotifications start
                     var logoutEvent = new AdminLoggedOutEvent(e.Session);
                     _entityManager.EventBus.RaiseEvent(EventSource.Local, logoutEvent);
-
                     _admins.Remove(e.Session);
-                    //A-13 AdminNotifications end
+
+                    if (_cfg.GetCVar(CCVars.AdminAnnounceLogout))
+                    {
+                        if (reg.Data.Stealth)
+                        {
+                            _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-admin-logout-message",
+                                ("name", e.Session.Name)), flagWhitelist: AdminFlags.Stealth);
+                        }
+                        else
+                        {
+                            _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-admin-logout-message",
+                                ("name", e.Session.Name)));
+                        }
+                    }
                 }
+                //A-13 AdminNotifications end
             }
         }
 
@@ -382,6 +384,14 @@ namespace Content.Server.Administration.Managers
                 RankId = rankId
             };
 
+            //A-13 AdminNotifications start
+            if (session.ContentData()?.ExplicitlyDeadminned == true)
+            {
+                reg.Data.Active = true;
+                session.ContentData()!.ExplicitlyDeadminned = false;
+            }
+            //A-13 AdminNotifications end
+
             _admins.Add(session, reg);
 
             if (session.ContentData()!.Stealthed)
@@ -390,6 +400,11 @@ namespace Content.Server.Administration.Managers
             if (!session.ContentData()!.ExplicitlyDeadminned)
             {
                 reg.Data.Active = true;
+
+                //A-13 AdminNotifications start
+                var loginEvent = new AdminLoggedInEvent(session);
+                _entityManager.EventBus.RaiseEvent(EventSource.Local, loginEvent);
+                //A-13 AdminNotifications end
 
                 if (_cfg.GetCVar(CCVars.AdminAnnounceLogin))
                 {
@@ -405,10 +420,6 @@ namespace Content.Server.Administration.Managers
                         _chat.SendAdminAnnouncement(Loc.GetString("admin-manager-admin-login-message",
                             ("name", session.Name)));
                     }
-                    //A-13 AdminNotifications start
-                    var loginEvent = new AdminLoggedInEvent(session);
-                    _entityManager.EventBus.RaiseEvent(EventSource.Local, loginEvent);
-                    //A-13 AdminNotifications end
                 }
 
                 SendPermsChangedEvent(session);

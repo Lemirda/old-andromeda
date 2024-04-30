@@ -7592,14 +7592,6 @@ entities:
     - type: Transform
       pos: 14.5,47.5
       parent: 588
-- proto: DeathRattleImplanter
-  entities:
-  - uid: 376
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 12.5045595,42.48262
-      parent: 588
 - proto: DeathweedLeaves
   entities:
   - uid: 1022
@@ -9033,6 +9025,13 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 10.765976,19.912766
+      parent: 588
+- proto: LandMineExplosive
+  entities:
+  - uid: 1107
+    components:
+    - type: Transform
+      pos: 29.464441,10.437056
       parent: 588
 - proto: LemonKa
   entities:
@@ -10724,6 +10723,13 @@ entities:
     - type: Transform
       pos: 5.5,43.5
       parent: 588
+- proto: RandomCommandCorpseSpawner
+  entities:
+  - uid: 1102
+    components:
+    - type: Transform
+      pos: 30.5,8.5
+      parent: 588
 - proto: RandomDrinkBottle
   entities:
   - uid: 580
@@ -11195,6 +11201,13 @@ entities:
     components:
     - type: Transform
       pos: 10.4890785,27.46785
+      parent: 588
+- proto: SpawnMobSpaceCobra
+  entities:
+  - uid: 376
+    components:
+    - type: Transform
+      pos: 29.5,8.5
       parent: 588
 - proto: Spear
   entities:
@@ -11733,6 +11746,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 8.5,25.5
+      parent: 588
+- proto: TrackingImplanter
+  entities:
+  - uid: 265
+    components:
+    - type: Transform
+      pos: 12.498964,42.450397
       parent: 588
 - proto: UniformScrubsColorPurple
   entities:
@@ -12479,14 +12499,6 @@ entities:
     components:
     - type: Transform
       pos: 26.57963,35.4414
-      parent: 588
-- proto: WeaponTurretHostile
-  entities:
-  - uid: 265
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 30.5,8.5
       parent: 588
 - proto: WindoorAssemblySecure
   entities:

@@ -1152,6 +1152,16 @@
   entity: ClothingOuterCoatDetectiveSponsor
   sponsorOnly: true
 
+- type: loadout
+  id: ClothingOuterCoatDetectiveDarkSponsorLoadout
+  entity: ClothingOuterCoatDetectiveDarkSponsor
+  sponsorOnly: true
+
+- type: loadout
+  id: ClothingBackpackMilitarySatchelLoadout
+  entity: ClothingBackpackMilitarySatchel
+  sponsorOnly: true
+
 #SansZana
 - type: loadout
   id: ClothingUniformJumpsuitStrangeBunnyLoadout2
