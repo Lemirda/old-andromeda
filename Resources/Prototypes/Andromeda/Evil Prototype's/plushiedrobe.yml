@@ -1,19 +1,19 @@
 - type: entity
   parent: VendingMachine
-  id: HugsDrobe
+  id: VendingMachinePlushieToys
   name: ОбниМат
   description: Если долго всматриваться в эту плюше-мягкую бездну, то можно сгибнуть от умиления!
   components:
   - type: VendingMachine
-    pack: HugsDrobeInventory
+    pack: VendingMachinePlushieToysInventory
     offState: off
     brokenState: broken
     normalState: normal-unshaded
   - type: Advertise
-    pack: HugsDrobeAds
+    pack: VendingMachinePlushieToysAds
   - type: Speech
   - type: Sprite
-    sprite: Andromeda\Evil\hugsdrobe.rsi
+    sprite: Andromeda\Evil\vendingmachineplushietoys.rsi
     layers:
     - state: "off"
       map: ["enum.VendingMachineVisualLayers.Base"]
@@ -24,7 +24,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
 - type: advertisementsPack
-  id: HugsDrobeAds
+  id: VendingMachinePlushieToysAds
   advertisements:
     - Подходят для не шуточной драки!
     - Мягче подушки!
@@ -43,7 +43,7 @@
     - Безбашенно восхитительны!
 
 - type: vendingMachineInventory
-  id: HugsDrobeInventory
+  id: VendingMachinePlushieToysInventory
   startingInventory:
     PlushieXeno: 2
     PlushieBee: 2
