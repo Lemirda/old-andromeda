@@ -32,6 +32,22 @@
       - id: BaseChemistryEmptyVial
       - id: SyringeStimulants
 
+# A-13 bring back the stealth, bitches
+- type: entity
+  id: Observationskit
+  parent: BoxCardboard
+  name: набор наблюдателя
+  suffix: заполненный
+  components:
+    - type: StorageFill
+      contents:
+        - id: ClothingEyesGlassesHiddenSecurity
+          amount: 1
+        - id: SyndiCrewMonitorEmpty
+          amount: 1
+        - id: PowerCellHigh
+          amount: 1
+
 - type: entity
   parent: BoxCardboard
   id: ThrowingKnivesKit

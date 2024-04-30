@@ -8,6 +8,9 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Content.Server.Administration;
 using Content.Server.Administration.Managers;
+using Content.Server.Guardian; //A-13 Fix AdminNotifySystem
+using Content.Server.GameTicking.Rules.Components; //A-13 Fix AdminNotifySystem
+using System.Linq; //A-13 Fix AdminNotifySystem
 
 namespace Content.Server.Administration.Systems;
 
@@ -29,6 +32,14 @@ public sealed class AdminNotifySystem : EntitySystem
     {
         if (!TryComp(ev.Target, out ActorComponent? actorComponent))
             return;
+
+        //A-13 Fix AdminNotifySystem start
+        if (!HasComp<CanHostGuardianComponent>(ev.Target))
+            return;
+
+        if (EntityQuery<NukeopsRuleComponent>().Any())
+            return;
+        //A-13 Fix AdminNotifySystem end
 
         if (actorComponent.PlayerSession.AttachedEntity == null || ev.NewMobState == MobState.Alive)
             return;

@@ -1,0 +1,50 @@
+- type: entity
+  name: cалат оливье
+  parent: FoodBowlBase
+  id: FoodSaladOlivie
+  description: Традиционное салатное блюдо в русской кухне.
+  suffix: Андромеда
+  components:
+  - type: FlavorProfile
+    flavors:
+      - carrot
+      - potatoes
+      - egg
+      - meaty
+  - type: Sprite
+    sprite: Andromeda/NIKforest/olivie.rsi
+    layers:
+    - state: bowl
+    - state: olivie
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Vitamin
+          Quantity: 5
+  - type: Tag
+    tags:
+    - Fruit
+    - Soup
+    - Meat
+
+- type: microwaveMealRecipe
+  id: RecipeOlivieSalad
+  name: olivie salad recipe
+  result: FoodSaladOlivie
+  time: 5
+  reagents:
+    Mayo: 5
+    Egg: 12
+    TableSalt: 5
+    Blackpepper: 5
+  solids:
+    FoodBowlBig: 1
+    FoodPotato: 2
+    FoodCarrot: 2
+    FoodMeat: 1
+    FoodPeaPod: 2
+    FoodOnionSlice: 1

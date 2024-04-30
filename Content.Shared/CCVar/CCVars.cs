@@ -796,10 +796,10 @@ namespace Content.Shared.CCVar
          */
 
         public static readonly CVarDef<bool> AdminAnnounceLogin =
-            CVarDef.Create("admin.announce_login", true, CVar.SERVERONLY);
+            CVarDef.Create("admin.announce_login", false, CVar.SERVERONLY); //A-13 AdminNotifications
 
         public static readonly CVarDef<bool> AdminAnnounceLogout =
-            CVarDef.Create("admin.announce_logout", true, CVar.SERVERONLY);
+            CVarDef.Create("admin.announce_logout", false, CVar.SERVERONLY); //A-13 AdminNotifications
 
         /// <summary>
         /// Should users be able to see their own notes? Admins will be able to see and set notes regardless
