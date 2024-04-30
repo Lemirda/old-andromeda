@@ -2074,7 +2074,7 @@
   noSpawn: false
   parent: ClothingBackpackSatchelLeather
   id: ClothingBackpackSatchelLeatherDealer
-  name: набор карточного дилера
+  name: набор для покера
   suffix: Заполненный, Андромеда
   components:
   - type:  StorageFill
