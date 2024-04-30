@@ -137,17 +137,3 @@
   - type: Item
     size: Small
     sprite: Andromeda\Evil\plushiefelsci.rsi
-
-- type: entity
-  parent: BasePlushie
-  id: PlushieCob
-  name: плюшевый кобольд
-  description: Милая плюшевая игрушка.
-  suffix: Андромеда
-  components:
-  - type: Sprite
-    sprite: Andromeda\Evil\plushiecob.rsi
-    state: icon
-  - type: Item
-    size: Small
-    sprite: Andromeda\Evil\plushiecob.rsi
