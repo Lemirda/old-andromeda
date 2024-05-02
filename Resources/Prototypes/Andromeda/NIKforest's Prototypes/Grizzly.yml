@@ -35,8 +35,8 @@
   - type: CombatMode
   - type: SlowOnDamage
     speedModifierThresholds:
-      2000: 0.7
-      2500: 0.5
+      800: 0.7
+      1000: 0.5
   - type: MobMover
   - type: FireVisuals
     sprite: Andromeda/NIKforest/grizzly.rsi
@@ -111,8 +111,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      2900: Critical
-      3000: Dead
+      1100: Critical
+      1200: Dead
   - type: Metabolizer
     solutionOnBody: false
     updateFrequency: 0.25

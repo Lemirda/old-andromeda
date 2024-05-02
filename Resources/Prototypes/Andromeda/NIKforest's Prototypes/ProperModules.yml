@@ -71,8 +71,7 @@
     - state: icon-properdead
   - type: ItemBorgModule
     items:
-    - EnergySword
-    - WeaponAdvancedLaser
+    - WeaponCrusher
 
 - type: entity
   id: BorgModuleWayCleanerProper
