@@ -17,6 +17,7 @@ using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
 using Content.Shared.Chat;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 using Content.Shared.Communications;
 using Content.Shared.Database;
 using Content.Shared.DeviceNetwork;
@@ -228,6 +229,14 @@ namespace Content.Server.Communications
             if (message.Session.AttachedEntity is not { Valid: true } mob)
                 return;
 
+            //A-13 Eblan system update start
+            if (HasComp<EblanComponent>(mob))
+            {
+                _popupSystem.PopupEntity(Loc.GetString("В данный момент вы наиграли слишком мало времени, новички не могут пользоваться консолью связи."), uid, message.Session);
+                return;
+            }
+            //A-13 Eblan system update end
+
             if (!CanUse(mob, uid))
             {
                 _popupSystem.PopupCursor(Loc.GetString("comms-console-permission-denied"), message.Session, PopupType.Medium);
@@ -253,6 +262,14 @@ namespace Content.Server.Communications
                 {
                     return;
                 }
+
+                //A-13 Eblan system update start
+                if (HasComp<EblanComponent>(mob))
+                {
+                    _popupSystem.PopupEntity(Loc.GetString("В данный момент вы наиграли слишком мало времени, новички не могут пользоваться консолью связи."), uid, message.Session);
+                    return;
+                }
+                //A-13 Eblan system update end
 
                 if (!CanUse(mob, uid))
                 {

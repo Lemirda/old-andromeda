@@ -29,3 +29,16 @@
     params:
       variation: 0.125
       pitch: 0.75
+  - type: EmitSoundOnCollide
+    sound:
+      collection: MaleYawn
+    params:
+      variation: 0.125
+      pitch: 0.75
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      collection: MaleYawn
+    params:
+      variation: 0.125
+      pitch: 0.75

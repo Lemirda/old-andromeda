@@ -29,3 +29,9 @@
     params:
       variation: 0.125
       pitch: 0.75
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Andromeda/Lemird/Misc/plushiescientist.ogg
+    params:
+      variation: 0.125
+      pitch: 0.75

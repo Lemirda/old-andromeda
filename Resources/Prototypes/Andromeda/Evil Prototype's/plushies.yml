@@ -1,0 +1,221 @@
+- type: soundCollection
+  id: PaintorUse
+  files:
+  - /Audio/Andromeda/Evil/SoundCollection/PlushiePaintor/karandash.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: PlushiePaintor
+  name: плюшевый грустный художник
+  description: Это маленький плюшевый художник, ваш грустный брат по рисованию. Он вам с радостью поможет.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushiepaintor.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushiepaintor.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,1,1
+    whitelist:
+      components:
+        - Paint
+        - Crayon
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#9932CC"
+  - type:  StorageFill
+    contents:
+      - id: SprayPaintPurple
+      - id: CrayonPurple
+      - id: CrayonRainbow
+  - type: EmitSoundOnLand
+    sound:
+      collection: PaintorUse
+  - type: EmitSoundOnActivate
+    sound:
+      collection: PaintorUse
+  - type: EmitSoundOnUse
+    sound:
+      collection: PaintorUse
+  - type: EmitSoundOnCollide
+    sound:
+      collection: PaintorUse
+  - type: Clothing
+    quickEquip: false
+    sprite: Andromeda/Evil/plushiepaintor.rsi
+    slots:
+    - HEAD
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieSelectionist
+  name: плюшевый селекционер
+  description: Растрепанный исследователь-ботаник, весь в работе над селекцией растений.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushieselectionist.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushieselectionist.rsi
+  - type: Storage
+    maxItemSize: Small
+    grid:
+    - 0,0,0,0
+    whitelist:
+      components:
+        - Produce
+        - Seed
+  - type: UserInterface
+    interfaces:
+    - key: enum.StorageUiKey.Key
+      type: StorageBoundUserInterface
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#55eb63"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieCadet
+  name: плюшевый кадет
+  description: Не обманывайтесь её глупой мордочкой, эта унати стоит на страже закона! ... И ... возможно на вашем лице, если вы этот закон нарушили!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushiecadet.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushiecadet.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieAdv
+  name: плюшевый авантюрист
+  description: От него веет жаждой приключений и карпами. Еще на 30% мягче!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushieadv.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushieadv.rsi
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieFelSci
+  name: плюшевая научная ассистентка
+  description: От неё веет жаждой знаний.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushiefelsci.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushiefelsci.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieNukeMar
+  name: плюшевый мародер
+  description: Смотря на эту плюшку, видно тонны робаста. Данная персона сотворить многое... как минимум взорваться от своей же чайна-лейк!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushnukies/plushienukemar.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushnukies/plushienukemar.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#f53711"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieNukeCom
+  name: плюшевый командир нюкеров
+  description: Его плюшевая мания величия сильнее, чем у ГСБ! Так и хочется его зотискать.
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushnukies/plushienukecom.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushnukies/plushienukecom.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#f53711"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieNukeMed
+  name: плюшевый медик нюкеров
+  description: Пушистый и мягкий как облачко! Однако, кажется, что эта плюшка пропитана кислотой?... Её явно не стоит нюхать... 
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushnukies/plushienukemed.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushnukies/plushienukemed.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#f53711"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieNukeJagg
+  name: плюшевый джаггернаут
+  description: Всматриваясь в эту перекаченную пухом плюшку, вы ощущаете, что она уже готовится взять два пулемёта со словами "Я ГРАЖДАНСКИЙ! Я ГРАЖДАНСКИЙ!"...
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushnukies/plushienukejagg.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushnukies/plushienukejagg.rsi
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.0
+    color: "#f53711"

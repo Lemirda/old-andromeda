@@ -2,7 +2,7 @@
   id: PaperWrittenMedipenRed
   parent: Paper
   name: руководство по "Red Killer"
-  nospawn: true
+  noSpawn: true
   suffix: Андромеда
   components:
   - type: Paper
@@ -44,7 +44,7 @@
   id: PaperWrittenMedipenOrange
   parent: Paper
   name: руководство по "Air Raid"
-  nospawn: true
+  noSpawn: true
   suffix: Андромеда
   components:
   - type: Paper
@@ -81,7 +81,7 @@
   id: PaperWrittenMedipenDarkGreen
   parent: Paper
   name: руководство по "Dark Water"
-  nospawn: true
+  noSpawn: true
   suffix: Андромеда
   components:
   - type: Paper
@@ -115,7 +115,7 @@
   id: PaperWrittenMedipenLightGreen
   parent: Paper
   name: руководство по "Light Skull"
-  nospawn: true
+  noSpawn: true
   suffix: Андромеда
   components:
   - type: Paper
@@ -148,7 +148,7 @@
   id: PaperWrittenMedipenBrown
   parent: Paper
   name: руководство по "Make Day"
-  nospawn: true
+  noSpawn: true
   suffix: Андромеда
   components:
   - type: Paper

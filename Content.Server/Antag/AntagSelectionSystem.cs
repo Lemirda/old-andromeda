@@ -20,6 +20,7 @@ using Robust.Shared.Enums;
 using Content.Server.Corvax.Sponsors; //A-13 SponsorAntag
 using Content.Server.Andromeda.Roles; //A-13 SponsorAntag
 using Robust.Server.Player; //A-13 SponsorAntag
+using Content.Shared.Andromeda.Lemird.Fatigue; //A-13 Fatigue system
 
 namespace Content.Server.Antag;
 
@@ -269,6 +270,21 @@ public sealed class AntagSelectionSystem : GameRuleSystem<GameRuleComponent>
 
             chosenPlayers.Add(RobustRandom.PickAndTake(eligiblePlayers));
         }
+
+        //A-13 Fatigue system start
+        foreach (var chosenPlayer in chosenPlayers)
+        {
+            if (EntityManager.TryGetComponent<FatigueComponent>(chosenPlayer, out var fatigueComponent))
+            {
+                fatigueComponent.IsAntag = true;
+                Log.Info($"Для игрока {chosenPlayer} IsAntag установлен на true");
+            }
+            else
+            {
+                Log.Error($"Почему то у игрока {chosenPlayer} отсутствует компонент усталости.");
+            }
+        }
+        //A-13 Fatigue system end
 
         return chosenPlayers;
     }

@@ -10,6 +10,7 @@ public enum AlertCategory
     Breathing,
     Buckled,
     Health,
+    Fatigue, //A-13 Fatigue
     Internals,
     Stamina,
     Piloting,

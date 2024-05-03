@@ -49,6 +49,11 @@ namespace Content.Shared.Alert
         Debug4,
         Debug5,
         Debug6,
+        Fatigue1, //A-13 Fatigue
+        Fatigue2, //A-13 Fatigue
+        Fatigue3, //A-13 Fatigue
+        Fatigue4, //A-13 Fatigue
+        Fatigue5, //A-13 Fatigue
         SuitPower,
         BorgHealth,
         BorgCrit,

@@ -1,0 +1,108 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachinePlushieToys
+  name: ОбниМат
+  description: Если долго всматриваться в эту плюше-мягкую бездну, то можно сгибнуть от умиления!
+  suffix: Андромеда
+  components:
+  - type: VendingMachine
+    pack: VendingMachinePlushieToysInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Advertise
+    pack: VendingMachinePlushieToysAds
+  - type: Speech
+  - type: Sprite
+    sprite: Andromeda/Evil/vendingmachineplushietoys.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: advertisementsPack
+  id: VendingMachinePlushieToysAds
+  advertisements:
+    - Подходят для не шуточной драки!
+    - Мягче подушки!
+    - Лучший друг или лучшая подруга для сна!
+    - Порадуйте других людей этой умилительной плюшевой куклой!
+    - Вы должны их взять лишь потому что их можно жмякать!
+  thankyous:
+    - Смотрите и лапайте!
+    - Смотрите не умрите от милоты!
+    - Слышали их стоны?
+    - Наши игрушки на девяносто процентов состоят из доброты и на десять - из плутония! ... Наверное!
+    - Никаких мстительных духов внутри плюшевки!
+    - Отталкивают грязь, воду, кровь, кровь, пыль!
+    - Мягче только стены комнаты!
+    - Широкая палитра цветов от FFFAFA до 808080!
+    - Безбашенно восхитительны!
+
+- type: vendingMachineInventory
+  id: VendingMachinePlushieToysInventory
+  startingInventory:
+    PlushieXeno: 2
+    PlushieBee: 2
+    PlushieRGBee: 2
+    PlushieHampter: 2
+    PlushiePenguin: 2
+    PlushieLizard: 2
+    PlushieSnake: 2
+    PlushieSpaceLizard: 2
+    PlushieVox: 2
+    PlushieSlime: 2
+    PlushieRouny: 2 
+    PlushieMoth: 2
+    PlushieDiona: 2
+    PlushieGhost: 2
+    PlushieCarp: 2
+    PlushieHoloCarp: 2
+    PlushieMagicarp: 2
+    PlushieRainbowCarp: 2
+    PlushieSharkGrey: 2
+    PlushieSharkBlue: 2
+    PlushieSharkPink: 2
+    PlushieBear: 2
+    PlushieMaleToy: 2
+    PlushieMaleAndGun: 2
+    PlushieRatvar: 2
+    PlushieNar: 2
+    MrChips: 2
+    MrDips: 2
+    PlushieArachnid: 2
+    PlushieAtmosian: 2
+    PlushieGirl: 1
+    PlushieRD: 1
+    PlushieParamedic: 1
+    PlushieRoboMechanic: 1
+    PlushieChemist: 1
+    PlushieScientist: 1
+    PlushieFelSci: 1
+    PlushieAdv: 1
+    PlushieCadet: 1
+    PlushieSelectionist: 1
+    ToyMouse: 2
+    Basketball: 2
+    Football: 2
+    BeachBall: 2
+    FoamCrossbow: 2
+    RevolverCapGun: 2
+    FoamBlade: 2
+    ToySword: 2
+    FoamCutlass: 2
+    ClownRecorder: 2
+    ToyHammer: 2
+    PonderingOrb: 2
+    CrayonBox: 3
+    CrayonRainbow: 2
+  emaggedInventory:
+    PlushieNuke: 1
+    PlushieNukeMar: 1
+    PlushieNukeCom: 1
+    PlushieNukeMed: 1
+    PlushieNukeJagg: 1

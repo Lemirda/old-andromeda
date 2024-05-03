@@ -309,6 +309,7 @@ namespace Content.Server.GameTicking
             RunLevel = GameRunLevel.PostRound;
 
             ShowRoundEndScoreboard(text);
+            CheckAndChangeGamePreset(); //A-13 GameTicker.SetGamePresetUTC
         }
 
         public void ShowRoundEndScoreboard(string text = "")

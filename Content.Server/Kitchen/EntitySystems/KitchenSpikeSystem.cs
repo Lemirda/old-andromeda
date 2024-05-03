@@ -20,6 +20,7 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update start
 using static Content.Shared.Kitchen.Components.KitchenSpikeComponent;
 
 namespace Content.Server.Kitchen.EntitySystems
@@ -230,6 +231,15 @@ namespace Content.Server.Kitchen.EntitySystems
         public bool TrySpike(EntityUid uid, EntityUid userUid, EntityUid victimUid, KitchenSpikeComponent? component = null,
             ButcherableComponent? butcherable = null, MobStateComponent? mobState = null)
         {
+            //A-13 Eblan system update start
+            if (HasComp<EblanComponent>(userUid))
+            {
+                _popupSystem.PopupEntity(Loc.GetString("Вы не можете вешать тела на крюк, вы наиграли ещё слишком мало.", ("user", Identity.Entity(userUid, EntityManager))),
+                    userUid, userUid);
+                return false;
+            }
+            //A-13 Eblan system update end
+
             if (!Resolve(uid, ref component) || component.InUse ||
                 !Resolve(victimUid, ref butcherable) || butcherable.BeingButchered)
                 return false;

@@ -17,3 +17,16 @@
     PaperCNCSheet: 6
     MysteryFigureBox: 2
     BooksBag: 3
+    #А-13 CardGame start
+    CardBinFool: 3
+    CardBinPoker: 3
+    PokerChipsVStack5: 10
+    PokerChipsXStack5: 10
+    PokerChipsLStack5: 10
+    PokerChipsCStack5: 10
+    PokerChipsDStack5: 10
+    PokerChipsMStack5: 5
+  emaggedInventory:
+    PlayableCardSindiJack: 1
+    PlayableCardSindiJackRed: 1
+    #А-13 CardGame end

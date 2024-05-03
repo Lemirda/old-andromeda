@@ -125,6 +125,20 @@ public sealed partial class ChatSystem : SharedChatSystem
         }
     }
 
+    //A-13 Eblan system update start
+    private void BanPlayer(EntityUid source, ICommonSession? player)
+    {
+        if (player == null)
+        {
+            return;
+        }
+
+        var banManager = IoCManager.Resolve<IBanManager>();
+        var reason = "Вы были забанены с кодом 001. Если вы думаете что это ошибка, то напишите обжалование в https://discord.gg/CuWu6kSznf.";
+        banManager.CreateServerBan(player.UserId, player.Name, null, null, null, 0, NoteSeverity.High, reason);
+    }
+    //A-13 Eblan system update end
+
     /// <summary>
     ///     Sends an in-character chat message to relevant clients.
     /// </summary>
@@ -173,6 +187,19 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool ignoreActionBlocker = false
         )
     {
+        //A-13 Eblan system update start
+        string[] bannedContent = {
+            "░", "▓", "▐", "▄", "▀", "⣿", "█", "╚", "═", "╝", "╔", "╗", "║", "⢀", "⣴", "⢴", "⣿", "⣷", "⡷", "⣏", "⠋", "⣄",
+            ".ru", ".com", "http"
+        };
+
+        if (bannedContent.Any(message.Contains))
+        {
+            BanPlayer(source, player);
+            return;
+        }
+        //A-13 Eblan system update end
+
         if (HasComp<GhostComponent>(source))
         {
             // Ghosts can only send dead chat messages, so we'll forward it to InGame OOC.

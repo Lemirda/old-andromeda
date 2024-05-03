@@ -2,6 +2,7 @@ using Content.Server.GameTicking;
 using Content.Server.Morgue.Components;
 using Content.Server.Storage.Components;
 using Content.Server.Storage.EntitySystems;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.IdentityManagement;
@@ -77,6 +78,13 @@ public sealed class CrematoriumSystem : EntitySystem
     {
         if (!TryComp<EntityStorageComponent>(uid, out var storage))
             return;
+
+        //A-13 Eblan system update start
+        if (HasComp<EblanComponent>(args.User))
+        {
+            return;
+        }
+        //A-13 Eblan system update end
 
         if (!args.CanAccess || !args.CanInteract || args.Hands == null || storage.Open)
             return;

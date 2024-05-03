@@ -43,6 +43,7 @@
   - type: MovementSpeedModifier
   - type: Polymorphable
   - type: StatusIcon
+  - type: Fatigue #A-13 Fatigue
   - type: TTS # Corvax-TTS
 
 # Used for mobs that have health and can take damage.
@@ -178,7 +179,7 @@
     canResistFire: true
     damage: #per second, scales with number of fire 'stacks'
       types:
-        Heat: 3
+        Heat: 1.5
   - type: FireVisuals
     sprite: Mobs/Effects/onfire.rsi
     normalState: Generic_mob_burning

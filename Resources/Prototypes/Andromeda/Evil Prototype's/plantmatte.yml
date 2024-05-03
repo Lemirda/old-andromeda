@@ -1,0 +1,115 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachinePottedPlant
+  name: ЦветоМат
+  description: Растения в горшках – лучшие психологи в соотношении цена/качество!
+  suffix: Андромеда
+  components:
+  - type: VendingMachine
+    pack: VendingMachinePottedPlantInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Advertise
+    pack: VendingMachinePottedPlantAds
+  - type: Speech
+  - type: Sprite
+    sprite: Andromeda/Evil/plantmatte.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: advertisementsPack
+  id: VendingMachinePottedPlantAds
+  advertisements:
+    - Мы точно не торгуем контрабандными видами!
+    - Ощути себя садовником!
+    - У нас растения на вынос – буквально!
+  thankyous:
+    - Растения – цветы жизни!
+    - Тебе грустно? Полей росток!
+    - Ставка на зелёное!
+    - Чёрт возьми, ДА!
+    - Можно использовать вместо баллона с кислородом!
+    - Трава, детка!
+    - Смерть зомби!
+    - Пока без ГМО!
+    - Замена скучной лампе в допросной!
+
+- type: entity
+  id: SusPlant1
+  parent: PottedPlantBase
+  name: Подозрительное растение
+  description: Крайне подозрительное чужеродное растение... и не все не так, как вы видите!
+  components:
+  - type: Sprite
+    drawdepth: Overdoors
+    offset: "0.0,0.3"
+    sprite: Andromeda/Evil/susplant.rsi
+    state: susplant1
+    noRot: true
+  - type: PointLight
+    radius: 2
+    color: "#8a2be2"
+
+- type: entity
+  id: SusPlant2
+  parent: SusPlant1
+  components:
+  - type: Sprite
+    drawdepth: Overdoors
+    offset: "0.0,0.3"
+    sprite: Andromeda/Evil/susplant.rsi
+    state: susplant2
+    noRot: true
+
+- type: entity
+  id: SusPlant3
+  parent: SusPlant1
+  components:
+  - type: Sprite
+    drawdepth: Overdoors
+    offset: "0.0,0.3"
+    sprite: Andromeda/Evil/susplant.rsi
+    state: susplant3
+    noRot: true
+
+- type: vendingMachineInventory
+  id: VendingMachinePottedPlantInventory
+  startingInventory:
+    PottedPlant0: 2
+    PottedPlant1: 2
+    PottedPlant2: 2
+    PottedPlant3: 2
+    PottedPlant4: 2
+    PottedPlant5: 2
+    PottedPlant6: 2
+    PottedPlant7: 2
+    PottedPlant8: 2
+    PottedPlant9: 2
+    PottedPlant10: 2
+    PottedPlant11: 2
+    PottedPlant12: 2
+    PottedPlant13: 2
+    PottedPlant14: 2
+    PottedPlant15: 2
+    PottedPlant16: 2
+    PottedPlant17: 2
+    PottedPlant18: 2
+    PottedPlant19: 2
+    PottedPlant20: 2
+    PottedPlant21: 2
+    PottedPlant22: 2
+    PottedPlant23: 2
+    PottedPlant24: 2
+    PottedPlant25: 2
+    PottedPlant26: 2
+  emaggedInventory:
+    SusPlant1: 2
+    SusPlant2: 2
+    SusPlant3: 2

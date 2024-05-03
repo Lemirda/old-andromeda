@@ -23,20 +23,15 @@
       Min: 5
       Max: 20
       PotencyDivisor: 20
+#A-13 MeatWheatseed start
   evolveTable:
-    oat:
-      requiredMinPotency: 40
+    meatwheat: 
+      requiredMinPotency: 50
       requiredMaxPotency: 100
-      requiredMinHealth: 0
-      requiredMaxHealth: 40
-      requiredMutationLevel: 0
-    rice:
-      requiredMinPotency: 30
-      requiredMaxPotency: 100
-      requiredMinHealth: 70
-      requiredMaxHealth: 150
-      requiredMutationLevel: 0
-      requiredReagent: Rice
+      requiredMinHealth: 80
+      requiredMaxHealth: 100
+      requiredReagent: UncookedAnimalProteins
+#A-13 MeatWheatseed end
 
 - type: seed
   id: oat

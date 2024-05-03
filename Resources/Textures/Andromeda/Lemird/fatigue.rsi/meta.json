@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "By Lemird",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "fatigue-1",
+      "delays": [
+        [5.0, 5.0]
+      ]
+    },
+    {
+      "name": "fatigue-2",
+      "delays": [
+        [5.0, 5.0]
+      ]
+    },
+    {
+      "name": "fatigue-3",
+      "delays": [
+        [5.0, 5.0]
+      ]
+    },
+    {
+      "name": "fatigue-4",
+      "delays": [
+        [5.0, 5.0]
+      ]
+    },
+    {
+      "name": "fatigue-5",
+      "delays": [
+        [5.0, 5.0]
+      ]
+    }
+  ]
+}

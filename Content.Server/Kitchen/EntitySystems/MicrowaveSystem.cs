@@ -35,6 +35,7 @@ using Robust.Shared.Player;
 using System.Linq;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 
 namespace Content.Server.Kitchen.EntitySystems
 {
@@ -289,6 +290,14 @@ namespace Content.Server.Kitchen.EntitySystems
                 _popupSystem.PopupEntity(Loc.GetString("microwave-component-interact-using-broken"), ent, args.User);
                 return;
             }
+
+            //A-13 Eblan system update start
+            if (HasComp<EblanComponent>(args.User) && TryComp<BatteryComponent>(args.Used, out var _))
+            {
+                _popupSystem.PopupEntity(Loc.GetString("Вы не можете вставить батарейку в микроволновку!"), ent, args.User);
+                return;
+            }
+            //A-13 Eblan system update end
 
             if (TryComp<ItemComponent>(args.Used, out var item))
             {

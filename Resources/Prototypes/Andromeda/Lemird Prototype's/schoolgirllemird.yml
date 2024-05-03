@@ -10,3 +10,8 @@
     state: icon
   - type: Item
     sprite: Andromeda/Lemird/plushielemirdschoolgirl.rsi
+  - type: Clothing
+    quickEquip: false
+    sprite: Andromeda/Lemird/plushielemirdschoolgirl.rsi
+    slots:
+    - HEAD

@@ -20,11 +20,12 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using Content.Server.Database; // A-13
-using Robust.Shared.Audio; // A-13
-using Robust.Shared.Audio.Systems; // A-13
-using Content.Shared.CombatMode.Pacification; // A-13
-using Content.Shared.Players.PlayTimeTracking; // A-13
+using Content.Server.Database; //A-13 Eblan system update start
+using Robust.Shared.Audio; //A-13 Eblan system update start
+using Robust.Shared.Audio.Systems; //A-13 Eblan system update start
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update start
+using Content.Shared.Players.PlayTimeTracking; //A-13 Eblan system update start
+using System.Threading.Tasks; //A-13 Eblan system update start
 
 namespace Content.Server.GameTicking
 {
@@ -59,6 +60,23 @@ namespace Content.Server.GameTicking
 
             return spawnableStations;
         }
+
+        //A-13 Eblan system update start
+        private async Task CheckPlayTimeAndAddEblanComponent(ICommonSession session, EntityUid mob)
+        {
+            const double minPlayTimeHours = 2.0;
+            var playTime = await _db.GetPlayTimes(session.UserId);
+            var overallTime = playTime.Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall)?.TimeSpent;
+
+            if (overallTime.HasValue && overallTime.Value.TotalHours < minPlayTimeHours)
+            {
+                if (!EntityManager.HasComponent<EblanComponent>(mob))
+                {
+                    EntityManager.AddComponent<EblanComponent>(mob);
+                }
+            }
+        }
+        //A-13 Eblan system update end
 
         private void SpawnPlayers(List<ICommonSession> readyPlayers, Dictionary<NetUserId, HumanoidCharacterProfile> profiles, bool force)
         {
@@ -220,6 +238,8 @@ namespace Content.Server.GameTicking
 
             _mind.TransferTo(newMind, mob);
 
+            await CheckPlayTimeAndAddEblanComponent(player, mob); //A-13 Eblan system update
+
             if (lateJoin && !silent)
             {
                 _chatSystem.DispatchStationAnnouncement(station,
@@ -230,32 +250,7 @@ namespace Content.Server.GameTicking
                     ("job", CultureInfo.CurrentCulture.TextInfo.ToTitleCase(jobName))
                     ), Loc.GetString("latejoin-arrival-sender"),
                     playDefaultSound: false);
-
-                // A-13 WIP EblanComponent
-                var minOverallHours = 2;
-                var overallTime = ( await _db.GetPlayTimes(player.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
-                var haveMinOverallTime = overallTime != null && overallTime.TimeSpent.TotalHours < minOverallHours;
-                if (haveMinOverallTime)
-                    _audioSystem.PlayGlobal(new SoundPathSpecifier("/Audio/Andromeda/Effects/newplayerping.ogg"),
-                        Filter.Empty().AddPlayers(_adminManager.ActiveAdmins), false,
-                        audioParams: new AudioParams { Volume = -5f });
-
-                if (haveMinOverallTime)
-                {
-                    EntityManager.AddComponent<EblanComponent>(mob);
-                }
-                // A-13 WIP EblanComponent
             }
-
-            // A-13 WIP EblanComponent
-            var minOverallHours2 = 2;
-            var overallTime2 = ( await _db.GetPlayTimes(player.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
-            var haveMinOverallTime2 = overallTime2 != null && overallTime2.TimeSpent.TotalHours < minOverallHours2;
-            if (!lateJoin && haveMinOverallTime2)
-            {
-                EntityManager.AddComponent<EblanComponent>(mob);
-            }
-            // A-13 WIP EblanComponent
 
             if (player.UserId == new Guid("{e887eb93-f503-4b65-95b6-2f282c014192}"))
             {
