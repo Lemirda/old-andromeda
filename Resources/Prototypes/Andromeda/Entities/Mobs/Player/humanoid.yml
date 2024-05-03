@@ -28,9 +28,11 @@
       state: full
     - type: RandomHumanoidSpawner
       settings: SyndicateListener
+    - type: InformantSindicate
 
 - type: randomHumanoidSettings
   id: SyndicateListener
   components:
     - type: Loadout
       prototypes: [SyndicateListenerGear]
+    - type: InformantSindicate

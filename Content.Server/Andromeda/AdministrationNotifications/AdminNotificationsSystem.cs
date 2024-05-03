@@ -34,7 +34,7 @@ namespace Content.Server.Andromeda.AdministrationNotifications
             var request = await _httpClient.PostAsync(_webhookUrl,
                 new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
 
-            _sawmill.Debug($"Вебхук Discord в формате json: {JsonSerializer.Serialize(payload)}");
+            //_sawmill.Debug($"Вебхук Discord в формате json: {JsonSerializer.Serialize(payload)}");
 
             var content = await request.Content.ReadAsStringAsync();
             if (!request.IsSuccessStatusCode)
