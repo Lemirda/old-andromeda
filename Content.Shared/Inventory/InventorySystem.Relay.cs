@@ -8,7 +8,7 @@ using Content.Shared.Inventory.Events;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Overlays;
 using Content.Shared.Radio;
-using Content.Shared.Andromeda.Lemird.NV;
+using Content.Shared.Andromeda.NightVision; //A-13 NightVision
 using Content.Shared.Slippery;
 using Content.Shared.Strip.Components;
 using Content.Shared.Temperature;
@@ -38,9 +38,9 @@ public partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, GetBlurEvent>(RelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, SolutionScanEvent>(RelayInventoryEvent);
 
-        // A-13 NV start
+        // A-13 NightVision start
         SubscribeLocalEvent<InventoryComponent, CanVisionAttemptEvent>(RelayInventoryEvent);
-        // A-13 NV end
+        // A-13 NightVision end
 
         // ComponentActivatedClientSystems
         SubscribeLocalEvent<InventoryComponent, RefreshEquipmentHudEvent<ShowSecurityIconsComponent>>(RelayInventoryEvent);

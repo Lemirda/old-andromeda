@@ -20,7 +20,7 @@ using Robust.Shared.Enums;
 using Content.Server.Corvax.Sponsors; //A-13 SponsorAntag
 using Content.Server.Andromeda.Roles; //A-13 SponsorAntag
 using Robust.Server.Player; //A-13 SponsorAntag
-using Content.Shared.Andromeda.Lemird.Fatigue; //A-13 Fatigue system
+using Content.Shared.Andromeda.Fatigue; //A-13 Fatigue system
 
 namespace Content.Server.Antag;
 
