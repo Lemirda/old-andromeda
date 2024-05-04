@@ -18,8 +18,8 @@ public sealed class FatigueMovementSpeedSystem : EntitySystem
 
         if (fatigueLevel > 45 && fatigueLevel <= 60)
         {
-            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.8f; // 20% снижение скорости
-            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.8f; // 20% снижение скорости
+            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.95f; // 5% снижение скорости
+            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.95f; // 5% снижение скорости
 
             _movementSpeedModifierSystem.ChangeBaseSpeed(uid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
 
@@ -30,8 +30,8 @@ public sealed class FatigueMovementSpeedSystem : EntitySystem
         }
         else if (fatigueLevel > 20 && fatigueLevel <= 45)
         {
-            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.6f; // 40% снижение скорости
-            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.6f; // 40% снижение скорости
+            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.8f; // 20% снижение скорости
+            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.8f; // 20% снижение скорости
 
             _movementSpeedModifierSystem.ChangeBaseSpeed(uid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
 
@@ -42,8 +42,8 @@ public sealed class FatigueMovementSpeedSystem : EntitySystem
         }
         else if (fatigueLevel > 0 && fatigueLevel <= 20)
         {
-            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.45f; // 55% снижение скорости
-            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.45f; // 55% снижение скорости
+            var newWalkSpeed = fatigueComp.OriginalWalkSpeed * 0.6f; // 40% снижение скорости
+            var newSprintSpeed = fatigueComp.OriginalSprintSpeed * 0.6f; // 40% снижение скорости
 
             _movementSpeedModifierSystem.ChangeBaseSpeed(uid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
 

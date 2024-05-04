@@ -92,7 +92,7 @@ public sealed class FatigueSystem : EntitySystem
     {
         if (HasComp<CanHostGuardianComponent>(uid))
         {
-            var minFatigue = 15;
+            var minFatigue = 60;
             component.CurrentFatigue = _random.Next(minFatigue, component.MaxFatigue + 1);
             Log.Info($"Для {uid} было выбрано значение усталости: {component.CurrentFatigue}.");
             component.LastDecreaseTime = _gameTiming.CurTime;
@@ -349,7 +349,7 @@ public sealed class FatigueSystem : EntitySystem
                 return;
 
             var oldFatigue = fatigueComp.CurrentFatigue;
-            fatigueComp.CurrentFatigue -= 3;
+            fatigueComp.CurrentFatigue -= 2;
 
             if (fatigueComp.CurrentFatigue < 0)
             {

@@ -12,7 +12,7 @@ public sealed partial class FatigueComponent : Component
     public int MaxFatigue { get; set; } = 100;
 
     [DataField("decreaseIntervalMinutes"), ViewVariables(VVAccess.ReadWrite)]
-    public float DecreaseIntervalMinutes = 0.5f;
+    public float DecreaseIntervalMinutes = 2.5f;
 
     [DataField("recoverIntervalSeconds"), ViewVariables(VVAccess.ReadWrite)]
     public float RecoverIntervalSeconds = 1f;
