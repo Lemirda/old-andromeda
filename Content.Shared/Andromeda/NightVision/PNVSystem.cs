@@ -1,10 +1,10 @@
 using Content.Shared.Actions;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
-using Content.Shared.Andromeda.Lemird.NV;
+using Content.Shared.Andromeda.NightVision;
 
 
-namespace Content.Shared.Andromeda.Lemird.NV;
+namespace Content.Shared.Andromeda.NightVision;
 
 public sealed class PNVSystem : EntitySystem
 {

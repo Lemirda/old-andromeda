@@ -1,11 +1,11 @@
 using Content.Shared.GameTicking;
-using Content.Shared.Andromeda.Lemird.NV;
+using Content.Shared.Andromeda.NightVision;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Player;
 
 
-namespace Content.Client.Andromeda.Lemird.NV;
+namespace Content.Client.Andromeda.NightVision;
 
 public sealed class NightVisionSystem : EntitySystem
 {

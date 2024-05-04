@@ -1,10 +1,10 @@
-using Content.Client.Andromeda.Lemird.Nearsighted;
+using Content.Client.Andromeda.Nearsighted;
 using Content.Shared.Inventory.Events;
-using Content.Shared.Andromeda.Lemird.Nearsighted;
+using Content.Shared.Andromeda.Nearsighted;
 using Content.Shared.Tag;
 using Robust.Client.Graphics;
 
-namespace Content.Client.Andromeda.Lemird.Nearsighted;
+namespace Content.Client.Andromeda.Nearsighted;
 
 public sealed class NearsightedSystem : EntitySystem
 {

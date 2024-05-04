@@ -3,7 +3,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 
-namespace Content.Shared.Andromeda.Lemird.NV;
+namespace Content.Shared.Andromeda.NightVision;
 
 [RegisterComponent]
 [NetworkedComponent]

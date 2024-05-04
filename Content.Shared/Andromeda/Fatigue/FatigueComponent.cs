@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.Andromeda.Lemird.Fatigue;
+namespace Content.Shared.Andromeda.Fatigue;
 
 [RegisterComponent]
 public sealed partial class FatigueComponent : Component

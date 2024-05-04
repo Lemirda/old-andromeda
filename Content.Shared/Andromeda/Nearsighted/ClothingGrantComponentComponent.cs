@@ -1,6 +1,6 @@
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared.Andromeda.Lemird.Nearsighted;
+namespace Content.Shared.Andromeda.Nearsighted;
 
 [RegisterComponent]
 public sealed partial class ClothingGrantComponentComponent : Component

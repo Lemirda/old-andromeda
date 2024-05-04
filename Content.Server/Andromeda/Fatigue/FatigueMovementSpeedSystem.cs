@@ -3,7 +3,7 @@ using Content.Server.Andromeda.Fatigue;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 
-namespace Content.Shared.Andromeda.Lemird.Fatigue;
+namespace Content.Shared.Andromeda.Fatigue;
 
 public sealed class FatigueMovementSpeedSystem : EntitySystem
 {

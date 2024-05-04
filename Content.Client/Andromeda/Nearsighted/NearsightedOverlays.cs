@@ -1,4 +1,4 @@
-using Content.Shared.Andromeda.Lemird.Nearsighted;
+using Content.Shared.Andromeda.Nearsighted;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
@@ -6,7 +6,7 @@ using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Client.Andromeda.Lemird.Nearsighted;
+namespace Content.Client.Andromeda.Nearsighted;
 
 public sealed class NearsightedOverlay : Overlay
 {

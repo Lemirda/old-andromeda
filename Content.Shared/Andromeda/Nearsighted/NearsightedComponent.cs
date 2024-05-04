@@ -1,6 +1,6 @@
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.Andromeda.Lemird.Nearsighted;
+namespace Content.Shared.Andromeda.Nearsighted;
 
 /// <summary>
 ///     Owner entity cannot see well, without prescription glasses.
