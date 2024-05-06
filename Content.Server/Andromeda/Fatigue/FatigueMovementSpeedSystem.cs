@@ -1,5 +1,3 @@
-using System.Threading;
-using Content.Server.Andromeda.Fatigue;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
 

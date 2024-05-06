@@ -4,7 +4,6 @@ using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 
-
 namespace Content.Client.Andromeda.Lemird.NV;
 
 public sealed class NightVisionOverlay : Overlay

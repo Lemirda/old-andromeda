@@ -1890,7 +1890,7 @@
   id: CardBin
   parent: [ BaseStorageItem, BaseBagOpenClose ]
   name: card box
-  suffix: Пустой, Андромеда
+  suffix: Андромеда, Пустой
   description: What secrets lie at the bottom of its endless stack?
   components:
   - type: Sprite
@@ -1941,7 +1941,7 @@
   id: CardBin2
   parent: CardBin
   name: card box
-  suffix: Пустой, Андромеда
+  suffix: Андромеда, Пустой
   description: What secrets lie at the bottom of its endless stack?
   components:
   - type: Sprite
@@ -2071,10 +2071,26 @@
     - id: PlayableCardTwoBlackT
 
 - type: entity
+  parent: BriefcaseBrown
+  abstract: true
+  id: PokerCase
+  description: набор для покера
+  suffix: Андромеда, Пустой
+  components:
+  - type: Storage
+    grid:
+    - 0,0,7,3
+  - type: Sprite
+    sprite: Andromeda/Evil/pokercase.rsi
+    state: icon
+  - type: Item
+    sprite: Andromeda/Evil/pokercase.rsi
+
+- type: entity
   noSpawn: false
-  parent: ClothingBackpackSatchelLeather
-  id: ClothingBackpackSatchelLeatherDealer
-  name: набор карточного дилера
+  parent: PokerCase
+  id: PokerCaseFilled
+  name: набор для покера
   suffix: Андромеда, Заполненный
   components:
   - type:  StorageFill

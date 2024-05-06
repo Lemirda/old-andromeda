@@ -30,7 +30,7 @@ public sealed class RoarAccentSystem : EntitySystem
             "р+",
             _random.Pick(new List<string>() { "рр", "ррр" })
         );
-      // Andromeda Vulpkanin Roar End
+        // Andromeda Vulpkanin Roar End
         args.Message = message;
     }
 }

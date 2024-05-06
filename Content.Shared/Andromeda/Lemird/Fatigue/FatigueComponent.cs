@@ -1,5 +1,3 @@
-using Robust.Shared.GameStates;
-
 namespace Content.Shared.Andromeda.Lemird.Fatigue;
 
 [RegisterComponent]
@@ -12,10 +10,10 @@ public sealed partial class FatigueComponent : Component
     public int MaxFatigue { get; set; } = 100;
 
     [DataField("decreaseIntervalMinutes"), ViewVariables(VVAccess.ReadWrite)]
-    public float DecreaseIntervalMinutes = 5f;
+    public float DecreaseIntervalMinutes = 0.5f;
 
     [DataField("recoverIntervalSeconds"), ViewVariables(VVAccess.ReadWrite)]
-    public float RecoverIntervalSeconds = 10f;
+    public float RecoverIntervalSeconds = 1f;
 
     [DataField("fatiguePopupIntervalMinutes"), ViewVariables(VVAccess.ReadWrite)]
     public float FatiguePopupIntervalMinutes = 10f;

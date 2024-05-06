@@ -1,39 +1,37 @@
-using System;
 using Robust.Shared.Timing;
 
-namespace Content.Server.GameTicking
+namespace Content.Server.GameTicking;
+
+public sealed partial class GameTicker
 {
-    public sealed partial class GameTicker
+    [Dependency] private readonly IGameTiming _timing = default!;
+    private TimeSpan _checkInterval = TimeSpan.FromMinutes(1);
+    private TimeSpan _moscowTimeThreshold = new TimeSpan(10, 0, 0); // 10:00 МСК
+    private int _playerThreshold = 25;
+    private string _secretPresetId = "secret";
+
+    private void CheckAndChangeGamePreset()
     {
-        [Dependency] private readonly IGameTiming _timing = default!;
-        private TimeSpan _checkInterval = TimeSpan.FromMinutes(1);
-        private TimeSpan _moscowTimeThreshold = new TimeSpan(10, 0, 0); // 10:00 МСК
-        private int _playerThreshold = 25;
-        private string _secretPresetId = "secret";
+        var utcNow = DateTime.UtcNow;
+        TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
+        DateTime moscowDateTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, moscowTimeZone);
 
-        private void CheckAndChangeGamePreset()
+        if (_playerManager.PlayerCount >= _playerThreshold || moscowDateTime.TimeOfDay >= _moscowTimeThreshold)
         {
-            var utcNow = DateTime.UtcNow;
-            TimeZoneInfo moscowTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Russian Standard Time");
-            DateTime moscowDateTime = TimeZoneInfo.ConvertTimeFromUtc(utcNow, moscowTimeZone);
-
-            if (_playerManager.PlayerCount >= _playerThreshold || moscowDateTime.TimeOfDay >= _moscowTimeThreshold)
+            Log.Info($"В данный момент количество игроков больше или ровно 25, либо время больше 10:00 МСК");
+            if (TryFindGamePreset(_secretPresetId, out var preset))
             {
-                Log.Info($"В данный момент количество игроков больше или ровно 25, либо время больше 10:00 МСК");
-                if (TryFindGamePreset(_secretPresetId, out var preset))
-                {
-                    Log.Info($"Выставляем {preset} в связи с тем что в данный момент количество игроков больше или ровно 25, либо время больше 10:00 МСК");
-                    SetGamePreset(preset);
-                }
-                else
-                {
-                    Log.Error($"Почему то небыл найден режим {_secretPresetId}, невозможно выставить режим в связи с тем что в данный момент количество игроков больше или ровно 25, либо время больше 10:00 МСК");
-                }
+                Log.Info($"Выставляем {preset} в связи с тем что в данный момент количество игроков больше или ровно 25, либо время больше 10:00 МСК");
+                SetGamePreset(preset);
             }
             else
             {
-                Log.Warning($"В данный момент количество игроков меньше 25, либо время меньше 10:00 МСК");
+                Log.Error($"Не найден режим {_secretPresetId}, невозможно выставить режим в связи с тем что в данный момент количество игроков больше или ровно 25, либо время меньше 10:00 МСК");
             }
+        }
+        else
+        {
+            Log.Warning($"В данный момент количество игроков меньше 25, либо время меньше 10:00 МСК");
         }
     }
 }

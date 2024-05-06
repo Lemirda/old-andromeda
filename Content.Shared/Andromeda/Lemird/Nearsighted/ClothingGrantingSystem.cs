@@ -1,7 +1,7 @@
 using Content.Shared.Clothing.Components;
 using Content.Shared.Inventory.Events;
-using Robust.Shared.Serialization.Manager;
 using Content.Shared.Tag;
+using Robust.Shared.Serialization.Manager;
 
 namespace Content.Shared.Andromeda.Lemird.Nearsighted;
 

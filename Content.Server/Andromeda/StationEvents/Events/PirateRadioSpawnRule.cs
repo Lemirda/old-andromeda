@@ -1,11 +1,10 @@
-using Robust.Server.GameObjects;
-using Robust.Server.Maps;
-using Robust.Shared.Map;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
 using Content.Server.GameTicking.Rules.Components;
 using Content.Server.StationEvents.Components;
-using Content.Server.RoundEnd;
+using Robust.Server.GameObjects;
+using Robust.Server.Maps;
+using Robust.Shared.Map;
 
 namespace Content.Server.StationEvents.Events;
 
@@ -19,7 +18,7 @@ public sealed class PirateRadioSpawnRule : StationEventSystem<PirateRadioSpawnRu
     protected override void Started(EntityUid uid, PirateRadioSpawnRuleComponent component, GameRuleComponent gameRule, GameRuleStartedEvent args)
     {
         base.Started(uid, component, gameRule, args);
-		
+
         var shuttleMap = _mapManager.CreateMap();
         var options = new MapLoadOptions
         {
