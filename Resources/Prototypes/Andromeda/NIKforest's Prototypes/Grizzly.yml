@@ -35,7 +35,7 @@
   - type: CombatMode
   - type: SlowOnDamage
     speedModifierThresholds:
-      800: 0.7
+      600: 0.7
       1000: 0.5
   - type: MobMover
   - type: FireVisuals
@@ -73,7 +73,7 @@
   - type: AntiRottingContainer #A-13 Dragon fix full
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
-    baseSprintSpeed: 4
+    baseSprintSpeed: 3.5
   - type: Sprite
     sprite: Andromeda/NIKforest/grizzly.rsi
     noRot: true
@@ -127,6 +127,8 @@
     spawned:
     - id: FoodMeatBear
       amount: 10
+  - type: Stamina
+    critThreshold: 300
   - type: InteractionPopup
     successChance: 0.25
     interactSuccessString: petting-success-bear
@@ -194,3 +196,11 @@
     - CannotSuicide
     - DoorBumpOpener
     - NoPaint
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Blunt
+        damage: 1500
+      behaviors:
+      - !type:GibBehavior { }

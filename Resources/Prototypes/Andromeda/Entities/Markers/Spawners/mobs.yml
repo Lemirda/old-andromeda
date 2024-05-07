@@ -10,3 +10,17 @@
   - type: ConditionalSpawner
     prototypes:
       - MobRadioGuard
+
+- type: entity
+  name: спавнер Гризли
+  id: SpawnMobGrizly
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+        sprite: Andromeda/NIKforest/grizzly.rsi
+      - state: alive
+  - type: ConditionalSpawner
+    prototypes:
+      - MobGrizzly

@@ -43,3 +43,17 @@
     maxOccurences: 1
     duration: 1
   - type: PirateRadioSpawnRule
+
+- type: entity
+  parent: BaseGameRule
+  id: GrizzlySpawn
+  noSpawn: true
+  components:
+  - type: StationEvent
+    weight: 5
+    duration: 1
+    earliestStart: 45
+    reoccurrenceDelay: 60
+    minimumPlayers: 20
+  - type: RandomSpawnRule
+    prototype: SpawnMobGrizly
