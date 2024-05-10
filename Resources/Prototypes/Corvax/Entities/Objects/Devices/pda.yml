@@ -5,6 +5,18 @@
   description: Corporation and profit are best friends.
   components:
     - type: Pda
+      penSlot:
+        startingItem: AVDPen
+        priority: -1
+        whitelist:
+          tags:
+          - Write
+          - SalvagePenWelder
+          - LibraPenR
+          - RollingPen
+        blacklist:
+          tags:
+          - CrossPen
       id: IAAIDCard
       state: pda-lawyer
     - type: PdaBorderColor
