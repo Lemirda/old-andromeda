@@ -63,8 +63,7 @@ namespace Content.Server.Flash
             args.Handled = true;
             foreach (var e in args.HitEntities)
             {
-                Flash(e, args.User, comp.ForceFlash, uid, comp.FlashDuration, comp.SlowTo, melee: true);
-                // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
+                Flash(e, args.User, comp.ForceFlash, uid, comp.FlashDuration, comp.SlowTo, melee: true); // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
             }
         }
 
@@ -74,8 +73,7 @@ namespace Content.Server.Flash
                 return;
 
             args.Handled = true;
-            FlashArea(uid, args.User, comp.ForceFlash, comp.Range, comp.AoeFlashDuration, comp.SlowTo, true);
-            // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
+            FlashArea(uid, args.User, comp.ForceFlash, comp.Range, comp.AoeFlashDuration, comp.SlowTo, true); // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
         }
 
         private bool UseFlash(EntityUid uid, FlashComponent comp, EntityUid user)
@@ -121,13 +119,13 @@ namespace Content.Server.Flash
             if (!Resolve(target, ref flashable, false))
                 return;
 
-            if (!force) // A-13 check if flash is forced. - 'PenPlus+'
+            if (!force) // A-13 check if flash is forced. - 'PenPlus+' start
             {
                 var attempt = new FlashAttemptEvent(target, user, used);
                 RaiseLocalEvent(target, attempt, true);
                 if (attempt.Cancelled)
                     return;
-            }
+            } // A-13 check if flash is forced. - 'PenPlus+' end
 
             if (melee)
             {
