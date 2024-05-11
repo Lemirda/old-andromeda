@@ -121,7 +121,7 @@ namespace Content.Server.Flash
             if (!Resolve(target, ref flashable, false))
                 return;
 
-            if (!force)
+            if (!force) // A-13 check if flash is forced. - 'PenPlus+'
             {
                 var attempt = new FlashAttemptEvent(target, user, used);
                 RaiseLocalEvent(target, attempt, true);
