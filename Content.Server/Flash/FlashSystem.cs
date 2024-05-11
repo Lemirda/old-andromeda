@@ -119,13 +119,15 @@ namespace Content.Server.Flash
             if (!Resolve(target, ref flashable, false))
                 return;
 
-            if (!force) // A-13 check if flash is forced. - 'PenPlus+' start
+            // A-13 check if flash is forced. - 'PenPlus+' start
+            if (!force)
             {
                 var attempt = new FlashAttemptEvent(target, user, used);
                 RaiseLocalEvent(target, attempt, true);
                 if (attempt.Cancelled)
                     return;
-            } // A-13 check if flash is forced. - 'PenPlus+' end
+            }
+            // A-13 check if flash is forced. - 'PenPlus+' end
 
             if (melee)
             {
@@ -151,7 +153,7 @@ namespace Content.Server.Flash
 
         }
 
-        public void FlashArea(EntityUid source, EntityUid? user, bool force, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, SoundSpecifier? sound = null)
+        public void FlashArea(EntityUid source, EntityUid? user, bool force, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, SoundSpecifier? sound = null) // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
         {
             var transform = EntityManager.GetComponent<TransformComponent>(source);
             var mapPosition = _transform.GetMapCoordinates(transform);
