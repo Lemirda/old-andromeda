@@ -108,7 +108,7 @@ namespace Content.Server.Flash
 
         public void Flash(EntityUid target,
             EntityUid? user,
-            bool force,
+            bool force, // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
             EntityUid? used,
             float flashDuration,
             float slowTo,
