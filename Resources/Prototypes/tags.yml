@@ -455,7 +455,7 @@
   id: CrayonYellow
 
 - type: Tag
-  id: CrayonMime
+  id: CrayonMime # A-13 New tag for mime crayon. - 'PenPlus+'
 
 - type: Tag
   id: Crowbar
