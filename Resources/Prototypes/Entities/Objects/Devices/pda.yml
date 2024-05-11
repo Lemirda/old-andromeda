@@ -418,7 +418,7 @@
         - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens and no volume for mime pda. - 'PenPlus+' end
     id: MimeIDCard
     state: pda-mime
-    idSlot: #  rewrite without sound because mime. Ok i will
+    idSlot: # A-13 Rewriten with no volume for mime pda. - 'PenPlus+' start
       name: ID Card
       ejectSound:
         path: /Audio/Machines/id_insert.ogg
@@ -427,7 +427,7 @@
       insertSound:
         path: /Audio/Machines/id_insert.ogg
         params:
-          volume: -30
+          volume: -30 # A-13 Rewriten with no volume for mime pda. - 'PenPlus+' end
       whitelist:
         components:
         - IdCard
