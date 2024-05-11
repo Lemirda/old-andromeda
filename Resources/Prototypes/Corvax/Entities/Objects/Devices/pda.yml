@@ -5,7 +5,7 @@
   description: Corporation and profit are best friends.
   components:
     - type: Pda
-      penSlot:
+      penSlot: # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' start
         startingItem: AVDPen
         priority: -1
         whitelist:
@@ -16,7 +16,7 @@
           - RollingPen
         blacklist:
           tags:
-          - CrossPen
+          - CrossPen # A-13 New pen replacement for PDA's, also new whitelist and blacklist for other pens. - 'PenPlus+' end
       id: IAAIDCard
       state: pda-lawyer
     - type: PdaBorderColor
