@@ -151,6 +151,7 @@ namespace Content.Server.Explosion.EntitySystems
         {
             // TODO Make flash durations sane ffs.
             _flashSystem.FlashArea(uid, args.User, force: false, component.Range, component.Duration * 1000f);
+            // A-13 force set to false due usage for trigger granades only and to not break balance. - 'PenPlus+'
             args.Handled = true;
         }
 

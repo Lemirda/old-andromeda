@@ -64,6 +64,7 @@ namespace Content.Server.Flash
             foreach (var e in args.HitEntities)
             {
                 Flash(e, args.User, comp.ForceFlash, uid, comp.FlashDuration, comp.SlowTo, melee: true);
+                // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
             }
         }
 
@@ -74,6 +75,7 @@ namespace Content.Server.Flash
 
             args.Handled = true;
             FlashArea(uid, args.User, comp.ForceFlash, comp.Range, comp.AoeFlashDuration, comp.SlowTo, true);
+            // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
         }
 
         private bool UseFlash(EntityUid uid, FlashComponent comp, EntityUid user)
