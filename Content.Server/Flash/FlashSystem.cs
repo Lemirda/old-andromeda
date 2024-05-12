@@ -170,7 +170,7 @@ namespace Content.Server.Flash
                     continue;
 
                 // They shouldn't have flash removed in between right?
-                Flash(entity, user, force, source, duration, slowTo, displayPopup, flashableQuery.GetComponent(entity));
+                Flash(entity, user, force, source, duration, slowTo, displayPopup, flashableQuery.GetComponent(entity)); // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
             }
 
             if (sound != null)
