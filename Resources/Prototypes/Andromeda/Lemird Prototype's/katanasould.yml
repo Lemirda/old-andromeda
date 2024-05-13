@@ -1,0 +1,42 @@
+- type: entity
+  parent: BaseItem
+  id: SoulСuttingKatana
+  name: катана разрезающая душу
+  description: Катана которая способка разрубить пополам всё живое. Стоит только отдать часть души...
+  components:
+  - type: SoulCuttingKatana
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/katana.rsi
+    state: icon
+  - type: Item
+    size: Normal
+    sprite: Objects/Weapons/Melee/katana.rsi
+  - type: MeleeWeapon
+    attackRate: 75
+    damage:
+      types:
+        Slash: 15
+    soundSwing: /Audio/Andromeda/Lemird/Misc/katanaswipe.ogg
+    soundHit: /Audio/Andromeda/Lemird/Misc/katanahit.ogg
+    wideAnimationRotation: -135
+  - type: Reflect
+    enabled: true
+    reflectProb: 0.7
+  - type: Tag
+    tags:
+    - Katana
+
+- type: entity
+  id: ActionRecallSoulCuttingKatana
+  name: Вернуть катану назад
+  description: Телепортирует катану разрезающую душу назад к вам в руки.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 1
+    icon:
+      sprite: Objects/Weapons/Melee/katana.rsi
+      state: icon
+    itemIconStyle: NoItem
+    priority: -11
+    event: !type:RecallSoulCuttingKatanaEvent {}
