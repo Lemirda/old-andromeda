@@ -1,0 +1,13 @@
+- type: technology
+  id: Huds
+  name: Окулярная технология
+  icon:
+    sprite: Clothing/Eyes/Hud/med.rsi
+    state: icon
+  discipline: CivilianServices
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - ClothingEyesHudMedical
+  - ClothingEyesHudSecurity
+  - ClothingEyesGlassesChemical

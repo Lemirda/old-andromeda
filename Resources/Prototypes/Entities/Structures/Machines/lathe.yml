@@ -262,7 +262,6 @@
     staticRecipes:
     - LargeBeaker
     - Dropper
-    - ClothingEyesGlassesChemical
     dynamicRecipes:
       - PowerDrill
       - MiningDrill
@@ -325,6 +324,7 @@
       - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
+      - ClothingEyesGlassesChemical #A-13 Change (removed from static)
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ExplosivePayload
@@ -654,7 +654,6 @@
     idleState: icon
     runningState: icon
     staticRecipes:
-      - ClothingEyesHudSecurity
       - Flash
       - Handcuffs
       - Zipties
@@ -739,6 +738,7 @@
       - ShuttleGunPerforatorCircuitboard
       - ShuttleGunFriendshipCircuitboard
       - ShuttleGunDusterCircuitboard
+      - ClothingEyesHudSecurity #A-13 Change (removed from static)
   - type: MaterialStorage
     whitelist:
       tags:
@@ -849,13 +849,14 @@
       - Drill
       - Saw
       - Hemostat
-      - ClothingEyesGlassesChemical
     dynamicRecipes:
       - ChemicalPayload
       - CryostasisBeaker
       - BluespaceBeaker
       - SyringeBluespace
       - SyringeCryostasis
+      - ClothingEyesGlassesChemical #A-13 Change (removed from static)
+      - ClothingEyesHudMedical #A-13 added
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget
