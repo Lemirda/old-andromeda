@@ -15,6 +15,7 @@ using Robust.Shared.Random;
 using Content.Server.Chat.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Andromeda.SoulСuttingKatana;
 
 namespace Content.Server.Andromeda.SoulСuttingKatana;
 

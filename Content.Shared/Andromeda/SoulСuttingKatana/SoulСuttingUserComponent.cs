@@ -1,6 +1,6 @@
-namespace Content.Server.Andromeda.SoulСuttingKatana;
+namespace Content.Shared.Andromeda.SoulСuttingKatana;
 
-[RegisterComponent]
+[RegisterComponent, AutoGenerateComponentState]
 public sealed partial class SoulCuttingUserComponent : Component
 {
     [DataField("ownerUid")]

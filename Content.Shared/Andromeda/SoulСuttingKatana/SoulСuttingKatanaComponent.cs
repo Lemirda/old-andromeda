@@ -1,4 +1,4 @@
-namespace Content.Server.Andromeda.SoulСuttingKatana;
+namespace Content.Shared.Andromeda.SoulСuttingKatana;
 
 [RegisterComponent]
 public sealed partial class SoulCuttingKatanaComponent : Component

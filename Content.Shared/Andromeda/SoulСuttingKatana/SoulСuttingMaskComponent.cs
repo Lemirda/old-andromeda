@@ -1,13 +1,10 @@
-using Content.Shared.Damage;
-using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
-using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
-namespace Content.Server.Andromeda.SoulСuttingKatana;
+namespace Content.Shared.Andromeda.SoulСuttingKatana;
 
-[RegisterComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class SoulCuttingMaskComponent : Component
 {
     [DataField("ownerUid")]
@@ -20,5 +17,6 @@ public sealed partial class SoulCuttingMaskComponent : Component
     [DataField("recallKatanaSoulCuttingAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     public string RecallKatanaSoulCuttingAction = "ActionRecallSoulCuttingKatana";
 
-    [DataField] public EntityUid? RecallKatanaActionSoulCuttingEntity;
+    [DataField, AutoNetworkedField]
+    public EntityUid? RecallKatanaActionSoulCuttingEntity;
 }

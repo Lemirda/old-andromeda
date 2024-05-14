@@ -5,6 +5,7 @@ using Content.Shared.Interaction.Components;
 using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
+using Content.Shared.Andromeda.SoulСuttingKatana;
 
 namespace Content.Server.Andromeda.SoulСuttingKatana;
 
@@ -23,10 +24,11 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         SubscribeLocalEvent<SoulCuttingUserComponent, RecallSoulCuttingKatanaEvent>(OnRecallKatana);
     }
 
-    private void OnMapInit(EntityUid uid, SoulCuttingMaskComponent component, MapInitEvent args)
+    private void OnMapInit(EntityUid maskUid, SoulCuttingMaskComponent component, MapInitEvent args)
     {
         Log.Info($"Добавляем контейнер.");
-        _actionContainer.AddAction(uid, component.RecallKatanaSoulCuttingAction);
+        _actionContainer.EnsureAction(maskUid, ref component.RecallKatanaActionSoulCuttingEntity, component.RecallKatanaSoulCuttingAction);
+        Dirty(maskUid, component);
     }
 
     private void AddMaskVerbs(EntityUid maskUid, SoulCuttingMaskComponent component, GetVerbsEvent<Verb> args)
