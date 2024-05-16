@@ -1319,5 +1319,7 @@
 - type: Tag
   id: WriteIgnoreStamps
 
+#A-13 for HudChemical craft start
 - type: Tag
-  id: HudChemical #A-13 for HudChemical craft
+  id: HudChemical 
+#A-13 for HudChemical craft end
