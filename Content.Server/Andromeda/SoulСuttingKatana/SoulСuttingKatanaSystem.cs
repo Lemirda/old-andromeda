@@ -45,11 +45,11 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
             if (!component.IsActive)
                 return;
 
-            component.DamageTimer = component.StandartTimer;
             component.DamageTimer -= frameTime;
             if (component.DamageTimer <= 0)
             {
                 ApplyDamage(component);
+                component.DamageTimer = component.DamageInterval;
             }
         }
     }

@@ -7,11 +7,11 @@ namespace Content.Shared.Andromeda.SoulСuttingKatana;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class SoulCuttingMaskComponent : Component
 {
-    [DataField("ownerUid")]
-    public EntityUid OwnerUid;
-
     [DataField("maskSealed")]
     public bool MaskSealed { get; set; } = false;
+
+    [DataField("ownerIdentified")]
+    public bool OwnerIdentified { get; set; } = false;
 
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("recallKatanaSoulCuttingAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]

@@ -1,14 +1,14 @@
 namespace Content.Shared.Andromeda.SoulСuttingKatana;
 
-[RegisterComponent, AutoGenerateComponentState]
+[RegisterComponent]
 public sealed partial class SoulCuttingUserComponent : Component
 {
     [DataField("ownerUid")]
     public EntityUid OwnerUid;
 
-    [DataField("katanaUid"), AutoNetworkedField]
+    [DataField("katanaUid")]
     public EntityUid? KatanaUid;
 
-    [DataField("maskUid"), AutoNetworkedField]
+    [DataField("maskUid")]
     public EntityUid? MaskUid;
 }

@@ -21,11 +21,11 @@ public sealed partial class SoulCuttingKatanaComponent : Component
     [DataField("speedReduced")]
     public bool SpeedReduced { get; set; } = false;
 
-    [DataField("standartTimer")]
-    public float StandartTimer { get; set; } = 0.7f;
-
     [DataField("damageTimer")]
-    public float DamageTimer { get; set; }
+    public float DamageTimer { get; set; } = 0.7f;
+
+    [DataField("damageInterval")]
+    public float DamageInterval { get; set; } = 0.7f;
 
     [DataField("oneBlockMessage")]
     public List<string> OneBlockMessage { get; set; } = new()
