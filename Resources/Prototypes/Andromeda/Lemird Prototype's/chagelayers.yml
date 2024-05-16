@@ -1,0 +1,14 @@
+- type: entity
+  id: ActionChangeLayers
+  name: Переключаться между пространством
+  description: Позволяет вам стать видимым и невидимым перемещаясь из пространства и времени.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    itemIconStyle: BigAction
+    priority: -20
+    useDelay: 0
+    icon:
+      sprite: Andromeda/Lemird/changelayers.rsi
+      state: icon
+    event: !type:ChangeLayersActionEvent {}
