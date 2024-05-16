@@ -6,6 +6,7 @@ using Content.Shared.Popups;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 using Content.Shared.Andromeda.SoulСuttingKatana;
+using Content.Shared.Inventory;
 
 namespace Content.Server.Andromeda.SoulСuttingKatana;
 
@@ -14,6 +15,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
     [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedHandsSystem _hands = default!;
+    [Dependency] private readonly InventorySystem _inventorySystem = default!;
 
     public override void Initialize()
     {
@@ -85,9 +87,16 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         if (TryComp<SoulCuttingUserComponent>(ownerUid, out var ownerComp))
         {
             ownerComp.MaskUid = maskUid;
-            maskComp.MaskSealed = true;
 
+            if (!_inventorySystem.TryGetSlotEntity(ownerUid, "mask", out var slotEntity))
+            {
+                _popupSystem.PopupCursor("Маска не находится на лице.", ownerUid, PopupType.Large);
+                return;
+            }
+
+            maskComp.MaskSealed = true;
             AddComp<UnremoveableComponent>(maskUid);
+
             _popupSystem.PopupCursor("Вы чувствует как маска наполняется энергией и запечатывается...", ownerComp.OwnerUid, PopupType.Large);
             _actionSystem.AddAction(ownerUid, ref maskComp.RecallKatanaActionSoulCuttingEntity, maskComp.RecallKatanaSoulCuttingAction);
         }
@@ -111,7 +120,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         {
             if (component.KatanaUid == null)
             {
-                Log.Info($"СУКААААААААА2");
+                Log.Error($"Katana Uid не найден");
                 return;
             }
 
@@ -130,7 +139,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         }
         else
         {
-            Log.Info($"СУКААААААААА");
+            Log.Error($"Не удалось извлечь SoulCuttingUserComponent и SoulCuttingMaskComponent");
         }
     }
 }

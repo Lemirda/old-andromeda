@@ -16,6 +16,8 @@ using Content.Server.Chat.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Andromeda.SoulСuttingKatana;
+using Content.Shared.Mobs.Components;
+using Content.Shared.Mobs;
 
 namespace Content.Server.Andromeda.SoulСuttingKatana;
 
@@ -27,13 +29,12 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!;
-    [Dependency] private readonly ActionContainerSystem _actionContainer = default!;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<SoulCuttingKatanaComponent, GetVerbsEvent<Verb>>(AddKatanaVerbs);
+        SubscribeLocalEvent<SoulCuttingUserComponent, MobStateChangedEvent>(OnMobStateChanged);
     }
 
     public override void Update(float frameTime)
@@ -45,9 +46,11 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
             if (!component.IsActive)
                 return;
 
+            Log.Info($"Поехали в Update");
             component.DamageTimer -= frameTime;
             if (component.DamageTimer <= 0)
             {
+                Log.Info($"Поехали в метод Update");
                 ApplyDamage(component);
                 component.DamageTimer = component.DamageInterval;
             }
@@ -62,6 +65,7 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
         if (!_prototypeManager.TryIndex<DamageTypePrototype>("Slash", out var slashDamageType))
             return;
 
+        Log.Info($"Ебашим");
         var damage = new DamageSpecifier(slashDamageType, FixedPoint2.New(2.5));
         EntityManager.System<DamageableSystem>().TryChangeDamage(component.OwnerUid, damage);
     }
@@ -189,5 +193,17 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
 
         var message = _random.Pick(component.ThreeBlockMessage);
         _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
+    }
+
+    private void OnMobStateChanged(EntityUid uid, SoulCuttingUserComponent userComp, MobStateChangedEvent args)
+    {
+        if (args.NewMobState == MobState.Critical && userComp.KatanaUid.HasValue)
+        {
+            var katanaUid = userComp.KatanaUid.Value;
+            if (TryComp<SoulCuttingKatanaComponent>(katanaUid, out var katanaComp) && katanaComp.IsActive)
+            {
+                DeActivateKatana(katanaUid, katanaComp, uid);
+            }
+        }
     }
 }
