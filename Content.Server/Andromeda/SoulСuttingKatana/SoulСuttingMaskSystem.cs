@@ -35,7 +35,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         Verb setHostVerb = new Verb
         {
             Text = "Стать владельцем маски",
-            Act = () => SetHost(component, args.User),
+            Act = () => SetHost(maskUid, component, args.User),
             Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
         };
 
@@ -48,7 +48,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
             args.Verbs.Add(setHostVerb);
         }
 
-        if (userComp.OwnerUid == args.User && component.OwnerIdentified)
+        if (component.OwnerUid == args.User && component.OwnerIdentified)
         {
             Verb saveVerb = new Verb
             {
@@ -76,18 +76,21 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         }
     }
 
-    private void SetHost(SoulCuttingMaskComponent maskComp, EntityUid ownerUid)
+    private void SetHost(EntityUid maskUid, SoulCuttingMaskComponent maskComp, EntityUid ownerUid)
     {
-        maskComp.OwnerIdentified = true;
-        _popupSystem.PopupCursor("Вы чувствует как вы стали обладателем могущественной маски...", ownerUid, PopupType.Large);
+        if (TryComp<SoulCuttingUserComponent>(ownerUid, out var ownerComp))
+        {
+            ownerComp.MaskUid = maskUid;
+            maskComp.OwnerUid = ownerUid;
+            maskComp.OwnerIdentified = true;
+            _popupSystem.PopupCursor("Вы чувствует как вы стали обладателем могущественной маски...", ownerUid, PopupType.Large);
+        }
     }
 
     private void SaveMask(EntityUid maskUid, SoulCuttingMaskComponent maskComp, EntityUid ownerUid)
     {
         if (TryComp<SoulCuttingUserComponent>(ownerUid, out var ownerComp))
         {
-            ownerComp.MaskUid = maskUid;
-
             if (!_inventorySystem.TryGetSlotEntity(ownerUid, "mask", out var slotEntity))
             {
                 _popupSystem.PopupCursor("Маска не находится на лице.", ownerUid, PopupType.Large);
@@ -95,8 +98,8 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
             }
 
             maskComp.MaskSealed = true;
-            AddComp<UnremoveableComponent>(maskUid);
 
+            AddComp<UnremoveableComponent>(maskUid);
             _popupSystem.PopupCursor("Вы чувствует как маска наполняется энергией и запечатывается...", ownerComp.OwnerUid, PopupType.Large);
             _actionSystem.AddAction(ownerUid, ref maskComp.RecallKatanaActionSoulCuttingEntity, maskComp.RecallKatanaSoulCuttingAction);
         }
@@ -115,7 +118,6 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
 
     private void OnRecallKatana(EntityUid ownerUid, SoulCuttingUserComponent component, RecallSoulCuttingKatanaEvent args)
     {
-        Log.Info($"АААА ПОЕХАЛИ");
         if (TryComp<SoulCuttingUserComponent>(ownerUid, out var ownerComp) && TryComp<SoulCuttingMaskComponent>(ownerComp.MaskUid, out var maskComp))
         {
             if (component.KatanaUid == null)
@@ -131,6 +133,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
             {
                 _hands.TryPickupAnyHand(user, katana);
                 _popupSystem.PopupEntity("Катана появляется в руках.", user, user);
+                args.Handled = true;
             }
             else
             {

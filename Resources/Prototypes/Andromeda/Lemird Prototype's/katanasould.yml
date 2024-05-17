@@ -1,30 +1,29 @@
 - type: entity
-  parent: BaseItem
+  parent: Katana
   id: SoulСuttingKatana
-  name: катана разрезающая душу
-  description: Катана которая способка разрубить пополам всё живое. Стоит только отдать часть души...
+  suffix: Андромеда, катана синдиката.
   components:
   - type: SoulCuttingKatana
   - type: Sprite
-    sprite: Objects/Weapons/Melee/katana.rsi
-    state: icon
+    sprite: Andromeda/Lemird/soulkatana.rsi
   - type: Item
     size: Normal
-    sprite: Objects/Weapons/Melee/katana.rsi
-  - type: MeleeWeapon
-    attackRate: 75
-    damage:
-      types:
-        Slash: 15
-    soundSwing: /Audio/Andromeda/Lemird/Misc/katanaswipe.ogg
-    soundHit: /Audio/Andromeda/Lemird/Misc/katanahit.ogg
-    wideAnimationRotation: -135
-  - type: Reflect
-    enabled: true
-    reflectProb: 0.7
-  - type: Tag
-    tags:
-    - Katana
+    sprite: Andromeda/Lemird/soulkatana.rsi
+
+- type: entity
+  parent: ClothingMaskBase
+  id: SoulСuttingMask
+  name: дьявольская маска
+  suffix: Андромеда, катана синдиката
+  components:
+    - type: SoulCuttingMask
+    - type: BreathMask
+    - type: EyeProtection
+      protectionTime: 5
+    - type: Sprite
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
+    - type: Clothing
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
 
 - type: entity
   id: ActionRecallSoulCuttingKatana
@@ -33,7 +32,7 @@
   noSpawn: true
   components:
   - type: InstantAction
-    useDelay: 1
+    useDelay: 60
     icon:
       sprite: Objects/Weapons/Melee/katana.rsi
       state: icon

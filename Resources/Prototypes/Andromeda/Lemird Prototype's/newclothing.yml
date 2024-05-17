@@ -170,7 +170,6 @@
   id: ClothingMaskRedFestival
   name: красная фестивальная маска
   components:
-    - type: SoulCuttingMask
     - type: Sprite
       sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
     - type: Clothing

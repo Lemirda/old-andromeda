@@ -79,7 +79,7 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
         {
             Text = "Стать владельцем",
             Act = () => SetOwner(katanaUid, component, args.User),
-            Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/takekatana.png"))
         };
 
         if (component.OwnerIdentified)
@@ -97,7 +97,7 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
             {
                 Text = "Активировать катану",
                 Act = () => ActivateKatana(katanaUid, component, args.User),
-                Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
+                Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/activatekatana.png"))
             };
 
             if (component.IsActive)
@@ -106,7 +106,7 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
                 {
                     Text = "Отключить катану",
                     Act = () => DeActivateKatana(katanaUid, component, args.User),
-                    Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
+                    Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/deactivatekatana.png"))
                 };
 
                 args.Verbs.Add(deactivateVerb);
@@ -135,12 +135,15 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
                 ownerComp.KatanaUid = katanaUid;
                 component.OwnerUid = ownerUid;
                 component.OwnerIdentified = true;
+
                 _popupSystem.PopupCursor(Loc.GetString("Вы видите как ваше имя оказывается на клинке... Вы чувствуете лёгкость и силу."), ownerUid, PopupType.Large);
+
                 AddComp<PointLightComponent>(katanaUid);
                 TryComp<PointLightComponent>(katanaUid, out var light);
                 _pointLight.SetColor(katanaUid, Color.Red, light);
                 _pointLight.SetRadius(katanaUid, (float) 2.0, light);
                 _pointLight.SetEnergy(katanaUid, (float) 1.0, light);
+
                 var message = _random.Pick(component.OneBlockMessage);
                 _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
             }
@@ -195,11 +198,11 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
         _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
     }
 
-    private void OnMobStateChanged(EntityUid uid, SoulCuttingUserComponent userComp, MobStateChangedEvent args)
+    private void OnMobStateChanged(EntityUid uid, SoulCuttingUserComponent ownerComp, MobStateChangedEvent args)
     {
-        if (args.NewMobState == MobState.Critical && userComp.KatanaUid.HasValue)
+        if (args.NewMobState == MobState.Critical && ownerComp.KatanaUid.HasValue)
         {
-            var katanaUid = userComp.KatanaUid.Value;
+            var katanaUid = ownerComp.KatanaUid.Value;
             if (TryComp<SoulCuttingKatanaComponent>(katanaUid, out var katanaComp) && katanaComp.IsActive)
             {
                 DeActivateKatana(katanaUid, katanaComp, uid);
