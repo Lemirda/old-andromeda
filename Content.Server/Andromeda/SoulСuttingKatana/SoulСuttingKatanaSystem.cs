@@ -167,11 +167,14 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
             _movementSpeedModifierSystem.ChangeBaseSpeed(ownerUid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
         }
 
-        AddComp<ReflectComponent>(katanaUid);
-
         if (TryComp<ReflectComponent>(katanaUid, out var reflectComponent))
         {
-            reflectComponent.ReflectProb = 0.75f;
+            reflectComponent.ReflectProb = 0.7f;
+        }
+
+        if (TryComp<MeleeWeaponComponent>(katanaUid, out var meleeComp))
+        {
+            meleeComp.AttackRate = 75;
         }
 
         AddComp<UnremoveableComponent>(katanaUid);
@@ -195,7 +198,16 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
             _movementSpeedModifierSystem.ChangeBaseSpeed(ownerUid, component.OriginalWalkSpeed, component.OriginalSprintSpeed, moveMod.Acceleration);
         }
 
-        RemComp<ReflectComponent>(katanaUid);
+        if (TryComp<MeleeWeaponComponent>(katanaUid, out var meleeComp))
+        {
+            meleeComp.AttackRate = 1;
+        }
+
+        if (TryComp<ReflectComponent>(katanaUid, out var reflectComponent))
+        {
+            reflectComponent.ReflectProb = 0.5f;
+        }
+
         RemComp<UnremoveableComponent>(katanaUid);
 
         TryComp<PointLightComponent>(katanaUid, out var light);
