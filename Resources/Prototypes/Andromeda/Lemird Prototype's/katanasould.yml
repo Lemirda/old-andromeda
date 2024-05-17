@@ -9,6 +9,14 @@
   - type: Item
     size: Normal
     sprite: Andromeda/Lemird/soulkatana.rsi
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Slash: 15
+    soundSwing: /Audio/Andromeda/Lemird/Misc/katanaswipe.ogg
+    soundHit: /Audio/Andromeda/Lemird/Misc/katanahit.ogg
+    wideAnimationRotation: -135
 
 - type: entity
   parent: ClothingMaskBase
@@ -34,7 +42,7 @@
   - type: InstantAction
     useDelay: 60
     icon:
-      sprite: Objects/Weapons/Melee/katana.rsi
+      sprite: Andromeda/Lemird/soulkatana.rsi
       state: icon
     itemIconStyle: NoItem
     priority: -11
@@ -61,13 +69,6 @@
   - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say7.ogg
 
 - type: soundCollection
-  id: SoulUserAskSpeech
-  files:
-  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask1.ogg
-  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask2.ogg
-  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask3.ogg
-
-- type: soundCollection
   id: SoulUserExclaimSpeech
   files:
   - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim1.ogg
@@ -77,3 +78,10 @@
   - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim5.ogg
   - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim6.ogg
   - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim7.ogg
+
+- type: soundCollection
+  id: SoulUserAskSpeech
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask3.ogg

@@ -18,6 +18,7 @@ using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Andromeda.SoulСuttingKatana;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs;
+using Content.Shared.Weapons.Reflect;
 
 namespace Content.Server.Andromeda.SoulСuttingKatana;
 
@@ -166,6 +167,13 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
             _movementSpeedModifierSystem.ChangeBaseSpeed(ownerUid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
         }
 
+        AddComp<ReflectComponent>(katanaUid);
+
+        if (TryComp<ReflectComponent>(katanaUid, out var reflectComponent))
+        {
+            reflectComponent.ReflectProb = 0.75f;
+        }
+
         AddComp<UnremoveableComponent>(katanaUid);
 
         TryComp<PointLightComponent>(katanaUid, out var light);
@@ -187,6 +195,7 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
             _movementSpeedModifierSystem.ChangeBaseSpeed(ownerUid, component.OriginalWalkSpeed, component.OriginalSprintSpeed, moveMod.Acceleration);
         }
 
+        RemComp<ReflectComponent>(katanaUid);
         RemComp<UnremoveableComponent>(katanaUid);
 
         TryComp<PointLightComponent>(katanaUid, out var light);
