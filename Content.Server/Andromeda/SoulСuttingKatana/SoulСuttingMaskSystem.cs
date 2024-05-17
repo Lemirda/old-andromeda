@@ -7,6 +7,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 using Content.Shared.Andromeda.SoulСuttingKatana;
 using Content.Shared.Inventory;
+using Content.Shared.Speech;
 
 namespace Content.Server.Andromeda.SoulСuttingKatana;
 
@@ -97,6 +98,14 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
                 return;
             }
 
+            if (TryComp<SpeechComponent>(ownerUid, out var speechComp))
+            {
+                maskComp.OriginalSpeechSounds = speechComp.SpeechSounds;
+
+                speechComp.SpeechSounds = "SoulCuttingSpech";
+                Dirty(ownerUid, speechComp);
+            }
+
             maskComp.MaskSealed = true;
 
             AddComp<UnremoveableComponent>(maskUid);
@@ -109,6 +118,12 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
     {
         if (maskComp.MaskSealed)
         {
+            if (TryComp<SpeechComponent>(ownerUid, out var speechComp) && maskComp.OriginalSpeechSounds.HasValue)
+            {
+                speechComp.SpeechSounds = maskComp.OriginalSpeechSounds;
+                Dirty(ownerUid, speechComp);
+            }
+
             maskComp.MaskSealed = false;
 
             RemComp<UnremoveableComponent>(maskUid);

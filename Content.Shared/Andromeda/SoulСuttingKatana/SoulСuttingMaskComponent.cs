@@ -1,5 +1,6 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Content.Shared.Speech;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.Andromeda.SoulСuttingKatana;
@@ -15,6 +16,10 @@ public sealed partial class SoulCuttingMaskComponent : Component
 
     [DataField("ownerIdentified")]
     public bool OwnerIdentified { get; set; } = false;
+
+    [ViewVariables(VVAccess.ReadWrite)]
+    [DataField("speechSounds")]
+    public ProtoId<SpeechSoundsPrototype>? OriginalSpeechSounds;
 
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("recallKatanaSoulCuttingAction", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]

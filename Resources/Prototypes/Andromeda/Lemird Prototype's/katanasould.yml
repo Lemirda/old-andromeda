@@ -39,3 +39,41 @@
     itemIconStyle: NoItem
     priority: -11
     event: !type:RecallSoulCuttingKatanaEvent {}
+
+- type: speechSounds
+  id: SoulCuttingSpech
+  saySound:
+    collection: SoulUserSaySpeech
+  askSound:
+    collection: SoulUserAskSpeech
+  exclaimSound:
+    collection: SoulUserExclaimSpeech
+
+- type: soundCollection
+  id: SoulUserSaySpeech
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say3.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say4.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say5.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say6.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say7.ogg
+
+- type: soundCollection
+  id: SoulUserAskSpeech
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask3.ogg
+
+- type: soundCollection
+  id: SoulUserExclaimSpeech
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim3.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim4.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim5.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim6.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim7.ogg
