@@ -27,6 +27,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Content.Shared.Maps;
+using FastAccessors;
 
 namespace Content.Server.Botany.Systems;
 
@@ -928,7 +929,7 @@ public sealed class PlantHolderSystem : EntitySystem
         }
     }
 
-    // A-13 botany
+    // A-13 botany // upd. 18.05.2024 added Temperature to Evolution
     private void Evolve(EntityUid uid, PlantHolderComponent? component = null, float mutationLevelMemory = 0)
     {
         if (!Resolve(uid, ref component))
@@ -949,6 +950,8 @@ public sealed class PlantHolderSystem : EntitySystem
                     component.Seed.Potency < seedEvolveConditions.RequiredMaxPotency &&
                     component.Health >= seedEvolveConditions.RequiredMinHealth &&
                     component.Health < seedEvolveConditions.RequiredMaxHealth &&
+                    GasMixture.SpaceGas.Temperature >= seedEvolveConditions.RequiredMinTemperature &&
+                    GasMixture.SpaceGas.Temperature < seedEvolveConditions.RequiredMaxTemperature &&
                     mutationLevelMemory >= seedEvolveConditions.RequiredMutationLevel &&
                     (seedEvolveConditions.Reagent == null || solution.ContainsPrototype(seedEvolveConditions.Reagent)))
                 {

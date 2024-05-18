@@ -83,11 +83,13 @@
       PotencyDivisor: 5
   evolveTable:
     catnip:
-      requiredMinPotency: 60
-      requiredMaxPotency: 100
-      requiredMinHealth: 80
-      requiredMaxHealth: 100
-      requiredMutationLevel: 1
+      # requiredMinPotency: 60
+      # requiredMaxPotency: 100
+      # requiredMinHealth: 80
+      # requiredMaxHealth: 100
+      requiredMinTemperature: 250
+      requiredMaxTemperature: 350
+      # requiredMutationLevel: 1
       requiredReagent: JuiceLemon
 
 - type: entity

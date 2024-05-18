@@ -85,6 +85,8 @@ public partial struct SeedEvolveConditions
     [DataField("requiredMaxPotency")] public int RequiredMaxPotency;
     [DataField("requiredMinHealth")] public int RequiredMinHealth;
     [DataField("requiredMaxHealth")] public int RequiredMaxHealth;
+    [DataField("requiredMinTemperature")] public int RequiredMinTemperature; // upd. 18.05.2024 added Temperature to Evolution
+    [DataField("requiredMaxTemperature")] public int RequiredMaxTemperature; // upd. 18.05.2024 added Temperature to Evolution
     [DataField("requiredMutationLevel")] public int RequiredMutationLevel;
     [DataField("requiredReagent")] public string? Reagent;
 }
