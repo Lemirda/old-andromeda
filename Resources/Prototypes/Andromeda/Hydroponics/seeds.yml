@@ -135,11 +135,14 @@
       PotencyDivisor: 10
   evolveTable:
     gatfruit:
-      requiredMinPotency: 60
+      requiredMinPotency: 70
       requiredMaxPotency: 100
-      requiredMinHealth: 0
-      requiredMaxHealth: 40
-      requiredMutationLevel: 0
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
+      requiredReagent: ChlorineTrifluoride
 
 - type: seed
   id: steelcane
