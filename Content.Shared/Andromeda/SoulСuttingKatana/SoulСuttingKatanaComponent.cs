@@ -1,3 +1,5 @@
+using Content.Shared.Damage;
+
 namespace Content.Shared.Andromeda.SoulСuttingKatana;
 
 [RegisterComponent]
@@ -26,6 +28,9 @@ public sealed partial class SoulCuttingKatanaComponent : Component
 
     [DataField("damageInterval")]
     public float DamageInterval { get; set; } = 0.7f;
+
+    [DataField("originalDamage")]
+    public DamageSpecifier OriginalDamage = new();
 
     [DataField("oneBlockMessage")]
     public List<string> OneBlockMessage { get; set; } = new()

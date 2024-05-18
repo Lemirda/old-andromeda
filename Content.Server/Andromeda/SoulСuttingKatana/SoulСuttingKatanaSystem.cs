@@ -174,7 +174,9 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
 
         if (TryComp<MeleeWeaponComponent>(katanaUid, out var meleeComp))
         {
-            meleeComp.AttackRate = 75;
+            meleeComp.AttackRate = 3;
+            component.OriginalDamage = meleeComp.Damage;
+            meleeComp.Damage = new DamageSpecifier(_prototypeManager.Index<DamageTypePrototype>("Slash"), FixedPoint2.New(4));
         }
 
         AddComp<UnremoveableComponent>(katanaUid);
@@ -201,11 +203,12 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
         if (TryComp<MeleeWeaponComponent>(katanaUid, out var meleeComp))
         {
             meleeComp.AttackRate = 1;
+            meleeComp.Damage = component.OriginalDamage;
         }
 
         if (TryComp<ReflectComponent>(katanaUid, out var reflectComponent))
         {
-            reflectComponent.ReflectProb = 0.5f;
+            reflectComponent.ReflectProb = 0.1f;
         }
 
         RemComp<UnremoveableComponent>(katanaUid);

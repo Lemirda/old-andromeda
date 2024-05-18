@@ -13,7 +13,7 @@
     attackRate: 1
     damage:
       types:
-        Slash: 15
+        Slash: 10
     soundSwing: /Audio/Andromeda/Lemird/Misc/katanaswipe.ogg
     soundHit: /Audio/Andromeda/Lemird/Misc/katanahit.ogg
     wideAnimationRotation: -135
