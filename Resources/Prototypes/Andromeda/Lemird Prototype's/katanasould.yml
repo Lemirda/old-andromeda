@@ -50,6 +50,20 @@
     priority: -11
     event: !type:RecallSoulCuttingKatanaEvent {}
 
+- type: entity
+  id: ActionGetSoulCuttingMask
+  name: Получить маску разрезающую душу
+  description: Вы получаете уникальную маску которая даёт вам лишь больше сил.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
+      state: icon
+    itemIconStyle: NoItem
+    priority: -11
+    event: !type:GetSoulCuttingMaskEvent {}
+
 - type: speechSounds
   id: SoulCuttingSpech
   saySound:

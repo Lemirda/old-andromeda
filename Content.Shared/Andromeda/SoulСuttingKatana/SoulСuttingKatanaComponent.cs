@@ -1,4 +1,7 @@
 using Content.Shared.Damage;
+using Robust.Shared.Prototypes;
+using Robust.Shared.GameStates;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.Andromeda.SoulСuttingKatana;
 

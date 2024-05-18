@@ -29,12 +29,15 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
     [Dependency] private readonly SharedPointLightSystem _pointLight = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private readonly SharedActionsSystem _actionSystem = default!;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<SoulCuttingKatanaComponent, GetVerbsEvent<Verb>>(AddKatanaVerbs);
+        SubscribeLocalEvent<SoulCuttingUserComponent, GetSoulCuttingMaskEvent>(OnGetMask);
         SubscribeLocalEvent<SoulCuttingUserComponent, MobStateChangedEvent>(OnMobStateChanged);
     }
 
@@ -147,6 +150,8 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
 
                 var message = _random.Pick(component.OneBlockMessage);
                 _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
+
+                _actionSystem.AddAction(ownerUid, ref ownerComp.GetMaskActionSoulCuttingEntity, ownerComp.GetMaskSoulCuttingAction);
             }
         }
     }
@@ -220,6 +225,16 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
 
         var message = _random.Pick(component.ThreeBlockMessage);
         _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
+    }
+
+    private void OnGetMask(EntityUid ownerUid, SoulCuttingUserComponent component, GetSoulCuttingMaskEvent args)
+    {
+        var user = args.Performer;
+        var mask = Spawn(component.SoulСuttingMaskPrototype, Transform(user).Coordinates);
+        _hands.TryPickupAnyHand(user, mask);
+        _popupSystem.PopupEntity("Маска разрезающая душу появляется в руках.", user, user);
+
+        _actionSystem.RemoveAction(user, component.GetMaskActionSoulCuttingEntity);
     }
 
     private void OnMobStateChanged(EntityUid uid, SoulCuttingUserComponent ownerComp, MobStateChangedEvent args)
