@@ -25,22 +25,22 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         SubscribeLocalEvent<SoulCuttingUserComponent, RecallSoulCuttingKatanaEvent>(OnRecallKatana);
     }
 
-    private void AddMaskVerbs(EntityUid maskUid, SoulCuttingMaskComponent component, GetVerbsEvent<Verb> args)
+    private void AddMaskVerbs(EntityUid maskUid, SoulCuttingMaskComponent maskComp, GetVerbsEvent<Verb> args)
     {
         if (!args.CanAccess || !args.CanInteract)
             return;
 
-        if (!TryComp<SoulCuttingUserComponent>(args.User, out var userComp))
+        if (!TryComp<SoulCuttingUserComponent>(args.User, out var userComp) || userComp.MaskUid != null && maskComp.OwnerUid != args.User)
             return;
 
         Verb setHostVerb = new Verb
         {
             Text = "Стать владельцем маски",
-            Act = () => SetHost(maskUid, component, args.User),
+            Act = () => SetHost(maskUid, maskComp, args.User),
             Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
         };
 
-        if (component.OwnerIdentified)
+        if (maskComp.OwnerIdentified)
         {
             args.Verbs.Remove(setHostVerb);
         }
@@ -49,21 +49,21 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
             args.Verbs.Add(setHostVerb);
         }
 
-        if (component.OwnerUid == args.User && component.OwnerIdentified)
+        if (maskComp.OwnerUid == args.User)
         {
             Verb saveVerb = new Verb
             {
                 Text = "Зафиксировать маску",
-                Act = () => SaveMask(maskUid, component, args.User),
+                Act = () => SaveMask(maskUid, maskComp, args.User),
                 Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
             };
 
-            if (component.MaskSealed)
+            if (maskComp.MaskSealed)
             {
                 Verb removeVerb = new Verb
                 {
                     Text = "Снять маску",
-                    Act = () => RemoveMask(maskUid, component, args.User),
+                    Act = () => RemoveMask(maskUid, maskComp, args.User),
                     Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
                 };
 
@@ -84,7 +84,8 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
             ownerComp.MaskUid = maskUid;
             maskComp.OwnerUid = ownerUid;
             maskComp.OwnerIdentified = true;
-            _popupSystem.PopupCursor("Вы чувствует как вы стали обладателем могущественной маски...", ownerUid, PopupType.Large);
+
+            _popupSystem.PopupCursor("Вы стали обладателем могущественной маски...", ownerUid, PopupType.Large);
         }
     }
 
@@ -98,18 +99,17 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
                 return;
             }
 
+            maskComp.MaskSealed = true;
+
             if (TryComp<SpeechComponent>(ownerUid, out var speechComp))
             {
                 maskComp.OriginalSpeechSounds = speechComp.SpeechSounds;
-
                 speechComp.SpeechSounds = "SoulCuttingSpech";
-                Dirty(ownerUid, speechComp);
             }
 
-            maskComp.MaskSealed = true;
-
             AddComp<UnremoveableComponent>(maskUid);
-            _popupSystem.PopupCursor("Вы чувствует как маска наполняется энергией и запечатывается...", ownerComp.OwnerUid, PopupType.Large);
+
+            _popupSystem.PopupCursor("Вы чувствует как маска электризуется и запечатывается...", ownerComp.OwnerUid, PopupType.Large);
             _actionSystem.AddAction(ownerUid, ref maskComp.RecallKatanaActionSoulCuttingEntity, maskComp.RecallKatanaSoulCuttingAction);
         }
     }
@@ -118,15 +118,15 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
     {
         if (maskComp.MaskSealed)
         {
+            maskComp.MaskSealed = false;
+
             if (TryComp<SpeechComponent>(ownerUid, out var speechComp) && maskComp.OriginalSpeechSounds.HasValue)
             {
                 speechComp.SpeechSounds = maskComp.OriginalSpeechSounds;
-                Dirty(ownerUid, speechComp);
             }
 
-            maskComp.MaskSealed = false;
-
             RemComp<UnremoveableComponent>(maskUid);
+
             _actionSystem.RemoveAction(ownerUid, maskComp.RecallKatanaActionSoulCuttingEntity);
         }
     }
@@ -136,10 +136,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         if (TryComp<SoulCuttingUserComponent>(ownerUid, out var ownerComp) && TryComp<SoulCuttingMaskComponent>(ownerComp.MaskUid, out var maskComp))
         {
             if (component.KatanaUid == null)
-            {
-                Log.Error($"Katana Uid не найден");
                 return;
-            }
 
             var user = args.Performer;
             var katana = component.KatanaUid.Value;
@@ -152,7 +149,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
             }
             else
             {
-                _popupSystem.PopupEntity("Маска не зафиксированна.", user, user);
+                _popupSystem.PopupCursor("Маска не зафиксированна.", user, PopupType.Large);
             }
         }
         else

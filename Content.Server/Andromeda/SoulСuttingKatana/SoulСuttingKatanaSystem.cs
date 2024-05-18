@@ -16,7 +16,6 @@ using Content.Server.Chat.Systems;
 using Content.Shared.Actions;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Andromeda.SoulСuttingKatana;
-using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Weapons.Reflect;
 
@@ -45,48 +44,45 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        foreach (var component in EntityManager.EntityQuery<SoulCuttingKatanaComponent>(true))
+        foreach (var katanaComp in EntityManager.EntityQuery<SoulCuttingKatanaComponent>(true))
         {
-            if (!component.IsActive)
+            if (!katanaComp.IsActive)
                 return;
 
-            Log.Info($"Поехали в Update");
-            component.DamageTimer -= frameTime;
-            if (component.DamageTimer <= 0)
+            katanaComp.DamageTimer -= frameTime;
+            if (katanaComp.DamageTimer <= 0)
             {
-                Log.Info($"Поехали в метод Update");
-                ApplyDamage(component);
-                component.DamageTimer = component.DamageInterval;
+                ApplyDamage(katanaComp);
+                katanaComp.DamageTimer = katanaComp.DamageInterval;
             }
         }
     }
 
-    public void ApplyDamage(SoulCuttingKatanaComponent component)
+    public void ApplyDamage(SoulCuttingKatanaComponent katanaComp)
     {
-        if (!HasComp<DamageableComponent>(component.OwnerUid))
-            return;
-
         if (!_prototypeManager.TryIndex<DamageTypePrototype>("Slash", out var slashDamageType))
             return;
 
-        Log.Info($"Ебашим");
         var damage = new DamageSpecifier(slashDamageType, FixedPoint2.New(2.5));
-        EntityManager.System<DamageableSystem>().TryChangeDamage(component.OwnerUid, damage);
+        EntityManager.System<DamageableSystem>().TryChangeDamage(katanaComp.OwnerUid, damage);
     }
 
-    private void AddKatanaVerbs(EntityUid katanaUid, SoulCuttingKatanaComponent component, GetVerbsEvent<Verb> args)
+    private void AddKatanaVerbs(EntityUid katanaUid, SoulCuttingKatanaComponent katanaComp, GetVerbsEvent<Verb> args)
     {
         if (!args.CanAccess || !args.CanInteract)
+            return;
+
+        if (HasComp<SoulCuttingUserComponent>(args.User) && katanaComp.OwnerUid != args.User)
             return;
 
         Verb setOwnerVerb = new Verb
         {
             Text = "Стать владельцем",
-            Act = () => SetOwner(katanaUid, component, args.User),
+            Act = () => SetOwner(katanaUid, katanaComp, args.User),
             Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/takekatana.png"))
         };
 
-        if (component.OwnerIdentified)
+        if (katanaComp.OwnerIdentified)
         {
             args.Verbs.Remove(setOwnerVerb);
         }
@@ -95,21 +91,21 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
             args.Verbs.Add(setOwnerVerb);
         }
 
-        if (component.OwnerUid == args.User)
+        if (katanaComp.OwnerUid == args.User)
         {
             Verb activateVerb = new Verb
             {
                 Text = "Активировать катану",
-                Act = () => ActivateKatana(katanaUid, component, args.User),
+                Act = () => ActivateKatana(katanaUid, katanaComp, args.User),
                 Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/activatekatana.png"))
             };
 
-            if (component.IsActive)
+            if (katanaComp.IsActive)
             {
                 Verb deactivateVerb = new Verb
                 {
                     Text = "Отключить катану",
-                    Act = () => DeActivateKatana(katanaUid, component, args.User),
+                    Act = () => DeActivateKatana(katanaUid, katanaComp, args.User),
                     Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/deactivatekatana.png"))
                 };
 
@@ -123,53 +119,47 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
         }
     }
 
-    private void SetOwner(EntityUid katanaUid, SoulCuttingKatanaComponent component, EntityUid ownerUid)
+    private void SetOwner(EntityUid katanaUid, SoulCuttingKatanaComponent katanaComp, EntityUid ownerUid)
     {
-        if (HasComp<SoulCuttingUserComponent>(ownerUid))
+        AddComp<SoulCuttingUserComponent>(ownerUid);
+
+        if (TryComp<SoulCuttingUserComponent>(ownerUid, out var ownerComp))
         {
-            _popupSystem.PopupCursor(Loc.GetString("Вы не можете заключить сразу 2 сделки с дьяволом..."), ownerUid, PopupType.Large);
-        }
-        else
-        {
-            AddComp<SoulCuttingUserComponent>(ownerUid);
+            ownerComp.OwnerUid = ownerUid;
+            ownerComp.KatanaUid = katanaUid;
+            katanaComp.OwnerUid = ownerUid;
+            katanaComp.OwnerIdentified = true;
 
-            if (TryComp<SoulCuttingUserComponent>(ownerUid, out var ownerComp))
-            {
-                ownerComp.OwnerUid = ownerUid;
-                ownerComp.KatanaUid = katanaUid;
-                component.OwnerUid = ownerUid;
-                component.OwnerIdentified = true;
+            _popupSystem.PopupCursor(Loc.GetString("Непонятные символы оказываются на катане..."), ownerUid, PopupType.Large);
 
-                _popupSystem.PopupCursor(Loc.GetString("Вы видите как ваше имя оказывается на клинке... Вы чувствуете лёгкость и силу."), ownerUid, PopupType.Large);
+            AddComp<PointLightComponent>(katanaUid);
+            TryComp<PointLightComponent>(katanaUid, out var light);
+            _pointLight.SetColor(katanaUid, Color.Red, light);
+            _pointLight.SetRadius(katanaUid, (float) 2.0, light);
+            _pointLight.SetEnergy(katanaUid, (float) 1.0, light);
 
-                AddComp<PointLightComponent>(katanaUid);
-                TryComp<PointLightComponent>(katanaUid, out var light);
-                _pointLight.SetColor(katanaUid, Color.Red, light);
-                _pointLight.SetRadius(katanaUid, (float) 2.0, light);
-                _pointLight.SetEnergy(katanaUid, (float) 1.0, light);
+            var message = _random.Pick(katanaComp.OneBlockMessage);
+            _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
 
-                var message = _random.Pick(component.OneBlockMessage);
-                _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
-
-                _actionSystem.AddAction(ownerUid, ref ownerComp.GetMaskActionSoulCuttingEntity, ownerComp.GetMaskSoulCuttingAction);
-            }
+            _actionSystem.AddAction(ownerUid, ref ownerComp.GetMaskActionSoulCuttingEntity, ownerComp.GetMaskSoulCuttingAction);
         }
     }
 
-    private void ActivateKatana(EntityUid katanaUid, SoulCuttingKatanaComponent component, EntityUid ownerUid)
+    private void ActivateKatana(EntityUid katanaUid, SoulCuttingKatanaComponent katanaComp, EntityUid ownerUid)
     {
-        component.IsActive = true;
-        _popupSystem.PopupCursor(Loc.GetString("Вы чувствуете силу, которую невозможно познать. Но так же вы чувствуете, будто вас пронзает несколькими клинками каждую секунду."), ownerUid, PopupType.Large);
+        katanaComp.IsActive = true;
 
-        if (TryComp<MovementSpeedModifierComponent>(ownerUid, out var moveMod))
+        _popupSystem.PopupCursor(Loc.GetString("КРУШИ! РУБИ! УБИВАЙ!"), ownerUid, PopupType.Large);
+
+        if (TryComp<MovementSpeedModifierComponent>(ownerUid, out var moveComp))
         {
-            component.OriginalWalkSpeed = moveMod.BaseWalkSpeed;
-            component.OriginalSprintSpeed = moveMod.BaseSprintSpeed;
+            katanaComp.OriginalWalkSpeed = moveComp.BaseWalkSpeed;
+            katanaComp.OriginalSprintSpeed = moveComp.BaseSprintSpeed;
 
-            var newWalkSpeed = component.OriginalWalkSpeed * 1.3f; //+ 30%
-            var newSprintSpeed = component.OriginalSprintSpeed * 1.3f; //+ 30%
+            var newWalkSpeed = katanaComp.OriginalWalkSpeed * 1.3f; //+ 30%
+            var newSprintSpeed = katanaComp.OriginalSprintSpeed * 1.3f; //+ 30%
 
-            _movementSpeedModifierSystem.ChangeBaseSpeed(ownerUid, newWalkSpeed, newSprintSpeed, moveMod.Acceleration);
+            _movementSpeedModifierSystem.ChangeBaseSpeed(ownerUid, newWalkSpeed, newSprintSpeed, moveComp.Acceleration);
         }
 
         if (TryComp<ReflectComponent>(katanaUid, out var reflectComponent))
@@ -179,8 +169,9 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
 
         if (TryComp<MeleeWeaponComponent>(katanaUid, out var meleeComp))
         {
+            katanaComp.OriginalDamage = meleeComp.Damage;
+
             meleeComp.AttackRate = 3;
-            component.OriginalDamage = meleeComp.Damage;
             meleeComp.Damage = new DamageSpecifier(_prototypeManager.Index<DamageTypePrototype>("Slash"), FixedPoint2.New(4));
         }
 
@@ -191,24 +182,25 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
         _pointLight.SetRadius(katanaUid, (float) 10.0, light);
         _pointLight.SetEnergy(katanaUid, (float) 4.0, light);
 
-        var message = _random.Pick(component.TwoBlockMessage);
+        var message = _random.Pick(katanaComp.TwoBlockMessage);
         _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
     }
 
-    private void DeActivateKatana(EntityUid katanaUid, SoulCuttingKatanaComponent component, EntityUid ownerUid)
+    private void DeActivateKatana(EntityUid katanaUid, SoulCuttingKatanaComponent katanaComp, EntityUid ownerUid)
     {
-        component.IsActive = false;
+        katanaComp.IsActive = false;
+
         _popupSystem.PopupCursor(Loc.GetString("Вы чувствуете что сила полученная вам, угасает... Кажется всё закончилось."), ownerUid, PopupType.Large);
 
         if (TryComp<MovementSpeedModifierComponent>(ownerUid, out var moveMod))
         {
-            _movementSpeedModifierSystem.ChangeBaseSpeed(ownerUid, component.OriginalWalkSpeed, component.OriginalSprintSpeed, moveMod.Acceleration);
+            _movementSpeedModifierSystem.ChangeBaseSpeed(ownerUid, katanaComp.OriginalWalkSpeed, katanaComp.OriginalSprintSpeed, moveMod.Acceleration);
         }
 
         if (TryComp<MeleeWeaponComponent>(katanaUid, out var meleeComp))
         {
             meleeComp.AttackRate = 1;
-            meleeComp.Damage = component.OriginalDamage;
+            meleeComp.Damage = katanaComp.OriginalDamage;
         }
 
         if (TryComp<ReflectComponent>(katanaUid, out var reflectComponent))
@@ -223,28 +215,28 @@ public sealed class SoulCuttingKatanaSystem : EntitySystem
         _pointLight.SetRadius(katanaUid, (float) 2.0, light);
         _pointLight.SetEnergy(katanaUid, (float) 1.0, light);
 
-        var message = _random.Pick(component.ThreeBlockMessage);
+        var message = _random.Pick(katanaComp.ThreeBlockMessage);
         _chat.TrySendInGameICMessage(ownerUid, message, InGameICChatType.Speak, true);
     }
 
-    private void OnGetMask(EntityUid ownerUid, SoulCuttingUserComponent component, GetSoulCuttingMaskEvent args)
+    private void OnGetMask(EntityUid ownerUid, SoulCuttingUserComponent ownerComp, GetSoulCuttingMaskEvent args)
     {
         var user = args.Performer;
-        var mask = Spawn(component.SoulСuttingMaskPrototype, Transform(user).Coordinates);
+        var mask = Spawn(ownerComp.SoulСuttingMaskPrototype, Transform(user).Coordinates);
         _hands.TryPickupAnyHand(user, mask);
-        _popupSystem.PopupEntity("Маска разрезающая душу появляется в руках.", user, user);
 
-        _actionSystem.RemoveAction(user, component.GetMaskActionSoulCuttingEntity);
+        _popupSystem.PopupEntity("Дьявольская маска появляется в руках.", user, user);
+        _actionSystem.RemoveAction(user, ownerComp.GetMaskActionSoulCuttingEntity);
     }
 
-    private void OnMobStateChanged(EntityUid uid, SoulCuttingUserComponent ownerComp, MobStateChangedEvent args)
+    private void OnMobStateChanged(EntityUid ownerUid, SoulCuttingUserComponent ownerComp, MobStateChangedEvent args)
     {
         if (args.NewMobState == MobState.Critical && ownerComp.KatanaUid.HasValue)
         {
             var katanaUid = ownerComp.KatanaUid.Value;
             if (TryComp<SoulCuttingKatanaComponent>(katanaUid, out var katanaComp) && katanaComp.IsActive)
             {
-                DeActivateKatana(katanaUid, katanaComp, uid);
+                DeActivateKatana(katanaUid, katanaComp, ownerUid);
             }
         }
     }
