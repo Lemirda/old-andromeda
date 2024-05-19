@@ -1855,8 +1855,8 @@
     - Vegetable
 
 - type: entity
-  name: cotton boll
-  description: Moth people's favorite snack, and just as fluffy as them.
+  name: хлопковый шарик # A-13 RenewedBothany CorwuhUpstream
+  description: Любимая закуска молей. Такая же пушистая, как и они.  # A-13 RenewedBothany CorwuhUpstream
   id: CottonBol
   parent: FoodProduceBase
   components:
@@ -1882,3 +1882,38 @@
     tags:
     - ClothMade
     - CottonBoll
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: entity
+  name: пирохлопковый шарик
+  description: Скорее всего, это вас подожжет.
+  id: PyrottonBol
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pyrotton.rsi
+  - type: FlavorProfile
+    flavors:
+      - pyrotton
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 5
+        - ReagentId: Phlogiston
+          Quantity: 5
+  - type: Log
+    spawnedPrototype: MaterialPyrotton1
+    spawnCount: 2
+  - type: Produce
+    seedId: pyrotton
+  - type: Tag
+    tags:
+    - ClothMade
+    - CottonBoll
+  - type: Extractable
+    grindableSolutionName: food
+# A-13 RenewedBothany CorwuhUpstream end

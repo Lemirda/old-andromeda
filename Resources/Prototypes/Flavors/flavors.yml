@@ -1023,3 +1023,10 @@
   id: violets
   flavorType: Complex
   description: flavor-complex-violets
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: flavor
+  id: pyrotton
+  flavorType: Complex
+  description: как горящий рот
+# A-13 RenewedBothany CorwuhUpstream end

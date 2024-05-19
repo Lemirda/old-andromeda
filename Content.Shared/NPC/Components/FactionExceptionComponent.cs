@@ -7,7 +7,7 @@ namespace Content.Shared.NPC.Components;
 /// Prevents an NPC from attacking ignored entities from enemy factions.
 /// Can be added to if pettable, see PettableFriendComponent.
 /// </summary>
-[RegisterComponent, NetworkedComponent, Access(typeof(NpcFactionSystem))]
+[RegisterComponent, NetworkedComponent, Access(typeof(NpcFactionSystem), typeof(SharedNPCImprintingOnSpawnBehaviourSystem))] // RenewedBothany CorwuhUpstream  KillerTomato
 public sealed partial class FactionExceptionComponent : Component
 {
     /// <summary>

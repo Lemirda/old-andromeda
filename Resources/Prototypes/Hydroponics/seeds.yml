@@ -240,7 +240,7 @@
 #A-13 RenewedBothany start
   evolveTable:
     lemonka:
-      requiredMinPotency: 60
+      requiredMinPotency: 70
       requiredMaxPotency: 100
       requiredMinHealth: 80
       requiredMaxHealth: 150
@@ -658,6 +658,51 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+#A-13 RenewedBothany start
+  evolveTable:
+    killerTomato:
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Blood
+#A-13 RenewedBothany end
+
+#A-13 RenewedBothany CorvuhUpstream start
+- type: seed
+  id: killerTomato
+  name: томат-убийца
+  noun: seeds-noun-seeds
+  displayName: куст томата-убийцы
+  plantRsi: Objects/Specific/Hydroponics/tomatokiller.rsi
+  packetPrototype: KillerTomatoSeeds
+  productPrototypes:
+    - MobTomatoKiller
+  harvestRepeat: Repeat
+  lifespan: 25
+  maturation: 15
+  production: 6
+  yield: 2
+  potency: 10
+  waterConsumption: 0.60
+  nutrientConsumption: 0.70
+  idealLight: 8
+  idealHeat: 298
+  growthStages: 2
+  splatPrototype: PuddleSplatter
+  chemicals:
+    Blood:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    JuiceTomato:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 25
+#A-13 RenewedBothany CorvuhUpstream end
 
 - type: seed
   id: eggplant
@@ -946,6 +991,10 @@
   packetPrototype: CannabisSeeds
   productPrototypes:
     - LeavesCannabis
+# A-13 RenewedBothany CorwuhUpstream start
+  # mutationPrototypes:
+  #   - rainbowCannabis
+# A-13 RenewedBothany CorwuhUpstream end
   harvestRepeat: Repeat
   lifespan: 75
   maturation: 8
@@ -973,6 +1022,15 @@
       requiredMutationLevel: 1
       requiredReagent: DoctorsDelight
     deathweed:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 0
+      requiredMaxHealth: 30
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 0
+      requiredReagent: ChloralHydrate
+    rainbowCannabis:
       requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 0
@@ -1824,6 +1882,10 @@
   packetPrototype: CottonSeeds
   productPrototypes:
     - CottonBol
+# A-13 RenewedBothany CorwuhUpstream start
+  # mutationPrototypes:
+  #   - pyrotton
+# A-13 RenewedBothany CorwuhUpstream end
   lifespan: 25
   maturation: 8
   production: 3
@@ -1837,4 +1899,44 @@
       Min: 5
       Max: 10
       PotencyDivisor: 20
+# A-13 RenewedBothany CorwuhUpstream start
+  evolveTable:
+    pyrotton:
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Phlogiston
+# A-13 RenewedBothany CorwuhUpstream end
 
+# A-13 RenewedBothany CorwuhUpstream start
+- type: seed
+  id: pyrotton
+  name: пирохлопок
+  noun: seeds-noun-seeds
+  displayName: куст пирохлопка
+  plantRsi: Objects/Specific/Hydroponics/pyrotton.rsi
+  packetPrototype: PyrottonSeeds
+  productPrototypes:
+    - PyrottonBol
+  lifespan: 25
+  maturation: 8
+  production: 3
+  yield: 2
+  potency: 5
+  idealLight: 8
+  growthStages: 3
+  waterConsumption: 0.80
+  chemicals:
+    Fiber:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20
+    Phlogiston:
+      Min: 4
+      Max: 8
+      PotencyDivisor: 30
+# A-13 RenewedBothany CorwuhUpstream end

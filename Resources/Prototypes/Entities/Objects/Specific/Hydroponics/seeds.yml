@@ -213,6 +213,18 @@
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/blood_tomato.rsi
 
+#A-13 RenewedBothany CorvuhUpstream start
+- type: entity
+  parent: SeedBase
+  name: пакет семян (томат-убийца)
+  id: KillerTomatoSeeds
+  components:
+    - type: Seed
+      seedId: killerTomato
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/tomatokiller.rsi
+#A-13 RenewedBothany CorvuhUpstream end
+
 - type: entity
   parent: SeedBase
   name: packet of eggplant seeds
@@ -584,3 +596,15 @@
       seedId: cotton
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/cotton.rsi
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: entity
+  parent: SeedBase
+  name: пакет семян (пирохлопок)
+  id: PyrottonSeeds
+  components:
+    - type: Seed
+      seedId: pyrotton
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/pyrotton.rsi
+# A-13 RenewedBothany CorwuhUpstream end
