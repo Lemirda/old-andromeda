@@ -81,8 +81,6 @@
       Max: 20
       PotencyDivisor: 5
 
-# TODO: Новые шляпники  -----------------------------------------------------------------------------------------
-
 - type: seed
   id: glasscap
   name: стеклошляпник
@@ -124,8 +122,6 @@
   nutrientConsumption: 0.80
   lightTolerance: 6
   idealHeat: 288
-
-# Блок новых семян -----------------------------------------------------------------------------------------
 
 - type: entity
   parent: SeedBase
@@ -181,19 +177,6 @@
       seedId: plaststeelcap
     - type: Sprite
       sprite: Andromeda/Evil/plants/plaststeelcap.rsi
-
-# - type: entity
-#   parent: SeedBase
-#   id: LaughinPeaSeeds
-#   name: packet of laughin' pea pods
-#   description: "These seeds give off a very soft purple glow.. they should grow into Laughin' Peas."
-#   components:
-#     - type: Seed
-#       seedId: laughinPea
-#     - type: Sprite
-#       sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
-
-# Блок новых плодов -----------------------------------------------------------------------------------------
 
 - type: entity
   name: сноп мясной пшеницы
