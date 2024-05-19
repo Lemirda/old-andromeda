@@ -23,41 +23,6 @@
       Max: 5
       PotencyDivisor: 20
 
-- type: entity
-  parent: SeedBase
-  name: пакет семян (мясная пшеница)
-  suffix: Андромеда
-  id: MeatWheatSeeds
-  components:
-    - type: Seed
-      seedId: meatwheat
-    - type: Sprite
-      sprite: Andromeda/Evil/plants/meatwheat.rsi
-
-- type: entity
-  name: сноп мясной пшеницы
-  description: Странно... мясное?
-  suffix: Андромеда
-  id: MeatWheatBushel
-  parent: FoodProduceBase
-  components:
-  - type: Sprite
-    sprite: Andromeda/Evil/plants/meatwheat.rsi
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-  - type: Produce
-    seedId: meatwheat
-  - type: Food
-    trash: FoodMeat
-  - type: Tag
-    tags:
-    - Wheat
-
 - type: seed
   id: mintplant
   name: мята
@@ -92,39 +57,6 @@
       requiredMutationLevel: 1
       requiredReagent: JuiceLemon
 
-- type: entity
-  parent: SeedBase
-  name: пакет семян (мята)
-  suffix: Андромеда
-  id: MintPlantSeeds
-  components:
-    - type: Seed
-      seedId: mintplant
-    - type: Sprite
-      sprite: Andromeda/Evil/plants/mint.rsi
-
-- type: entity
-  name: листья мяты
-  description: Приятно пахнущие мятные листы.
-  suffix: Андромеда
-  id: MintPlantLeaves
-  parent: FoodProduceBase
-  components:
-  - type: Sprite
-    sprite: Andromeda/Evil/plants/mint.rsi
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: MintExtract
-          Quantity: 20
-  - type: Produce
-    seedId: mintplant
-  - type: Tag
-    tags:
-    - Herb
-
 - type: seed
   id: catnip
   name: котовик
@@ -149,6 +81,74 @@
       Max: 20
       PotencyDivisor: 5
 
+# TODO: Новые шляпники  -----------------------------------------------------------------------------------------
+
+- type: seed
+  id: glasscap
+  name: стеклошляпник
+  noun: seeds-noun-spores
+  displayName: стеклошляпник
+  plantRsi: Andromeda/Evil/plants/glasscap.rsi
+  packetPrototype: GlasscapSeeds
+  productPrototypes:
+    - GlassLog
+  lifespan: 80
+  maturation: 15
+  ligneous: true
+  production: 3
+  yield: 5
+  potency: 1
+  growthStages: 3
+  waterConsumption: 0.60
+  nutrientConsumption: 0.50
+  lightTolerance: 6
+  idealHeat: 288
+
+- type: seed
+  id: plaststeelcap
+  name: пластошляпник
+  noun: seeds-noun-spores
+  displayName: пластошляпник
+  plantRsi: Andromeda/Evil/plants/plaststeelcap.rsi
+  packetPrototype: PlaststeelcapSeeds
+  productPrototypes:
+    - PlastSteelLog
+  lifespan: 80
+  maturation: 15
+  ligneous: true
+  production: 3
+  yield: 3
+  potency: 1
+  growthStages: 3
+  waterConsumption: 0.60
+  nutrientConsumption: 0.80
+  lightTolerance: 6
+  idealHeat: 288
+
+# Блок новых семян -----------------------------------------------------------------------------------------
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (мясная пшеница)
+  suffix: Андромеда
+  id: MeatWheatSeeds
+  components:
+    - type: Seed
+      seedId: meatwheat
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/meatwheat.rsi
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (мята)
+  suffix: Андромеда
+  id: MintPlantSeeds
+  components:
+    - type: Seed
+      seedId: mintplant
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/mint.rsi
+
 - type: entity
   parent: SeedBase
   name: пакет семян (котовик)
@@ -159,6 +159,87 @@
       seedId: catnip
     - type: Sprite
       sprite: Andromeda/Evil/plants/catnip.rsi
+
+- type: entity
+  parent: SeedBase
+  name: пакет спор (стеклошляпник)
+  suffix: Андромеда
+  id: GlasscapSeeds
+  components:
+    - type: Seed
+      seedId: glasscap
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/glasscap.rsi
+
+- type: entity
+  parent: SeedBase
+  name: пакет спор (пластошляпник)
+  suffix: Андромеда
+  id: PlastSteelcapSeeds
+  components:
+    - type: Seed
+      seedId: plaststeelcap
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/plaststeelcap.rsi
+
+# - type: entity
+#   parent: SeedBase
+#   id: LaughinPeaSeeds
+#   name: packet of laughin' pea pods
+#   description: "These seeds give off a very soft purple glow.. they should grow into Laughin' Peas."
+#   components:
+#     - type: Seed
+#       seedId: laughinPea
+#     - type: Sprite
+#       sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
+
+# Блок новых плодов -----------------------------------------------------------------------------------------
+
+- type: entity
+  name: сноп мясной пшеницы
+  description: Странно... мясное?
+  suffix: Андромеда
+  id: MeatWheatBushel
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/meatwheat.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+  - type: Produce
+    seedId: meatwheat
+  - type: Food
+    trash: FoodMeat
+  - type: Tag
+    tags:
+    - Wheat
+
+- type: entity
+  name: листья мяты
+  description: Приятно пахнущие мятные листы.
+  suffix: Андромеда
+  id: MintPlantLeaves
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/mint.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: MintExtract
+          Quantity: 20
+  - type: Produce
+    seedId: mintplant
+  - type: Tag
+    tags:
+    - Herb
 
 - type: entity
   name: листья котовика
@@ -181,3 +262,41 @@
   - type: Tag
     tags:
     - Herb
+
+- type: entity
+  name: бревно стеклошляпника
+  description: Стекло не растёт на деревьях! Конечно, оно растёт как грибы.
+  id: GlassLog
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/glasscap.rsi
+  - type: SolutionContainerManager
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 10
+  - type: Produce
+    seedId: glasscap
+  - type: Log
+    spawnedPrototype: SheetGlass1
+    spawnCount: 1
+
+- type: entity
+  name: бревно пластошляпника
+  description: Пластсталь ТОЧНО не растёт на деревьях! Она произрастает в форме грибов.
+  id: PlastSteelLog
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/plaststeelcap.rsi
+  - type: SolutionContainerManager
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 12
+  - type: Produce
+    seedId: plaststeelcap
+  - type: Log
+    spawnedPrototype: SheetPlasteel1
+    spawnCount: 1

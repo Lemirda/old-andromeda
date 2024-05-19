@@ -488,6 +488,15 @@
       RequiredMaxTemperature: 303
       requiredMutationLevel: 1
       requiredReagent: Iron
+    glasscap:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Silicon
 #A-13 RenewedBothany end
 
 - type: seed
@@ -510,6 +519,18 @@
   nutrientConsumption: 0.80
   lightTolerance: 6
   idealHeat: 288
+#A-13 RenewedBothany start
+  evolveTable:
+    plaststeelcap:
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Plasma
+#A-13 RenewedBothany end
 
 - type: seed
   id: tomato
