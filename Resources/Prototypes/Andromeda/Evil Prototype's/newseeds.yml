@@ -123,6 +123,33 @@
   lightTolerance: 6
   idealHeat: 288
 
+- type: seed
+  id: durotton
+  name: дюрапластик
+  noun: seeds-noun-seeds
+  displayName: куст дюрапластика
+  plantRsi: Andromeda/Evil/plants/durotton.rsi
+  packetPrototype: DurottonSeeds
+  productPrototypes:
+    - DurottonBol
+  lifespan: 25
+  maturation: 8
+  production: 3
+  yield: 2
+  potency: 5
+  idealLight: 8
+  growthStages: 3
+  waterConsumption: 0.80
+  chemicals:
+    Fiber:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20
+    Phosphorus:
+      Min: 4
+      Max: 8
+      PotencyDivisor: 30
+
 - type: entity
   parent: SeedBase
   name: пакет семян (мясная пшеница)
@@ -177,6 +204,17 @@
       seedId: plaststeelcap
     - type: Sprite
       sprite: Andromeda/Evil/plants/plaststeelcap.rsi
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (дюрахлопок)
+  suffix: Андромеда
+  id: DurottonSeeds
+  components:
+    - type: Seed
+      seedId: durotton
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/durotton.rsi
 
 - type: entity
   name: сноп мясной пшеницы
@@ -284,4 +322,211 @@
     spawnedPrototype: SheetPlasteel1
     spawnCount: 1
 
-# TODO: Добавить 4 вида ягод и 3 вида кофе
+- type: entity
+  name: дюрахлопковый шарик
+  description: Подозрительно жесткий шарик.
+  id: DurottonBol
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pyrotton.rsi
+  - type: FlavorProfile
+    flavors:
+      - pyrotton
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Oil
+          Quantity: 5
+        - ReagentId: Phosphorus
+          Quantity: 5
+  - type: Log
+    spawnedPrototype: MaterialDurotton1
+    spawnCount: 2
+  - type: Produce
+    seedId: durotton
+  - type: Tag
+    tags:
+    - ClothMade
+    - CottonBoll
+  - type: Extractable
+    grindableSolutionName: food
+
+# Отделить?!
+- type: entity
+  parent: MaterialBase
+  id: MaterialDurotton
+  name: дюрахлопок
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: Durotton
+    baseLayer: base
+    layerStates:
+    - durathreadraw
+    - durathreadraw_2
+    - durathreadraw_3
+  - type: Sprite
+    state: durathreadraw_3
+    layers:
+    - state: durathreadraw_3
+      map: ["base"]
+  - type: Appearance
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Oil
+          Quantity: 5
+        - ReagentId: Phlogiston
+          Quantity: 5
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 3
+      - ReagentId: Phosphorus
+        Quantity: 3
+  - type: Tag
+    tags:
+      - ClothMade
+      - RawMaterial
+
+- type: entity
+  parent: MaterialDurotton
+  id: MaterialDurotton1
+  name: дюрахлопок
+  suffix: Single
+  components:
+  - type: Sprite
+    state: durotton
+  - type: Stack
+    count: 1
+
+- type: construction
+  name: пироткань
+  id: PyrottonWovenCloth
+  graph: PyrottonObjects
+  startNode: start
+  targetNode: pyrottoncloth
+  category: construction-category-materials
+  description: "Кусок пироткани, сделанный своими руками, на ощупь грубый."
+  icon: { sprite: Objects/Tiles/tile.rsi, state: shuttlewhite }
+  objectType: Item
+
+- type: construction
+  name: дюраткань (из растений)
+  id: DurottonWovenCloth
+  graph: DurottonObjects
+  startNode: start
+  targetNode: durottoncloth
+  category: construction-category-materials
+  description: "Высококачественная нить используемая для изготовления прочной одежды."
+  icon: { sprite: Objects/Tiles/tile.rsi, state: shuttlewhite }
+  objectType: Item
+
+- type: constructionGraph
+  id: PyrottonObjects
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: pyrottoncloth
+          completed:
+            - !type:SetStackCount
+              amount: 4
+          steps:
+            - material: Pyrotton
+              amount: 2
+    - node: pyrottoncloth
+      entity: MaterialPyrothread
+
+- type: constructionGraph
+  id: DurottonObjects
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: durottoncloth
+          completed:
+            - !type:SetStackCount
+              amount: 4
+          steps:
+            - material: MaterialDurotton
+              amount: 2
+    - node: durottoncloth
+      entity: MaterialDurathread
+
+- type: material
+  id: Pyrothread
+  stackEntity: MaterialPyrothread1
+  name: пироткань
+  unit: materials-unit-sheet
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: pyrothread }
+  color: "#8291a1"
+  price: 0.15
+
+- type: entity
+  parent: MaterialBase
+  id: MaterialPyrothread
+  name: пироткань
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: Pyrothread
+    baseLayer: base
+    layerStates:
+    - pyrothread
+    - pyrothread_2
+    - pyrothread_3
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Pyrothread: 100
+  - type: Sprite
+    state: pyrothread_3
+    layers:
+    - state: pyrothread_3
+      map: ["base"]
+  - type: Appearance
+  - type: Construction
+    graph: Pyrothread
+    node: MaterialPyrothread
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 5
+  - type: Tag
+    tags:
+      - ClothMade
+      - RawMaterial
+
+- type: entity
+  parent: MaterialPyrothread
+  id: MaterialPyrothread1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: pyrothread
+  - type: Stack
+    count: 1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents: 
+        - ReagentId: Fiber
+          Quantity: 6
+
+# TODO: Добавить 4 вида ягод и 3 вида кофе и ебучий блять дюрохлопок

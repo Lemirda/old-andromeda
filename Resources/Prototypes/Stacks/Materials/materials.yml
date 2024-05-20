@@ -38,6 +38,16 @@
   maxCount: 30
   itemSize: 1
 
+# A-13 RenewedBothany start
+- type: stack
+  id: Pyrothread
+  name: пироткань
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: pyrothread }
+  spawn: MaterialPyrothread1
+  maxCount: 30
+  itemSize: 1
+# A-13 RenewedBothany end
+
 - type: stack
   id: Diamond
   name: diamond
@@ -57,12 +67,22 @@
 # A-13 RenewedBothany CorwuhUpstream start
 - type: stack
   id: Pyrotton
-  name: pyrotton
+  name: пироттон
   icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: pyrotton }
   spawn: MaterialPyrotton1
   maxCount: 30
   itemSize: 1
 # A-13 RenewedBothany CorwuhUpstream end
+
+# A-13 RenewedBothany start
+- type: stack
+  id: Durathreadraw
+  name: дюраткань
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: durathreadraw }
+  spawn: MaterialDurathreadraw1
+  maxCount: 30
+  itemSize: 1
+# A-13 RenewedBothany end
 
 - type: stack
   id: Bananium

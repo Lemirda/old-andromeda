@@ -1957,6 +1957,15 @@
       RequiredMaxTemperature: 303
       requiredMutationLevel: 1
       requiredReagent: Phlogiston
+    durotton:
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Plasma
 # A-13 RenewedBothany CorwuhUpstream end
 
 # A-13 RenewedBothany CorwuhUpstream start

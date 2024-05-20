@@ -202,18 +202,20 @@
     sprite: Objects/Weapons/Bombs/ied.rsi
     state: icon
 
-- type: construction
-  name: хлопчатобумажная ткань #A-13 Translation
-  id: CottonWovenCloth
-  graph: CottonObjects
-  startNode: start
-  targetNode: cottoncloth
-  category: construction-category-misc
-  description: "Кусок хлопчатобумажной ткани, сделанный своими руками, на ощупь грубый." #A-13 Translation
-  icon:
-    sprite: Objects/Materials/materials.rsi
-    state: cloth_3
-  objectType: Item
+# A-13 RenewedBothany start
+# - type: construction
+#   name: хлопчатобумажная ткань #A-13 Translation
+#   id: CottonWovenCloth
+#   graph: CottonObjects
+#   startNode: start
+#   targetNode: cottoncloth
+#   category: construction-category-misc
+#   description: "Кусок хлопчатобумажной ткани, сделанный своими руками, на ощупь грубый." #A-13 Translation
+#   icon:
+#     sprite: Objects/Materials/materials.rsi
+#     state: cloth_3
+#   objectType: Item
+# A-13 RenewedBothany end
 
 - type: construction
   name: соломенная шляпа #A-13 Translation
