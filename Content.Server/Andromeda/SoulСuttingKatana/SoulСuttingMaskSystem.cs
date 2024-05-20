@@ -37,7 +37,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
         {
             Text = "Стать владельцем маски",
             Act = () => SetHost(maskUid, maskComp, args.User),
-            Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
+            Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/takemask.png"))
         };
 
         if (maskComp.OwnerIdentified)
@@ -55,7 +55,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
             {
                 Text = "Зафиксировать маску",
                 Act = () => SaveMask(maskUid, maskComp, args.User),
-                Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
+                Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/activatemask.png"))
             };
 
             if (maskComp.MaskSealed)
@@ -64,7 +64,7 @@ public sealed class SoulCuttingMaskSystem : EntitySystem
                 {
                     Text = "Снять маску",
                     Act = () => RemoveMask(maskUid, maskComp, args.User),
-                    Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
+                    Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbKatana/deactivatemask.png"))
                 };
 
                 args.Verbs.Remove(saveVerb);
