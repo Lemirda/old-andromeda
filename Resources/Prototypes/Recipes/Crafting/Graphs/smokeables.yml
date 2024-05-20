@@ -13,6 +13,23 @@
     - node: joint
       entity: Joint
 
+# A-13 RenewedBothany CorwuhUpstream start
+- type: constructionGraph
+  id: smokeableJointRainbow
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: jointRainbow
+          steps:
+            - material: PaperRolling
+            - material: CigaretteFilter
+            - material: GroundCannabisRainbow
+              doAfter: 2
+    - node: jointRainbow
+      entity: JointRainbow
+# A-13 RenewedBothany CorwuhUpstream end
+
 - type: constructionGraph
   id: smokeableBlunt
   start: start
@@ -55,6 +72,22 @@
               doAfter: 5
     - node: ground
       entity: GroundCannabis
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: constructionGraph
+  id: smokeableGroundCannabisRainbow
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: groundRainbow
+          steps:
+            - material: LeavesCannabisRainbowDried
+              amount: 2
+              doAfter: 5
+    - node: groundRainbow
+      entity: GroundCannabisRainbow
+# A-13 RenewedBothany CorwuhUpstream end
 
 - type: constructionGraph
   id: smokeableGroundTobacco

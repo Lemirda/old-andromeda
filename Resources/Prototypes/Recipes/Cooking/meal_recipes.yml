@@ -1704,6 +1704,16 @@
   solids:
     LeavesCannabis: 1
 
+# A-13 RenewedBothany CorwuhUpstream start
+- type: microwaveMealRecipe
+  id: RecipeDriedCannabisRainbow
+  name: dried rainbow cannabis leaves recipe
+  result: LeavesCannabisRainbowDried
+  time: 10
+  solids:
+    LeavesCannabisRainbow: 1
+# A-13 RenewedBothany CorwuhUpstream end
+
 - type: microwaveMealRecipe
   id: RecipeTrashBakedBananaPeel
   name: baked banana peel recipe

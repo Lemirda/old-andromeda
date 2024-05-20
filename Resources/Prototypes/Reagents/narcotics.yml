@@ -410,3 +410,55 @@
         conditions:
         - !type:ReagentThreshold
           min: 20
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: reagent
+  id: Happiness
+  name: счастье
+  group: Narcotics
+  desc: Доводит до экстатического оцепенения и вызывает лёгкие повреждения мозга. Легко вызывает привыкание. Передозировка вызывает резкие перепады настроения.
+  physicalDesc: reagent-physical-desc-soothing
+  flavor: paintthinner
+  color: "#EE35FF"
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:Emote
+        emote: Laugh
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          max: 20
+      - !type:Emote
+        emote: Whistle
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          max: 20
+      - !type:Emote
+        emote: Crying
+        showInChat: true
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          min: 20
+      - !type:PopupMessage # we dont have sanity/mood so this will have to do
+        type: Local
+        visualType: Medium
+        messages:
+        - "Вы чувствуете себя абсолютно бесстрашно!"
+        - "Все ваши тревоги улетучиваются!"
+        - "Вы чувствуете полное умиротворение."
+        probability: 0.2
+        conditions:
+        - !type:ReagentThreshold
+          max: 20
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 5
+        refresh: false
+# A-13 RenewedBothany CorwuhUpstream end

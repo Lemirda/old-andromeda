@@ -1010,7 +1010,7 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
-#A-13 RenewedBothany start
+# A-13 RenewedBothany CorwuhUpstream start
   evolveTable:
     lifeweed:
       requiredMinPotency: 80
@@ -1038,8 +1038,55 @@
       RequiredMinTemperature: 288
       RequiredMaxTemperature: 303
       requiredMutationLevel: 0
-      requiredReagent: ChloralHydrate
-#A-13 RenewedBothany end
+      requiredReagent: THC
+# A-13 RenewedBothany CorwuhUpstream end
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: seed
+  id: rainbowCannabis
+  name: радужная конопля
+  noun: seeds-noun-seeds
+  displayName: радужная конопля
+  plantRsi: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+  packetPrototype: RainbowCannabisSeeds
+  productPrototypes:
+    - LeavesCannabisRainbow
+  harvestRepeat: Repeat
+  lifespan: 75
+  maturation: 8
+  production: 12
+  yield: 2
+  potency: 20
+  growthStages: 3
+  waterConsumption: 0.40
+  idealLight: 9
+  idealHeat: 298
+  chemicals:
+    SpaceDrugs:
+      Min: 1
+      Max: 15
+      PotencyDivisor: 10
+    Lipolicide:
+      Min: 1
+      Max: 15
+      PotencyDivisor: 10
+    MindbreakerToxin:
+      Min: 1
+      Max: 5
+      PotencyDivisor: 20
+    Happiness:
+      Min: 1
+      Max: 5
+#     PotencyDivisor: 20
+#   ColorfulReagent:
+#     Min: 0
+#     Max: 5
+#     PotencyDivisor: 20
+    Psicodine:
+      Min: 0
+      Max: 5
+      PotencyDivisor: 33
+# A-13 RenewedBothany CorwuhUpstream end
 
 - type: seed
   id: tobacco

@@ -29,6 +29,36 @@
           - ReagentId: THC
             Quantity: 20
 
+# A-13 RenewedBothany CorwuhUpstream start
+- type: entity
+  id: JointRainbow
+  parent: Joint
+  name: радужный косяк
+  suffix: Rainbow
+  description: Самокрутка из высушенного растения, завёрнутого в тонкую бумагу. Внутри, похоже, очень красочно.
+  components:
+  - type: Construction
+    graph: smokeableJointRainbow
+    node: jointRainbow
+  - type: SolutionContainerManager
+    solutions:
+      smokable:
+        maxVol: 20
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 4
+        - ReagentId: Lipolicide
+          Quantity: 4
+        - ReagentId: MindbreakerToxin
+          Quantity: 2.66
+        - ReagentId: Happiness
+          Quantity: 2.66
+#       - ReagentId: ColorfulReagent
+#         Quantity: 1.33
+        - ReagentId: Psicodine
+          Quantity: 0.8
+# A-13 RenewedBothany CorwuhUpstream end
+
 - type: entity
   id: Blunt
   parent: BaseCigar

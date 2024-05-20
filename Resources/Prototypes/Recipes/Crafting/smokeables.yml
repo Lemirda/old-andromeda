@@ -9,6 +9,19 @@
   icon: { sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi, state: unlit-icon }
   objectType: Item
 
+# A-13 RenewedBothany CorwuhUpstream start
+- type: construction
+  name: радужный косяк
+  id: smokeableJointRainbow
+  graph: smokeableJointRainbow
+  startNode: start
+  targetNode: jointRainbow
+  category: construction-category-misc
+  description: "A roll of dried plant matter wrapped in thin paper."
+  icon: { sprite: Objects/Consumable/Smokeables/Cannabis/joint.rsi, state: unlit-icon }
+  objectType: Item
+# A-13 RenewedBothany CorwuhUpstream end
+
 - type: construction
   name: блант #A-13 Translation
   id: smokeableBlunt
@@ -44,6 +57,19 @@
   icon: { sprite: Objects/Misc/reagent_fillings.rsi, state: powderpile }
 #    color: darkgreen
   objectType: Item
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: construction
+  name: измельчённая радужная конопля
+  id: smokeableGroundCannabisRainbow
+  graph: smokeableGroundCannabisRainbow
+  startNode: start
+  targetNode: groundRainbow
+  category: construction-category-misc
+  description: Измельчённая радужная конопля, готовая унести вас в трип.
+  icon: { sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: powderpile_rainbow }
+  objectType: Item
+# A-13 RenewedBothany CorwuhUpstream end
 
 - type: construction
   name: молотый табак #A-13 Translation

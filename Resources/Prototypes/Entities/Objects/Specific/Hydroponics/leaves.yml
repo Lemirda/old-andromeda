@@ -66,6 +66,73 @@
   - type: Item
     size: Tiny
 
+# A-13 RenewedBothany CorwuhUpstream start
+- type: entity
+  name: листья радужной конопли
+  parent: LeavesCannabis
+  id: LeavesCannabisRainbow
+  description: "Она и должна так светиться...?"
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+  - type: Produce
+    seedId: rainbowCannabis
+  - type: PointLight
+    radius: 1.5
+    energy: 2
+  - type: RgbLightController
+    cycleRate: 0.6
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 3
+        - ReagentId: Lipolicide
+          Quantity: 3
+        - ReagentId: MindbreakerToxin
+          Quantity: 2
+        - ReagentId: Happiness
+          Quantity: 2
+#       - ReagentId: ColorfulReagent
+#         Quantity: 1
+        - ReagentId: Psicodine
+          Quantity: 0.6
+
+- type: entity
+  name: измельченная радужная конопля
+  parent: GroundCannabis
+  id: GroundCannabisRainbow
+  description: "Измельченная радужная конопля, готова отправить тебя в путешенствие."
+  components:
+  - type: Stack
+    stackType: GroundCannabisRainbow
+    count: 1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: SpaceDrugs
+          Quantity: 4
+        - ReagentId: Lipolicide
+          Quantity: 4
+        - ReagentId: MindbreakerToxin
+          Quantity: 2.66
+        - ReagentId: Happiness
+          Quantity: 2.66
+#       - ReagentId: ColorfulReagent
+#         Quantity: 1.33
+        - ReagentId: Psicodine
+          Quantity: 0.8
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+    state: powderpile_rainbow
+    color: white
+  - type: Construction
+    graph: smokeableGroundCannabisRainbow
+    node: groundRainbow
+
+# A-13 RenewedBothany CorwuhUpstream end
 
 - type: entity
   name: tobacco leaves

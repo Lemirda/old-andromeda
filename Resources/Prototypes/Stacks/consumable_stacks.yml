@@ -38,7 +38,7 @@
 - type: stack
   id: GroundTobacco
   name: ground tobacco
-  icon: { sprite: /Textures/Objects/Misc/reagent_fillings.rsi, state: powderpile }
+  icon: { sprite: /Textures/Objects/Specific/Hydroponics/tobacco.rsi, state: powderpile } # A-13 RenewedBothany FixVisualAppearance
   spawn: GroundTobacco
   maxCount: 5
   itemSize: 1
@@ -46,10 +46,20 @@
 - type: stack
   id: GroundCannabis
   name: ground cannabis
-  icon: { sprite: /Textures/Objects/Misc/reagent_fillings.rsi, state: powderpile }
+  icon: { sprite: /Textures/Objects/Specific/Hydroponics/cannabis.rsi, state: powderpile } # A-13 RenewedBothany FixVisualAppearance
   spawn: GroundCannabis
-  maxCount:
+  maxCount: 5 # A-13 RenewedBothany fix max stack
   itemSize: 1
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: stack
+  id: GroundCannabisRainbow
+  name: измельченная радужная конопля
+  icon: { sprite: /Textures/Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: powderpile_rainbow }
+  spawn: GroundCannabisRainbow
+  maxCount: 5
+  itemSize: 1
+# A-13 RenewedBothany CorwuhUpstream end
 
 - type: stack
   id: LeavesTobaccoDried
@@ -66,3 +76,13 @@
   spawn: LeavesCannabisDried
   maxCount: 5
   itemSize: 5
+
+# A-13 RenewedBothany CorwuhUpstream start
+- type: stack
+  id: LeavesCannabisRainbowDried
+  name: сушеные листья радужной конопли
+  icon: { sprite: /Textures/Objects/Specific/Hydroponics/rainbow_cannabis.rsi, state: dried }
+  spawn: LeavesCannabisRainbowDried
+  maxCount: 5
+  itemSize: 5
+# A-13 RenewedBothany CorwuhUpstream end

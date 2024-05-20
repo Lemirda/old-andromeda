@@ -297,6 +297,19 @@
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/cannabis.rsi
 
+#A-13 RenewedBothany CorvuhUpstream start
+- type: entity
+  parent: SeedBase
+  name: пакет семян (радужная конопля)
+  description: Из этих семян вырастет радужная травка. Круто... и вызывает сильное привыкание.
+  id: RainbowCannabisSeeds
+  components:
+    - type: Seed
+      seedId: rainbowCannabis
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+#A-13 RenewedBothany CorvuhUpstream end
+
 - type: entity
   parent: SeedBase
   name: packet of nettle seeds

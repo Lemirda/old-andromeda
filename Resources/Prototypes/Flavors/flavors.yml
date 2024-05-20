@@ -1029,4 +1029,14 @@
   id: pyrotton
   flavorType: Complex
   description: как горящий рот
+
+- type: flavor
+  id: mothballs
+  flavorType: Complex
+  description: как нафталиновые шарики
+
+- type: flavor
+  id: paintthinner
+  flavorType: Complex
+  description: как растворитель для краски
 # A-13 RenewedBothany CorwuhUpstream end
