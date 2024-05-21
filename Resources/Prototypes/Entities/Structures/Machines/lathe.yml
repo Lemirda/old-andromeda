@@ -162,7 +162,7 @@
       - WeaponCapacitorRechargerCircuitboard
       - HandheldStationMap
       - ClothingHeadHatWelding
-      - RadioHandheld #A-13 added for craft MedSolHud
+      - RadioHandheld #A-13 MedSolHud craft
   - type: EmagLatheRecipes
     emagStaticRecipes:
        - CartridgePistol
@@ -263,6 +263,7 @@
     staticRecipes:
     - LargeBeaker
     - Dropper
+    # - ClothingEyesGlassesChemical A-13 MedSolHud craft
     dynamicRecipes:
       - PowerDrill
       - MiningDrill
@@ -325,7 +326,7 @@
       - FauxTileAstroSnow
       - OreBagOfHolding
       - DeviceQuantumSpinInverter
-      - ClothingEyesGlassesChemical #A-13 Change (removed from static)
+      - ClothingEyesGlassesChemical #A-13 MedSolHud craft
   - type: EmagLatheRecipes
     emagDynamicRecipes:
       - ExplosivePayload
@@ -655,6 +656,7 @@
     idleState: icon
     runningState: icon
     staticRecipes:
+      # - ClothingEyesHudSecurity A-13 MedSolHud craft
       - Flash
       - Handcuffs
       - Zipties
@@ -739,7 +741,7 @@
       - ShuttleGunPerforatorCircuitboard
       - ShuttleGunFriendshipCircuitboard
       - ShuttleGunDusterCircuitboard
-      - ClothingEyesHudSecurity #A-13 Change (removed from static)
+      - ClothingEyesHudSecurity #A-13 MedSolHud craft
   - type: MaterialStorage
     whitelist:
       tags:
@@ -850,14 +852,15 @@
       - Drill
       - Saw
       - Hemostat
+      # - ClothingEyesGlassesChemical A-13 MedSolHud craft
     dynamicRecipes:
       - ChemicalPayload
       - CryostasisBeaker
       - BluespaceBeaker
       - SyringeBluespace
       - SyringeCryostasis
-      - ClothingEyesGlassesChemical #A-13 Change (removed from static)
-      - ClothingEyesHudMedical #A-13 added for craft MedSolHud
+      - ClothingEyesGlassesChemical #A-13 MedSolHud craft
+      - ClothingEyesHudMedical #A-13 MedSolHud craft
   - type: Machine
     board: MedicalTechFabCircuitboard
   - type: StealTarget
