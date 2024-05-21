@@ -1,0 +1,135 @@
+- type: entity
+  parent: MaterialBase
+  id: MaterialDurathreadraw
+  name: дюрахлопок
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: MaterialDurathreadraw
+    baseLayer: base
+    layerStates:
+    - durathreadraw
+    - durathreadraw_2
+    - durathreadraw_3
+  - type: Sprite
+    state: durathreadraw_3
+    layers:
+    - state: durathreadraw_3
+      map: ["base"]
+  - type: Appearance
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 5
+        - ReagentId: Phosphorus
+          Quantity: 5
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 3
+      - ReagentId: Phosphorus
+        Quantity: 3
+  - type: Tag
+    tags:
+      - ClothMade
+      - RawMaterial
+
+- type: entity
+  parent: MaterialDurathreadraw
+  id: MaterialDurathreadraw1
+  name: дюрахлопок
+  suffix: Single
+  components:
+  - type: Sprite
+    state: durathreadraw
+  - type: Stack
+    count: 1
+
+- type: material
+  id: Durathreadraw
+  stackEntity: MaterialDurathreadraw1
+  name: дюраткань
+  unit: materials-unit-sheet
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: durathreadraw }
+  color: "#8291a1"
+  price: 0.15
+
+- type: stack
+  id: MaterialDurathreadraw
+  name: дюраткань
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: durathreadraw }
+  spawn: MaterialDurathreadraw1
+  maxCount: 30
+  itemSize: 1
+
+- type: entity
+  parent: MaterialBase
+  id: MaterialPyrothread
+  name: пироткань
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: Pyrothread
+    baseLayer: base
+    layerStates:
+    - pyrothread
+    - pyrothread_2
+    - pyrothread_3
+  - type: Material
+  - type: PhysicalComposition
+    materialComposition:
+      Pyrothread: 100
+  - type: Sprite
+    state: pyrothread_3
+    layers:
+    - state: pyrothread_3
+      map: ["base"]
+  - type: Appearance
+  - type: Construction
+    graph: Pyrothread
+    node: MaterialPyrothread
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 5
+  - type: Tag
+    tags:
+      - ClothMade
+      - RawMaterial
+
+- type: entity
+  parent: MaterialPyrothread
+  id: MaterialPyrothread1
+  suffix: Single
+  components:
+  - type: Sprite
+    state: pyrothread
+  - type: Stack
+    count: 1
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 5
+        reagents: 
+        - ReagentId: Fiber
+          Quantity: 6
+
+- type: material
+  id: Pyrothread
+  stackEntity: MaterialPyrothread1
+  name: пироткань
+  unit: materials-unit-sheet
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: pyrothread }
+  color: "#8291a1"
+  price: 0.15

@@ -1,0 +1,53 @@
+- type: construction
+  name: пироткань (хлопок)
+  id: PyrottonWovenCloth
+  graph: PyrottonObjects
+  startNode: start
+  targetNode: pyrottoncloth
+  category: construction-category-materials
+  description: "Кусок пироткани, сделанный своими руками, на ощупь грубый."
+  icon: { sprite: Objects/Materials/materials.rsi, state: pyrothread }
+  objectType: Item
+
+- type: construction
+  name: дюраткань (хлопок)
+  id: DurottonWovenCloth
+  graph: DurottonObjects
+  startNode: start
+  targetNode: durottoncloth
+  category: construction-category-materials
+  description: "Высококачественная нить используемая для изготовления прочной одежды."
+  icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
+  objectType: Item
+
+- type: constructionGraph
+  id: PyrottonObjects
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: pyrottoncloth
+          completed:
+            - !type:SetStackCount
+              amount: 1
+          steps:
+            - material: Pyrotton
+              amount: 2
+    - node: pyrottoncloth
+      entity: MaterialPyrothread
+
+- type: constructionGraph
+  id: DurottonObjects
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: durottoncloth
+          completed:
+            - !type:SetStackCount
+              amount: 1
+          steps:
+            - material: MaterialDurathreadraw
+              amount: 2
+    - node: durottoncloth
+      entity: MaterialDurathread

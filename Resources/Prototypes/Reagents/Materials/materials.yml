@@ -27,7 +27,7 @@
 - type: material
   id: Durathread
   stackEntity: MaterialDurathread1
-  name: materials-durathread
+  name: дюраткань (синтетическая)
   # not exactly a sheet but its sprite suggests it cant be rolled like cloth
   unit: materials-unit-sheet
   icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: durathread }
