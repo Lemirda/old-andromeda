@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingEyesBase
+  id: ClothingEyesHudMedSol
+  suffix: Андромеда
+  name: медицинский хим визор
+  description: Окуляр с индикатором на стекле, который сканирует гуманоидов в поле зрения и предоставляет точные данные о состоянии их здоровья. Со встроеным химическим анализатором.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evrozor/Clothing/medsol.rsi
+  - type: Clothing
+    sprite: Andromeda/Evrozor/Clothing/medsol.rsi
+  - type: SolutionScanner
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+  - type: ShowHealthIcons
+    damageContainers:
+    - Biological
+  - type: Construction
+    graph: HudMedSol
+    node: medsolHud

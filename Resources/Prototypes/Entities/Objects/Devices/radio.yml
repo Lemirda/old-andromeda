@@ -20,6 +20,10 @@
   - type: Item
     sprite: Objects/Devices/communication.rsi
     heldPrefix: walkietalkie
+#A-13 Added price for walkie-talkie start
+  - type: StaticPrice
+    price: 40 
+#A-13 Added price for walkie-talkie end
   - type: Tag
     tags:
     - Radio
