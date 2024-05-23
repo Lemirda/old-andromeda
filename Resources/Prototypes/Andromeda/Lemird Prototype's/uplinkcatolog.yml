@@ -68,3 +68,14 @@
     Telecrystal: 5
   categories:
   - UplinkPointless
+
+- type: listing
+  id: UplinkSoulСuttingKatana
+  name: uplink-katana-name
+  description: uplink-katana-desc
+  icon: { sprite: Andromeda/Lemird/soulkatana.rsi, state: icon }
+  productEntity: SoulСuttingKatana
+  cost:
+    Telecrystal: 14
+  categories:
+  - UplinkWeaponry

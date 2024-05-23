@@ -128,19 +128,6 @@
   categories:
   - UplinkWeaponry
 
-# A-13 SoulCuttingCatana start
-- type: listing
-  id: UplinkSoulСuttingKatana
-  name: uplink-katana-name
-  description: uplink-katana-desc
-  icon: { sprite: Andromeda/Lemird/soulkatana.rsi, state: icon }
-  productEntity: SoulСuttingKatana
-  cost:
-    Telecrystal: 14
-  categories:
-  - UplinkWeaponry
-# A-13 SoulCuttingCatana end
-
 - type: listing
   id: UplinkC20RBundle
   name: uplink-c20r-bundle-name
