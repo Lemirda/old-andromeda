@@ -31,9 +31,9 @@
     - type: EyeProtection
       protectionTime: 5
     - type: Sprite
-      sprite: Andromeda/Lemird/soulmask.rsi
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
     - type: Clothing
-      sprite: Andromeda/Lemird/soulmask.rsi
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
 
 - type: entity
   id: ActionRecallSoulCuttingKatana
@@ -58,7 +58,7 @@
   components:
   - type: InstantAction
     icon:
-      sprite: Andromeda/Lemird/soulmask.rsi
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
       state: icon
     itemIconStyle: NoItem
     priority: -11
