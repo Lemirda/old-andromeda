@@ -1,6 +1,8 @@
 - type: entity
   parent: Katana
   id: SoulСuttingKatana
+  name: катана разрезающая душу
+  description: Судя по всему это катана которая имеет странные символы... Возможно её не стоит трогать...
   suffix: Андромеда, катана синдиката.
   components:
   - type: SoulCuttingKatana
@@ -24,6 +26,7 @@
   parent: ClothingMaskBase
   id: SoulСuttingMask
   name: дьявольская маска
+  description: Маска выглядит как обычнакя маска, только выглядит немного... Странно...
   suffix: Андромеда, катана синдиката
   components:
     - type: SoulCuttingMask
