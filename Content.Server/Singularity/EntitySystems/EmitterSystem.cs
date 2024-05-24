@@ -6,6 +6,7 @@ using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Projectiles;
 using Content.Server.Weapons.Ranged.Systems;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
@@ -64,6 +65,14 @@ namespace Content.Server.Singularity.EntitySystems
             if (args.Handled)
                 return;
 
+            //A-13 Eblan system update start
+            if (HasComp<EblanComponent>(args.User))
+            {
+                _popup.PopupCursor(Loc.GetString("Вы не можете пока что пользоватсья такими устройствами, потому что, наиграли ещё слишком мало времени."), args.User, PopupType.Large);
+                return;
+            }
+            //A-13 Eblan system update end
+
             if (TryComp(uid, out LockComponent? lockComp) && lockComp.Locked)
             {
                 _popup.PopupEntity(Loc.GetString("comp-emitter-access-locked",
@@ -102,6 +111,11 @@ namespace Content.Server.Singularity.EntitySystems
         {
             if (!args.CanAccess || !args.CanInteract || args.Hands == null)
                 return;
+
+            //A-13 Eblan system update start
+            if (HasComp<EblanComponent>(args.User))
+                return;
+            //A-13 Eblan system update end
 
             if (TryComp<LockComponent>(uid, out var lockComp) && lockComp.Locked)
                 return;
