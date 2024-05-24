@@ -160,7 +160,7 @@
           prob: 0.20
         - id: BarberScissors
           prob: 0.05
-        # A-13 FunniPills start
+        # A-13 FunniPills and AbyssChasms start
         - id: FunniPillCanister
           prob: 0.05
         - id: FunniPill1
@@ -185,7 +185,9 @@
           prob: 0.05
         - id: FunniPill11
           prob: 0.05
-        # A-13 FunniPills end
+        - id: FloorCarpetItemAbyss10
+          prob: 0.15
+        # A-13 FunniPills and AbyssChasms end
         # Syndicate loot
         - id: null
           prob: 0.95
@@ -286,7 +288,7 @@
           prob: 0.20
         - id: ModularReceiver
           prob: 0.1
-# A-13 FunniPills start
+        # A-13 FunniPills and AbyssChasms start
         - id: FunniPillCanister
           prob: 0.05
         - id: FunniPill1
@@ -311,7 +313,9 @@
           prob: 0.05
         - id: FunniPill11
           prob: 0.05
-# A-13 FunniPills end
+        - id: FloorCarpetItemAbyss10
+          prob: 0.15
+        # A-13 FunniPills and AbyssChasms end
         # Syndicate loot
         - id: null
           prob: 0.95
