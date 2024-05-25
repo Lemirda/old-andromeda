@@ -81,9 +81,7 @@ public sealed class CrematoriumSystem : EntitySystem
 
         //A-13 Eblan system update start
         if (HasComp<EblanComponent>(args.User))
-        {
             return;
-        }
         //A-13 Eblan system update end
 
         if (!args.CanAccess || !args.CanInteract || args.Hands == null || storage.Open)
