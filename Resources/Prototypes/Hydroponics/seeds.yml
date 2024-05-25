@@ -1819,6 +1819,46 @@
       Min: 1
       Max: 4
       PotencyDivisor: 40
+#A-13 RenewedBothany start
+  evolveTable:
+    berriesbluespace:
+      requiredMinPotency: 80
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 173
+      RequiredMaxTemperature: 223
+      requiredMutationLevel: 1
+      requiredReagent: Leporazine
+    berriesdeath:
+      requiredMinPotency: 80
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
+      requiredReagent: CarpoToxin
+    berriesflame:
+      requiredMinPotency: 80
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 323
+      RequiredMaxTemperature: 373
+      requiredMutationLevel: 1
+      requiredReagent: Plasma
+    berriesice:
+      requiredMinPotency: 80
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 173
+      RequiredMaxTemperature: 223
+      requiredMutationLevel: 1
+      requiredReagent: Cryptobiolin
+#A-13 RenewedBothany end
+
 
 - type: seed
   id: bungo

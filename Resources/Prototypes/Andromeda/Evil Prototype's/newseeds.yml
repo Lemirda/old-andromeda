@@ -150,6 +150,110 @@
       Max: 8
       PotencyDivisor: 30
 
+- type: seed
+  id: berriesbluespace
+  name: блюспейсинка
+  noun: seeds-noun-seeds
+  displayName: куст блюспейсинки
+  plantRsi: Andromeda/Evil/plants/berriesbluespace.rsi
+  packetPrototype: BerriesBluespaceSeeds
+  productPrototypes:
+    - FoodBerriesBluespace
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 4
+  idealLight: 7
+  nutrientConsumption: 0.6
+  chemicals:
+    Nutriment:
+      Min: 2
+      Max: 5
+      PotencyDivisor: 30
+    Vitamin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 40
+    Barozine:
+      Min: 1
+      Max: 2
+      PotencyDivisor: 90
+
+- type: seed
+  id: berriesdeath
+  name: смертовица
+  noun: seeds-noun-seeds
+  displayName: куст смертовицы
+  plantRsi: Andromeda/Evil/plants/berriesdeath.rsi
+  packetPrototype: BerriesDeathSeeds
+  productPrototypes:
+    - FoodBerriesDeath
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 4
+  idealLight: 7
+  nutrientConsumption: 0.6
+  chemicals:
+    Lead:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+
+- type: seed
+  id: berriesice
+  name: ледовица
+  noun: seeds-noun-seeds
+  displayName: куст ледовицы
+  plantRsi: Andromeda/Evil/plants/berriesice.rsi
+  packetPrototype: BerriesIceSeeds
+  productPrototypes:
+    - FoodBerriesIce
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 4
+  idealLight: 7
+  nutrientConsumption: 0.6
+  chemicals:
+    Fresium:
+      Min: 2
+      Max: 5
+      PotencyDivisor: 30
+    Frostoil:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+
+- type: seed
+  id: berriesflame
+  name: тепловица
+  noun: seeds-noun-seeds
+  displayName: куст тепловицы
+  plantRsi: Andromeda/Evil/plants/berriesflame.rsi
+  packetPrototype: BerriesFlameSeeds
+  productPrototypes:
+    - FoodBerriesFlame
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 4
+  idealLight: 7
+  nutrientConsumption: 0.6
+  chemicals:
+    Pyrazine:
+      Min: 1
+      Max: 3
+      PotencyDivisor: 30
+    Insuzine:
+      Min: 1
+      Max: 3
+      PotencyDivisor: 30
+
 - type: entity
   parent: SeedBase
   name: пакет семян (мясная пшеница)
@@ -215,6 +319,50 @@
       seedId: durotton
     - type: Sprite
       sprite: Andromeda/Evil/plants/durotton.rsi
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (блюспейсинка)
+  suffix: Андромеда
+  id: BerriesBluespaceSeeds
+  components:
+    - type: Seed
+      seedId: berriesbluespace
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/berriesbluespace.rsi
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (смертовица)
+  suffix: Андромеда
+  id: BerriesDeathSeeds
+  components:
+    - type: Seed
+      seedId: berriesdeath
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/berriesdeath.rsi
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (ледовица)
+  suffix: Андромеда
+  id: BerriesIceSeeds
+  components:
+    - type: Seed
+      seedId: berriesice
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/berriesice.rsi
+
+- type: entity
+  parent: SeedBase
+  name: пакет спор (тепловица)
+  suffix: Андромеда
+  id: BerriesflameSeeds
+  components:
+    - type: Seed
+      seedId: berriesflame
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/berriesflame.rsi
 
 - type: entity
   name: сноп мясной пшеницы
@@ -354,5 +502,129 @@
     - CottonBoll
   - type: Extractable
     grindableSolutionName: food
+
+- type: entity
+  name: ягоды блюспейсинки
+  parent: FoodProduceBase
+  id: FoodBerriesBluespace
+  description: Холодные, как пустота космоса!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - berry
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 11
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: Vitamin
+          Quantity: 4
+        - ReagentId: Barozine
+          Quantity: 2
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/berriesbluespace.rsi
+  - type: Produce
+    seedId: berriesbluespace
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceBerryBluespace
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity
+  name: ягоды смертовицы
+  parent: FoodProduceBase
+  id: FoodBerriesDeath
+  description: Пахнут смертью!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - berry
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Lead
+          Quantity: 10
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/berriesdeath.rsi
+  - type: Produce
+    seedId: berriesdeath
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceBerryDeath
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity
+  name: ягоды ледовицы
+  parent: FoodProduceBase
+  id: FoodBerriesIce
+  description: Ледяные, как морозное утро при разгерметизации!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - berry
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Fresium
+          Quantity: 5
+        - ReagentId: Frostoil
+          Quantity: 10
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/berriesice.rsi
+  - type: Produce
+    seedId: berriesice
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceBerryIce
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+
+- type: entity
+  name: ягоды тепловицы
+  parent: FoodProduceBase
+  id: FoodBerriesFlame
+  description: Горячая, как печь с тритием!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - berry
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 6
+        reagents:
+        - ReagentId: Pyrazine
+          Quantity: 3
+        - ReagentId: Insuzine
+          Quantity: 3
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/berriesflame.rsi
+  - type: Produce
+    seedId: berriesflame
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceBerryFlame
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
 
 # TODO: Добавить 4 вида ягод и 3 вида кофе и ебучий блять дюрохлопок
