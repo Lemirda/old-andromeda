@@ -22,7 +22,8 @@ internal sealed class MidRoundAntagRule : StationEventSystem<MidRoundAntagRuleCo
         {
             var spawnLoc = _robustRandom.Pick(spawnLocations);
             spawn = spawnLoc.Item2;
-        } else if (backupSpawnLocations.Count > 0)
+        }
+        else if (backupSpawnLocations.Count > 0)
         {
             var spawnLoc = _robustRandom.Pick(backupSpawnLocations);
             spawn = spawnLoc.Item2;

@@ -217,6 +217,11 @@
     - type: Clothing
       sprite: Clothing/Eyes/Glasses/science.rsi
     - type: SolutionScanner
+#A-13 HudChemical start
+    - type: Tag
+      tags:
+      - HudChemical
+#A-13 HudChemical end
 
 - type: entity
   parent: ClothingEyesBase

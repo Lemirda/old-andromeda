@@ -1,0 +1,54 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieAmmaYakiama
+  name: плюшевый комиссар
+  description: Плюшевая игрушка комиссара. Выглядит мило. От неё пахнет розами и дешёвым вином.
+  suffix: Андромеда
+  components: 
+  - type: Sprite
+    sprite: Andromeda/Evrozor/Plushies/plushie_Amma_Yakiama.rsi
+    state: icon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Andromeda/Evrozor/nya1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Andromeda/Evrozor/nya1.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Andromeda/Evrozor/nya1.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Andromeda/Evrozor/nya1.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Andromeda/Evrozor/nya1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Voice/Felinid/cat_scream2.ogg
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 2.0
+    color: "#8A2BE2"
+  # plan for future
+  # - type: Instrument
+  #   program: 29
+  # - type: SwappableInstrument
+  #   instrumentList:
+  #     "Nylon Acoustic": {24: 0}
+  #     "Steel Acoustic": {25: 0}
+  #     "Clean Electric": {27: 0}
+  #     "Jazz Electric": {25: 0}
+  #     "Muted Electric": {28: 0}
+  #     "Overdrive Rock": {29: 0}
+  #     "Distortion Rock": {30: 0}
+  #     "Harmonics Rock": {31: 0}
+  #     "Fingered Bass": {33: 0}
+  #     "Pick Bass": {34: 0}
+  #     "Slap Bass": {36: 0}
+  #     "Slap (XTra Funky) Bass": {37: 0}
+  # - type: UserInterface
+  #   interfaces:
+  #   - key: enum.InstrumentUiKey.Key
+  #     type: InstrumentBoundUserInterface 

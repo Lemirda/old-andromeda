@@ -4,7 +4,6 @@ using Content.Shared.Interaction;
 using Content.Shared.Kitchen;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Verbs;
-using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -16,8 +15,6 @@ namespace Content.Server.Roboisseur.Roboisseur;
 
 public sealed partial class RoboisseurSystem : EntitySystem
 {
-    //private float _doneTotal = 0;
-
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
@@ -147,7 +144,7 @@ public sealed partial class RoboisseurSystem : EntitySystem
             NextItem(component);
     }
 
-    private bool CheckValidity(String name, EntityPrototype target)
+    private bool CheckValidity(string name, EntityPrototype target)
     {
         // 1: directly compare Names
         // name instead of ID because the oracle asks for them by name
@@ -158,7 +155,7 @@ public sealed partial class RoboisseurSystem : EntitySystem
         return false;
     }
 
-    private int CheckTier(String target, RoboisseurComponent component)
+    private int CheckTier(string target, RoboisseurComponent component)
     {
         if (component.Tier2Protos.Contains(target))
             return 2;
@@ -203,7 +200,7 @@ public sealed partial class RoboisseurSystem : EntitySystem
     {
 
         var allRecipes = _prototypeManager.EnumeratePrototypes<FoodRecipePrototype>();
-        var allProtos = new List<String>();
+        var allProtos = new List<string>();
 
         foreach (var recipe in allRecipes)
             allProtos.Add(recipe.Result);
@@ -222,14 +219,14 @@ public sealed partial class RoboisseurSystem : EntitySystem
         }
         Verb verb = new()
         {
-            Act = () => ResetOrder(uid, component, args.User),
+            Act = () => ResetOrder(uid, component),
             Text = Loc.GetString("roboisseur-reset-order-verb-get-data-text"),
             Icon = new SpriteSpecifier.Texture(new("/Textures/Andromeda/Lemird/VerbRoboisseur/verbroboisseur.png"))
         };
         args.Verbs.Add(verb);
     }
 
-    private void ResetOrder(EntityUid uid, RoboisseurComponent component, EntityUid user)
+    private void ResetOrder(EntityUid uid, RoboisseurComponent component)
     {
         if (DateTime.Now - component.TimerStartTime < component.TimerDuration)
         {

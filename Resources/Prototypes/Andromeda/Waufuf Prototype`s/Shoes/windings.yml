@@ -1,0 +1,22 @@
+- type: entity
+  suffix: Андромеда
+  parent: ClothingShoesBaseButcherable
+  id: ClothingShoesWindings
+  name: обмотки
+  description: Пара лоскутов прочной ткани, предназначенные для обматывания ног.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Waufuf/Shoes/windings.rsi
+  - type: Clothing
+    sprite: Andromeda/Waufuf/Shoes/windings.rsi
+  - type: Matchbox
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepObmotki
+
+- type: soundCollection
+  id: FootstepObmotki
+  files:
+  - /Audio/Andromeda/Waufuf/ragsstep1.ogg
+  - /Audio/Andromeda/Waufuf/ragsstep2.ogg
+  - /Audio/Andromeda/Waufuf/ragsstep3.ogg

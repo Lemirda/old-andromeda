@@ -1,6 +1,6 @@
 - type: gameMap
   id: Aspid
-  mapName: 'Andromeda Aspid'
+  mapName: 'Aspid'
   mapPath: /Maps/aspid.yml
   minPlayers: 20
   maxPlayers: 40
@@ -9,7 +9,7 @@
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Aspid Andromeda {1}'
+          mapNameTemplate: '{0} Aspid {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'

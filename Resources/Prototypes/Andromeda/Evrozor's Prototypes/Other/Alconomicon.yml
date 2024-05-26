@@ -1,0 +1,42 @@
+- type: entity
+  name: алкономикон
+  description: По мановению руки может наслать жесткий бодун.
+  parent: BaseItem
+  id: Alconomicon
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evrozor/Other/alconomicon.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evrozor/Other/alconomicon.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Tag
+    tags:
+    - Book
+  - type: SolutionContainerManager
+    solutions:
+      essence:
+        maxVol: 50
+        reagents:
+        - ReagentId: Ethanol
+          Quantity: 50
+  - type: SolutionRegeneration
+    solution: essence
+    generated:
+      reagents:
+      - ReagentId: Ethanol
+        Quantity: 7
+  - type: InjectableSolution
+    solution: essence
+  - type: RefillableSolution
+    solution: essence
+  - type: Hypospray
+    solutionName: essence
+    transferAmount: 7
+  - type: UseDelay
+    delay: 40
+  

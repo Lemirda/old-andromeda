@@ -1,0 +1,106 @@
+- type: entity
+  parent: Katana
+  id: SoulСuttingKatana
+  name: катана разрезающая душу
+  description: Судя по всему это катана которая имеет странные символы... Возможно её не стоит трогать...
+  suffix: Андромеда, катана синдиката.
+  components:
+  - type: SoulCuttingKatana
+  - type: Sprite
+    sprite: Andromeda/Lemird/soulkatana.rsi
+  - type: Item
+    size: Normal
+    sprite: Andromeda/Lemird/soulkatana.rsi
+  - type: MeleeWeapon
+    attackRate: 1
+    damage:
+      types:
+        Slash: 10
+    soundSwing: /Audio/Andromeda/Lemird/Misc/katanaswipe.ogg
+    soundHit: /Audio/Andromeda/Lemird/Misc/katanahit.ogg
+    wideAnimationRotation: -135
+  - type: Reflect
+    reflectProb: 0.1
+
+- type: entity
+  parent: ClothingMaskBase
+  id: SoulСuttingMask
+  name: дьявольская маска
+  description: Маска выглядит как обычнакя маска, только выглядит немного... Странно...
+  suffix: Андромеда, катана синдиката
+  components:
+    - type: SoulCuttingMask
+    - type: BreathMask
+    - type: EyeProtection
+      protectionTime: 5
+    - type: Sprite
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
+    - type: Clothing
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
+
+- type: entity
+  id: ActionRecallSoulCuttingKatana
+  name: Вернуть катану назад
+  description: Телепортирует катану разрезающую душу назад к вам в руки.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    useDelay: 60
+    icon:
+      sprite: Andromeda/Lemird/soulkatana.rsi
+      state: icon
+    itemIconStyle: NoItem
+    priority: -11
+    event: !type:RecallSoulCuttingKatanaEvent {}
+
+- type: entity
+  id: ActionGetSoulCuttingMask
+  name: Получить маску разрезающую душу
+  description: Вы получаете уникальную маску которая даёт вам лишь больше сил.
+  noSpawn: true
+  components:
+  - type: InstantAction
+    icon:
+      sprite: Andromeda/Clothing/Mask/redfestivalmask.rsi
+      state: icon
+    itemIconStyle: NoItem
+    priority: -11
+    event: !type:GetSoulCuttingMaskEvent {}
+
+- type: speechSounds
+  id: SoulCuttingSpech
+  saySound:
+    collection: SoulUserSaySpeech
+  askSound:
+    collection: SoulUserAskSpeech
+  exclaimSound:
+    collection: SoulUserExclaimSpeech
+
+- type: soundCollection
+  id: SoulUserSaySpeech
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say3.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say4.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say5.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say6.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/say7.ogg
+
+- type: soundCollection
+  id: SoulUserExclaimSpeech
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim3.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim4.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim5.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim6.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/exclaim7.ogg
+
+- type: soundCollection
+  id: SoulUserAskSpeech
+  files:
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask1.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask2.ogg
+  - /Audio/Andromeda/Lemird/SoundCollection/SoulUser/ask3.ogg

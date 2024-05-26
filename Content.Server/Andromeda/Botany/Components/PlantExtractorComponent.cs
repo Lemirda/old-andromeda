@@ -51,6 +51,7 @@ public sealed partial class ActivePlantExtractorComponent : Component
     /// <summary>
     /// Remaining time until the plant extractor finishes extracting.
     /// </summary>
+
     [ViewVariables]
     public TimeSpan EndTime;
 }

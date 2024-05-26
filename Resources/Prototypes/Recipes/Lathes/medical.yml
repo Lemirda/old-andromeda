@@ -210,7 +210,10 @@
   result: Jug
   completetime: 4
   materials:
-    Plastic: 400
+  #A-13 Change craft jug start
+    Glass: 400 
+    Plastic: 100
+  #A-13 Change craft jug end
 
 - type: latheRecipe
   id: RollerBedSpawnFolded

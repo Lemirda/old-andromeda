@@ -1,0 +1,46 @@
+- type: entity
+  name: священная книга похоти
+  description: Эта книга наполняет окружающих чувством любви.
+  parent: BaseItem
+  id: HornyBible
+  suffix: Андромеда, НЕ МАППИТЬ!
+  components:
+#  - type: Prayable
+#    bibleUserOnly: true
+  - type: Sprite
+    sprite: Andromeda/Evrozor/Other/horny_bible.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evrozor/Other/horny_bible.rsi
+  - type: Clothing
+    slots:
+    - Belt
+  - type: Tag
+    tags:
+    - Book
+  - type: SolutionContainerManager
+    solutions:
+      essence:
+        maxVol: 300
+        reagents:
+        - ReagentId: Aphrodisiac
+          Quantity: 300
+  - type: SolutionRegeneration
+    solution: essence
+    generated:
+      reagents:
+      - ReagentId: Aphrodisiac
+        Quantity: 30
+  - type: InjectableSolution
+    solution: essence
+  - type: RefillableSolution
+    solution: essence
+#  - type: ExaminableSolution
+#    solution: essence
+  - type: Hypospray
+    solutionName: essence
+    transferAmount: 10
+  - type: UseDelay
+    delay: 60
+  
