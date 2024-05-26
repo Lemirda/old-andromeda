@@ -25,10 +25,10 @@ public sealed class DeathReminderWindow : DefaultWindow
                     Orientation = LayoutOrientation.Vertical,
                     Children =
                     {
-                        (new Label()
+                        new Label()
                         {
                             Text = Loc.GetString("death-reminder-window-prompt-text-part")
-                        }),
+                        },
                         new BoxContainer
                         {
                             Orientation = LayoutOrientation.Horizontal,
@@ -40,12 +40,10 @@ public sealed class DeathReminderWindow : DefaultWindow
                                     Text = Loc.GetString("death-reminder-window-accept-button"),
                                 }),
 
-                                (new Control()
+                                new Control()
                                 {
                                     MinSize = new Vector2(20, 0)
-                                }),
-
-
+                                },
                             }
                         },
                     }

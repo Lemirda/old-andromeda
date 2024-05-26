@@ -1,0 +1,10 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieChemist
+  name: плюшевый химик
+  description: Забавная на вид игрушка химика, от которой исходит легкий и сладковатый запах. Внимание! Не давайте ей пробирки с взрывоопасными веществами!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evrozor/Plushies/plushie_chemist.rsi
+    state: icon

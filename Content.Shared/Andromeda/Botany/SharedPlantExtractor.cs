@@ -8,6 +8,7 @@ namespace Content.Shared.Andromeda.Botany;
 /// <summary>
 /// This class holds constants that are shared between client and server.
 /// </summary>
+
 public sealed class SharedPlantExtractor
 {
     public static readonly string BeakerContainerId = "beakerContainer";
@@ -126,6 +127,7 @@ public sealed class PlantExtractorBoundUserInterfaceState : BoundUserInterfaceSt
     /// <summary>
     /// A list of the reagents and their amounts within the buffer, if applicable.
     /// </summary>
+
     public readonly IReadOnlyList<ReagentQuantity> BufferReagents;
     public readonly PlantExtractorMode Mode;
     public readonly FixedPoint2? BufferCurrentVolume;

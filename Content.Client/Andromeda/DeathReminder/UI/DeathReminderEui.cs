@@ -33,5 +33,4 @@ public sealed class DeathReminderEui : BaseEui
     {
         _window.Close();
     }
-
 }

@@ -294,7 +294,7 @@ namespace Content.Server.Kitchen.EntitySystems
             //A-13 Eblan system update start
             if (HasComp<EblanComponent>(args.User) && TryComp<BatteryComponent>(args.Used, out var _))
             {
-                _popupSystem.PopupEntity(Loc.GetString("Вы не можете вставить батарейку в микроволновку!"), ent, args.User);
+                _popupSystem.PopupCursor(Loc.GetString("Вы не можете вставить батарейку в микроволновку."), args.User, PopupType.Large);
                 return;
             }
             //A-13 Eblan system update end

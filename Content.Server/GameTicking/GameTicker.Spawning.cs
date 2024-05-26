@@ -20,12 +20,9 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using Content.Server.Database; //A-13 Eblan system update start
-using Robust.Shared.Audio; //A-13 Eblan system update start
-using Robust.Shared.Audio.Systems; //A-13 Eblan system update start
-using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update start
-using Content.Shared.Players.PlayTimeTracking; //A-13 Eblan system update start
-using System.Threading.Tasks; //A-13 Eblan system update start
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
+using Content.Shared.Players.PlayTimeTracking; //A-13 Eblan system update
+using System.Threading.Tasks; //A-13 Eblan system update
 
 namespace Content.Server.GameTicking
 {
@@ -68,7 +65,7 @@ namespace Content.Server.GameTicking
             var playTime = await _db.GetPlayTimes(session.UserId);
             var overallTime = playTime.Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall)?.TimeSpent;
 
-            if (overallTime.HasValue && overallTime.Value.TotalHours < minPlayTimeHours)
+            if (!overallTime.HasValue || overallTime.Value.TotalHours < minPlayTimeHours)
             {
                 if (!EntityManager.HasComponent<EblanComponent>(mob))
                 {

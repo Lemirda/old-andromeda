@@ -24,8 +24,9 @@ public sealed partial class RoboisseurComponent : Component
     public TimeSpan BarkTime = TimeSpan.FromMinutes(1);
 
     /// <summary>
-    ///     Antispam.
+    /// Antispam.
     /// </summary>
+
     public TimeSpan StateTime = default!;
     public DateTime TimerStartTime { get; set; }
     public TimeSpan TimerDuration { get; } = TimeSpan.FromMinutes(25);
@@ -289,6 +290,12 @@ public sealed partial class RoboisseurComponent : Component
         "FoodDonkpocketPizzaWarm",
         "FoodBurgerMothRoach",
         "FoodBurgerBear",
-        "FoodSaladOlivie"
+        "FoodSaladOlivie",
+        "SalCoat",
+        "SalCrab",
+        "SalMime",
+        "FoodTinCondMilk",
+        "FoodTinPorrige",
+        "FoodTinErp"  
     };
 }

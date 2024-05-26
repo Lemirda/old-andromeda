@@ -9,6 +9,7 @@ using Content.Shared.Atmos;
 using Content.Shared.Atmos.Piping;
 using Content.Shared.Atmos.Piping.Binary.Components;
 using Content.Shared.Audio;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 using Content.Shared.Database;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
@@ -107,6 +108,14 @@ namespace Content.Server.Atmos.Piping.Binary.EntitySystems
         {
             if (!EntityManager.TryGetComponent(args.User, out ActorComponent? actor))
                 return;
+
+            //A-13 Eblan system update start
+            if (HasComp<EblanComponent>(args.User))
+            {
+                _popup.PopupCursor(Loc.GetString("Вы не можете пока что пользоваться этим устройством, потому что, наиграли слишком мало времени"), args.User, PopupType.Large);
+                return;
+            }
+            //A-13 Eblan system update end
 
             if (Transform(uid).Anchored)
             {

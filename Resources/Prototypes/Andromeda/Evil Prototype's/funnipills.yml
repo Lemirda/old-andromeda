@@ -1,0 +1,261 @@
+- type: entity
+  noSpawn: true
+  name: афродизиак
+  description: Повышает потенцию как никто другой! Скушайте! 
+  parent: Pill
+  id: FunniPill1
+  suffix: Андромеда
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: Potassium
+          Quantity: 10
+        - ReagentId: Vinegar
+          Quantity: 10
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill2
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: BuzzochloricBees
+          Quantity: 5
+        - ReagentId: CapsaicinOil
+          Quantity: 5
+        - ReagentId: Frostoil
+          Quantity: 5
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill3
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: Ipecac
+          Quantity: 10
+        - ReagentId: Water
+          Quantity: 5
+        - ReagentId: Potassium
+          Quantity: 5
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill4
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: Water
+          Quantity: 5
+        - ReagentId: Potassium
+          Quantity: 5
+        - ReagentId: Ice
+          Quantity: 10
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill5
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 1
+        - ReagentId: Potassium
+          Quantity: 1
+        - ReagentId: Phosphorus
+          Quantity: 1
+        - ReagentId: SpaceDrugs
+          Quantity: 17
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill6
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 7
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: SulfuricAcid
+          Quantity: 1
+        - ReagentId: Plasma
+          Quantity: 1
+        - ReagentId: Phosphorus
+          Quantity: 1
+        - ReagentId: Fluorine
+          Quantity: 3
+        - ReagentId: Chlorine
+          Quantity: 1
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill7
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: SulfuricAcid
+          Quantity: 1
+        - ReagentId: Fluorine
+          Quantity: 2
+        - ReagentId: Carbon
+          Quantity: 2
+        - ReagentId: Water
+          Quantity: 5
+        - ReagentId: SpaceDrugs
+          Quantity: 10
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill8
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: Fresium
+          Quantity: 10
+        - ReagentId: MuteToxin
+          Quantity: 10
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill9
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: Tazinide
+          Quantity: 10
+        - ReagentId: Licoxide
+          Quantity: 10
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill10
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: MindbreakerToxin
+          Quantity: 5
+        - ReagentId: THC
+          Quantity: 5
+        - ReagentId: Ethanol
+          Quantity: 5
+        - ReagentId: Laughter
+          Quantity: 5
+
+- type: entity
+  noSpawn: true
+  parent: FunniPill1
+  id: FunniPill11
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        canBoil: false
+        canReact: false
+        reagents:
+        - ReagentId: Fluorosurfactant
+          Quantity: 5
+        - ReagentId: Water
+          Quantity: 5
+        - ReagentId: Carpetium
+          Quantity: 5
+
+- type: entity
+  noSpawn: true
+  name: подозрительная таблеточница
+  description: Подозрительная таблеточница, с не менее подозрительными таблетками...
+  parent: PillCanister
+  id: FunniPillCanister
+  suffix: Андромеда, Заполненный
+  components:
+  - type: StorageFill
+    contents:
+    - id: FunniPill1
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill2
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill3
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill4
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill5
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill6
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill7
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill8
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill9
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill10
+      prob: 0.25
+      maxAmount: 3
+    - id: FunniPill11
+      prob: 0.25
+      maxAmount: 3
