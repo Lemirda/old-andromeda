@@ -86,6 +86,7 @@
   name: стеклошляпник
   noun: seeds-noun-spores
   displayName: стеклошляпник
+  suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/glasscap.rsi
   packetPrototype: GlasscapSeeds
   productPrototypes:
@@ -107,6 +108,7 @@
   name: пластошляпник
   noun: seeds-noun-spores
   displayName: пластошляпник
+  suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/plaststeelcap.rsi
   packetPrototype: PlaststeelcapSeeds
   productPrototypes:
@@ -128,6 +130,7 @@
   name: дюрапластик
   noun: seeds-noun-seeds
   displayName: куст дюрапластика
+  suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/durotton.rsi
   packetPrototype: DurottonSeeds
   productPrototypes:
@@ -155,6 +158,7 @@
   name: блюспейсинка
   noun: seeds-noun-seeds
   displayName: куст блюспейсинки
+  suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/berriesbluespace.rsi
   packetPrototype: BerriesBluespaceSeeds
   productPrototypes:
@@ -185,6 +189,7 @@
   name: смертовица
   noun: seeds-noun-seeds
   displayName: куст смертовицы
+  suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/berriesdeath.rsi
   packetPrototype: BerriesDeathSeeds
   productPrototypes:
@@ -207,6 +212,7 @@
   name: ледовица
   noun: seeds-noun-seeds
   displayName: куст ледовицы
+  suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/berriesice.rsi
   packetPrototype: BerriesIceSeeds
   productPrototypes:
@@ -233,6 +239,7 @@
   name: тепловица
   noun: seeds-noun-seeds
   displayName: куст тепловицы
+  suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/berriesflame.rsi
   packetPrototype: BerriesFlameSeeds
   productPrototypes:
@@ -253,6 +260,189 @@
       Min: 1
       Max: 3
       PotencyDivisor: 30
+
+# - type: seed
+#   id: lightmushroom
+#   name: светогриб
+#   noun: seeds-noun-spores
+#   displayName: стящийся гриб
+#   plantRsi: Objects/Specific/Hydroponics/chanterelle.rsi
+#   packetPrototype: LightmushroomSeeds
+#   productPrototypes:
+#     - FoodLightmushroom
+#   lifespan: 35
+#   maturation: 10
+#   production: 7
+#   yield: 5
+#   potency: 1
+#   growthStages: 3
+#   lightTolerance: 6
+#   waterConsumption: 0.60
+#   nutrientConsumption: 0.50
+#   idealHeat: 288
+#   chemicals:
+#     Nutriment:
+#       Min: 1
+#       Max: 25
+#       PotencyDivisor: 4
+#     ChloralHydrate:
+#       Min: 1
+#       Max: 10
+#       PotencyDivisor: 10
+
+# - type: seed
+#   id: whitemushroom
+#   name: белый гриб
+#   noun: seeds-noun-spores
+#   displayName: белый гриб
+#   plantRsi: Objects/Specific/Hydroponics/chanterelle.rsi
+#   packetPrototype: WhitemushroomSeeds
+#   productPrototypes:
+#     - FoodWhitemushroom
+#   lifespan: 35
+#   maturation: 10
+#   production: 7
+#   yield: 5
+#   potency: 1
+#   growthStages: 3
+#   lightTolerance: 6
+#   waterConsumption: 0.60
+#   nutrientConsumption: 0.50
+#   idealHeat: 288
+#   chemicals:
+#     Nutriment:
+#       Min: 1
+#       Max: 50
+#       PotencyDivisor: 2
+
+# - type: seed
+#   id: wineshop
+#   name: хмель
+#   noun: seeds-noun-seeds
+#   displayName: хмелевая лоза
+#   plantRsi: Objects/Specific/Hydroponics/wheat.rsi
+#   packetPrototype: WineshopSeeds
+#   productPrototypes:
+#     - FoodWineshopCones
+#   lifespan: 25
+#   maturation: 6
+#   production: 3
+#   yield: 3
+#   potency: 5
+#   idealLight: 8
+#   nutrientConsumption: 0.40
+#   chemicals:
+#     Nutriment:
+#       Min: 1
+#       Max: 20
+#       PotencyDivisor: 20
+#     Flour:
+#       Min: 5
+#       Max: 20
+#       PotencyDivisor: 20
+
+# - type: seed
+#   id: coffeearabica
+#   name: кофе арабика
+#   noun: seeds-noun-seeds
+#   displayName: кофейный куст (арабика)
+#   plantRsi: Objects/Specific/Hydroponics/cocoa.rsi
+#   packetPrototype: CoffeearabicaSeeds
+#   productPrototypes:
+#     - FoodCoffeearabicaRaw
+#   harvestRepeat: Repeat
+#   lifespan: 50
+#   maturation: 6
+#   production: 6
+#   yield: 6
+#   idealLight: 7
+#   waterConsumption: 1
+#   nutrientConsumption: 0.8
+#   idealHeat: 298
+#   chemicals:
+#     Vitamin:
+#       Min: 1
+#       Max: 4
+#       PotencyDivisor: 25
+#     Nutriment:
+#       Min: 1
+#       Max: 2
+#       PotencyDivisor: 50
+#   evolveTable:
+#     coffeeliberica:
+#       requiredMinPotency: 50
+#       requiredMaxPotency: 100
+#       requiredMinHealth: 60
+#       requiredMaxHealth: 150
+#       RequiredMinTemperature: 288
+#       RequiredMaxTemperature: 303
+#       requiredMutationLevel: 1
+#       requiredReagent: CoffeeLiqueur
+#     coffeerobusta:
+#       requiredMinPotency: 70
+#       requiredMaxPotency: 100
+#       requiredMinHealth: 80
+#       requiredMaxHealth: 150
+#       RequiredMinTemperature: 273
+#       RequiredMaxTemperature: 313
+#       requiredMutationLevel: 1
+#       requiredReagent: Coffee
+
+# - type: seed
+#   id: coffeeliberica
+#   name: кофе либерика
+#   noun: seeds-noun-seeds
+#   displayName: кофейный куст (либерика)
+#   plantRsi: Objects/Specific/Hydroponics/cocoa.rsi
+#   packetPrototype: CoffeelibericaSeeds
+#   productPrototypes:
+#     - FoodCoffeelibericaRaw
+#   harvestRepeat: Repeat
+#   lifespan: 50
+#   maturation: 6
+#   production: 6
+#   yield: 6
+#   idealLight: 7
+#   waterConsumption: 1
+#   nutrientConsumption: 0.8
+#   idealHeat: 298
+#   chemicals:
+#     Vitamin:
+#       Min: 1
+#       Max: 4
+#       PotencyDivisor: 25
+#     Nutriment:
+#       Min: 1
+#       Max: 2
+#       PotencyDivisor: 50
+
+# - type: seed
+#   id: coffeerobusta
+#   name: кофе робуста
+#   noun: seeds-noun-seeds
+#   displayName: кофейный куст (робуста)
+#   plantRsi: Objects/Specific/Hydroponics/cocoa.rsi
+#   packetPrototype: CoffeerobustaSeeds
+#   productPrototypes:
+#     - FoodCoffeerobustaRaw
+#   harvestRepeat: Repeat
+#   lifespan: 50
+#   maturation: 6
+#   production: 6
+#   yield: 6
+#   idealLight: 7
+#   waterConsumption: 1
+#   nutrientConsumption: 0.8
+#   idealHeat: 298
+#   chemicals:
+#     Vitamin:
+#       Min: 1
+#       Max: 4
+#       PotencyDivisor: 25
+#     Nutriment:
+#       Min: 1
+#       Max: 2
+#       PotencyDivisor: 50
 
 - type: entity
   parent: SeedBase
@@ -355,7 +545,7 @@
 
 - type: entity
   parent: SeedBase
-  name: пакет спор (тепловица)
+  name: пакет семян (тепловица)
   suffix: Андромеда
   id: BerriesflameSeeds
   components:
@@ -363,6 +553,72 @@
       seedId: berriesflame
     - type: Sprite
       sprite: Andromeda/Evil/plants/berriesflame.rsi
+
+# - type: entity
+#   parent: SeedBase
+#   name: пакет спор (светогриб)
+#   suffix: Андромеда
+#   id: LightmushroomSeeds
+#   components:
+#     - type: Seed
+#       seedId: lightmushroom
+#     - type: Sprite
+#       sprite: Andromeda/Evil/plants/berriesflame.rsi
+
+# - type: entity
+#   parent: SeedBase
+#   name: пакет спор (белый гриб)
+#   suffix: Андромеда
+#   id: WhitemushroomSeeds
+#   components:
+#     - type: Seed
+#       seedId: whitemushroom
+#     - type: Sprite
+#       sprite: Andromeda/Evil/plants/berriesflame.rsi
+
+# - type: entity
+#   parent: SeedBase
+#   name: пакет семян (хмель)
+#   suffix: Андромеда
+#   id: WineshopSeeds
+#   components:
+#     - type: Seed
+#       seedId: wineshop
+#     - type: Sprite
+#       sprite: Andromeda/Evil/plants/berriesflame.rsi
+
+# - type: entity
+#   parent: SeedBase
+#   name: пакет семян (кофе арабика)
+#   suffix: Андромеда
+#   id: СoffeearabicaSeeds
+#   components:
+#     - type: Seed
+#       seedId: coffeearabica
+#     - type: Sprite
+#       sprite: Andromeda/Evil/plants/berriesflame.rsi
+
+# - type: entity
+#   parent: SeedBase
+#   name: пакет семян (кофе либерика)
+#   suffix: Андромеда
+#   id: СoffeelibericaSeeds
+#   components:
+#     - type: Seed
+#       seedId: coffeeliberica
+#     - type: Sprite
+#       sprite: Andromeda/Evil/plants/berriesflame.rsi
+
+# - type: entity
+#   parent: SeedBase
+#   name: пакет семян (кофе робуста)
+#   suffix: Андромеда
+#   id: СoffeerobustaSeeds
+#   components:
+#     - type: Seed
+#       seedId: coffeerobusta
+#     - type: Sprite
+#       sprite: Andromeda/Evil/plants/berriesflame.rsi
 
 - type: entity
   name: сноп мясной пшеницы
@@ -435,6 +691,7 @@
 - type: entity
   name: бревно стеклошляпника
   description: Стекло не растёт на деревьях! Конечно, оно растёт как грибы.
+  suffix: Андромеда
   id: GlassLog
   parent: ProduceBase
   components:
@@ -454,6 +711,7 @@
 - type: entity
   name: бревно пластошляпника
   description: Пластсталь ТОЧНО не растёт на деревьях! Она произрастает в форме грибов.
+  suffix: Андромеда
   id: PlastSteelLog
   parent: ProduceBase
   components:
@@ -473,6 +731,7 @@
 - type: entity
   name: дюрахлопковый шарик
   description: Подозрительно жесткий шарик.
+  suffix: Андромеда
   id: DurottonBol
   parent: FoodProduceBase
   components:
@@ -508,6 +767,7 @@
   parent: FoodProduceBase
   id: FoodBerriesBluespace
   description: Холодные, как пустота космоса!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
@@ -541,6 +801,7 @@
   parent: FoodProduceBase
   id: FoodBerriesDeath
   description: Пахнут смертью!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
@@ -570,6 +831,7 @@
   parent: FoodProduceBase
   id: FoodBerriesIce
   description: Ледяные, как морозное утро при разгерметизации!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
@@ -601,6 +863,7 @@
   parent: FoodProduceBase
   id: FoodBerriesFlame
   description: Горячая, как печь с тритием!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
@@ -627,4 +890,127 @@
     tags:
     - Fruit
 
-# TODO: Добавить 4 вида ягод и 3 вида кофе и ебучий блять дюрохлопок
+# - type: entity
+#   name: шишки хмеля
+#   parent: FoodProduceBase
+#   id: FoodWineshopCones
+#   description: Ароматные шишки хмеля!
+#   components:
+#   - type: FlavorProfile
+#     flavors:
+#       - sake
+#   - type: SolutionContainerManager
+#     solutions:
+#       food:
+#         maxVol: 40
+#         reagents:
+#         - ReagentId: Nutriment
+#           Quantity: 20
+#         - ReagentId: Flour
+#           Quantity: 20
+#   - type: Sprite
+#     sprite: Objects/Specific/Hydroponics/cocoa.rsi
+#   - type: Produce
+#     seedId: wineshop
+#   - type: Tag
+#     tags:
+#     - Fruit
+
+# - type: entity
+#   name: кофейные зерна (арабика)
+#   parent: FoodProduceBase
+#   id: FoodCoffeearabicaRaw
+#   description: Ароматные кофейные зерна арабики!
+#   components:
+#   - type: FlavorProfile
+#     flavors:
+#       - chocolate
+#   - type: SolutionContainerManager
+#     solutions:
+#       food:
+#         maxVol: 14
+#         reagents:
+#         - ReagentId: Nutriment
+#           Quantity: 2
+#         - ReagentId: Vitamin
+#           Quantity: 1
+#         - ReagentId: CoffeearabicaPowder
+#           Quantity: 1
+#   - type: Sprite
+#     sprite: Objects/Specific/Hydroponics/cocoa.rsi
+#   - type: Produce
+#     seedId: сoffeearabica
+#   - type: SpawnItemsOnUse
+#     items:
+#       - id: FoodCoffeearabica
+#     sound:
+#       path: /Audio/Effects/packetrip.ogg
+#   - type: Tag
+#     tags:
+#     - Fruit
+
+# - type: entity
+#   name: кофейные зерна (либерика)
+#   parent: FoodProduceBase
+#   id: FoodCoffeelibericaRaw
+#   description: Ароматные кофейные зерна свободного кофе!
+#   components:
+#   - type: FlavorProfile
+#     flavors:
+#       - chocolate
+#   - type: SolutionContainerManager
+#     solutions:
+#       food:
+#         maxVol: 14
+#         reagents:
+#         - ReagentId: Nutriment
+#           Quantity: 2
+#         - ReagentId: Vitamin
+#           Quantity: 1
+#         - ReagentId: CoffeelibericaPowder
+#           Quantity: 1
+#   - type: Sprite
+#     sprite: Objects/Specific/Hydroponics/cocoa.rsi
+#   - type: Produce
+#     seedId: сoffeeliberica
+#   - type: SpawnItemsOnUse
+#     items:
+#       - id: FoodCoffeeliberica
+#     sound:
+#       path: /Audio/Effects/packetrip.ogg
+#   - type: Tag
+#     tags:
+#     - Fruit
+
+# - type: entity
+#   name: кофейные зерна (робуста)
+#   parent: FoodProduceBase
+#   id: FoodCoffeerobustaRaw
+#   description: Ароматные кофейные зерна самого робастного кофе!
+#   components:
+#   - type: FlavorProfile
+#     flavors:
+#       - chocolate
+#   - type: SolutionContainerManager
+#     solutions:
+#       food:
+#         maxVol: 14
+#         reagents:
+#         - ReagentId: Nutriment
+#           Quantity: 2
+#         - ReagentId: Vitamin
+#           Quantity: 1
+#         - ReagentId: CoffeerobustaPowder
+#           Quantity: 1
+#   - type: Sprite
+#     sprite: Objects/Specific/Hydroponics/cocoa.rsi
+#   - type: Produce
+#     seedId: сoffeerobusta
+#   - type: SpawnItemsOnUse
+#     items:
+#       - id: FoodCoffeerobusta
+#     sound:
+#       path: /Audio/Effects/packetrip.ogg
+#   - type: Tag
+#     tags:
+#     - Fruit

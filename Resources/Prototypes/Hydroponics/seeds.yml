@@ -956,6 +956,24 @@
       RequiredMaxTemperature: 303
       requiredMutationLevel: 1
       requiredReagent: UnstableMutagen
+    lightMushroom:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: ChloralHydrate
+    whiteMushroom:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 95
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Nutriments
 #A-13 RenewedBothany end
 
 - type: seed
@@ -1858,7 +1876,6 @@
       requiredMutationLevel: 1
       requiredReagent: Cryptobiolin
 #A-13 RenewedBothany end
-
 
 - type: seed
   id: bungo
