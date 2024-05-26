@@ -1,10 +1,13 @@
+- type: Tag
+  id: Herb
+
 - type: seed
   id: meatwheat
   name: мясная пшеница
   noun: seeds-noun-seeds
   displayName: стебли мясной пшеницы
   suffix: Андромеда
-  plantRsi: Andromeda/Evil/meatwheat.rsi
+  plantRsi: Andromeda/Evil/plants/meatwheat.rsi
   packetPrototype: MeatWheatSeeds
   productPrototypes:
     - MeatWheatBushel
@@ -17,7 +20,7 @@
   chemicals:
     Nutriment:
       Min: 1
-      Max: 20
+      Max: 5
       PotencyDivisor: 20
 
 - type: entity
@@ -29,7 +32,7 @@
     - type: Seed
       seedId: meatwheat
     - type: Sprite
-      sprite: Andromeda/Evil/meatwheat.rsi
+      sprite: Andromeda/Evil/plants/meatwheat.rsi
 
 - type: entity
   name: сноп мясной пшеницы
@@ -39,14 +42,14 @@
   parent: FoodProduceBase
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/meatwheat.rsi
+    sprite: Andromeda/Evil/plants/meatwheat.rsi
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 5
         reagents:
         - ReagentId: Nutriment
-          Quantity: 20
+          Quantity: 5
   - type: Produce
     seedId: meatwheat
   - type: Food
@@ -54,3 +57,125 @@
   - type: Tag
     tags:
     - Wheat
+
+- type: seed
+  id: mintplant
+  name: мята
+  noun: seeds-noun-seeds
+  displayName: куст мяты
+  suffix: Андромеда
+  plantRsi: Andromeda/Evil/plants/mint.rsi
+  packetPrototype: MintPlantSeeds
+  productPrototypes:
+    - MintPlantLeaves
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  growthStages: 5
+  yield: 2
+  potency: 5
+  idealLight: 9
+  chemicals:
+    MintExtract:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 5
+  evolveTable:
+    catnip:
+      requiredMinPotency: 60
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 100
+      requiredMutationLevel: 1
+      requiredReagent: JuiceLemon
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (мята)
+  suffix: Андромеда
+  id: MintPlantSeeds
+  components:
+    - type: Seed
+      seedId: mintplant
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/mint.rsi
+
+- type: entity
+  name: листья мяты
+  description: Приятно пахнущие мятные листы.
+  suffix: Андромеда
+  id: MintPlantLeaves
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/mint.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: MintExtract
+          Quantity: 20
+  - type: Produce
+    seedId: mintplant
+  - type: Tag
+    tags:
+    - Herb
+
+- type: seed
+  id: catnip
+  name: котовик
+  noun: seeds-noun-seeds
+  displayName: куст котовика
+  suffix: Андромеда
+  plantRsi: Andromeda/Evil/plants/catnip.rsi
+  packetPrototype: CatNipSeeds
+  productPrototypes:
+    - CatNipLeaves
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  growthStages: 5
+  yield: 2
+  potency: 5
+  idealLight: 9
+  chemicals:
+    CatNipExtract:
+      Min: 1
+      Max: 20
+      PotencyDivisor: 5
+
+- type: entity
+  parent: SeedBase
+  name: пакет семян (котовик)
+  suffix: Андромеда
+  id: CatNipSeeds
+  components:
+    - type: Seed
+      seedId: catnip
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/catnip.rsi
+
+- type: entity
+  name: листья котовика
+  description: Подозрительно муррчащие листы котовика.
+  suffix: Андромеда
+  id: CatNipLeaves
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/catnip.rsi
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: CatNipExtract
+          Quantity: 20
+  - type: Produce
+    seedId: catnip
+  - type: Tag
+    tags:
+    - Herb

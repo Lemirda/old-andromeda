@@ -1,0 +1,17 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieRoboMechanic
+  name: плюшевый робототехник
+  description: Потрепанная игрушка робототехника, на ней столько масла и металической стружки, словно это она собрала оборудование для всей станции. 
+  suffix: Андромеда
+  components: 
+  - type: Sprite
+    sprite: Andromeda/Evrozor/Plushies/plushie_robomechanic.rsi
+    state: icon
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 10
+      - ReagentId: Iron
+        Quantity: 10

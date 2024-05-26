@@ -72,6 +72,11 @@
   - type: HolidayRsiSwap
     sprite:
       festive: Objects/Weapons/Bombs/c4gift.rsi
+  #A-13 Detonation of C4 during detaching start
+  - type: Sticky
+    unstickDelay: 10
+  - type: C4DetonationByUnstick
+  #A-13 Detonation of C4 during detaching end
 
 - type: entity
   name: seismic charge

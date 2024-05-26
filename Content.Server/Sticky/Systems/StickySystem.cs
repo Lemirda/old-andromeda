@@ -1,13 +1,16 @@
 using Content.Server.Popups;
 using Content.Server.Sticky.Components;
 using Content.Server.Sticky.Events;
+using Content.Shared.Andromeda.Voomra.C4; //A-13 Detonation of C4 during detaching
 using Content.Shared.DoAfter;
+using Content.Shared.Explosion.Components; //A-13 Detonation of C4 during detaching
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Sticky;
 using Content.Shared.Sticky.Components;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
+using Robust.Shared.Random; //A-13 Detonation of C4 during detaching
 using Robust.Shared.Utility;
 
 namespace Content.Server.Sticky.Systems;
@@ -20,6 +23,7 @@ public sealed class StickySystem : EntitySystem
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
+    [Dependency] private readonly IRobustRandom _random = default!; //A-13 Detonation of C4 during detaching
 
     private const string StickerSlotId = "stickers_container";
 
@@ -133,6 +137,19 @@ public sealed class StickySystem : EntitySystem
             return;
 
         var delay = (float) component.UnstickDelay.TotalSeconds;
+
+        //A-13 Detonation of C4 during detaching start
+        if (TryComp<C4DetonationByUnstickComponent>(uid, out var c4Comp))
+        {
+            if (c4Comp.Detonation
+                && TryComp<ActiveTimerTriggerComponent>(uid, out var activateComp)
+                && _random.NextFloat(0.0f, 1.0f) > 0.25f)
+            {
+                activateComp.TimeRemaining = 0;
+            }
+        }
+        //A-13 Detonation of C4 during detaching end
+
         if (delay > 0)
         {
             // show message to user

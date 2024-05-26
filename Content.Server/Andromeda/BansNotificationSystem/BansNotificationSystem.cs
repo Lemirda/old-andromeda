@@ -13,6 +13,7 @@ namespace Content.Server.Andromeda.BansNotifications;
 /// <summary>
 /// Listen game events and send notifications to Discord
 /// </summary>
+
 /*
 public interface IBansNotificationsSystem
 {
@@ -27,8 +28,8 @@ public sealed class BansNotificationsSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _config = default!;
     private ISawmill _sawmill = default!;
     private readonly HttpClient _httpClient = new();
-    private string _webhookUrl = String.Empty;
-    private string _serverName = String.Empty;
+    private string _webhookUrl = string.Empty;
+    private string _serverName = string.Empty;
 
     public override void Initialize()
     {
@@ -39,7 +40,8 @@ public sealed class BansNotificationsSystem : EntitySystem
         _config.OnValueChanged(AndromedaCCVars.DiscordBanWebhook, value => _webhookUrl = value, true);
         _config.OnValueChanged(CVars.GameHostName, value => _serverName = value, true);
     }
-/*
+
+    /*
     public void RaiseLocalBanEvent(string username, DateTimeOffset? expires, string reason, NoteSeverity severity, string adminusername)
     {
         RaiseLocalEvent(new BanEvent(username, expires, reason, severity, adminusername));
@@ -54,7 +56,8 @@ public sealed class BansNotificationsSystem : EntitySystem
     {
         RaiseLocalEvent(new DepartmentBanEvent(username, expires, department, reason, severity, adminusername));
     }
-*/
+    */
+
     private async void SendDiscordMessage(WebhookPayload payload)
     {
         var request = await _httpClient.PostAsync(_webhookUrl,
@@ -72,7 +75,7 @@ public sealed class BansNotificationsSystem : EntitySystem
 
     public void OnBan(BanEvent e)
     {
-        if (String.IsNullOrEmpty(_webhookUrl))
+        if (string.IsNullOrEmpty(_webhookUrl))
             return;
 
         var expires = e.Expires == null ? Loc.GetString("discord-permanent") : Loc.GetString("discord-expires-at", ("date", e.Expires));
@@ -94,9 +97,7 @@ public sealed class BansNotificationsSystem : EntitySystem
         {
 
             Username = _serverName,
-            /*
-            AvatarUrl = string.IsNullOrWhiteSpace(_avatarUrl) ? null : _avatarUrl,
-            */
+            //AvatarUrl = string.IsNullOrWhiteSpace(_avatarUrl) ? null : _avatarUrl,
             Embeds = new List<Embed>
             {
                 new()
@@ -106,9 +107,7 @@ public sealed class BansNotificationsSystem : EntitySystem
                     Footer = new EmbedFooter
                     {
                         Text = $"{e.AdminUsername}",
-                        /*
-                        IconUrl = string.IsNullOrWhiteSpace(_footerIconUrl) ? null : _footerIconUrl
-                        */
+                        //IconUrl = string.IsNullOrWhiteSpace(_footerIconUrl) ? null : _footerIconUrl
                     },
                 },
             },
@@ -119,7 +118,7 @@ public sealed class BansNotificationsSystem : EntitySystem
 
     public void OnJobBan(JobBanEvent e)
     {
-        if (String.IsNullOrEmpty(_webhookUrl))
+        if (string.IsNullOrEmpty(_webhookUrl))
             return;
 
         var expires = e.Expires == null ? Loc.GetString("discord-permanent") : Loc.GetString("discord-expires-at", ("date", e.Expires));
@@ -142,9 +141,7 @@ public sealed class BansNotificationsSystem : EntitySystem
         var payload = new WebhookPayload
         {
             Username = _serverName,
-            /*
-            AvatarUrl = string.IsNullOrWhiteSpace(_avatarUrl) ? null : _avatarUrl,
-            */
+            //AvatarUrl = string.IsNullOrWhiteSpace(_avatarUrl) ? null : _avatarUrl,
             Embeds = new List<Embed>
             {
                 new()
@@ -154,9 +151,7 @@ public sealed class BansNotificationsSystem : EntitySystem
                     Footer = new EmbedFooter
                     {
                         Text = $"{e.AdminUsername}",
-                        /*
-                        IconUrl = string.IsNullOrWhiteSpace(_footerIconUrl) ? null : _footerIconUrl
-                        */
+                        //IconUrl = string.IsNullOrWhiteSpace(_footerIconUrl) ? null : _footerIconUrl
                     },
                 },
             },
@@ -167,9 +162,10 @@ public sealed class BansNotificationsSystem : EntitySystem
 
     public void OnDepartmentBan(DepartmentBanEvent e)
     {
-        if (String.IsNullOrEmpty(_webhookUrl))
+        if (string.IsNullOrEmpty(_webhookUrl))
             return;
-/*
+
+        /*
         var payload = new WebhookPayload();
         var departamentLocName = Loc.GetString(string.Concat("department-", e.Department.ID));
         var expires = e.Expires == null ? Loc.GetString("discord-permanent") : Loc.GetString("discord-expires-at", ("date", e.Expires));
@@ -181,7 +177,7 @@ public sealed class BansNotificationsSystem : EntitySystem
 
         payload.Content = text;
         SendDiscordMessage(payload);
-*/
+        */
     }
 
     private struct WebhookPayload
@@ -207,7 +203,6 @@ public sealed class BansNotificationsSystem : EntitySystem
         }
     }
 
-    // https://discord.com/developers/docs/resources/channel#embed-object-embed-structure
     private struct Embed
     {
         [JsonPropertyName("description")]
@@ -224,7 +219,6 @@ public sealed class BansNotificationsSystem : EntitySystem
         }
     }
 
-    // https://discord.com/developers/docs/resources/channel#embed-object-embed-footer-structure
     private struct EmbedFooter
     {
         [JsonPropertyName("text")]
@@ -238,7 +232,6 @@ public sealed class BansNotificationsSystem : EntitySystem
         }
     }
 
-    // https://discord.com/developers/docs/resources/webhook#webhook-object-webhook-structure
     private struct WebhookData
     {
         [JsonPropertyName("guild_id")]

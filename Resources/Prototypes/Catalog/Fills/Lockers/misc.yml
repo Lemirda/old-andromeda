@@ -87,6 +87,7 @@
         - id: OxygenTankFilled
         - id: FireExtinguisher
           prob: 0.25
+
 - type: entity
   id: ClosetMaintenanceFilledRandom
   suffix: Filled, Random
@@ -159,6 +160,32 @@
           prob: 0.20
         - id: BarberScissors
           prob: 0.05
+        # A-13 FunniPills start
+        - id: FunniPillCanister
+          prob: 0.05
+        - id: FunniPill1
+          prob: 0.05
+        - id: FunniPill2
+          prob: 0.05
+        - id: FunniPill3
+          prob: 0.05
+        - id: FunniPill4
+          prob: 0.05
+        - id: FunniPill5
+          prob: 0.05
+        - id: FunniPill6
+          prob: 0.05
+        - id: FunniPill7
+          prob: 0.05
+        - id: FunniPill8
+          prob: 0.05
+        - id: FunniPill9
+          prob: 0.05
+        - id: FunniPill10
+          prob: 0.05
+        - id: FunniPill11
+          prob: 0.05
+        # A-13 FunniPills end
         # Syndicate loot
         - id: null
           prob: 0.95
@@ -259,6 +286,32 @@
           prob: 0.20
         - id: ModularReceiver
           prob: 0.1
+# A-13 FunniPills start
+        - id: FunniPillCanister
+          prob: 0.05
+        - id: FunniPill1
+          prob: 0.05
+        - id: FunniPill2
+          prob: 0.05
+        - id: FunniPill3
+          prob: 0.05
+        - id: FunniPill4
+          prob: 0.05
+        - id: FunniPill5
+          prob: 0.05
+        - id: FunniPill6
+          prob: 0.05
+        - id: FunniPill7
+          prob: 0.05
+        - id: FunniPill8
+          prob: 0.05
+        - id: FunniPill9
+          prob: 0.05
+        - id: FunniPill10
+          prob: 0.05
+        - id: FunniPill11
+          prob: 0.05
+# A-13 FunniPills end
         # Syndicate loot
         - id: null
           prob: 0.95

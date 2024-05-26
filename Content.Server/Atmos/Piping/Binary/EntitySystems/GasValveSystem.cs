@@ -4,6 +4,7 @@ using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.NodeContainer.Nodes;
 using Content.Shared.Atmos.Piping;
 using Content.Shared.Audio;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
 using JetBrains.Annotations;
@@ -52,6 +53,11 @@ namespace Content.Server.Atmos.Piping.Binary.EntitySystems
 
         private void OnActivate(EntityUid uid, GasValveComponent component, ActivateInWorldEvent args)
         {
+            //A-13 Eblan system update start
+            if (HasComp<EblanComponent>(args.User))
+                return;
+            //A-13 Eblan system update end
+
             Toggle(uid, component);
             _audio.PlayPvs(component.ValveSound, uid, AudioParams.Default.WithVariation(0.25f));
         }

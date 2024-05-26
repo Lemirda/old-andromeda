@@ -20,17 +20,16 @@ public sealed class RoarAccentSystem : EntitySystem
 
         // roarrr
         message = Regex.Replace(message, "r+", "rrr");
+
         // roarRR
         message = Regex.Replace(message, "R+", "RRR");
 
-        // Andromeda Vulpkanin Roar Start
         // р => ррр
         message = Regex.Replace(
             message,
             "р+",
             _random.Pick(new List<string>() { "рр", "ррр" })
         );
-        // Andromeda Vulpkanin Roar End
         args.Message = message;
     }
 }
