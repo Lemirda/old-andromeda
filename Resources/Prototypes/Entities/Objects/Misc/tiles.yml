@@ -718,6 +718,11 @@
       - FloorShuttleWhite
   - type: Stack
     stackType: FloorTileStackShuttleWhite
+# A-13 shuttle tiles building start
+  - type: Construction
+    graph: TileShuttleSteel
+    node: steeltile
+# A-13 shuttle tiles building end
 
 - type: entity
   name: blue shuttle floor

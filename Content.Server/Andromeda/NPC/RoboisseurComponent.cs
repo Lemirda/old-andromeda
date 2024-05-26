@@ -290,6 +290,12 @@ public sealed partial class RoboisseurComponent : Component
         "FoodDonkpocketPizzaWarm",
         "FoodBurgerMothRoach",
         "FoodBurgerBear",
-        "FoodSaladOlivie"
+        "FoodSaladOlivie",
+        "SalCoat",
+        "SalCrab",
+        "SalMime",
+        "FoodTinCondMilk",
+        "FoodTinPorrige",
+        "FoodTinErp"  
     };
 }

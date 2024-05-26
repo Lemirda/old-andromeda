@@ -1,6 +1,7 @@
 using Content.Shared.Administration.Logs;
 using Content.Shared.Charges.Components;
 using Content.Shared.Charges.Systems;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
@@ -66,6 +67,11 @@ public sealed class RCDSystem : EntitySystem
         if (args.Handled)
             return;
 
+        //A-13 Eblan system update start
+        if (HasComp<EblanComponent>(args.User))
+            return;
+        //A-13 Eblan system update end
+
         NextMode(uid, comp, args.User);
         args.Handled = true;
     }
@@ -74,6 +80,11 @@ public sealed class RCDSystem : EntitySystem
     {
         if (args.Handled || !args.CanReach)
             return;
+
+        //A-13 Eblan system update start
+        if (HasComp<EblanComponent>(args.User))
+            return;
+        //A-13 Eblan system update end
 
         var user = args.User;
 

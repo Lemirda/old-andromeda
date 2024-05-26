@@ -8,33 +8,27 @@
   },
   "states": [
     {
-      "name": "fatigue-1",
-      "delays": [
-        [5.0, 5.0]
-      ]
+      "name": "fatigue-1"
     },
     {
-      "name": "fatigue-2",
-      "delays": [
-        [5.0, 5.0]
-      ]
+      "name": "fatigue-2"
     },
     {
       "name": "fatigue-3",
       "delays": [
-        [5.0, 5.0]
+        [10, 10]
       ]
     },
     {
       "name": "fatigue-4",
       "delays": [
-        [5.0, 5.0]
+        [5, 5]
       ]
     },
     {
       "name": "fatigue-5",
       "delays": [
-        [5.0, 5.0]
+        [1, 1]
       ]
     }
   ]

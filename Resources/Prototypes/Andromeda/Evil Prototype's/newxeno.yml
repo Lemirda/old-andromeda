@@ -1,0 +1,140 @@
+- type: entity
+  name: Страж
+  parent: MobXenoPraetorian
+  id: MobXenoGuardCC
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/guardcc.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      150: Dead
+  - type: Stamina
+    critThreshold: 300
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      75: 0.7
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 10
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 5
+    baseSprintSpeed : 5
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 15500
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+
+- type: entity
+  name: Страж-штурмовик
+  parent: MobXenoGuardCC
+  id: MobXenoGuardStormCC
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/guardstormcc.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      130: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      65: 0.7
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 10
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 6
+    baseSprintSpeed : 6
+
+- type: entity
+  name: Страж-броненосец
+  parent: MobXenoGuardCC
+  id: MobXenoGuardArmCC
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/guardarmcc.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      180: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      90: 0.7
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 7
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 4
+
+- type: entity
+  name: Стрелок-штурмовик
+  parent: MobXenoSpitter
+  id: MobXenoGuardStormS
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/guardstorms.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      110: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      55: 0.7
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 6
+    baseSprintSpeed : 6
+
+- type: entity
+  name: Стрелок-броненосец
+  parent: MobXenoSpitter
+  id: MobXenoGuardArmS
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    sprite: Andromeda/Evil/xeno/guardarms.rsi
+    offset: 0,0.4
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: running
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      130: Dead
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      65: 0.7
+  - type: MovementSpeedModifier
+    baseWalkSpeed : 4
+    baseSprintSpeed : 4

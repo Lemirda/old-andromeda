@@ -1,0 +1,10 @@
+- type: entity
+  parent: BasePlushie
+  id: PlushieParamedic
+  name: плюшевый парамедик
+  description: Милая на вид игрушка парамедика, от вида которой ты точно понимаешь, что сгнить в техах – твоя судьба!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evrozor/Plushies/plushie_paramedic.rsi
+    state: icon
