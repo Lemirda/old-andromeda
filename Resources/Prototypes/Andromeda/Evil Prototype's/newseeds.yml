@@ -110,7 +110,7 @@
   displayName: пластошляпник
   suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/plaststeelcap.rsi
-  packetPrototype: PlaststeelcapSeeds
+  packetPrototype: PlastSteelcapSeeds
   productPrototypes:
     - PlastSteelLog
   lifespan: 80
@@ -126,43 +126,15 @@
   idealHeat: 288
 
 - type: seed
-  id: durotton
-  name: дюрапластик
-  noun: seeds-noun-seeds
-  displayName: куст дюрапластика
-  suffix: Андромеда
-  plantRsi: Andromeda/Evil/plants/durotton.rsi
-  packetPrototype: DurottonSeeds
-  productPrototypes:
-    - DurottonBol
-  lifespan: 25
-  maturation: 8
-  production: 3
-  yield: 2
-  potency: 5
-  idealLight: 8
-  growthStages: 3
-  waterConsumption: 0.80
-  chemicals:
-    Fiber:
-      Min: 5
-      Max: 10
-      PotencyDivisor: 20
-    Phosphorus:
-      Min: 4
-      Max: 8
-      PotencyDivisor: 30
-
-- type: seed
   id: berriesbluespace
   name: блюспейсинка
   noun: seeds-noun-seeds
   displayName: куст блюспейсинки
   suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/berriesbluespace.rsi
-  packetPrototype: BerriesBluespaceSeeds
+  packetPrototype: BerriesbluespaceSeeds
   productPrototypes:
-    - FoodBerriesBluespace
+    - FoodBerriesbluespace
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
@@ -191,9 +163,9 @@
   displayName: куст смертовицы
   suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/berriesdeath.rsi
-  packetPrototype: BerriesDeathSeeds
+  packetPrototype: BerriesdeathSeeds
   productPrototypes:
-    - FoodBerriesDeath
+    - FoodBerriesdeath
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
@@ -214,9 +186,9 @@
   displayName: куст ледовицы
   suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/berriesice.rsi
-  packetPrototype: BerriesIceSeeds
+  packetPrototype: BerriesiceSeeds
   productPrototypes:
-    - FoodBerriesIce
+    - FoodBerriesice
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
@@ -241,9 +213,9 @@
   displayName: куст тепловицы
   suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/berriesflame.rsi
-  packetPrototype: BerriesFlameSeeds
+  packetPrototype: BerriesflameSeeds
   productPrototypes:
-    - FoodBerriesFlame
+    - FoodBerriesflame
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
@@ -261,59 +233,61 @@
       Max: 3
       PotencyDivisor: 30
 
-# - type: seed
-#   id: lightmushroom
-#   name: светогриб
-#   noun: seeds-noun-spores
-#   displayName: стящийся гриб
-#   plantRsi: Objects/Specific/Hydroponics/chanterelle.rsi
-#   packetPrototype: LightmushroomSeeds
-#   productPrototypes:
-#     - FoodLightmushroom
-#   lifespan: 35
-#   maturation: 10
-#   production: 7
-#   yield: 5
-#   potency: 1
-#   growthStages: 3
-#   lightTolerance: 6
-#   waterConsumption: 0.60
-#   nutrientConsumption: 0.50
-#   idealHeat: 288
-#   chemicals:
-#     Nutriment:
-#       Min: 1
-#       Max: 25
-#       PotencyDivisor: 4
-#     ChloralHydrate:
-#       Min: 1
-#       Max: 10
-#       PotencyDivisor: 10
+- type: seed
+  id: lightmushroom
+  name: светогриб
+  noun: seeds-noun-spores
+  displayName: светящийся гриб
+  suffix: Андромеда
+  plantRsi: Andromeda/Evil/plants/lightmushroom.rsi
+  packetPrototype: LightmushroomSeeds
+  productPrototypes:
+    - FoodLightmushroom
+  lifespan: 35
+  maturation: 10
+  production: 7
+  yield: 5
+  potency: 1
+  growthStages: 3
+  lightTolerance: 6
+  waterConsumption: 0.60
+  nutrientConsumption: 0.50
+  idealHeat: 288
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
+    ChloralHydrate:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
 
-# - type: seed
-#   id: whitemushroom
-#   name: белый гриб
-#   noun: seeds-noun-spores
-#   displayName: белый гриб
-#   plantRsi: Objects/Specific/Hydroponics/chanterelle.rsi
-#   packetPrototype: WhitemushroomSeeds
-#   productPrototypes:
-#     - FoodWhitemushroom
-#   lifespan: 35
-#   maturation: 10
-#   production: 7
-#   yield: 5
-#   potency: 1
-#   growthStages: 3
-#   lightTolerance: 6
-#   waterConsumption: 0.60
-#   nutrientConsumption: 0.50
-#   idealHeat: 288
-#   chemicals:
-#     Nutriment:
-#       Min: 1
-#       Max: 50
-#       PotencyDivisor: 2
+- type: seed
+  id: whitemushroom
+  name: белый гриб
+  noun: seeds-noun-spores
+  displayName: белый гриб
+  suffix: Андромеда
+  plantRsi: Andromeda/Evil/plants/whitemushroom.rsi
+  packetPrototype: WhitemushroomSeeds
+  productPrototypes:
+    - FoodWhitemushroom
+  lifespan: 35
+  maturation: 10
+  production: 7
+  yield: 5
+  potency: 1
+  growthStages: 3
+  lightTolerance: 6
+  waterConsumption: 0.60
+  nutrientConsumption: 0.50
+  idealHeat: 288
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 50
+      PotencyDivisor: 2
 
 # - type: seed
 #   id: wineshop
@@ -501,20 +475,9 @@
 
 - type: entity
   parent: SeedBase
-  name: пакет семян (дюрахлопок)
-  suffix: Андромеда
-  id: DurottonSeeds
-  components:
-    - type: Seed
-      seedId: durotton
-    - type: Sprite
-      sprite: Andromeda/Evil/plants/durotton.rsi
-
-- type: entity
-  parent: SeedBase
   name: пакет семян (блюспейсинка)
   suffix: Андромеда
-  id: BerriesBluespaceSeeds
+  id: BerriesbluespaceSeeds
   components:
     - type: Seed
       seedId: berriesbluespace
@@ -525,7 +488,7 @@
   parent: SeedBase
   name: пакет семян (смертовица)
   suffix: Андромеда
-  id: BerriesDeathSeeds
+  id: BerriesdeathSeeds
   components:
     - type: Seed
       seedId: berriesdeath
@@ -536,7 +499,7 @@
   parent: SeedBase
   name: пакет семян (ледовица)
   suffix: Андромеда
-  id: BerriesIceSeeds
+  id: BerriesiceSeeds
   components:
     - type: Seed
       seedId: berriesice
@@ -554,27 +517,27 @@
     - type: Sprite
       sprite: Andromeda/Evil/plants/berriesflame.rsi
 
-# - type: entity
-#   parent: SeedBase
-#   name: пакет спор (светогриб)
-#   suffix: Андромеда
-#   id: LightmushroomSeeds
-#   components:
-#     - type: Seed
-#       seedId: lightmushroom
-#     - type: Sprite
-#       sprite: Andromeda/Evil/plants/berriesflame.rsi
+- type: entity
+  parent: SeedBase
+  name: пакет спор (светогриб)
+  suffix: Андромеда
+  id: LightmushroomSeeds
+  components:
+    - type: Seed
+      seedId: lightmushroom
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/lightmushroom.rsi
 
-# - type: entity
-#   parent: SeedBase
-#   name: пакет спор (белый гриб)
-#   suffix: Андромеда
-#   id: WhitemushroomSeeds
-#   components:
-#     - type: Seed
-#       seedId: whitemushroom
-#     - type: Sprite
-#       sprite: Andromeda/Evil/plants/berriesflame.rsi
+- type: entity
+  parent: SeedBase
+  name: пакет спор (белый гриб)
+  suffix: Андромеда
+  id: WhitemushroomSeeds
+  components:
+    - type: Seed
+      seedId: whitemushroom
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/whitemushroom.rsi
 
 # - type: entity
 #   parent: SeedBase
@@ -729,43 +692,9 @@
     spawnCount: 1
 
 - type: entity
-  name: дюрахлопковый шарик
-  description: Подозрительно жесткий шарик.
-  suffix: Андромеда
-  id: DurottonBol
-  parent: FoodProduceBase
-  components:
-  - type: Sprite
-    sprite: Andromeda/Evil/plants/durotton.rsi
-  - type: FlavorProfile
-    flavors:
-      - pyrotton
-  - type: Food
-    requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-        - ReagentId: Oil
-          Quantity: 5
-        - ReagentId: Phosphorus
-          Quantity: 5
-  - type: Log
-    spawnedPrototype: MaterialDurathreadraw1
-    spawnCount: 2
-  - type: Produce
-    seedId: durotton
-  - type: Tag
-    tags:
-    - ClothMade
-    - CottonBoll
-  - type: Extractable
-    grindableSolutionName: food
-
-- type: entity
   name: ягоды блюспейсинки
   parent: FoodProduceBase
-  id: FoodBerriesBluespace
+  id: FoodBerriesbluespace
   description: Холодные, как пустота космоса!
   suffix: Андромеда
   components:
@@ -790,7 +719,7 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: JuiceBerryBluespace
+      - ReagentId: JuiceBerriesbluespace
         Quantity: 10
   - type: Tag
     tags:
@@ -799,7 +728,7 @@
 - type: entity
   name: ягоды смертовицы
   parent: FoodProduceBase
-  id: FoodBerriesDeath
+  id: FoodBerriesdeath
   description: Пахнут смертью!
   suffix: Андромеда
   components:
@@ -820,7 +749,7 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: JuiceBerryDeath
+      - ReagentId: JuiceBerriesdeath
         Quantity: 10
   - type: Tag
     tags:
@@ -829,7 +758,7 @@
 - type: entity
   name: ягоды ледовицы
   parent: FoodProduceBase
-  id: FoodBerriesIce
+  id: FoodBerriesice
   description: Ледяные, как морозное утро при разгерметизации!
   suffix: Андромеда
   components:
@@ -852,7 +781,7 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: JuiceBerryIce
+      - ReagentId: JuiceBerriesice
         Quantity: 10
   - type: Tag
     tags:
@@ -861,7 +790,7 @@
 - type: entity
   name: ягоды тепловицы
   parent: FoodProduceBase
-  id: FoodBerriesFlame
+  id: FoodBerriesflame
   description: Горячая, как печь с тритием!
   suffix: Андромеда
   components:
@@ -884,11 +813,53 @@
   - type: Extractable
     juiceSolution:
       reagents:
-      - ReagentId: JuiceBerryFlame
+      - ReagentId: JuiceBerriesflame
         Quantity: 10
   - type: Tag
     tags:
     - Fruit
+
+- type: entity
+  name: гроздь светящихся грибов
+  parent: FoodProduceBase
+  id: FoodLightmushroom
+  description: "Они усыпят вас своим свечением!"
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 5
+        - ReagentId: ChloralHydrate
+          Quantity: 5
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/lightmushroom.rsi
+  - type: Produce
+    seedId: lightmushroom
+  - type: Tag
+    tags:
+    - Vegetable
+
+- type: entity
+  name: белый гриб
+  parent: FoodProduceBase
+  id: FoodWhitemushroom
+  description: "Большой, белый и вкусный!"
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 20
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/whitemushroom.rsi
+  - type: Produce
+    seedId: whitemushroom
+  - type: Tag
+    tags:
+    - Vegetable
 
 # - type: entity
 #   name: шишки хмеля

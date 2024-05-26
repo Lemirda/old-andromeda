@@ -1,5 +1,5 @@
 - type: reagent
-  id: JuiceBerryBluespace
+  id: JuiceBerriesbluespace
   name: сок блюспейсинки
   parent: BaseJuice
   desc: вращающийся, как сингулярность
@@ -8,7 +8,7 @@
   color: "#3d85c6"
 
 - type: reagent
-  id: JuiceBerryDeath
+  id: JuiceBerriesdeath
   name: сок смертовицы
   parent: BaseJuice
   desc: смертельно растекающийся
@@ -17,7 +17,7 @@
   color: "#D4D8EB"
 
 - type: reagent
-  id: JuiceBerryIce
+  id: JuiceBerriesice
   name: сок ледовицы
   parent: BaseJuice
   desc: замораживающий, как стужа
@@ -26,7 +26,7 @@
   color: "#D4D8EB"
 
 - type: reagent
-  id: JuiceBerryFlame
+  id: JuiceBerriesflame
   name: сок тепловицы
   parent: BaseJuice
   desc: смертельно растекающийся
