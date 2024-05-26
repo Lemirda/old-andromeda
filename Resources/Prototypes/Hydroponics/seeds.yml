@@ -29,7 +29,10 @@
       requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 80
-      requiredMaxHealth: 100
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
       requiredReagent: UncookedAnimalProteins
 #A-13 MeatWheatseed end
 
@@ -68,8 +71,10 @@
   packetPrototype: BananaSeeds
   productPrototypes:
     - FoodBanana
-  mutationPrototypes:
-    - mimana
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - mimana
+#A-13 RenewedBothany end
   harvestRepeat: Repeat
   lifespan: 50
   maturation: 6
@@ -88,6 +93,18 @@
       Min: 1
       Max: 2
       PotencyDivisor: 50
+#A-13 RenewedBothany start
+  evolveTable:
+    mimana: 
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 323
+      requiredMutationLevel: 1
+      requiredReagent: MuteToxin
+#A-13 RenewedBothany start
 
 - type: seed
   id: mimana
@@ -145,14 +162,18 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+#A-13 RenewedBothany start
   evolveTable:
     colina:
-      requiredMinPotency: 10
+      requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 60
       requiredMaxHealth: 150
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 323
       requiredMutationLevel: 1
       requiredReagent: Cola
+#A-13 RenewedBothany end
 
 - type: seed
   id: laughinPea
@@ -196,8 +217,10 @@
   packetPrototype: LemonSeeds
   productPrototypes:
     - FoodLemon
-  mutationPrototypes:
-    - lemoon
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - lemoon
+#A-13 RenewedBothany end
   harvestRepeat: Repeat
   lifespan: 55
   maturation: 6
@@ -214,14 +237,27 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+#A-13 RenewedBothany start
   evolveTable:
     lemonka:
-      requiredMinPotency: 51
+      requiredMinPotency: 70
       requiredMaxPotency: 100
-      requiredMinHealth: 99
+      requiredMinHealth: 80
       requiredMaxHealth: 150
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 313
       requiredMutationLevel: 1
       requiredReagent: ChlorineTrifluoride
+    lemoon:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
+      requiredReagent: Milk
+#A-13 RenewedBothany end
 
 - type: seed
   id: lemoon
@@ -331,14 +367,18 @@
       Min: 1
       Max: 2
       PotencyDivisor: 50
+#A-13 RenewedBothany start
   evolveTable:
     pizzaplant:
-      requiredMinPotency: 50
+      requiredMinPotency: 70
       requiredMaxPotency: 100
-      requiredMinHealth: 90
+      requiredMinHealth: 80
       requiredMaxHealth: 150
-      requiredMutationLevel: 0
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
       requiredReagent: Flour
+#A-13 RenewedBothany end
 
 - type: seed
   id: potato
@@ -365,14 +405,18 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+#A-13 RenewedBothany start
   evolveTable:
     slipperyblob:
-      requiredMinPotency: 46
+      requiredMinPotency: 50
       requiredMaxPotency: 100
-      requiredMinHealth: 80
+      requiredMinHealth: 60
       requiredMaxHealth: 150
-      requiredMutationLevel: 0
+      RequiredMinTemperature: 278
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
       requiredReagent: WeldingFuel
+#A-13 RenewedBothany end
 
 - type: seed
   id: sugarcane
@@ -396,14 +440,18 @@
       Min: 4
       Max: 5
       PotencyDivisor: 5
+#A-13 RenewedBothany start
   evolveTable:
     steelcane:
-      requiredMinPotency: 0
+      requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 60
       requiredMaxHealth: 150
-      requiredMutationLevel: 0
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
       requiredReagent: Iron
+#A-13 RenewedBothany end
 
 - type: seed
   id: towercap
@@ -414,8 +462,10 @@
   packetPrototype: TowercapSeeds
   productPrototypes:
     - Log
-  mutationPrototypes:
-    - steelcap
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - steelcap
+#A-13 RenewedBothany end
   lifespan: 80
   maturation: 15
   ligneous: true
@@ -427,6 +477,27 @@
   nutrientConsumption: 0.50
   lightTolerance: 6
   idealHeat: 288
+#A-13 RenewedBothany start
+  evolveTable:
+    steelcap:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Iron
+    glasscap:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Silicon
+#A-13 RenewedBothany end
 
 - type: seed
   id: steelcap
@@ -448,6 +519,18 @@
   nutrientConsumption: 0.80
   lightTolerance: 6
   idealHeat: 288
+#A-13 RenewedBothany start
+  evolveTable:
+    plaststeelcap:
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Plasma
+#A-13 RenewedBothany end
 
 - type: seed
   id: tomato
@@ -458,9 +541,11 @@
   packetPrototype: TomatoSeeds
   productPrototypes:
     - FoodTomato
-  mutationPrototypes:
-    - blueTomato
-    - bloodTomato
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - blueTomato
+  #   - bloodTomato
+#A-13 RenewedBothany end
   harvestRepeat: Repeat
   lifespan: 25
   maturation: 8
@@ -486,6 +571,27 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+#A-13 RenewedBothany start
+  evolveTable:
+    bloodTomato:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Blood
+    blueTomato:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: SpaceLube
+#A-13 RenewedBothany end
 
 - type: seed
   id: blueTomato
@@ -562,8 +668,10 @@
   packetPrototype: EggplantSeeds
   productPrototypes:
     - FoodEggplant
-  mutationPrototypes:
-    - eggy
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - eggy
+#A-13 RenewedBothany end
   harvestRepeat: Repeat
   lifespan: 25
   maturation: 6
@@ -661,14 +769,18 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+#A-13 RenewedBothany start
   evolveTable:
     moneytree:
-      requiredMinPotency: 15
+      requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 60
       requiredMaxHealth: 150
-      requiredMutationLevel: 0
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 323
+      requiredMutationLevel: 1
       requiredReagent: SyndicateBomb
+#A-13 RenewedBothany end
 
 - type: seed
   id: corn
@@ -788,13 +900,36 @@
       Min: 1
       Max: 25
       PotencyDivisor: 25
+#A-13 RenewedBothany start
   evolveTable:
     flyAmanita:
-      requiredMinPotency: 40
+      requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 0
       requiredMaxHealth: 30
-      requiredMutationLevel: 0
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: UnstableMutagen
+    lightMushroom:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: ChloralHydrate
+    whiteMushroom:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 95
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Nutriments
+#A-13 RenewedBothany end
 
 - type: seed
   id: eggy
@@ -819,14 +954,6 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
-  evolveTable:
-    cotton:
-      requiredMinPotency: 25
-      requiredMaxPotency: 100
-      requiredMinHealth: 50
-      requiredMaxHealth: 150
-      requiredMutationLevel: 0
-      requiredReagent: Carbon
 
 - type: seed
   id: cannabis
@@ -852,20 +979,27 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
+# A-13 RenewedBothany start
   evolveTable:
     lifeweed:
-      requiredMinPotency: 50
+      requiredMinPotency: 80
       requiredMaxPotency: 100
       requiredMinHealth: 95
       requiredMaxHealth: 150
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 303
       requiredMutationLevel: 1
-      requiredReagent: Tricordrazine
+      requiredReagent: DoctorsDelight
     deathweed:
-      requiredMinPotency: 30
-      requiredMaxPotency: 40
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
       requiredMinHealth: 0
-      requiredMaxHealth: 20
+      requiredMaxHealth: 30
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 303
       requiredMutationLevel: 0
+      requiredReagent: ChloralHydrate
+# A-13 RenewedBothany end
 
 - type: seed
   id: tobacco
@@ -901,8 +1035,10 @@
   packetPrototype: NettleSeeds
   productPrototypes:
     - Nettle
-  mutationPrototypes:
-    - deathNettle
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - deathNettle
+#A-13 RenewedBothany end
   lifespan: 25
   maturation: 8
   production: 6
@@ -917,13 +1053,27 @@
       Min: 1
       Max: 25
       PotencyDivisor: 4
+#A-13 RenewedBothany start
   evolveTable:
     fleshbush:
-      requiredMinPotency: 50
+      requiredMinPotency: 60
       requiredMaxPotency: 100
       requiredMinHealth: 90
       requiredMaxHealth: 150
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
       requiredReagent: Blood
+    deathNettle:
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
+      requiredReagent: UnstableMutagen
+#A-13 RenewedBothany end
 
 - type: seed
   id: deathNettle
@@ -963,8 +1113,10 @@
   packetPrototype: ChiliSeeds
   productPrototypes:
     - FoodChili
-  mutationPrototypes:
-    - chilly
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - chilly
+#A-13 RenewedBothany end
   harvestRepeat: Repeat
   lifespan: 25
   maturation: 6
@@ -986,6 +1138,18 @@
       Min: 1
       Max: 4
       PotencyDivisor: 25
+#A-13 RenewedBothany start
+  evolveTable:
+    chilly:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 308
+      requiredMutationLevel: 1
+      requiredReagent: Nitrogen
+#A-13 RenewedBothany end
 
 - type: seed
   id: chilly
@@ -1027,8 +1191,10 @@
   packetPrototype: PoppySeeds
   productPrototypes:
     - FoodPoppy
-  mutationPrototypes:
-    - lily
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - lily
+#A-13 RenewedBothany end
   lifespan: 25
   maturation: 10
   production: 3
@@ -1045,6 +1211,18 @@
       Min: 1
       Max: 20
       PotencyDivisor: 5
+#A-13 RenewedBothany start
+  evolveTable:
+    lily:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Bicaridine
+#A-13 RenewedBothany end
 
 - type: seed
   id: aloe
@@ -1081,8 +1259,10 @@
   packetPrototype: LilySeeds
   productPrototypes:
     - FoodLily
-  mutationPrototypes:
-    - spacemansTrumpet
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - spacemansTrumpet
+#A-13 RenewedBothany end
   lifespan: 25
   maturation: 10
   production: 3
@@ -1099,6 +1279,18 @@
       Min: 1
       Max: 20
       PotencyDivisor: 5
+#A-13 RenewedBothany start
+  evolveTable:
+    spacemansTrumpet:
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Bicaridine
+#A-13 RenewedBothany end
 
 - type: seed
   id: lingzhi
@@ -1125,14 +1317,18 @@
       Min: 1
       Max: 20
       PotencyDivisor: 5
+#A-13 RenewedBothany start
   evolveTable:
     namelessmushroom:
-      requiredMinPotency: 30
+      requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 0
-      requiredMaxHealth: 40
+      requiredMaxHealth: 30
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
       requiredMutationLevel: 0
       requiredReagent: SpaceDrugs
+#A-13 RenewedBothany end
 
 - type: seed
   id: ambrosiaVulgaris
@@ -1143,8 +1339,10 @@
   packetPrototype: AmbrosiaVulgarisSeeds
   productPrototypes:
     - FoodAmbrosiaVulgaris
-  mutationPrototypes:
-    - ambrosiaDeus
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - ambrosiaDeus
+#A-13 RenewedBothany end
   lifespan: 25
   maturation: 10
   production: 3
@@ -1173,6 +1371,18 @@
       Min: 1
       Max: 2
       PotencyDivisor: 50
+#A-13 RenewedBothany start
+  evolveTable:
+    ambrosiaDeus:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 273
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
+      requiredReagent: Bicaridine
+#A-13 RenewedBothany end
 
 - type: seed
   id: ambrosiaDeus
@@ -1229,13 +1439,18 @@
       Min: 1
       Max: 25
       PotencyDivisor: 4
+#A-13 RenewedBothany start
   evolveTable:
     cannabis:
-      requiredMinPotency: 60
+      requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 0
-      requiredMaxHealth: 70
-      requiredMutationLevel: 0
+      requiredMaxHealth: 30
+      RequiredMinTemperature: 283
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: UnstableMutagen
+#A-13 RenewedBothany end
 
 - type: seed
   id: flyAmanita
@@ -1327,8 +1542,10 @@
   packetPrototype: SoybeanSeeds
   productPrototypes:
     - FoodSoybeans
-  mutationPrototypes:
-    - koibean
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - koibean
+#A-13 RenewedBothany end
   growthStages: 4
   lifespan: 25
   maturation: 6
@@ -1342,6 +1559,18 @@
       Min: 1
       Max: 2
       PotencyDivisor: 50
+#A-13 RenewedBothany start
+  evolveTable:
+    koibean:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 60
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
+      requiredReagent: MilkSoy
+#A-13 RenewedBothany end
 
 - type: seed
   id: spacemansTrumpet
@@ -1503,6 +1732,45 @@
       Min: 1
       Max: 4
       PotencyDivisor: 40
+#A-13 RenewedBothany start
+  evolveTable:
+    berriesbluespace:
+      requiredMinPotency: 80
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 173
+      RequiredMaxTemperature: 223
+      requiredMutationLevel: 1
+      requiredReagent: Leporazine
+    berriesdeath:
+      requiredMinPotency: 80
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
+      requiredReagent: CarpoToxin
+    berriesflame:
+      requiredMinPotency: 80
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 323
+      RequiredMaxTemperature: 373
+      requiredMutationLevel: 1
+      requiredReagent: Plasma
+    berriesice:
+      requiredMinPotency: 80
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 173
+      RequiredMaxTemperature: 223
+      requiredMutationLevel: 1
+      requiredReagent: Cryptobiolin
+#A-13 RenewedBothany end
 
 - type: seed
   id: bungo
@@ -1542,8 +1810,10 @@
   packetPrototype: PeaSeeds
   productPrototypes:
     - FoodPeaPod
-  mutationPrototypes:
-    - laughinPea
+#A-13 RenewedBothany start
+  # mutationPrototypes:
+  #   - laughinPea
+#A-13 RenewedBothany end
   lifespan: 25
   growthStages: 3
   maturation: 8
@@ -1563,6 +1833,18 @@
       Min: 1
       Max: 2
       PotencyDivisor: 50
+#A-13 RenewedBothany start
+  evolveTable:
+    laughinPea:
+      requiredMinPotency: 50
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 313
+      requiredMutationLevel: 1
+      requiredReagent: Sugar
+#A-13 RenewedBothany end
 
 - type: seed
   id: pumpkin
@@ -1612,4 +1894,3 @@
       Min: 5
       Max: 10
       PotencyDivisor: 20
-

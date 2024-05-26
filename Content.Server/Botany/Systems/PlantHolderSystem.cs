@@ -27,6 +27,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Content.Shared.Maps;
+using FastAccessors;
 
 namespace Content.Server.Botany.Systems;
 
@@ -300,7 +301,7 @@ public sealed class PlantHolderSystem : EntitySystem
                 return;
             }
 
-            component.Health -= (_random.Next(3, 5) * 10);
+            component.Health -= (_random.Next(3, 5) * 2);
             component.Seed.Unique = false;
             var seed = _botany.SpawnSeedPacket(component.Seed, Transform(args.User).Coordinates, args.User, component.Health);
             _randomHelper.RandomOffset(seed, 0.25f);
@@ -928,7 +929,7 @@ public sealed class PlantHolderSystem : EntitySystem
         }
     }
 
-    // A-13 botany
+    // A-13 botany // A-13 RenewedBothany start
     private void Evolve(EntityUid uid, PlantHolderComponent? component = null, float mutationLevelMemory = 0)
     {
         if (!Resolve(uid, ref component))
@@ -940,18 +941,21 @@ public sealed class PlantHolderSystem : EntitySystem
         if (component.Seed != null)
         {
             EnsureUniqueSeed(uid, component);
+
+            var environment = _atmosphere.GetContainingMixture(uid, true, true) ?? GasMixture.SpaceGas;
+           
             foreach (var (seedId, seedEvolveConditions) in component.Seed.EvolveTable)
             {
                 if (!_prototype.TryIndex(seedId, out SeedPrototype? protoSeed))
                     continue;
 
-                if (component.Seed.Potency >= seedEvolveConditions.RequiredMinPotency &&
-                    component.Seed.Potency < seedEvolveConditions.RequiredMaxPotency &&
-                    component.Health >= seedEvolveConditions.RequiredMinHealth &&
-                    component.Health < seedEvolveConditions.RequiredMaxHealth &&
+                if (InRange(component.Seed.Potency, seedEvolveConditions.RequiredMinPotency, seedEvolveConditions.RequiredMaxPotency) &&
+                    InRange(component.Health, seedEvolveConditions.RequiredMinHealth, seedEvolveConditions.RequiredMaxHealth) &&
+                    InRange(environment.Temperature, seedEvolveConditions.RequiredMinTemperature, seedEvolveConditions.RequiredMaxTemperature) &&
                     mutationLevelMemory >= seedEvolveConditions.RequiredMutationLevel &&
                     (seedEvolveConditions.Reagent == null || solution.ContainsPrototype(seedEvolveConditions.Reagent)))
                 {
+
                     component.Seed = protoSeed;
                     component.Dead = false;
                     component.Age = (int)protoSeed.Maturation;
@@ -964,6 +968,15 @@ public sealed class PlantHolderSystem : EntitySystem
             }
         }
     }
+
+    private bool InRange(float value, float min, float max)
+    {
+        if (min == 0 && max == 0)
+            return true;
+
+        return min <= value && value < max;
+    }
+// A-13 RenewedBothany end
 
     public void UpdateSprite(EntityUid uid, PlantHolderComponent? component = null)
     {

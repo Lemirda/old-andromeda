@@ -1,0 +1,37 @@
+- type: reagent
+  id: JuiceBerryBluespace
+  name: сок блюспейсинки
+  parent: BaseJuice
+  desc: вращающийся, как сингулярность
+  physicalDesc: reagent-physical-desc-starry
+  flavor: singulo
+  color: "#3d85c6"
+
+- type: reagent
+  id: JuiceBerryDeath
+  name: сок смертовицы
+  parent: BaseJuice
+  desc: смертельно растекающийся
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: chaos
+  color: "#D4D8EB"
+
+- type: reagent
+  id: JuiceBerryIce
+  name: сок ледовицы
+  parent: BaseJuice
+  desc: замораживающий, как стужа
+  physicalDesc: reagent-physical-desc-cold
+  flavor: cold
+  color: "#D4D8EB"
+
+- type: reagent
+  id: JuiceBerryFlame
+  name: сок тепловицы
+  parent: BaseJuice
+  desc: смертельно растекающийся
+  physicalDesc: reagent-physical-desc-burning
+  flavor: bee
+  color: "#f44336"
+
+
