@@ -40,10 +40,11 @@
     equipSound: /Audio/Andromeda/Objects/MantisImplanter/on.ogg
     unequipSound: /Audio/Andromeda/Objects/MantisImplanter/off.ogg
   - type: MeleeWeapon
+    autoAttack: true
     attackRate: 2
     damage:
       types:
-        Piercing: 10
+        Piercing: 15
         Structural: 15
     soundSwing: /Audio/Andromeda/Objects/MantisImplanter/miss.ogg
     soundHit: /Audio/Andromeda/Objects/MantisImplanter/hit.ogg

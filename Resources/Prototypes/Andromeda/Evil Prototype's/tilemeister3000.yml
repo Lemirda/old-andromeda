@@ -1,0 +1,504 @@
+- type: entity
+  id: TileMeister3000
+  parent: BaseLathe
+  name: ПлитМастер3000
+  description: Компактная версия промышленной машинерии для создания высококачественной плитки, прямо у вас на станции!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/tilemeister3000.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: TileMeister3000Circuitboard
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - RawMaterial
+        - Ingot
+  - type: Lathe
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - FloorTileItemWhite
+      - FloorTileItemSteel
+      - FloorTileItemDark
+      - FloorTileItemMetalDiamond
+      - FloorTileItemSteelCheckerLight
+      - FloorTileItemSteelCheckerDark
+      - FloorTileItemClown
+      - FloorTileItemKitchen
+      - FloorTileItemLaundry
+      - FloorTileItemMime
+      - FloorTileItemBar
+      - FloorTileItemLime
+      - FloorTileItemFreezer
+      - FloorTileItemHydro
+      - FloorTileItemConcrete
+      - FloorTileItemGrayConcrete
+      - FloorTileItemOldConcrete
+      - FloorTileItemArcadeBlue
+      - FloorTileItemArcadeBlue2
+      - FloorTileItemArcadeRed
+      - FloorTileItemEighties
+      - FloorTileItemCarpetClown
+      - FloorTileItemCarpetOffice
+      - FloorTileItemBoxing
+      - FloorTileItemGym
+      - FloorCarpetItemRed
+      - FloorCarpetItemBlack
+      - FloorCarpetItemBlue
+      - FloorCarpetItemGreen
+      - FloorCarpetItemOrange
+      - FloorCarpetItemSkyBlue
+      - FloorCarpetItemPurple
+      - FloorCarpetItemPink
+      - FloorCarpetItemCyan
+      - FloorCarpetItemWhite
+      - FloorTileItemGold
+      - FloorTileItemSilver
+      - FloorTileItemMining
+      - FloorTileItemMiningDark
+      - FloorTileItemMiningLight
+      - FloorTileItemBrassReebe
+      - FloorTileItemBrassFilled
+      - FloorTileItemShuttleWhite
+      - FloorTileItemShuttleBlue
+      - FloorTileItemShuttleOrange
+      - FloorTileItemShuttlePurple
+      - FloorTileItemShuttleRed
+      - FloorTileItemShuttleGrey
+      - FloorTileItemShuttleBlack
+      - FloorTileItemWood
+      - FloorTileItemWoodPattern
+      - FloorTileItemWoodLarge
+
+- type: latheRecipe
+  id: TileMeister3000Circuitboard
+  result: TileMeister3000Circuitboard
+  category: Circuitry
+  completetime: 4
+  materials:
+     Steel: 100
+     Glass: 900
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: TileMeister3000Circuitboard
+  name: плитмастер3000 (машинная плата)
+  description: Печатная плата для ПлитМастер 3000.
+  suffix: Андромеда
+  components:
+    - type: MachineBoard
+      prototype: TileMeister3000
+      requirements:
+        MatterBin: 2
+        Manipulator: 2
+      materialRequirements:
+        Steel: 5
+
+- type: latheRecipe
+  id: FloorTileItemWhite
+  result: FloorTileItemWhite
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemSteel
+  result: FloorTileItemSteel
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemDark
+  result: FloorTileItemDark
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemMetalDiamond
+  result: FloorTileItemMetalDiamond
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemSteelCheckerLight
+  result: FloorTileItemSteelCheckerLight
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemSteelCheckerDark
+  result: FloorTileItemSteelCheckerDark
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemClown
+  result: FloorTileItemClown
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemKitchen
+  result: FloorTileItemKitchen
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemLaundry
+  result: FloorTileItemLaundry
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemMime
+  result: FloorTileItemMime
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemBar
+  result: FloorTileItemBar
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemLime
+  result: FloorTileItemLime
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemFreezer
+  result: FloorTileItemFreezer
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemHydro
+  result: FloorTileItemHydro
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemConcrete
+  result: FloorTileItemConcrete
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemGrayConcrete
+  result: FloorTileItemGrayConcrete
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemOldConcrete
+  result: FloorTileItemOldConcrete
+  completetime: 1
+  materials:
+    Steel: 50
+
+- type: latheRecipe
+  id: FloorTileItemArcadeBlue
+  result: FloorTileItemArcadeBlue
+  completetime: 1
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: FloorTileItemArcadeBlue2
+  result: FloorTileItemArcadeBlue2
+  completetime: 1
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: FloorTileItemArcadeRed
+  result: FloorTileItemArcadeRed
+  completetime: 1
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: FloorTileItemEighties
+  result: FloorTileItemEighties
+  completetime: 1
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: FloorTileItemCarpetClown
+  result: FloorTileItemCarpetClown
+  completetime: 1
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: FloorTileItemCarpetOffice
+  result: FloorTileItemCarpetOffice
+  completetime: 1
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: FloorTileItemBoxing
+  result: FloorTileItemBoxing
+  completetime: 1
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: FloorTileItemGym
+  result: FloorTileItemGym
+  completetime: 1
+  materials:
+    Cloth: 50
+
+- type: latheRecipe
+  id: FloorCarpetItemRed
+  result: FloorCarpetItemRed
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemBlack
+  result: FloorCarpetItemBlack
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemBlue
+  result: FloorCarpetItemBlue
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemGreen
+  result: FloorCarpetItemGreen
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemOrange
+  result: FloorCarpetItemOrange
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemSkyBlue
+  result: FloorCarpetItemSkyBlue
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemPurple
+  result: FloorCarpetItemPurple
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemPink
+  result: FloorCarpetItemPink
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemCyan
+  result: FloorCarpetItemCyan
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorCarpetItemWhite
+  result: FloorCarpetItemWhite
+  completetime: 1
+  materials:
+    Cloth: 100
+
+- type: latheRecipe
+  id: FloorTileItemGold
+  result: FloorTileItemGold
+  completetime: 1
+  materials:
+    Gold: 100
+
+- type: latheRecipe
+  id: FloorTileItemSilver
+  result: FloorTileItemSilver
+  completetime: 1
+  materials:
+    Silver: 100
+
+- type: latheRecipe
+  id: FloorTileItemMining
+  result: FloorTileItemMining
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemMiningDark
+  result: FloorTileItemMiningDark
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemMiningLight
+  result: FloorTileItemMiningLight
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemElevatorShaft
+  result: FloorTileItemElevatorShaft
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemBrassFilled
+  result: FloorTileItemBrassFilled
+  completetime: 1
+  materials:
+    Brass: 50
+
+- type: latheRecipe
+  id: FloorTileItemBrassReebe
+  result: FloorTileItemBrassReebe
+  completetime: 1
+  materials:
+    Brass: 50
+
+- type: latheRecipe
+  id: FloorTileItemShuttleWhite
+  result: FloorTileItemShuttleWhite
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemShuttleBlue
+  result: FloorTileItemShuttleBlue
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemShuttleOrange
+  result: FloorTileItemShuttleOrange
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemShuttlePurple
+  result: FloorTileItemShuttlePurple
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemShuttleRed
+  result: FloorTileItemShuttleRed
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemShuttleGrey
+  result: FloorTileItemShuttleGrey
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemShuttleBlack
+  result: FloorTileItemShuttleBlack
+  completetime: 1
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  id: FloorTileItemWood
+  result: FloorTileItemWood
+  completetime: 1
+  materials:
+    Wood: 50
+
+- type: latheRecipe
+  id: FloorTileItemWoodPattern
+  result: FloorTileItemWoodPattern
+  completetime: 1
+  materials:
+    Wood: 50
+
+- type: latheRecipe
+  id: FloorTileItemWoodLarge
+  result: FloorTileItemWoodLarge
+  completetime: 1
+  materials:
+    Wood: 50
+
+- type: constructionGraph
+  id: TileShuttleWhite
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: steeltile
+          completed:
+            - !type:SetStackCount
+              amount: 4
+          steps:
+            - material: Steel
+              amount: 2
+    - node: steeltile
+      entity: FloorTileItemShuttleWhite
+
+- type: construction
+  name: белая плитка шаттла
+  id: FloorTileItemShuttleWhite
+  graph: TileShuttleWhite
+  startNode: start
+  targetNode: steeltile
+  category: construction-category-tiles
+  description: "Четыре белых плитки шаттла."
+  icon: { sprite: Objects/Tiles/tile.rsi, state: shuttlewhite }
+  objectType: Item

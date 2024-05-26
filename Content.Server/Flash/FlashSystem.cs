@@ -63,7 +63,7 @@ namespace Content.Server.Flash
             args.Handled = true;
             foreach (var e in args.HitEntities)
             {
-                Flash(e, args.User, uid, comp.FlashDuration, comp.SlowTo, melee: true);
+                Flash(e, args.User, comp.ForceFlash, uid, comp.FlashDuration, comp.SlowTo, melee: true); // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
             }
         }
 
@@ -73,7 +73,7 @@ namespace Content.Server.Flash
                 return;
 
             args.Handled = true;
-            FlashArea(uid, args.User, comp.Range, comp.AoeFlashDuration, comp.SlowTo, true);
+            FlashArea(uid, args.User, comp.ForceFlash, comp.Range, comp.AoeFlashDuration, comp.SlowTo, true); // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
         }
 
         private bool UseFlash(EntityUid uid, FlashComponent comp, EntityUid user)
@@ -108,6 +108,7 @@ namespace Content.Server.Flash
 
         public void Flash(EntityUid target,
             EntityUid? user,
+            bool force, // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
             EntityUid? used,
             float flashDuration,
             float slowTo,
@@ -118,11 +119,15 @@ namespace Content.Server.Flash
             if (!Resolve(target, ref flashable, false))
                 return;
 
-            var attempt = new FlashAttemptEvent(target, user, used);
-            RaiseLocalEvent(target, attempt, true);
-
-            if (attempt.Cancelled)
-                return;
+            // A-13 check if flash is forced. - 'PenPlus+' start
+            if (!force)
+            {
+                var attempt = new FlashAttemptEvent(target, user, used);
+                RaiseLocalEvent(target, attempt, true);
+                if (attempt.Cancelled)
+                    return;
+            }
+            // A-13 check if flash is forced. - 'PenPlus+' end
 
             if (melee)
             {
@@ -148,7 +153,7 @@ namespace Content.Server.Flash
 
         }
 
-        public void FlashArea(EntityUid source, EntityUid? user, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, SoundSpecifier? sound = null)
+        public void FlashArea(EntityUid source, EntityUid? user, bool force, float range, float duration, float slowTo = 0.8f, bool displayPopup = false, SoundSpecifier? sound = null) // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
         {
             var transform = EntityManager.GetComponent<TransformComponent>(source);
             var mapPosition = _transform.GetMapCoordinates(transform);
@@ -165,7 +170,7 @@ namespace Content.Server.Flash
                     continue;
 
                 // They shouldn't have flash removed in between right?
-                Flash(entity, user, source, duration, slowTo, displayPopup, flashableQuery.GetComponent(entity));
+                Flash(entity, user, force, source, duration, slowTo, displayPopup, flashableQuery.GetComponent(entity)); // A-13 new variable from component ForceFlash to ignore protection if needed. - 'PenPlus+'
             }
 
             if (sound != null)

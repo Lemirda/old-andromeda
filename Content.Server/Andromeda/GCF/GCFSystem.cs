@@ -7,8 +7,9 @@ using Robust.Shared.Timing;
 namespace Content.Server.Andromeda.GCF;
 
 /// <summary>
-///     Handles periodically GCF (Garbage Collector)
+/// Handles periodically GCF (Garbage Collector)
 /// </summary>
+
 public sealed class GCFSystem : EntitySystem
 {
     [Dependency] private readonly IChatManager _chat = default!;
@@ -70,7 +71,7 @@ public sealed class GCFSystem : EntitySystem
     {
         if (!_gcfNotify)
             return;
-        _chat.SendAdminAnnouncement("Автоочистка завершена успешно");
+        _chat.SendAdminAnnouncement("GCF смогла выполнить отчистку сервера.");
     }
 
     private void RecalculateNextGCFTime()

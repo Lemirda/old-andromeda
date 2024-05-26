@@ -30,6 +30,7 @@ namespace Content.Server.Andromeda.Botany.Systems;
 /// Contains all the server-side logic for PlantExtractors.
 /// <seealso cref="PlantExtractorComponent"/>
 /// </summary>
+
 [UsedImplicitly]
 public sealed class PlantExtractorSystem : EntitySystem
 {
@@ -100,7 +101,7 @@ public sealed class PlantExtractorSystem : EntitySystem
                 }
                 QueueDel(item);
 
-                // _solutionContainerSystem.TryAddSolution(uid, bufferSolution, solution);
+                //_solutionContainerSystem.TryAddSolution(uid, bufferSolution, solution);
                 bufferSolution.AddSolution(solution, _prototypeManager);
             }
 
@@ -177,10 +178,10 @@ public sealed class PlantExtractorSystem : EntitySystem
         switch (component.Mode)
         {
             case PlantExtractorMode.Transfer:
-                TransferReagents(component, message.ReagentId, message.Amount.GetFixedPoint(), message.FromBuffer);
+                TransferReagents(uid, component, message.ReagentId, message.Amount.GetFixedPoint(), message.FromBuffer);
                 break;
             case PlantExtractorMode.Discard:
-                DiscardReagents(component, message.ReagentId, message.Amount.GetFixedPoint(), message.FromBuffer);
+                DiscardReagents(uid, component, message.ReagentId, message.Amount.GetFixedPoint(), message.FromBuffer);
                 break;
             default:
                 // Invalid mode.
@@ -190,12 +191,12 @@ public sealed class PlantExtractorSystem : EntitySystem
         ClickSound(uid, component);
     }
 
-    private void TransferReagents(PlantExtractorComponent component, ReagentId id, FixedPoint2 amount, bool fromBuffer)
+    private void TransferReagents(EntityUid uid, PlantExtractorComponent component, ReagentId id, FixedPoint2 amount, bool fromBuffer)
     {
-        var container = _itemSlotsSystem.GetItemOrNull(component.Owner, SharedPlantExtractor.BeakerContainerId);
+        var container = _itemSlotsSystem.GetItemOrNull(uid, SharedPlantExtractor.BeakerContainerId);
         if (container is null ||
             !_solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSoln, out var containerSolution) ||
-            !_solutionContainerSystem.TryGetSolution(component.Owner, SharedPlantExtractor.BufferId, out _, out var bufferSolution))
+            !_solutionContainerSystem.TryGetSolution(uid, SharedPlantExtractor.BufferId, out _, out var bufferSolution))
         {
             return;
         }
@@ -213,22 +214,22 @@ public sealed class PlantExtractorSystem : EntitySystem
             bufferSolution.AddReagent(id, amount);
         }
 
-        UpdateUiState(component.Owner);
+        UpdateUiState(uid);
     }
 
-    private void DiscardReagents(PlantExtractorComponent plantExtractorComponent, ReagentId id, FixedPoint2 amount, bool fromBuffer)
+    private void DiscardReagents(EntityUid uid, PlantExtractorComponent plantExtractorComponent, ReagentId id, FixedPoint2 amount, bool fromBuffer)
     {
 
         if (fromBuffer)
         {
-            if (_solutionContainerSystem.TryGetSolution(plantExtractorComponent.Owner, SharedPlantExtractor.BufferId, out _, out var bufferSolution))
+            if (_solutionContainerSystem.TryGetSolution(uid, SharedPlantExtractor.BufferId, out _, out var bufferSolution))
                 bufferSolution.RemoveReagent(id, amount);
             else
                 return;
         }
         else
         {
-            var container = _itemSlotsSystem.GetItemOrNull(plantExtractorComponent.Owner, SharedPlantExtractor.BeakerContainerId);
+            var container = _itemSlotsSystem.GetItemOrNull(uid, SharedPlantExtractor.BeakerContainerId);
             if (container is not null &&
                 _solutionContainerSystem.TryGetFitsInDispenser(container.Value, out var containerSolution, out _))
             {
@@ -238,7 +239,7 @@ public sealed class PlantExtractorSystem : EntitySystem
                 return;
         }
 
-        UpdateUiState(plantExtractorComponent.Owner);
+        UpdateUiState(uid);
     }
 
     private void OnInteractUsing(EntityUid uid, PlantExtractorComponent component, InteractUsingEvent args)

@@ -143,7 +143,7 @@ public sealed class StickySystem : EntitySystem
         {
             if (c4Comp.Detonation
                 && TryComp<ActiveTimerTriggerComponent>(uid, out var activateComp)
-                && _random.NextFloat(0.0f, 1.0f) > 0.5f)
+                && _random.NextFloat(0.0f, 1.0f) > 0.25f)
             {
                 activateComp.TimeRemaining = 0;
             }

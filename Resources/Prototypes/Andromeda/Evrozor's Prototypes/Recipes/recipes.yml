@@ -1,0 +1,73 @@
+- type: constructionGraph
+  id: HudMedSol
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: medsolHud
+          steps:
+            - tag: HudMedical
+              name: medical hud
+              icon:
+                sprite: Clothing/Eyes/Hud/med.rsi
+                state: icon
+              doAfter: 5
+            - tag: HudChemical
+              name: chemical analysis goggles
+              icon:
+                sprite: Clothing/Eyes/Glasses/science.rsi
+                state: icon
+              doAfter: 5
+            - material: Cable
+              amount: 5
+              doAfter: 5
+            - tag: Radio
+              name: radio
+              icon:
+                sprite: Objects/Devices/communication.rsi
+                state: walkietalkie
+              doAfter: 5
+            - tag: CapacitorStockPart
+              name: capacitor
+              icon:
+                sprite: Objects/Misc/stock_parts.rsi
+                state: capacitor
+              doAfter: 5
+            - tag: CapacitorStockPart
+              name: capacitor
+              icon:
+                sprite: Objects/Misc/stock_parts.rsi
+                state: capacitor
+              doAfter: 5
+    - node: medsolHud
+      entity: ClothingEyesHudMedSol
+
+- type: construction
+  name: медицинский хим визор 
+  id: ClothingEyesHudMedSol
+  graph: HudMedSol
+  startNode: start
+  targetNode: medsolHud
+  category: construction-category-clothing
+  description: Два визора, соединенные руками.
+  icon: { sprite: Andromeda/Evrozor/Clothing/medsol.rsi, state: icon }
+  objectType: Item
+
+
+- type: latheRecipe
+  id: ClothingEyesHudMedical
+  result: ClothingEyesHudMedical
+  completetime: 2
+  materials:
+    Steel: 150
+    Plastic: 200
+    Glass: 300
+
+- type: latheRecipe
+  id: RadioHandheld
+  result: RadioHandheld
+  completetime: 2
+  materials:
+    Steel: 100
+    Plastic: 200
+    Glass: 100
