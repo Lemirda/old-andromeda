@@ -9,6 +9,7 @@ namespace Content.Shared.Andromeda.PlayableCards;
 /// <remarks>
 /// Wiill prevent any insertions into containers while this item is unfolded.
 /// </remarks>
+
 [RegisterComponent]
 [NetworkedComponent]
 [Access(typeof(FoldableCardSystem))]
@@ -23,7 +24,6 @@ public sealed partial class FoldableCardComponent : Component
     public string CurrentDescription = string.Empty;
 }
 
-// ahhh, the ol' "state thats just a copy of the component".
 [Serializable, NetSerializable]
 public sealed class FoldableCardComponentState : ComponentState
 {

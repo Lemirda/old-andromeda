@@ -14,7 +14,7 @@ public sealed partial class AdminNotificationsSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _config = default!;
     private ISawmill _sawmill = default!;
     private readonly HttpClient _httpClient = new();
-    private string _webhookUrl = String.Empty;
+    private string _webhookUrl = string.Empty;
     private int _adminCount = 0;
 
     public override void Initialize()
@@ -55,7 +55,7 @@ public sealed partial class AdminNotificationsSystem : EntitySystem
 
     private void SendAdminStatusUpdate(ICommonSession session, string action, int color)
     {
-        if (String.IsNullOrEmpty(_webhookUrl))
+        if (string.IsNullOrEmpty(_webhookUrl))
             return;
 
         var message = $"{session.Name} {action}. Всего администраторов онлайн: {_adminCount}";

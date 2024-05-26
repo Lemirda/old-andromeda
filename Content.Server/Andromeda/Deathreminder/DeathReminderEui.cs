@@ -6,8 +6,6 @@ namespace Content.Server.Andromeda.DeathReminder.DeathReminderEui;
 
 public sealed class DeathReminderEui : BaseEui
 {
-
-
     public override void HandleMessage(EuiMessageBase msg)
     {
         base.HandleMessage(msg);

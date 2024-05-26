@@ -146,7 +146,7 @@
   description: Для любителей приносить свободу. For the end is our glory.
   components:
   - type: Sprite
-    sprite: Andromeda/Clothing/Neck/Cloaks/cloak_colony.rsi    
+    sprite: Andromeda/Clothing/Neck/Cloaks/cloak_colony.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -156,7 +156,7 @@
   description: Этот плащ был сшит по специальному заказу НаноТрейзен, для порядочных сотрудников. Он такой же красный, как и кровь, чтобы никто не знал, сколько вы старались, ради премии.
   components:
   - type: Sprite
-    sprite: Andromeda/Evrozor/clothing/security_cloak.rsi
+    sprite: Andromeda/Evrozor/Clothing/security_cloak.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -166,5 +166,4 @@
   description: Ходят слухи, что этот плащ носили только лучшие бармены! Но вы в этом не уверенны.
   components:
   - type: Sprite
-    sprite: Andromeda/Evrozor/clothing/barmen_cloak.rsi
-
+    sprite: Andromeda/Evrozor/Clothing/barmen_cloak.rsi

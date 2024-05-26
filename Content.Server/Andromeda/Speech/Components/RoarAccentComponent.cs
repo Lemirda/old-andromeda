@@ -1,9 +1,11 @@
 namespace Content.Server.Speech.Components;
 
 /// <summary>
-///     Roar!
+/// Roar!
 /// </summary>
+
 [RegisterComponent]
 public sealed partial class RoarAccentComponent : Component
 {
+    //Тут пока что пусто
 }

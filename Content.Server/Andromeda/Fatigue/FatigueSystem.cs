@@ -1,24 +1,30 @@
-using Content.Server.Guardian;
-using Content.Shared.Alert;
-using Content.Shared.Andromeda.Lemird.Fatigue;
-using Content.Shared.Andromeda.Lemird.Nearsighted;
 using Content.Shared.Bed.Sleep;
-using Content.Shared.Eye.Blinding.Components;
-using Content.Shared.Movement.Components;
-using Content.Shared.NukeOps;
-using Content.Shared.Popups;
-using Content.Shared.Traits.Assorted;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Content.Shared.Popups;
+using Content.Shared.Andromeda.Fatigue;
+using Content.Server.Guardian;
+using Content.Shared.Alert;
+using Content.Shared.Movement.Components;
+using Content.Shared.Eye.Blinding.Components;
+using Content.Shared.Andromeda.Nearsighted;
+using Content.Shared.Traits.Assorted;
+using Content.Shared.NukeOps;
+using Content.Shared.Rejuvenate;
+using Content.Shared.Actions;
+using Content.Server.Bed.Sleep;
+using Content.Shared.Toggleable;
+using Content.Shared.Buckle.Components;
 
 namespace Content.Server.Andromeda.Fatigue;
-
 public sealed class FatigueSystem : EntitySystem
 {
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly AlertsSystem _alerts = default!;
+    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
+    [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly FatigueMovementSpeedSystem _fatigueMovementSpeedSystem = default!;
 
     public override void Initialize()
@@ -27,22 +33,23 @@ public sealed class FatigueSystem : EntitySystem
         SubscribeLocalEvent<FatigueComponent, ComponentStartup>(OnComponentStartup);
         SubscribeLocalEvent<FatigueComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<SleepingComponent, SleepStateChangedEvent>(OnSleepStateChanged);
+        SubscribeLocalEvent<FatigueComponent, RejuvenateEvent>(OnRejuvenate);
+        SubscribeLocalEvent<ToggleActionEvent>(OnSleepAction);
     }
 
     public override void Update(float frameTime)
     {
         foreach (var fatigueComponent in EntityManager.EntityQuery<FatigueComponent>())
         {
-            var uid = fatigueComponent.Owner;
             if (fatigueComponent.IsSleeping)
             {
                 if ((_gameTiming.CurTime - fatigueComponent.LastRecoverTime).TotalSeconds >= fatigueComponent.RecoverIntervalSeconds)
                 {
-                    RecoverFatigue(uid);
-                    _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComponent);
-                    SetStaminaAlert(uid, fatigueComponent);
-                    CheckAndUpdateNearsighted(uid, fatigueComponent);
-                    CheckAndUpdateTemporaryBlindness(uid, fatigueComponent);
+                    RecoverFatigue(fatigueComponent.Uid);
+                    _fatigueMovementSpeedSystem.UpdateMovementSpeed(fatigueComponent.Uid, fatigueComponent);
+                    SetStaminaAlert(fatigueComponent.Uid, fatigueComponent);
+                    CheckAndUpdateNearsighted(fatigueComponent.Uid, fatigueComponent);
+                    CheckAndUpdateTemporaryBlindness(fatigueComponent.Uid, fatigueComponent);
                     fatigueComponent.LastRecoverTime = _gameTiming.CurTime;
                 }
             }
@@ -50,11 +57,11 @@ public sealed class FatigueSystem : EntitySystem
             {
                 if ((_gameTiming.CurTime - fatigueComponent.LastDecreaseTime).TotalMinutes >= fatigueComponent.DecreaseIntervalMinutes)
                 {
-                    DecreaseFatigue(uid);
-                    _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, fatigueComponent);
-                    SetStaminaAlert(uid, fatigueComponent);
-                    CheckAndUpdateNearsighted(uid, fatigueComponent);
-                    CheckAndUpdateTemporaryBlindness(uid, fatigueComponent);
+                    DecreaseFatigue(fatigueComponent.Uid);
+                    _fatigueMovementSpeedSystem.UpdateMovementSpeed(fatigueComponent.Uid, fatigueComponent);
+                    SetStaminaAlert(fatigueComponent.Uid, fatigueComponent);
+                    CheckAndUpdateNearsighted(fatigueComponent.Uid, fatigueComponent);
+                    CheckAndUpdateTemporaryBlindness(fatigueComponent.Uid, fatigueComponent);
                     fatigueComponent.LastDecreaseTime = _gameTiming.CurTime;
                 }
             }
@@ -63,21 +70,21 @@ public sealed class FatigueSystem : EntitySystem
                 if (fatigueComponent.CurrentFatigue <= 60 && fatigueComponent.CurrentFatigue > 45)
                 {
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeOne);
-                    _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Small);
+                    _popupSystem.PopupCursor(Loc.GetString(message), fatigueComponent.Uid, PopupType.Small);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
                     //Log.Info($"Для {uid} показано сообщение первого типа: {message}");
                 }
                 else if (fatigueComponent.CurrentFatigue <= 45 && fatigueComponent.CurrentFatigue > 20)
                 {
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeTwo);
-                    _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Medium);
+                    _popupSystem.PopupCursor(Loc.GetString(message), fatigueComponent.Uid, PopupType.Medium);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
                     //Log.Info($"Для {uid} показано сообщение второго типа: {message}");
                 }
                 else if (fatigueComponent.CurrentFatigue <= 20 && fatigueComponent.CurrentFatigue > 0)
                 {
                     var message = _random.Pick(fatigueComponent.FatigueMessagesTypeThree);
-                    _popupSystem.PopupCursor(Loc.GetString(message), uid, PopupType.Large);
+                    _popupSystem.PopupCursor(Loc.GetString(message), fatigueComponent.Uid, PopupType.Large);
                     fatigueComponent.LastPopupTime = _gameTiming.CurTime;
                     //Log.Info($"Для {uid} показано сообщение третьего типа: {message}");
                 }
@@ -89,14 +96,17 @@ public sealed class FatigueSystem : EntitySystem
     {
         if (HasComp<CanHostGuardianComponent>(uid))
         {
-            var minFatigue = 50;
+            var minFatigue = 75;
+            var sleepActionPrototypeId = "ActionSleepFatigue";
             component.CurrentFatigue = _random.Next(minFatigue, component.MaxFatigue + 1);
             //Log.Info($"Для {uid} было выбрано значение усталости: {component.CurrentFatigue}.");
             component.LastDecreaseTime = _gameTiming.CurTime;
             SetStaminaAlert(uid, component);
+            _actionsSystem.AddAction(uid, sleepActionPrototypeId);
             Timer.Spawn(1000, () => CheckerNukeOperative(uid));
             Timer.Spawn(2000, () => CheckerTraitor(uid, component));
             Timer.Spawn(3000, () => CheckerBaseSystem(uid));
+            component.Uid = uid;
         }
         else
         {
@@ -123,6 +133,47 @@ public sealed class FatigueSystem : EntitySystem
                 CheckAndUpdateTemporaryBlindness(uid, component);
                 _alerts.ClearAlertCategory(uid, AlertCategory.Fatigue);
             }
+        }
+        else
+        {
+            return;
+        }
+    }
+
+    private void OnSleepAction(ToggleActionEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!EntityManager.TryGetComponent<FatigueComponent>(args.Performer, out var fatigueComponent))
+            return;
+
+        if (EntityManager.TryGetComponent<BuckleComponent>(args.Performer, out var buckleComponent))
+        {
+            if (buckleComponent.Buckled)
+            {
+                var sleepingSystem = _entManager.System<SleepingSystem>();
+                sleepingSystem.TrySleeping(args.Performer);
+                //Log.Info($"Удалось выполнить условие потому что, {args.Performer} пристёгнут.");
+                args.Handled = true;
+            }
+            else
+            {
+                _popupSystem.PopupCursor(Loc.GetString("Вы не пристёгнуты"), args.Performer, PopupType.Medium);
+                //Log.Warning($"{args.Performer} не пристёгнут, невозможно уложить его спать.");
+            }
+        }
+    }
+
+    private void OnRejuvenate(EntityUid uid, FatigueComponent component, RejuvenateEvent args)
+    {
+        if (HasComp<FatigueComponent>(uid))
+        {
+            component.CurrentFatigue = 100;
+            _fatigueMovementSpeedSystem.UpdateMovementSpeed(uid, component);
+            CheckAndUpdateNearsighted(uid, component);
+            CheckAndUpdateTemporaryBlindness(uid, component);
+            SetStaminaAlert(uid, component);
         }
         else
         {
@@ -329,12 +380,12 @@ public sealed class FatigueSystem : EntitySystem
             if (fatigueComp.IsSleeping)
                 return;
 
-            var oldFatigue = fatigueComp.CurrentFatigue;
+            //var oldFatigue = fatigueComp.CurrentFatigue;
             fatigueComp.CurrentFatigue -= 1;
 
             if (fatigueComp.CurrentFatigue < 0)
             {
-                ////Log.Warning($"Усталость для {uid} вышла за пределы 0, новое значение возвращено к 0.");
+                //Log.Warning($"Усталость для {uid} вышла за пределы 0, новое значение возвращено к 0.");
                 fatigueComp.CurrentFatigue = 0;
             }
             else
@@ -371,7 +422,7 @@ public sealed class FatigueSystem : EntitySystem
 
         if (TryComp<FatigueComponent>(uid, out var fatigueComp))
         {
-            var oldFatigue = fatigueComp.CurrentFatigue;
+            //var oldFatigue = fatigueComp.CurrentFatigue;
             fatigueComp.CurrentFatigue += 1;
 
             if (fatigueComp.CurrentFatigue > 100)

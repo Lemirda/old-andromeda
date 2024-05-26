@@ -6,6 +6,8 @@ using Content.Shared.Wieldable;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
+using Content.Shared.Tools.Components; //A-13 Eblan system update
 
 namespace Content.Shared.Item.ItemToggle;
 /// <summary>
@@ -38,6 +40,14 @@ public abstract class SharedItemToggleSystem : EntitySystem
     {
         if (args.Handled)
             return;
+
+        //A-13 Eblan system update start
+        if (HasComp<EblanComponent>(args.User))
+        {
+            if (TryComp<ToolComponent>(uid, out var toolComponent) && toolComponent.Qualities.Contains("Welding"))
+                return;
+        }
+        //A-13 Eblan system update end
 
         args.Handled = true;
 

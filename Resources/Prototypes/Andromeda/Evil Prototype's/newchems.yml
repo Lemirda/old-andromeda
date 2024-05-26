@@ -1,0 +1,165 @@
+- type: reagent
+  id: MintExtract
+  name: экстракт мяты
+  parent: BaseJuice
+  desc: Приятно пахнущий мятный экстракт
+  suffix: Андромеда
+  physicalDesc: мятное
+  flavor: minty
+  color: "#18ad45"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: -1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.05
+        sprintSpeedModifier: 1.05
+
+- type: reagent
+  id: CatNipExtract
+  name: экстракт котовика
+  parent: BaseJuice
+  desc: Подозрительно муррчащий экстракт котовика
+  suffix: Андромеда
+  physicalDesc: котомятное
+  flavor: minty
+  color: "#18ad45"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: -1
+    Narcotic:
+      effects:
+      - !type:GenericStatusEffect
+        key: SeeingRainbows
+        component: SeeingRainbows
+        type: Add
+        time: 5
+        refresh: false
+        conditions:
+        - !type:OrganType
+          type: Animal
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.15
+        sprintSpeedModifier: 1.15
+        conditions:
+        - !type:OrganType
+          type: Animal
+      - !type:Emote
+        emote: Meow
+        showInChat: true
+        probability: 0.05
+        conditions:
+        - !type:OrganType
+          type: Animal
+      - !type:Emote
+        emote: Mew
+        showInChat: true
+        probability: 0.05
+        conditions:
+        - !type:OrganType
+          type: Animal
+
+- type: reagent
+  id: MilkThatMakesYouMurr
+  name: милоко
+  group: Special
+  desc: Чистая сущность фелинидов. Заставляет вас Муррчать!
+  suffix: Андромеда
+  physicalDesc: муррчащее
+  flavor: magical
+  color: "#dcf0ea"
+  metabolisms:
+    Poison:
+      metabolismRate: 0.5
+      effects:
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: MilkThatMakesYouMurr
+          max: 10
+        visualType: Medium
+        messages: ["Вы ощущаете приятное муррчание", "Вы чувствуете желание муррчать", "Вы чувствуете слабое желание гладить Лемирду"]
+        probability: 0.15
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: MilkThatMakesYouMurr
+          min: 11
+          max: 20
+        visualType: Medium
+        messages: ["Ваше желание муррчать усиливается", "Вы отчаянно муррчите", "Вы очень хотите погладить Лемирду"]
+        probability: 0.15
+      - !type:PopupMessage
+        type: Local
+        conditions:
+        - !type:ReagentThreshold
+          reagent: MilkThatMakesYouMurr
+          min: 21
+          max: 30
+        visualType: Medium
+        messages: ["Вы очень хотите потискать Лемирду", "Вы хотите поиграть с клубком ниток"]
+        probability: 0.15
+      - !type:Emote
+        emote: CatMeow
+        showInChat: true
+        conditions:
+        - !type:OrganType
+          type: Animal
+          shouldHave: false
+        probability: 0.25
+      - !type:Emote
+        emote: Meow
+        showInChat: true
+        probability: 0.05
+        conditions:
+        - !type:OrganType
+          type: Animal
+      - !type:Emote
+        emote: Mew
+        showInChat: true
+        probability: 0.05
+        conditions:
+        - !type:OrganType
+          type: Animal
+      - !type:Polymorph
+        prototype: CatPoly
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+      - !type:AdjustReagent
+        reagent: MilkThatMakesYouMurr
+        amount: -20
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+
+- type: polymorph
+  id: CatPoly
+  configuration:
+    entity: MobCat
+    forced: true
+    transferName: true
+    transferHumanoidAppearance: true
+    inventory: None
+    revertOnDeath: true
+    revertOnCrit: true
+    duration: 30
+
+- type: reaction
+  id: MilkThatMakesYouMurr
+  reactants:
+    CatNipExtract:
+      amount: 1
+    Milk:
+      amount: 1
+  products:
+    MilkThatMakesYouMurr: 2
