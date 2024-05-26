@@ -34,4 +34,29 @@
   flavor: bee
   color: "#f44336"
 
+- type: reagent
+  id: CoffeearabicaPowder
+  name: сок тепловицы
+  parent: BaseJuice
+  desc: смертельно растекающийся
+  physicalDesc: reagent-physical-desc-burning
+  flavor: bee
+  color: "#f44336"
 
+- type: reagent
+  id: CoffeelibericaPowder
+  name: сок тепловицы
+  parent: BaseJuice
+  desc: смертельно растекающийся
+  physicalDesc: reagent-physical-desc-burning
+  flavor: bee
+  color: "#f44336"
+
+- type: reagent
+  id: CoffeerobustaPowder
+  name: сок тепловицы
+  parent: BaseJuice
+  desc: смертельно растекающийся
+  physicalDesc: reagent-physical-desc-burning
+  flavor: bee
+  color: "#f44336"
