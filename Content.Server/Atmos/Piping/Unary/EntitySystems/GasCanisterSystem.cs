@@ -11,6 +11,7 @@ using Content.Server.NodeContainer.Nodes;
 using Content.Server.Popups;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Piping.Binary.Components;
+using Content.Shared.CombatMode.Pacification; //A-13 Eblan system update
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Database;
 using Content.Shared.Hands.EntitySystems;
@@ -207,6 +208,11 @@ public sealed class GasCanisterSystem : EntitySystem
         if (!TryComp<ActorComponent>(args.User, out var actor))
             return;
 
+        //A-13 Eblan system update start
+        if (HasComp<EblanComponent>(args.User))
+            return;
+        //A-13 Eblan system update end
+
         if (CheckLocked(uid, component, args.User))
             return;
 
@@ -223,6 +229,11 @@ public sealed class GasCanisterSystem : EntitySystem
     {
         if (!TryComp<ActorComponent>(args.User, out var actor))
             return;
+
+        //A-13 Eblan system update start
+        if (HasComp<EblanComponent>(args.User))
+            return;
+        //A-13 Eblan system update end
 
         if (CheckLocked(uid, component, args.User))
             return;
