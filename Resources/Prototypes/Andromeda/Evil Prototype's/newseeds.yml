@@ -1,5 +1,9 @@
+# tag section
+
 - type: Tag
   id: Herb
+
+# plant section
 
 - type: seed
   id: meatwheat
@@ -426,6 +430,8 @@
       Max: 10
       PotencyDivisor: 10
 
+# seed section
+
 - type: entity
   parent: SeedBase
   name: пакет семян (мясная пшеница)
@@ -590,6 +596,8 @@
       seedId: coffeerobusta
     - type: Sprite
       sprite: Andromeda/Evil/plants/coffeerobusta.rsi
+
+# unprocessed raw plantfood section
 
 - type: entity
   name: сноп мясной пшеницы
@@ -874,6 +882,7 @@
   parent: FoodProduceBase
   id: FoodWineshopCones
   description: Ароматные шишки хмеля!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
@@ -894,10 +903,11 @@
     - Fruit
 
 - type: entity
-  name: кофейные зерна (арабика)
+  name: кофейные ягоды (арабика)
   parent: FoodProduceBase
   id: FoodCoffeearabicaRaw
-  description: Ароматные кофейные зерна арабики!
+  description: Ароматные кофейные ягоды арабики!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
@@ -919,7 +929,7 @@
     seedId: сoffeearabica
   - type: SpawnItemsOnUse
     items:
-      - id: FoodCoffeearabica
+      - id: FoodCoffeearabicaRaw2
     sound:
       path: /Audio/Effects/packetrip.ogg
   - type: Tag
@@ -927,10 +937,11 @@
     - Fruit
 
 - type: entity
-  name: кофейные зерна (либерика)
+  name: кофейные ягоды (либерика)
   parent: FoodProduceBase
   id: FoodCoffeelibericaRaw
-  description: Ароматные кофейные зерна свободного кофе!
+  description: Ароматные кофейные ягоды свободного кофе!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
@@ -960,10 +971,11 @@
     - Fruit
 
 - type: entity
-  name: кофейные зерна (робуста)
+  name: кофейные ягоды (робуста)
   parent: FoodProduceBase
   id: FoodCoffeerobustaRaw
-  description: Ароматные кофейные зерна самого робастного кофе!
+  description: Ароматные кофейные ягоды самого робастного кофе!
+  suffix: Андромеда
   components:
   - type: FlavorProfile
     flavors:
@@ -977,17 +989,230 @@
           Quantity: 2
         - ReagentId: Vitamin
           Quantity: 1
-        - ReagentId: CoffeerobustaPowder
-          Quantity: 1
   - type: Sprite
     sprite: Andromeda/Evil/plants/coffeerobusta.rsi
   - type: Produce
     seedId: сoffeerobusta
   - type: SpawnItemsOnUse
     items:
-      - id: FoodCoffeerobusta
+      - id: FoodCoffeearabicaRaw2
     sound:
       path: /Audio/Effects/packetrip.ogg
   - type: Tag
     tags:
     - Fruit
+
+# unprocessed plantfood section
+
+- type: entity
+  name: сырые кофейные зерна (арабика)
+  parent: FoodProduceBase
+  id: FoodCoffeearabicaRaw2
+  description: "Ароматные кофейные зерна арабики!"
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeearabica.rsi
+    state: produceraw
+  - type: Produce
+    seedId: coffeearabica
+  - type: Food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+        - ReagentId: Vitamin
+          Quantity: 1
+
+- type: entity
+  name: сырые кофейные зерна (либерика)
+  parent: FoodProduceBase
+  id: FoodCoffeelibericaRaw2
+  description: "Ароматные и свободные кофейные зерна либерики!"
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeeliberica.rsi
+    state: produceraw
+  - type: Produce
+    seedId: coffeeliberica
+  - type: Food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+        - ReagentId: Vitamin
+          Quantity: 1
+
+- type: entity
+  name: сырые кофейные зерна (робуста)
+  parent: FoodProduceBase
+  id: FoodCoffeerobustaRaw2
+  description: "По настоящему робастные кофейные зерна!"
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeerobusta.rsi
+    state: produceraw
+  - type: Produce
+    seedId: coffeerobusta
+  - type: Food
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 2
+        - ReagentId: Vitamin
+          Quantity: 1
+
+# microwave processed plantfood section
+
+- type: microwaveMealRecipe
+  id: RecipeFoodCoffeearabicaRaw3
+  name: Рецепт жарки кофейных зерен (арабика)
+  result: FoodCoffeearabicaRaw3
+  time: 5
+  solids:
+    FoodCoffeearabicaRaw2: 1
+
+- type: microwaveMealRecipe
+  id: RecipeFoodCoffeelibericaRaw3
+  name: Рецепт жарки кофейных зерен (либерика)
+  result: FoodCoffeelibericaRaw3
+  time: 5
+  solids:
+    FoodCoffeelibericaRaw2: 1
+
+- type: microwaveMealRecipe
+  id: RecipeFoodCoffeerobustaRaw3
+  name: Рецепт жарки кофейных зерен (робуста)
+  result: FoodCoffeerobustaRaw3
+  time: 5
+  solids:
+    FoodCoffeerobustaRaw2: 1
+
+# processed plantfood section
+
+- type: entity
+  name: прожаренные кофейные зерна (арабика)
+  parent: FoodProduceBase
+  id: FoodCoffeearabicaRaw3
+  description: "Ароматные кофейные зерна арабики!"
+  suffix: Андромеда
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: CoffeearabicaPowder
+          Quantity: 10
+  - type: Food
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeearabica.rsi
+    state: produceroasted
+
+- type: entity
+  name: прожаренные кофейные зерна (либерика)
+  parent: FoodProduceBase
+  id: FoodCoffeelibericaRaw3
+  description: "Ароматные и свободные кофейные зерна либерики!"
+  suffix: Андромеда
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: CoffeelibericaPowder
+          Quantity: 10
+  - type: Food
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeeliberica.rsi
+    state: produceroasted
+
+- type: entity
+  name: прожаренные кофейные зерна (робуста)
+  parent: FoodProduceBase
+  id: FoodCoffeerobustaRaw3
+  description: "По настоящему робастные кофейные зерна!"
+  suffix: Андромеда
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: CoffeerobustaPowder
+          Quantity: 10
+  - type: Food
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeerobusta.rsi
+    state: produceroasted
+
+# coffee cans section
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: CanCoffeearabica
+  name: банка кофе (арабика)
+  description: Банка невероятно вкусного кофе!!!
+  suffix: Андромеда
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: CoffeearabicaPowder
+          Quantity: 100
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tincoffeearabica.rsi
+  - type: Sealable
+  - type: Tag
+    tags:
+    - Wine
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: CanCoffeeliberica
+  name: банка кофе (либерика)
+  description: Банка невероятно вкусного кофе!!!
+  suffix: Андромеда
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: CoffeelibericaPowder
+          Quantity: 100
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tincoffeeliberica.rsi
+  - type: Sealable
+  - type: Tag
+    tags:
+    - Wine
+
+- type: entity
+  parent: [DrinkBottleVisualsOpenable, DrinkBottlePlasticBaseFull]
+  id: CanCoffeerobusta
+  name: банка кофе (робуста)
+  description: Банка невероятно вкусного кофе!!!
+  suffix: Андромеда
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: CoffeerobustaPowder
+          Quantity: 100
+  - type: Sprite
+    sprite: Andromeda/Evil/food/tincoffeerobusta.rsi
+  - type: Sealable
+  - type: Tag
+    tags:
+    - Wine

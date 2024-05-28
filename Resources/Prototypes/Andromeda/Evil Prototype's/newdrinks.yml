@@ -36,27 +36,27 @@
 
 - type: reagent
   id: CoffeearabicaPowder
-  name: сок тепловицы
+  name: молотый кофе (арабика)
   parent: BaseJuice
-  desc: смертельно растекающийся
-  physicalDesc: reagent-physical-desc-burning
-  flavor: bee
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
   color: "#f44336"
 
 - type: reagent
   id: CoffeelibericaPowder
-  name: сок тепловицы
+  name: молотый кофе (либерика)
   parent: BaseJuice
-  desc: смертельно растекающийся
-  physicalDesc: reagent-physical-desc-burning
-  flavor: bee
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
   color: "#f44336"
 
 - type: reagent
   id: CoffeerobustaPowder
-  name: сок тепловицы
+  name: молотый кофе (робуста)
   parent: BaseJuice
-  desc: смертельно растекающийся
-  physicalDesc: reagent-physical-desc-burning
-  flavor: bee
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
   color: "#f44336"
