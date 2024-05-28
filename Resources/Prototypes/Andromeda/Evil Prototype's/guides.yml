@@ -1,0 +1,39 @@
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: блюспейсинка
+  id: GuideBerriesbluespace
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: berriesbluespace
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: смертовица
+  id: GuideBerriesdeath
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: berriesdeath
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: тепловица
+  id: GuideBerriesflame
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: berriesflame
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: ледовица
+  id: GuideBerriesice
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: berriesice
