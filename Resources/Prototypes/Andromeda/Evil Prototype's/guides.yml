@@ -1,7 +1,67 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: блюспейсинка
+  name: алоэ
+  id: GuideAloe
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: aloe
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: амброзия деус
+  id: GuideAmbroziadeus
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: ambroziadeus
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: амброзия вулгарис
+  id: GuideAmbroziavulgaris
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: ambroziavulgaris
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: яблоко
+  id: GuideApple
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: apple
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: банан
+  id: GuideBanana
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: banana
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: банан
+  id: GuideBerry
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: berry
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: блюспейcинка
   id: GuideBerriesbluespace
   components:
     - type: Sprite
@@ -37,3 +97,407 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: berriesice
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: бунго
+  id: GuideBungo
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: bungo
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: тыква
+  id: GuideCabbage
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: cabbage
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: конопля
+  id: GuideCannabis
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: cannabis
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: морковь
+  id: GuideCarrot
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: carrot
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: чили
+  id: GuideChili
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: chili
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: чилли
+  id: GuideChilli
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: chilli
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: какао
+  id: GuideCocoa
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: cocoa
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: кофе арабика
+  id: GuideCoffeearabica
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: coffeearabica
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: кофе либерика
+  id: GuideСoffeeliberica
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: coffeeliberica
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: кофе робуста
+  id: GuideСoffeerobusta
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: coffeerobusta
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: кои
+  id: GuideСoi
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: coi
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: колина
+  id: GuideСolina
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: colina
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: кукуруза
+  id: GuideСorn
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: corn
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: хлопок
+  id: GuideCotton
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: cotton
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: смертотрав
+  id: GuideDeathweed
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: deathweed
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: дюрахлопок
+  id: GuideDurotton
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: durotton
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: баклажан
+  id: GuideEggplant
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: eggplant
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: яйцевик
+  id: GuideEggs
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: eggs
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: галачертополох
+  id: GuideGalaxythistle
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: galaxythistle
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: чеснок
+  id: GuideGalric
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: galric
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: гатфрукт
+  id: GuideGatfruit
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: gatfruit
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: стеклошляпник
+  id: GuideGlasscap
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: glasscap
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: виноград
+  id: GuideGrape
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: grape
+
+- type: entity
+  noSpawn: true
+  parent: SeedBase
+  name: хмель
+  id: GuideHop
+  components:
+    - type: Sprite
+      sprite: Andromeda/Evil/guides/guidebothany.rsi
+      state: hop
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: банан
+#   id: GuideBerry
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berry
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: блюспейcинка
+#   id: GuideBerriesbluespace
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berriesbluespace
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: смертовица
+#   id: GuideBerriesdeath
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berriesdeath
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: тепловица
+#   id: GuideBerriesflame
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berriesflame
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: ледовица
+#   id: GuideBerriesice
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berriesice
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: алоэ
+#   id: GuideAloe
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: aloe
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: амброзия деус
+#   id: GuideAmbroziadeus
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: ambroziadeus
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: амброзия вулгарис
+#   id: GuideAmbroziavulgaris
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: ambroziavulgaris
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: яблоко
+#   id: GuideApple
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: apple
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: банан
+#   id: GuideBanana
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: banana
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: банан
+#   id: GuideBerry
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berry
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: блюспейcинка
+#   id: GuideBerriesbluespace
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berriesbluespace
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: смертовица
+#   id: GuideBerriesdeath
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berriesdeath
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: тепловица
+#   id: GuideBerriesflame
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berriesflame
+
+# - type: entity
+#   noSpawn: true
+#   parent: SeedBase
+#   name: ледовица
+#   id: GuideBerriesice
+#   components:
+#     - type: Sprite
+#       sprite: Andromeda/Evil/guides/guidebothany.rsi
+#       state: berriesice
+
+
+
+
+
+
+
+
+
+
+
+
+
+

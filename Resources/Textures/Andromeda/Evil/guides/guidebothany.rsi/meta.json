@@ -1,12 +1,30 @@
 {
   "version": 1,
   "license": "CC BY-NC-ND 3.0",
-  "copyright": "Sprites by Malanisa for Andromeda-13",
+  "copyright": "SpritesMerge by EvilBug for Andromeda-13",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
+    {
+      "name": "aloe"
+    },
+    {
+      "name": "ambroziadeus"
+    },
+    {
+      "name": "ambroziavulgaris"
+    },
+    {
+      "name": "apple"
+    },
+    {
+      "name": "banana"
+    },
+    {
+      "name": "berry"
+    },
     {
       "name": "berriesbluespace"
     },
@@ -18,6 +36,228 @@
     },
     {
       "name": "berriesice"
+    },
+    {
+      "name": "bungo"
+    },
+    {
+      "name": "cabbage"
+    },
+    {
+      "name": "cannabis"
+    },
+    {
+      "name": "carrot"
+    },
+    {
+      "name": "chili"
+    },
+    {
+      "name": "chilli"
+    },
+    {
+      "name": "cocoa"
+    },
+    {
+      "name": "coffeearabica"
+    },
+    {
+      "name": "coffeeliberica"
+    },
+    {
+      "name": "coffeerobusta"
+    },
+    {
+      "name": "coi"
+    },
+    {
+      "name": "colina"
+    },
+    {
+      "name": "corn"
+    },
+    {
+      "name": "cotton"
+    },
+    {
+      "name": "deathweed"
+    },
+    {
+      "name": "durotton"
+    },
+    {
+      "name": "eggplant"
+    },
+    {
+      "name": "eggs"
+    },
+    {
+      "name": "galaxythistle"
+    },
+    {
+      "name": "galric"
+    },
+    {
+      "name": "gatfruit"
+    },
+    {
+      "name": "glasscap"
+    },
+    {
+      "name": "grape"
+    },
+    {
+      "name": "hop"
+    },
+    {
+      "name": "lemon"
+    },
+    {
+      "name": "lemonka"
+    },
+    {
+      "name": "lemoon"
+    },
+    {
+      "name": "lifeweed"
+    },
+    {
+      "name": "lime"
+    },
+    {
+      "name": "meatwheat"
+    },
+    {
+      "name": "mimana"
+    },
+    {
+      "name": "mint"
+    },
+    {
+      "name": "mintcatnip"
+    },
+    {
+      "name": "money"
+    },
+    {
+      "name": "mushroomchanterelle"
+    },
+    {
+      "name": "mushroomflyamarita"
+    },
+    {
+      "name": "mushroomlingzhi"
+    },
+    {
+      "name": "mushroommicena"
+    },
+    {
+      "name": "mushroomnameless"
+    },
+    {
+      "name": "mushroomwhite"
+    },
+    {
+      "name": "nettle"
+    },
+    {
+      "name": "nettledeath"
+    },
+    {
+      "name": "nettleflesh"
+    },
+    {
+      "name": "oat"
+    },
+    {
+      "name": "onion"
+    },
+    {
+      "name": "onionred"
+    },
+    {
+      "name": "orange"
+    },
+    {
+      "name": "pea"
+    },
+    {
+      "name": "pealaughing"
+    },
+    {
+      "name": "pineapple"
+    },
+    {
+      "name": "pizza"
+    },
+    {
+      "name": "plasteelcap"
+    },
+    {
+      "name": "poppy"
+    },
+    {
+      "name": "poppylilly"
+    },
+    {
+      "name": "poppyspacemanstrumpet"
+    },
+    {
+      "name": "potato"
+    },
+    {
+      "name": "pumpkin"
+    },
+    {
+      "name": "pyrotton"
+    },
+    {
+      "name": "rainbowweed"
+    },
+    {
+      "name": "rice"
+    },
+    {
+      "name": "slippery"
+    },
+    {
+      "name": "soy"
+    },
+    {
+      "name": "steelcane"
+    },
+    {
+      "name": "steelcap"
+    },
+    {
+      "name": "sugarcane"
+    },
+    {
+      "name": "tobacco"
+    },
+    {
+      "name": "tobacco100"
+    },
+    {
+      "name": "tomato"
+    },
+    {
+      "name": "tomatoblood"
+    },
+    {
+      "name": "tomatoblue"
+    },
+    {
+      "name": "tomatokiller"
+    },
+    {
+      "name": "treecap"
+    },
+    {
+      "name": "watermellon"
+    },
+    {
+      "name": "wheat"
     }
   ]
 }
