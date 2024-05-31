@@ -42,6 +42,19 @@
   physicalDesc: reagent-physical-desc-thick-and-grainy
   flavor: bitter
   color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.5
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        probability: 0.5
 
 - type: reagent
   id: CoffeelibericaPowder
@@ -51,6 +64,19 @@
   physicalDesc: reagent-physical-desc-thick-and-grainy
   flavor: bitter
   color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.25
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        probability: 0.5
 
 - type: reagent
   id: CoffeerobustaPowder
@@ -60,3 +86,118 @@
   physicalDesc: reagent-physical-desc-thick-and-grainy
   flavor: bitter
   color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.5
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        probability: 0.5
+
+- type: reaction
+  id: HotCoffeearabica
+  reactants:
+    CoffeearabicaPowder:
+      amount: 1
+    Water:
+      amount: 3
+  products:
+    HotCoffeearabica: 4
+
+- type: reaction
+  id: HotCoffeeliberica
+  reactants:
+    CoffeelibericaPowder:
+      amount: 1
+    Water:
+      amount: 3
+  products:
+    HotCoffeeliberica: 4
+
+- type: reaction
+  id: HotCoffeerobusta
+  reactants:
+    CoffeerobustaPowder:
+      amount: 1
+    Water:
+      amount: 3
+  products:
+    HotCoffeerobusta: 4
+
+- type: reagent
+  id: HotCoffeearabica
+  name: кофе арабика
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.5
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 45
+        probability: 0.5
+
+- type: reagent
+  id: HotCoffeeliberica
+  name: кофе либерика
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.25
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        probability: 0.5
+
+- type: reagent
+  id: HotCoffeerobusta
+  name: кофе робуста
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.5
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        probability: 0.5

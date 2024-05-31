@@ -24,7 +24,7 @@
   chemicals:
     Nutriment:
       Min: 1
-      Max: 5
+      Max: 20
       PotencyDivisor: 20
 
 - type: seed
@@ -49,7 +49,7 @@
     MintExtract:
       Min: 1
       Max: 20
-      PotencyDivisor: 5
+      PotencyDivisor: 10
   evolveTable:
     catnip:
       requiredMinPotency: 70
@@ -82,8 +82,8 @@
   chemicals:
     CatNipExtract:
       Min: 1
-      Max: 20
-      PotencyDivisor: 5
+      Max: 10
+      PotencyDivisor: 10
 
 - type: seed
   id: glasscap
@@ -148,16 +148,16 @@
   nutrientConsumption: 0.6
   chemicals:
     Nutriment:
-      Min: 2
-      Max: 5
+      Min: 1
+      Max: 10
       PotencyDivisor: 30
     Vitamin:
       Min: 1
-      Max: 4
+      Max: 10
       PotencyDivisor: 40
     Barozine:
       Min: 1
-      Max: 2
+      Max: 10
       PotencyDivisor: 90
 
 - type: seed
@@ -181,7 +181,7 @@
     Lead:
       Min: 1
       Max: 10
-      PotencyDivisor: 10
+      PotencyDivisor: 20
 
 - type: seed
   id: berriesice
@@ -230,11 +230,11 @@
   chemicals:
     Pyrazine:
       Min: 1
-      Max: 3
+      Max: 10
       PotencyDivisor: 30
     Insuzine:
       Min: 1
-      Max: 3
+      Max: 10
       PotencyDivisor: 30
 
 - type: seed
@@ -291,7 +291,7 @@
     Nutriment:
       Min: 1
       Max: 50
-      PotencyDivisor: 2
+      PotencyDivisor: 3
 
 - type: seed
   id: wineshop
@@ -336,15 +336,15 @@
   chemicals:
     Nutriment:
       Min: 1
-      Max: 4
+      Max: 10
       PotencyDivisor: 25
     Vitamin:
       Min: 1
-      Max: 2
+      Max: 10
       PotencyDivisor: 50
     CoffeearabicaPowder:
       Min: 1
-      Max: 10
+      Max: 20
       PotencyDivisor: 10
   evolveTable:
     coffeeliberica:
@@ -395,7 +395,7 @@
       PotencyDivisor: 50
     CoffeelibericaPowder:
       Min: 1
-      Max: 10
+      Max: 20
       PotencyDivisor: 10
 
 - type: seed
@@ -427,7 +427,7 @@
       PotencyDivisor: 50
     CoffeerobustaPowder:
       Min: 1
-      Max: 10
+      Max: 20
       PotencyDivisor: 10
 
 # seed section
@@ -635,10 +635,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 10
         reagents:
         - ReagentId: MintExtract
-          Quantity: 20
+          Quantity: 10
   - type: Produce
     seedId: mintplant
   - type: Tag
@@ -657,10 +657,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 20
+        maxVol: 10
         reagents:
         - ReagentId: CatNipExtract
-          Quantity: 20
+          Quantity: 10
   - type: Produce
     seedId: catnip
   - type: Tag
@@ -989,6 +989,8 @@
           Quantity: 2
         - ReagentId: Vitamin
           Quantity: 1
+        - ReagentId: CoffeerobustaPowder
+          Quantity: 1
   - type: Sprite
     sprite: Andromeda/Evil/plants/coffeerobusta.rsi
   - type: Produce
@@ -1026,6 +1028,8 @@
           Quantity: 2
         - ReagentId: Vitamin
           Quantity: 1
+        - ReagentId: CoffeearabicaPowder
+          Quantity: 1
 
 - type: entity
   name: сырые кофейные зерна (либерика)
@@ -1049,6 +1053,8 @@
           Quantity: 2
         - ReagentId: Vitamin
           Quantity: 1
+        - ReagentId: CoffeelibericaPowder
+          Quantity: 1
 
 - type: entity
   name: сырые кофейные зерна (робуста)
@@ -1071,6 +1077,8 @@
         - ReagentId: Nutriment
           Quantity: 2
         - ReagentId: Vitamin
+          Quantity: 1
+        - ReagentId: CoffeerobustaPowder
           Quantity: 1
 
 # microwave processed plantfood section

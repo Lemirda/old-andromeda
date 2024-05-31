@@ -341,7 +341,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: лемон
+  name: радужная конопля
   id: GuideRainbowweed
   components:
     - type: Sprite
