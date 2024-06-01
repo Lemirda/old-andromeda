@@ -1,0 +1,235 @@
+- type: reagent
+  id: JuiceBerriesbluespace
+  name: сок блюспейсинки
+  parent: BaseJuice
+  desc: вращающийся, как сингулярность
+  physicalDesc: reagent-physical-desc-starry
+  flavor: singulo
+  color: "#3d85c6"
+
+- type: reagent
+  id: JuiceBerriesdeath
+  name: сок смертовицы
+  parent: BaseJuice
+  desc: смертельно растекающийся
+  physicalDesc: reagent-physical-desc-enigmatic
+  flavor: chaos
+  color: "#D4D8EB"
+
+- type: reagent
+  id: JuiceBerriesice
+  name: сок ледовицы
+  parent: BaseJuice
+  desc: замораживающий, как стужа
+  physicalDesc: reagent-physical-desc-cold
+  flavor: cold
+  color: "#D4D8EB"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          min: 293.15
+        amount: -10000
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages: [ "leporazine-effect-temperature-adjusting" ]
+        probability: 0.2
+      - !type:AdjustReagent
+        reagent: Fresium
+        amount: -5
+
+- type: reagent
+  id: JuiceBerriesflame
+  name: сок тепловицы
+  parent: BaseJuice
+  desc: смертельно растекающийся
+  physicalDesc: reagent-physical-desc-burning
+  flavor: bee
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:AdjustTemperature
+        conditions:
+        - !type:Temperature
+          max: 293.15
+        amount: 100000
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages: [ "leporazine-effect-temperature-adjusting" ]
+        probability: 0.2
+      - !type:AdjustReagent
+        reagent: Fresium
+        amount: -5
+
+- type: reagent
+  id: CoffeearabicaPowder
+  name: молотый кофе (арабика)
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.25
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 10
+        probability: 0.5
+
+- type: reagent
+  id: CoffeelibericaPowder
+  name: молотый кофе (либерика)
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.125
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 15
+        probability: 0.5
+
+- type: reagent
+  id: CoffeerobustaPowder
+  name: молотый кофе (робуста)
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.25
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 5
+        probability: 0.5
+
+- type: reaction
+  id: HotCoffeearabica
+  reactants:
+    CoffeearabicaPowder:
+      amount: 1
+    Water:
+      amount: 3
+  products:
+    HotCoffeearabica: 4
+
+- type: reaction
+  id: HotCoffeeliberica
+  reactants:
+    CoffeelibericaPowder:
+      amount: 1
+    Water:
+      amount: 3
+  products:
+    HotCoffeeliberica: 4
+
+- type: reaction
+  id: HotCoffeerobusta
+  reactants:
+    CoffeerobustaPowder:
+      amount: 1
+    Water:
+      amount: 3
+  products:
+    HotCoffeerobusta: 4
+
+- type: reagent
+  id: HotCoffeearabica
+  name: кофе арабика
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.25
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 45
+        probability: 0.5
+
+- type: reagent
+  id: HotCoffeeliberica
+  name: кофе либерика
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.125
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 60
+        probability: 0.5
+
+- type: reagent
+  id: HotCoffeerobusta
+  name: кофе робуста
+  parent: BaseJuice
+  desc: Предельно ароматный!
+  physicalDesc: reagent-physical-desc-thick-and-grainy
+  flavor: bitter
+  color: "#f44336"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.25
+      effects:
+      - !type:ResetNarcolepsy
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
+      - !type:ChemVomit
+        conditions:
+        - !type:ReagentThreshold
+          min: 30
+        probability: 0.5
