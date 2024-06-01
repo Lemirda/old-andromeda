@@ -131,3 +131,14 @@
     sprite: Andromeda/Evil/clothing/pantiesmiifrii.rsi
   - type: StealTarget
     stealGroup: Panties
+
+- type: cargoProduct
+  name: НижнеМат
+  id: VendingMachineUnderwearMatte
+  icon:
+    sprite: Andromeda/Evil/clothing/vendingmachineunderwearmatte.rsi
+    state: off
+  product: VendingMachineUnderwearMatte
+  cost: 8000
+  category: cargoproduct-category-name-service
+  group: market
