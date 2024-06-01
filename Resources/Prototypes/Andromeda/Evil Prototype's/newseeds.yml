@@ -963,7 +963,7 @@
     seedId: сoffeeliberica
   - type: SpawnItemsOnUse
     items:
-      - id: FoodCoffeeliberica
+      - id: FoodCoffeelibericaRaw2
     sound:
       path: /Audio/Effects/packetrip.ogg
   - type: Tag
