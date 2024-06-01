@@ -2,3 +2,18 @@
   id: Botany
   name: guide-entry-botany
   text: "/ServerInfo/Guidebook/Service/Botany.xml"
+# A-13 BothanyRenewal start
+  children:
+  - Plants
+  - Mutations
+
+- type: guideEntry
+  id: Plants
+  name: Растения
+  text: "/ServerInfo/Guidebook/Service/Plants.xml"
+
+- type: guideEntry
+  id: Mutations
+  name: Мутации
+  text: "/ServerInfo/Guidebook/Service/Mutations.xml"
+# A-13 BothanyRenewal end
