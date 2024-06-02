@@ -2014,6 +2014,15 @@
       RequiredMaxTemperature: 303
       requiredMutationLevel: 1
       requiredReagent: Phlogiston
+    durotton:
+      requiredMinPotency: 70
+      requiredMaxPotency: 100
+      requiredMinHealth: 80
+      requiredMaxHealth: 150
+      RequiredMinTemperature: 288
+      RequiredMaxTemperature: 303
+      requiredMutationLevel: 1
+      requiredReagent: Phosphorus
 #A-13 RenewedBothany end
 
 - type: seed

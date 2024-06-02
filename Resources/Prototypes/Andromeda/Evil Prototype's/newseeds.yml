@@ -430,6 +430,34 @@
       Max: 20
       PotencyDivisor: 10
 
+- type: seed
+  id: durotton
+  name: дюрапластик
+  noun: seeds-noun-seeds
+  displayName: куст дюрапластика
+  suffix: Андромеда
+  plantRsi: Andromeda/Evil/plants/durotton.rsi
+  packetPrototype: DurottonSeeds
+  productPrototypes:
+    - DurottonBol
+  lifespan: 25
+  maturation: 8
+  production: 3
+  yield: 2
+  potency: 5
+  idealLight: 8
+  growthStages: 3
+  waterConsumption: 0.80
+  chemicals:
+    Fiber:
+      Min: 5
+      Max: 10
+      PotencyDivisor: 20
+    Phosphorus:
+      Min: 4
+      Max: 8
+      PotencyDivisor: 30
+
 # seed section
 
 - type: entity
@@ -597,7 +625,18 @@
     - type: Sprite
       sprite: Andromeda/Evil/plants/coffeerobusta.rsi
 
-# unprocessed raw plantfood section
+- type: entity
+  parent: SeedBase
+  name: пакет семян (дюрахлопок)
+  suffix: Андромеда
+  id: DurottonSeeds
+  components:
+    - type: Seed
+      seedId: durotton
+    - type: Sprite
+      sprite: Andromeda/Evil/plants/durotton.rsi
+
+# unprocessed raw plantmaterials section
 
 - type: entity
   name: сноп мясной пшеницы
@@ -1004,7 +1043,41 @@
     tags:
     - Fruit
 
-# unprocessed plantfood section
+- type: entity
+  name: дюрахлопковый шарик
+  description: Подозрительно жесткий шарик.
+  suffix: Андромеда
+  id: DurottonBol
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/durotton.rsi
+  - type: FlavorProfile
+    flavors:
+      - pyrotton
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        reagents:
+        - ReagentId: Oil
+          Quantity: 5
+        - ReagentId: Phosphorus
+          Quantity: 5
+  - type: Log
+    spawnedPrototype: MaterialDurathreadraw1
+    spawnCount: 2
+  - type: Produce
+    seedId: durotton
+  - type: Tag
+    tags:
+    - ClothMade
+    - CottonBoll
+  - type: Extractable
+    grindableSolutionName: food
+
+# unprocessed plantmaterials section
 
 - type: entity
   name: сырые кофейные зерна (арабика)
@@ -1081,7 +1154,77 @@
         - ReagentId: CoffeerobustaPowder
           Quantity: 1
 
-# microwave processed plantfood section
+- type: entity
+  parent: MaterialBase
+  id: MaterialDurathreadraw
+  name: дюрахлопок
+  suffix: Full
+  components:
+  - type: Stack
+    stackType: MaterialDurathreadraw
+    baseLayer: base
+    layerStates:
+    - durathreadraw
+    - durathreadraw_2
+    - durathreadraw_3
+  - type: Sprite
+    state: durathreadraw_3
+    layers:
+    - state: durathreadraw_3
+      map: ["base"]
+  - type: Appearance
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 5
+        - ReagentId: Phosphorus
+          Quantity: 5
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 3
+      - ReagentId: Phosphorus
+        Quantity: 3
+  - type: Tag
+    tags:
+      - ClothMade
+      - RawMaterial
+
+- type: entity
+  parent: MaterialDurathreadraw
+  id: MaterialDurathreadraw1
+  name: дюрахлопок
+  suffix: Single
+  components:
+  - type: Sprite
+    state: durathreadraw
+  - type: Stack
+    count: 1
+
+- type: material
+  id: Durathreadraw
+  stackEntity: MaterialDurathreadraw1
+  name: дюраткань
+  unit: materials-unit-sheet
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: durathreadraw }
+  color: "#8291a1"
+  price: 0.15
+
+- type: stack
+  id: MaterialDurathreadraw
+  name: дюраткань
+  icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: durathreadraw }
+  spawn: MaterialDurathreadraw1
+  maxCount: 30
+  itemSize: 1
+
+# reciples section
 
 - type: microwaveMealRecipe
   id: RecipeFoodCoffeearabicaRaw3
@@ -1106,6 +1249,33 @@
   time: 5
   solids:
     FoodCoffeerobustaRaw2: 1
+
+- type: construction
+  name: дюраткань (хлопок)
+  id: DurottonWovenCloth
+  graph: DurottonObjects
+  startNode: start
+  targetNode: durottoncloth
+  category: construction-category-materials
+  description: "Высококачественная нить используемая для изготовления прочной одежды."
+  icon: { sprite: Objects/Materials/materials.rsi, state: durathread }
+  objectType: Item
+
+- type: constructionGraph
+  id: DurottonObjects
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: durottoncloth
+          completed:
+            - !type:SetStackCount
+              amount: 1
+          steps:
+            - material: MaterialDurathreadraw
+              amount: 2
+    - node: durottoncloth
+      entity: MaterialDurathread
 
 # processed plantfood section
 
