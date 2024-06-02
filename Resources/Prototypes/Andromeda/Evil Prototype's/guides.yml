@@ -61,7 +61,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: блюспейcинка
+  name:
   id: GuideBerriesbluespace
   components:
     - type: Sprite
@@ -71,7 +71,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: смертовица
+  name:
   id: GuideBerriesdeath
   components:
     - type: Sprite
@@ -81,7 +81,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: тепловица
+  name:
   id: GuideBerriesflame
   components:
     - type: Sprite
@@ -91,7 +91,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: ледовица
+  name:
   id: GuideBerriesice
   components:
     - type: Sprite
@@ -181,7 +181,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: кофе либерика
+  name:
   id: GuideСoffeeliberica
   components:
     - type: Sprite
@@ -191,7 +191,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: кофе робуста
+  name:
   id: GuideСoffeerobusta
   components:
     - type: Sprite
