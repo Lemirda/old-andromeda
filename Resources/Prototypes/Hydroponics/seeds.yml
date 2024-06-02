@@ -96,14 +96,13 @@
 #A-13 RenewedBothany start
   evolveTable:
     mimana: 
-      requiredMinPotency: 70
+      requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 80
       requiredMaxHealth: 150
       RequiredMinTemperature: 273
       RequiredMaxTemperature: 323
       requiredMutationLevel: 1
-      requiredReagent: MuteToxin
 #A-13 RenewedBothany start
 
 - type: seed
@@ -240,7 +239,7 @@
 #A-13 RenewedBothany start
   evolveTable:
     lemonka:
-      requiredMinPotency: 70
+      requiredMinPotency: 80
       requiredMaxPotency: 100
       requiredMinHealth: 80
       requiredMaxHealth: 150
@@ -665,7 +664,7 @@
 #A-13 RenewedBothany start
   evolveTable:
     killerTomato:
-      requiredMinPotency: 70
+      requiredMinPotency: 80
       requiredMaxPotency: 100
       requiredMinHealth: 80
       requiredMaxHealth: 150
@@ -950,7 +949,7 @@
 #A-13 RenewedBothany start
   evolveTable:
     flyAmanita:
-      requiredMinPotency: 50
+      requiredMinPotency: 70
       requiredMaxPotency: 100
       requiredMinHealth: 0
       requiredMaxHealth: 30
@@ -959,7 +958,7 @@
       requiredMutationLevel: 1
       requiredReagent: UnstableMutagen
     lightMushroom:
-      requiredMinPotency: 50
+      requiredMinPotency: 80
       requiredMaxPotency: 100
       requiredMinHealth: 80
       requiredMaxHealth: 150
@@ -1042,10 +1041,10 @@
       requiredMutationLevel: 1
       requiredReagent: DoctorsDelight
     deathweed:
-      requiredMinPotency: 50
+      requiredMinPotency: 80
       requiredMaxPotency: 100
       requiredMinHealth: 0
-      requiredMaxHealth: 30
+      requiredMaxHealth: 50
       RequiredMinTemperature: 288
       RequiredMaxTemperature: 303
       requiredMutationLevel: 0
@@ -1054,7 +1053,7 @@
       requiredMinPotency: 70
       requiredMaxPotency: 100
       requiredMinHealth: 0
-      requiredMaxHealth: 30
+      requiredMaxHealth: 50
       RequiredMinTemperature: 288
       RequiredMaxTemperature: 303
       requiredMutationLevel: 0
@@ -1428,7 +1427,7 @@
       requiredMinPotency: 50
       requiredMaxPotency: 100
       requiredMinHealth: 0
-      requiredMaxHealth: 30
+      requiredMaxHealth: 50
       RequiredMinTemperature: 283
       RequiredMaxTemperature: 303
       requiredMutationLevel: 0
@@ -2013,7 +2012,7 @@
       RequiredMinTemperature: 288
       RequiredMaxTemperature: 303
       requiredMutationLevel: 1
-      requiredReagent: Phlogiston
+      requiredReagent: Plasma
     durotton:
       requiredMinPotency: 70
       requiredMaxPotency: 100

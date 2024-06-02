@@ -147,18 +147,14 @@
   idealLight: 7
   nutrientConsumption: 0.6
   chemicals:
-    Nutriment:
-      Min: 1
-      Max: 10
-      PotencyDivisor: 30
-    Vitamin:
-      Min: 1
-      Max: 10
-      PotencyDivisor: 40
     Barozine:
       Min: 1
       Max: 10
-      PotencyDivisor: 90
+      PotencyDivisor: 40
+    Leporazine:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
 
 - type: seed
   id: berriesdeath
@@ -200,6 +196,8 @@
   yield: 4
   idealLight: 7
   nutrientConsumption: 0.6
+  exudeGasses:
+    Frezon: 0.01
   chemicals:
     Fresium:
       Min: 2
@@ -227,6 +225,8 @@
   yield: 4
   idealLight: 7
   nutrientConsumption: 0.6
+  exudeGasses:
+    Plasma: 0.05
   chemicals:
     Pyrazine:
       Min: 1
@@ -236,6 +236,10 @@
       Min: 1
       Max: 10
       PotencyDivisor: 30
+    Leporazine:
+      Min: 1
+      Max: 10
+      PotencyDivisor: 10
 
 - type: seed
   id: lightmushroom
@@ -262,10 +266,10 @@
       Min: 1
       Max: 10
       PotencyDivisor: 10
-    ChloralHydrate:
+    Nocturine:
       Min: 1
       Max: 10
-      PotencyDivisor: 10
+      PotencyDivisor: 50
 
 - type: seed
   id: whitemushroom
@@ -761,12 +765,10 @@
       food:
         maxVol: 11
         reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Vitamin
-          Quantity: 4
         - ReagentId: Barozine
           Quantity: 2
+        - ReagentId: Leporazine
+          Quantity: 5
   - type: Sprite
     sprite: Andromeda/Evil/plants/berriesbluespace.rsi
   - type: Produce
@@ -855,12 +857,14 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 6
+        maxVol: 11
         reagents:
         - ReagentId: Pyrazine
           Quantity: 3
         - ReagentId: Insuzine
           Quantity: 3
+        - ReagentId: Leporazine
+          Quantity: 5
   - type: Sprite
     sprite: Andromeda/Evil/plants/berriesflame.rsi
   - type: Produce
@@ -886,12 +890,17 @@
         reagents:
         - ReagentId: Nutriment
           Quantity: 5
-        - ReagentId: ChloralHydrate
-          Quantity: 5
+        - ReagentId: Nocturine
+          Quantity: 1
   - type: Sprite
     sprite: Andromeda/Evil/plants/lightmushroom.rsi
   - type: Produce
     seedId: lightmushroom
+  - type: PointLight
+    radius: 2.0
+    energy: 0.5
+    color: "#03cb13"
+    castShadows: false
   - type: Tag
     tags:
     - Vegetable
