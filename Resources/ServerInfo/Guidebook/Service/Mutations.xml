@@ -4,333 +4,436 @@
 Растения, обработанные [color=cyan]нестабильным мутагеном[/color], подвергнутся случайным генетическим мутациям, которые изменят их гены и вызовут изменения в их признаках. Вы можете сохранить растения с нужными вам мутациями, собрав их семена.
 Чем больше нестабильного мутагена вы используете, тем больше мутаций вы получите. Поскольку многие гены важны для выживания, большинство мутаций приведут к гибели растения.
 
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideAmbroziadeus"/>
-    [color=green]Условия мутации:[/color] амброзия вулгарис / потенция 50-100 / здоровье 60-150 / температура 273-313 / мутации / бикаридин
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideChilli"/>
-    [color=green]Условия мутации:[/color] чили / потенция 50-100 / здоровье 60-150 / температура 283-308 / мутации / азот
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideСoi"/>
-    [color=green]Условия мутации:[/color]: кои бобы / потенция 50-100 / здоровье 60-150 / температура 283-313 / мутации / соевое молоко
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePealaughing"/>
-    [color=green]Условия мутации:[/color] горошек / потенция 50-100 / здоровье 80-150 / температура 288-313 / мутации / сахар
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideСolina"/>
-    [color=green]Условия мутации:[/color] морковь / потенция 50-100 / здоровье 60-150 / температура 273-323 / мутации / кола
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePizza"/>
-    [color=green]Условия мутации:[/color] ананас / потенция 70-100 / здоровье 80-150 / температура 288-303 / мутации / мука
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMimana"/>
-    [color=green]Условия мутации:[/color] банан / потенция 70-100 / здоровье 80-150 / температура 273-323 / мутации / токсин немоты
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePoppylilly"/>
-    [color=green]Условия мутации:[/color] мак / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / бикаридин
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePoppyspacemanstrumpet"/>
-    [color=green]Условия мутации:[/color] лили / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / бикаридин
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMeatwheat"/>
-    [color=green]Условия мутации:[/color] пшеница / потенция 50-100 / здоровье 80-150 / температура 283-303 / мутации / НЖП
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMintcatnip"/>
-    [color=green]Условия мутации:[/color] мята / потенция 70-100 / здоровье 80-150 / температура 273-313 / мутации / лимонный сок
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMoney"/>
-    [color=green]Условия мутации:[/color] яблоня / потенция 50-100 / здоровье 60-150 / температура 273-323 / мутации / бомба синдиката
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideSlippery"/>
-    [color=green]Условия мутации:[/color] картофель / потенция 50-100 / здоровье 60-150 / температура 278-303 / мутации / сварочное топливо
-  </Box>
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideCannabis"/>
-    [color=green]Условия мутации:[/color] галачертополох / потенция 50-100 / здоровье 0-30 / температура 283-303 / мутации / нестабильный мутаген
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideDeathweed"/>
-    [color=green]Условия мутации:[/color] конопля / потенция 50-100 / здоровье 0-30 / температура 288-303 / мутации / хлораль
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideLifeweed"/>
-    [color=green]Условия мутации:[/color] конопля / потенция 80-100 / здоровье 95-150 / температура 288-303 / мутации / радость доктора
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideRainbowweed"/>
-    [color=lightgreen]Условия мутации:[/color] конопля / потенция 70-100 / здоровье 0-30 / температура 288-303 / мутации / ТГК
-  </Box>
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideHop"/>
-    [color=green]Условия мутации:[/color] пшеница / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / кремний
-  </Box>
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideSteelcane"/>
-    [color=green]Условия мутации:[/color] сахарный тростник / потенция 50-100 / здоровье 60-150 / температура 278-303 / мутации / железо
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideSteelcap"/>
-    [color=green]Условия мутации:[/color] грибошляпник / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / железо
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideGlasscap"/>
-    [color=green]Условия мутации:[/color] грибошляпник / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / кремний
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePlasteelcap"/>
-    [color=green]Условия мутации:[/color] сталешляпник / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / плазма
-  </Box>
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideLemonka"/>
-    [color=green]Условия мутации:[/color] лемон / потенция 70-100 / здоровье 80-150 / температура 273-313 / мутации / CLF3
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideLemoon"/>
-    [color=green]Условия мутации:[/color] лемон / потенция 50-100 / здоровье 60-150 / температура 273-313 / мутации / молоко
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideGatfruit"/>
-    [color=green]Условия мутации:[/color] лемонка / потенция 70-100 / здоровье 80-150 / температура 273-313 / мутации / CLF3
-  </Box>
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideMushroommicena"/>
-    [color=green]Условия мутации:[/color] лисички / потенция 50-100 / здоровье 80-150 / температура 283-303 / мутации / хлоральгидрат   
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMushroomwhite"/>
-    [color=green]Условия мутации:[/color] лисички / потенция 50-100 / здоровье 95-150 / температура 283-303 / мутации / нутрименты     
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMushroomflyamarita"/>
-    [color=green]Условия мутации:[/color] лисички / потенция 50-100 / здоровье 0-30 / температура 283-303 / мутации / нестабильный мутаген
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMushroomnameless"/>
-    [color=green]Условия мутации:[/color] линчжи / потенция 50-100 / здоровье 0-30 / температура 283-303 / мутации / космические наркотики
-  </Box>
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideNettledeath"/>
-    [color=green]Условия мутации:[/color] крапива / потенция 70-100 / здоровье 80-150 / температура 273-313 / мутации / нестабильный мутаген
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideNettleflesh"/>
-    [color=green]Условия мутации:[/color] крапива / потенция 50-100 / здоровье 90-150 / температура 273-313 / мутации / кровь
-  </Box>
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideTomatoblood"/>
-    [color=green]Условия мутации:[/color] томат / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / кровь
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideTomatoblue"/>
-    [color=green]Условия мутации:[/color] томат / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / космическая смазка
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideTomatokiller"/>
-    [color=green]Условия мутации:[/color] кровяной томат / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / кровь
-  </Box>
-
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideDurotton"/>
-    [color=green]Условия мутации:[/color] хлопок / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / плазма
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePyrotton"/>
-    [color=green]Условия мутации:[/color] хлопок / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / фогистон
-  </Box>
-
-Существуют следующие растения, которые возможно получить мутациями:
-
-  <Box>
-    <GuideEntityEmbed Entity="GuideAmbroziadeus"/>
-    [color=green]Условия мутации:[/color] амброзия вулгарис / потенция 50-100 / здоровье 60-150 / температура 273-313 / мутации / бикаридин
+<Table Columns="2">
+  <ColorBox Color="#147712">
+    <Box>
+      ТИП
     </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideBerriesbluespace"/>
-    [color=green]Условия мутации:[/color] ягоды / потенция 80-100 / здоровье 80-150 / температура 173-223 / мутации / лепоразин
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideBerriesdeath"/>
-    [color=green]Условия мутации:[/color] ягоды / потенция 80-100 / здоровье 80-150 / температура 288-313 / мутации / карпотоксин
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideBerriesice"/>
-    [color=green]Условия мутации:[/color] ягоды / потенция 80-100 / здоровье 80-150 / температура 173-223 / мутации / криптобиолин
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideBerriesflame"/>
-    [color=green]Условия мутации:[/color] ягоды / потенция 80-100 / здоровье 80-150 / температура 323-373 / мутации / плазма
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideChilli"/>
-    [color=green]Условия мутации:[/color] чили / потенция 50-100 / здоровье 60-150 / температура 283-308 / мутации / азот
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideСoffeeliberica"/>
-    [color=green]Условия мутации:[/color] кофе арабика / потенция 50-100 / здоровье 60-150 / температура 288-303 / мутации / кофе
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideСoffeerobusta"/>
-    [color=green]Условия мутации:[/color] кофе арабика / потенция 50-100 / здоровье 60-150 / температура 288-303 / мутации / кофейный ликер
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideСoi"/>
-    [color=green]Условия мутации:[/color]: кои бобы / потенция 50-100 / здоровье 60-150 / температура 283-313 / мутации / соевое молоко
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideСolina"/>
-    [color=green]Условия мутации:[/color] морковь / потенция 50-100 / здоровье 60-150 / температура 273-323 / мутации / кола
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideDeathweed"/>
-    [color=green]Условия мутации:[/color] конопля / потенция 50-100 / здоровье 0-30 / температура 288-303 / мутации / хлораль
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideGatfruit"/>
-    [color=green]Условия мутации:[/color] лемонка / потенция 70-100 / здоровье 80-150 / температура 273-313 / мутации / CLF3
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideGlasscap"/>
-    [color=green]Условия мутации:[/color] грибошляпник / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / кремний
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideHop"/>
-    [color=green]Условия мутации:[/color] пшеница / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / кремний
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideLemonka"/>
-    [color=green]Условия мутации:[/color] лемон / потенция 70-100 / здоровье 80-150 / температура 273-313 / мутации / CLF3
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideLemoon"/>
-    [color=green]Условия мутации:[/color] лемон / потенция 50-100 / здоровье 60-150 / температура 273-313 / мутации / молоко
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideLifeweed"/>
-    [color=green]Условия мутации:[/color] конопля / потенция 80-100 / здоровье 95-150 / температура 288-303 / мутации / радость доктора
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMeatwheat"/>
-    [color=green]Условия мутации:[/color] пшеница / потенция 50-100 / здоровье 80-150 / температура 283-303 / мутации / НЖП
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMimana"/>
-    [color=green]Условия мутации:[/color] банан / потенция 70-100 / здоровье 80-150 / температура 273-323 / мутации / токсин немоты
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMintcatnip"/>
-    [color=green]Условия мутации:[/color] мята / потенция 70-100 / здоровье 80-150 / температура 273-313 / мутации / лимонный сок
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMoney"/>
-    [color=green]Условия мутации:[/color] яблоня / потенция 50-100 / здоровье 60-150 / температура 273-323 / мутации / бомба синдиката
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMushroommicena"/>
-    [color=green]Условия мутации:[/color] лисички / потенция 50-100 / здоровье 80-150 / температура 283-303 / мутации / хлоральгидрат   
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMushroomwhite"/>
-    [color=green]Условия мутации:[/color] лисички / потенция 50-100 / здоровье 95-150 / температура 283-303 / мутации / нутрименты     
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMushroomflyamarita"/>
-    [color=green]Условия мутации:[/color] лисички / потенция 50-100 / здоровье 0-30 / температура 283-303 / мутации / нестабильный мутаген
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideMushroomnameless"/>
-    [color=green]Условия мутации:[/color] линчжи / потенция 50-100 / здоровье 0-30 / температура 283-303 / мутации / космические наркотики
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideNettledeath"/>
-    [color=green]Условия мутации:[/color] крапива / потенция 70-100 / здоровье 80-150 / температура 273-313 / мутации / нестабильный мутаген
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideNettleflesh"/>
-    [color=green]Условия мутации:[/color] крапива / потенция 50-100 / здоровье 90-150 / температура 273-313 / мутации / кровь
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePealaughing"/>
-    [color=green]Условия мутации:[/color] горошек / потенция 50-100 / здоровье 80-150 / температура 288-313 / мутации / сахар
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePizza"/>
-    [color=green]Условия мутации:[/color] ананас / потенция 70-100 / здоровье 80-150 / температура 288-303 / мутации / мука
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePlasteelcap"/>
-    [color=green]Условия мутации:[/color] сталешляпник / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / плазма
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePoppylilly"/>
-    [color=green]Условия мутации:[/color] мак / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / бикаридин
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePoppyspacemanstrumpet"/>
-    [color=green]Условия мутации:[/color] лили / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / бикаридин
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuidePyrotton"/>
-    [color=green]Условия мутации:[/color] хлопок / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / фогистон
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideSlippery"/>
-    [color=green]Условия мутации:[/color] картофель / потенция 50-100 / здоровье 60-150 / температура 278-303 / мутации / сварочное топливо
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideSteelcane"/>
-    [color=green]Условия мутации:[/color] сахарный тростник / потенция 50-100 / здоровье 60-150 / температура 278-303 / мутации / железо
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideSteelcap"/>
-    [color=green]Условия мутации:[/color] грибошляпник / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / железо
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideTomatoblood"/>
-    [color=green]Условия мутации:[/color] томат / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / кровь
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideTomatoblue"/>
-    [color=green]Условия мутации:[/color] томат / потенция 50-100 / здоровье 60-150 / температура 283-303 / мутации / космическая смазка
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideTomatokiller"/>
-    [color=green]Условия мутации:[/color] кровяной томат / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / кровь
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideCannabis"/>
-    [color=green]Условия мутации:[/color] галачертополох / потенция 50-100 / здоровье 0-30 / температура 283-303 / мутации / нестабильный мутаген
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideRainbowweed"/>
-    [color=lightgreen]Условия мутации:[/color] конопля / потенция 70-100 / здоровье 0-30 / температура 288-303 / мутации / ТГК
-  </Box>
-  <Box>
-    <GuideEntityEmbed Entity="GuideDurotton"/>
-    [color=green]Условия мутации:[/color] хлопок / потенция 70-100 / здоровье 80-150 / температура 283-303 / мутации / плазма
-  </Box>
-<Box>
-<GuideEntityEmbed Entity="UnstableMutagenChemistryBottle"/>
-</Box>
-
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box>
+      УСЛОВИЯ МУТАЦИИ
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideAmbroziadeus"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АМБРОЗИЯ ДЕУС:[/color] амброзия вулгарис / потенция 50+ / здоровье 60+ / 273-313 K / бикаридин / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideChilli"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЧИЛЛИ:[/color] чили / потенция 50+ / здоровье 60+ / 283-308 K / азот / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideСoi"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОИ:[/color] кои бобы / потенция 50+ / здоровье 60+ / 283-313 K / соевое молоко / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePealaughing"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СМЕЮЩИЙСЯ ГОРОШЕК:[/color] горошек / потенция 50+ / здоровье 80+ / 288-313 K / сахар / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideСolina"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОЛИНА:[/color] морковь / потенция 50+ / здоровье 60+ / 273-323 K / кола / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePizza"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПИЦЦЕВИК:[/color] ананас / потенция 70+ / здоровье 80+ / 288-303 K / мука / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMimana"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МИМАН:[/color] банан / потенция 70+ / здоровье 80+ / 273-323 K / токсин немоты / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePoppylilly"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛИЛИЯ:[/color] мак / потенция 50+ / здоровье 60+ / 283-303 K / бикаридин / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePoppyspacemanstrumpet"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛИЛИЯ:[/color] лили / потенция 70+ / здоровье 80+ / 283-303 K / бикаридин / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMoney"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ДЕНЕЖНОЕ ДЕРЕВО:[/color] яблоня / потенция 50+ / здоровье 60+ / 273-323 K / бомба синдиката / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSlippery"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЖИЖЕВИК:[/color] картофель / потенция 50+ / здоровье 60+ / 278-303 K / сварочное топливо / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMintcatnip"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОТОВИК:[/color] мята / потенция 70+ / здоровье 80+ / 273-313 K / лимонный сок / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMeatwheat"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МЯСНАЯ ПШЕНИЦА:[/color] пшеница / потенция 50+ / здоровье 80+ / 283-303 K / НЖП / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideHop"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ХМЕЛЬ:[/color] пшеница / потенция 50+ / здоровье 60+ / 283-303 K / кремний / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCannabis"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОНОПЛЯ:[/color] галачертополох / потенция 50+ / здоровье 30- / 283-303 K / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideDeathweed"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СМЕРТЕТРАВ:[/color] конопля / потенция 80+ / здоровье 50- / 288-303 K / хлораль
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLifeweed"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЖИЗНЕТРАВ:[/color] конопля / потенция 80+ / здоровье 95+ / 288-303 K / радость доктора / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideRainbowweed"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]РАДУЖНАЯ КОНОПЛЯ:[/color] конопля / потенция 70+ / здоровье 50- / 288-303 K / ТГК
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideNettledeath"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КРАПИВА СМЕРТИ:[/color] крапива / потенция 70+ / здоровье 80+ / 273-313 K / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideNettleflesh"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПЛОТЬ:[/color] крапива / потенция 50+ / здоровье 90+ / 273-313 K / кровь / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTomatoblood"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КРОВАВЫЙ ТОМАТ:[/color] томат / потенция 50+ / здоровье 60+ / 283-303 K / кровь / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTomatoblue"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ГОЛУБОЙ ТОМАТ:[/color] томат / потенция 50+ / здоровье 60+ / 283-303 K / космическая смазка / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTomatokiller"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ТОМАТ-УБИЙЦА:[/color] кровяной томат / потенция 70+ / здоровье 80+ / 283-303 K / кровь / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLemonka"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛЕМОНКА:[/color] лемон / потенция 70-100 / здоровье 80+ / 273-313 K / CLF3 / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLemoon"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛИЛУН:[/color] лемон / потенция 50-100 / здоровье 60+ / 273-313 K / молоко / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGatfruit"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ГАТФРУКТ:[/color] лемонка / потенция 70-100 / здоровье 80+ / 273-313 K / CLF3 / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSteelcane"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АРМАТУРНИК:[/color] сахарный тростник / потенция 50+ / здоровье 60+ / 278-303 K / железо / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSteelcap"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СТАЛЕШЛЯПНИК:[/color] грибошляпник / потенция 50+ / здоровье 60+ / 283-303 K / железо / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGlasscap"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СТЕКЛОШЛЯПНИК:[/color] грибошляпник / потенция 50+ / здоровье 60+ / 283-303 K / кремний / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePlasteelcap"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПЛАСТОШЛЯПНИК:[/color] сталешляпник / потенция 70+ / здоровье 80+ / 283-303 K / плазма / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideDurotton"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ДЮРАХЛОПОК:[/color] хлопок / потенция 70+ / здоровье 80+ / 283-303 K / плазма / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePyrotton"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПИРОХЛОПОК:[/color] хлопок / потенция 70+ / здоровье 80+ / 283-303 K / фогистон / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroommicena"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СВЕТОГРИБ:[/color] лисички / потенция 50+ / здоровье 80-150 / 283-303 K / хлоральгидрат / нестабильный мутаген 
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroomwhite"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БЕЛЫЙ ГРИБ:[/color] лисички / потенция 50+ / здоровье 95-150 / 283-303 K / нутрименты / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroomflyamarita"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МУХОМОРЫ:[/color] лисички / потенция 50+ / здоровье 30- / 283-303 K / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroomnameless"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БЕЗЫМЯННЫЙ ГРИБ:[/color] линчжи / потенция 50+ / здоровье 30- / 283-303 K / космические наркотики / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerriesbluespace"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БЛЮСПЕЙСИНКА:[/color] ягоды / потенция 80+ / здоровье 80+ / 173-223 K / лепоразин / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerriesdeath"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СМЕРТОВИЦА:[/color] ягоды / потенция 80+ / здоровье 80+ / 288-313 K / карпотоксин / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerriesice"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛЕДОВИЦА:[/color] ягоды / потенция 80+ / здоровье 80+ / 173-223 K / криптобиолин / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerriesflame"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ОГНЕВИЦА:[/color] ягоды / потенция 80+ / здоровье 80+ / 323-373 K / плазма / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideСoffeeliberica"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОФЕ ЛИБЕРИКА:[/color] кофе арабика / потенция 50+ / здоровье 60+ / 288-303 / кофе / нестабильный мутаген
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideСoffeerobusta"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОФЕ РОБУСТА:[/color] кофе арабика / потенция 50+ / здоровье 60+ / 288-303 / кофейный ликер / нестабильный мутаген
+    </Box>
+  </ColorBox>
+</Table>
 </Document>

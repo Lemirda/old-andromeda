@@ -1,7 +1,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: алоэ
+  name:
   id: GuideAloe
   components:
     - type: Sprite
@@ -11,7 +11,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: амброзия деус
+  name:
   id: GuideAmbroziadeus
   components:
     - type: Sprite
@@ -21,7 +21,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: амброзия вулгарис
+  name:
   id: GuideAmbroziavulgaris
   components:
     - type: Sprite
@@ -31,7 +31,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: яблоко
+  name:
   id: GuideApple
   components:
     - type: Sprite
@@ -41,7 +41,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: банан
+  name:
   id: GuideBanana
   components:
     - type: Sprite
@@ -51,7 +51,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: банан
+  name:
   id: GuideBerry
   components:
     - type: Sprite
@@ -101,7 +101,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: бунго
+  name:
   id: GuideBungo
   components:
     - type: Sprite
@@ -111,7 +111,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: тыква
+  name:
   id: GuideCabbage
   components:
     - type: Sprite
@@ -121,7 +121,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: конопля
+  name:
   id: GuideCannabis
   components:
     - type: Sprite
@@ -131,7 +131,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: морковь
+  name:
   id: GuideCarrot
   components:
     - type: Sprite
@@ -141,7 +141,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: чили
+  name:
   id: GuideChili
   components:
     - type: Sprite
@@ -151,7 +151,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: чилли
+  name:
   id: GuideChilli
   components:
     - type: Sprite
@@ -161,7 +161,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: какао
+  name:
   id: GuideCocoa
   components:
     - type: Sprite
@@ -171,7 +171,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: кофе арабика
+  name:
   id: GuideCoffeearabica
   components:
     - type: Sprite
@@ -201,7 +201,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: кои
+  name:
   id: GuideСoi
   components:
     - type: Sprite
@@ -211,7 +211,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: колина
+  name:
   id: GuideСolina
   components:
     - type: Sprite
@@ -221,7 +221,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: кукуруза
+  name:
   id: GuideСorn
   components:
     - type: Sprite
@@ -231,7 +231,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: хлопок
+  name:
   id: GuideCotton
   components:
     - type: Sprite
@@ -241,7 +241,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: смертотрав
+  name:
   id: GuideDeathweed
   components:
     - type: Sprite
@@ -251,7 +251,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: дюрахлопок
+  name:
   id: GuideDurotton
   components:
     - type: Sprite
@@ -261,7 +261,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: баклажан
+  name:
   id: GuideEggplant
   components:
     - type: Sprite
@@ -271,7 +271,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: яйцевик
+  name:
   id: GuideEggs
   components:
     - type: Sprite
@@ -281,7 +281,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: галачертополох
+  name:
   id: GuideGalaxythistle
   components:
     - type: Sprite
@@ -291,7 +291,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: чеснок
+  name:
   id: GuideGalric
   components:
     - type: Sprite
@@ -301,7 +301,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: гатфрукт
+  name:
   id: GuideGatfruit
   components:
     - type: Sprite
@@ -311,7 +311,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: стеклошляпник
+  name:
   id: GuideGlasscap
   components:
     - type: Sprite
@@ -321,7 +321,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: виноград
+  name:
   id: GuideGrape
   components:
     - type: Sprite
@@ -331,7 +331,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: хмель
+  name:
   id: GuideHop
   components:
     - type: Sprite
@@ -341,7 +341,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: радужная конопля
+  name:
   id: GuideRainbowweed
   components:
     - type: Sprite
@@ -351,7 +351,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: лемонка
+  name:
   id: GuideLemonka
   components:
     - type: Sprite
@@ -361,7 +361,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: лилун
+  name:
   id: GuideLemoon
   components:
     - type: Sprite
@@ -371,7 +371,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: жизнетрав
+  name:
   id: GuideLifeweed
   components:
     - type: Sprite
@@ -381,7 +381,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: лайм
+  name:
   id: GuideLime
   components:
     - type: Sprite
@@ -391,7 +391,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: мясная пшеница
+  name:
   id: GuideMeatwheat
   components:
     - type: Sprite
@@ -401,7 +401,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: миман
+  name:
   id: GuideMimana
   components:
     - type: Sprite
@@ -411,7 +411,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: мята
+  name:
   id: GuideMint
   components:
     - type: Sprite
@@ -421,7 +421,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: котовик
+  name:
   id: GuideMintcatnip
   components:
     - type: Sprite
@@ -431,7 +431,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: денежное дерево
+  name:
   id: GuideMoney
   components:
     - type: Sprite
@@ -441,7 +441,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: лисички
+  name:
   id: GuideMushroomchanterelle
   components:
     - type: Sprite
@@ -451,7 +451,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: мухоморы
+  name:
   id: GuideMushroomflyamarita
   components:
     - type: Sprite
@@ -461,7 +461,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: линчжи
+  name:
   id: GuideMushroomlingzhi
   components:
     - type: Sprite
@@ -471,7 +471,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: светогриб
+  name:
   id: GuideMushroommicena
   components:
     - type: Sprite
@@ -481,7 +481,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: безымянный гриб
+  name:
   id: GuideMushroomnameless
   components:
     - type: Sprite
@@ -491,7 +491,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: белый гриб
+  name:
   id: GuideMushroomwhite
   components:
     - type: Sprite
@@ -501,7 +501,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: крапива
+  name:
   id: GuideNettle
   components:
     - type: Sprite
@@ -511,7 +511,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: смертокрапива
+  name:
   id: GuideNettledeath
   components:
     - type: Sprite
@@ -521,7 +521,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: плоть
+  name:
   id: GuideNettleflesh
   components:
     - type: Sprite
@@ -531,7 +531,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: овес
+  name:
   id: GuideOat
   components:
     - type: Sprite
@@ -541,7 +541,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: лук
+  name:
   id: GuideOnion
   components:
     - type: Sprite
@@ -551,7 +551,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: красный лук
+  name:
   id: GuideOnionred
   components:
     - type: Sprite
@@ -561,7 +561,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: апельсин
+  name:
   id: GuideOrange
   components:
     - type: Sprite
@@ -571,7 +571,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: горошек
+  name:
   id: GuidePea
   components:
     - type: Sprite
@@ -581,7 +581,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: смешной горошек
+  name:
   id: GuidePealaughing
   components:
     - type: Sprite
@@ -591,7 +591,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: ананас
+  name:
   id: GuidePineapple
   components:
     - type: Sprite
@@ -601,7 +601,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: пиццевик
+  name:
   id: GuidePizza
   components:
     - type: Sprite
@@ -611,7 +611,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: пластошляпник
+  name:
   id: GuidePlasteelcap
   components:
     - type: Sprite
@@ -621,7 +621,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: мак
+  name:
   id: GuidePoppy
   components:
     - type: Sprite
@@ -631,7 +631,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: лилия
+  name:
   id: GuidePoppylilly
   components:
     - type: Sprite
@@ -641,7 +641,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: космонавтская труба
+  name:
   id: GuidePoppyspacemanstrumpet
   components:
     - type: Sprite
@@ -651,7 +651,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: картофель
+  name:
   id: GuidePotato
   components:
     - type: Sprite
@@ -661,7 +661,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: тыква
+  name:
   id: GuidePumpkin
   components:
     - type: Sprite
@@ -671,7 +671,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: пироттон
+  name:
   id: GuidePyrotton
   components:
     - type: Sprite
@@ -681,7 +681,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: рис
+  name:
   id: GuideRice
   components:
     - type: Sprite
@@ -691,7 +691,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: жижевик
+  name:
   id: GuideSlippery
   components:
     - type: Sprite
@@ -701,7 +701,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: соя
+  name:
   id: GuideSoy
   components:
     - type: Sprite
@@ -711,7 +711,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: арматурник
+  name:
   id: GuideSteelcane
   components:
     - type: Sprite
@@ -721,7 +721,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: сталешляпник
+  name:
   id: GuideSteelcap
   components:
     - type: Sprite
@@ -731,7 +731,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: сахарный тростник
+  name:
   id: GuideSugarcane
   components:
     - type: Sprite
@@ -741,7 +741,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: табак
+  name:
   id: GuideTobacco
   components:
     - type: Sprite
@@ -751,7 +751,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: стобакс
+  name:
   id: GuideTobacco100
   components:
     - type: Sprite
@@ -761,7 +761,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: томаты
+  name:
   id: GuideTomato
   components:
     - type: Sprite
@@ -771,7 +771,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: кровяные томаты
+  name:
   id: GuideTomatoblood
   components:
     - type: Sprite
@@ -781,7 +781,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: голубые томаты
+  name:
   id: GuideTomatoblue
   components:
     - type: Sprite
@@ -791,7 +791,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: томаты-убийцы
+  name:
   id: GuideTomatokiller
   components:
     - type: Sprite
@@ -801,7 +801,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: древошляпник
+  name:
   id: GuideTreecap
   components:
     - type: Sprite
@@ -811,7 +811,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: арбуз
+  name:
   id: GuideWatermellon
   components:
     - type: Sprite
@@ -821,7 +821,7 @@
 - type: entity
   noSpawn: true
   parent: SeedBase
-  name: пшеница
+  name:
   id: GuideWheat
   components:
     - type: Sprite
