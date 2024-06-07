@@ -10,9 +10,20 @@
 
 - type: entity
   noSpawn: true
+  name: 
+  parent: FoodProduceBase
+  id: GuideFoodAloe
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/aloe.rsi
+  - type: Produce
+    seedId: aloe
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
-  id: GuideAmbroziadeus
+  id: GuideAmbroziaDeus
   components:
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
@@ -22,11 +33,22 @@
   noSpawn: true
   parent: SeedBase
   name:
-  id: GuideAmbroziavulgaris
+  id: GuideAmbroziaVulgaris
   components:
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: ambroziavulgaris
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodAmbrosiaVulgaris
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
+  - type: Produce
+    seedId: ambrosiaVulgaris
 
 - type: entity
   noSpawn: true
@@ -40,6 +62,17 @@
 
 - type: entity
   noSpawn: true
+  name: 
+  parent: FoodProduceBase
+  id: GuideFoodApple
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/apple.rsi
+  - type: Produce
+    seedId: apple
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideBanana
@@ -47,6 +80,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: banana
+
+- type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodBanana
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/banana.rsi
+  - type: Produce
+    seedId: banana
 
 - type: entity
   noSpawn: true
@@ -57,6 +100,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: berry
+
+- type: entity
+  name: 
+  parent: FoodProduceBase
+  id: GuideFoodBerries
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/berries.rsi
+  - type: Produce
+    seedId: berries
 
 - type: entity
   noSpawn: true
@@ -70,6 +123,17 @@
 
 - type: entity
   noSpawn: true
+  name: 
+  parent: FoodProduceBase
+  id: GuideFoodBerriesbluespace
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/berriesbluespace.rsi
+  - type: Produce
+    seedId: berriesbluespace
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideBerriesdeath
@@ -77,6 +141,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: berriesdeath
+
+- type: entity
+  name: 
+  parent: FoodProduceBase
+  id: GuideFoodBerriesdeath
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/berriesdeath.rsi
+  - type: Produce
+    seedId: berriesdeath
 
 - type: entity
   noSpawn: true
@@ -89,6 +163,16 @@
       state: berriesflame
 
 - type: entity
+  name: 
+  parent: FoodProduceBase
+  id: GuideFoodBerriesflame
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/berriesflame.rsi
+  - type: Produce
+    seedId: berriesflame
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -97,6 +181,26 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: berriesice
+
+- type: entity
+  name: 
+  parent: FoodProduceBase
+  id: GuideFoodBerriesice
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 15
+        reagents:
+        - ReagentId: Fresium
+          Quantity: 5
+        - ReagentId: Frostoil
+          Quantity: 10
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/berriesice.rsi
+  - type: Produce
+    seedId: berriesice
+
 
 - type: entity
   noSpawn: true

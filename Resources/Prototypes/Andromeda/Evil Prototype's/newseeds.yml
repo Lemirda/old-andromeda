@@ -763,12 +763,12 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 11
+        maxVol: 12
         reagents:
         - ReagentId: Barozine
           Quantity: 2
         - ReagentId: Leporazine
-          Quantity: 5
+          Quantity: 10
   - type: Sprite
     sprite: Andromeda/Evil/plants/berriesbluespace.rsi
   - type: Produce

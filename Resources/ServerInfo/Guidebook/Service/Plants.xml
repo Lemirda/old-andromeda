@@ -1,3 +1,175 @@
 <Document>
-Дополнить
+<Table Columns="3">
+  <ColorBox Color="#147712">
+    <Box>
+      ТИП
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box>
+      ПЛОД
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box>
+      СВОЙСТВА
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideAloe"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodAloe"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АЛОЭ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color][color=lightblue] алоэ(1-10) дермалин(1-10)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideAmbroziaVulgaris"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodAmbrosiaVulgaris"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АМБРОЗИЯ ВУЛГАРИС: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-2) бикаридин(1-5) келотан(1-5) дезоксиэфедрин(1-10) витамин(1-2)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideAmbroziaDeus"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodAmbrosiaVulgaris"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АМБРОЗИЯ ДЕУС: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-2) омнизин(1-3) космические наркотики(1-5) дезоксиэфедрин(1-10)[/color]
+      [color=green] условия мутации: амброзия вулгарис потенция 50+ здоровье 60+ 273-313K бикаридин нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideApple"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodApple"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЯБЛОНЯ: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-10) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBanana"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBanana"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БАНАНЫ: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(2) потенция(10)[/color][color=lightblue] питательные вещества(1-2) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerry"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBerries"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЯГОДЫ: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] питательные вещества(2-5) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerriesbluespace"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBerriesbluespace"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БЛЮСПЕЙСИНКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] барозин(1-2) лепоразин(1-10)[/color]
+      [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 173-223K лепоразин нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerriesdeath"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBerriesdeath"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СМЕРТОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] свинец(1-10)[/color]
+      [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 288-313K карпотоксин нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerriesflame"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBerriesflame"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ТЕПЛОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] пиразин(1-3) инсузин (1-3) лепоразин (1-5)[/color][color=red] выделяет плазму[/color]
+      [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 323-373K плазма нестабильный мутаген[/color]      
+    </Box>
+  </ColorBox>
+
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBerriesice"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBerriesice"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛЕДОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] фризиум(1-5) ледяное масло(1-10)[/color][color=red] выделяет фрезон[/color]
+      [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 173-223K криптобиолин нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+</Table>
 </Document>

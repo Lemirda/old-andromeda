@@ -17,12 +17,12 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
-      <GuideEntityEmbed Entity="GuideAmbroziadeus"/>
+      <GuideEntityEmbed Entity="GuideAmbroziaDeus"/>
     </Box>
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]АМБРОЗИЯ ДЕУС:[/color] амброзия вулгарис / потенция 50+ / здоровье 60+ / 273-313 K / бикаридин / нестабильный мутаген
+      [color=green]АМБРОЗИЯ ДЕУС:[/color][color=lightblue] амброзия вулгарис / потенция 50+ / здоровье 60+ / 273-313 K / бикаридин / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -32,7 +32,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЧИЛЛИ:[/color] чили / потенция 50+ / здоровье 60+ / 283-308 K / азот / нестабильный мутаген
+      [color=green]ЧИЛЛИ:[/color][color=lightblue] чили / потенция 50+ / здоровье 60+ / 283-308 K / азот / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -42,7 +42,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОИ:[/color] кои бобы / потенция 50+ / здоровье 60+ / 283-313 K / соевое молоко / нестабильный мутаген
+      [color=green]КОИ:[/color][color=lightblue] кои бобы / потенция 50+ / здоровье 60+ / 283-313 K / соевое молоко / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -52,7 +52,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]СМЕЮЩИЙСЯ ГОРОШЕК:[/color] горошек / потенция 50+ / здоровье 80+ / 288-313 K / сахар / нестабильный мутаген
+      [color=green]СМЕЮЩИЙСЯ ГОРОШЕК:[/color][color=lightblue] горошек / потенция 50+ / здоровье 80+ / 288-313 K / сахар / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -62,7 +62,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОЛИНА:[/color] морковь / потенция 50+ / здоровье 60+ / 273-323 K / кола / нестабильный мутаген
+      [color=green]КОЛИНА:[/color][color=lightblue] морковь / потенция 50+ / здоровье 60+ / 273-323 K / кола / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -72,7 +72,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ПИЦЦЕВИК:[/color] ананас / потенция 70+ / здоровье 80+ / 288-303 K / мука / нестабильный мутаген
+      [color=green]ПИЦЦЕВИК:[/color][color=lightblue] ананас / потенция 70+ / здоровье 80+ / 288-303 K / мука / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -82,7 +82,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]МИМАН:[/color] банан / потенция 70+ / здоровье 80+ / 273-323 K / токсин немоты / нестабильный мутаген
+      [color=green]МИМАН:[/color][color=lightblue] банан / потенция 70+ / здоровье 80+ / 273-323 K / токсин немоты / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -92,7 +92,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЛИЛИЯ:[/color] мак / потенция 50+ / здоровье 60+ / 283-303 K / бикаридин / нестабильный мутаген
+      [color=green]ЛИЛИЯ:[/color][color=lightblue] мак / потенция 50+ / здоровье 60+ / 283-303 K / бикаридин / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -102,7 +102,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЛИЛИЯ:[/color] лили / потенция 70+ / здоровье 80+ / 283-303 K / бикаридин / нестабильный мутаген
+      [color=green]ЛИЛИЯ:[/color][color=lightblue] лили / потенция 70+ / здоровье 80+ / 283-303 K / бикаридин / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -112,7 +112,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ДЕНЕЖНОЕ ДЕРЕВО:[/color] яблоня / потенция 50+ / здоровье 60+ / 273-323 K / бомба синдиката / нестабильный мутаген
+      [color=green]ДЕНЕЖНОЕ ДЕРЕВО:[/color][color=lightblue] яблоня / потенция 50+ / здоровье 60+ / 273-323 K / бомба синдиката / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -122,7 +122,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЖИЖЕВИК:[/color] картофель / потенция 50+ / здоровье 60+ / 278-303 K / сварочное топливо / нестабильный мутаген
+      [color=green]ЖИЖЕВИК:[/color][color=lightblue] картофель / потенция 50+ / здоровье 60+ / 278-303 K / сварочное топливо / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -132,7 +132,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОТОВИК:[/color] мята / потенция 70+ / здоровье 80+ / 273-313 K / лимонный сок / нестабильный мутаген
+      [color=green]КОТОВИК:[/color][color=lightblue] мята / потенция 70+ / здоровье 80+ / 273-313 K / лимонный сок / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -142,7 +142,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]МЯСНАЯ ПШЕНИЦА:[/color] пшеница / потенция 50+ / здоровье 80+ / 283-303 K / НЖП / нестабильный мутаген
+      [color=green]МЯСНАЯ ПШЕНИЦА:[/color][color=lightblue] пшеница / потенция 50+ / здоровье 80+ / 283-303 K / НЖП / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -152,7 +152,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ХМЕЛЬ:[/color] пшеница / потенция 50+ / здоровье 60+ / 283-303 K / кремний / нестабильный мутаген
+      [color=green]ХМЕЛЬ:[/color][color=lightblue] пшеница / потенция 50+ / здоровье 60+ / 283-303 K / кремний / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -162,7 +162,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОНОПЛЯ:[/color] галачертополох / потенция 50+ / здоровье 30- / 283-303 K / нестабильный мутаген
+      [color=green]КОНОПЛЯ:[/color][color=lightblue] галачертополох / потенция 50+ / здоровье 30- / 283-303 K / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -172,7 +172,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]СМЕРТЕТРАВ:[/color] конопля / потенция 80+ / здоровье 50- / 288-303 K / хлораль
+      [color=green]СМЕРТЕТРАВ:[/color][color=lightblue] конопля / потенция 80+ / здоровье 50- / 288-303 K / хлораль[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -182,7 +182,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЖИЗНЕТРАВ:[/color] конопля / потенция 80+ / здоровье 95+ / 288-303 K / радость доктора / нестабильный мутаген
+      [color=green]ЖИЗНЕТРАВ:[/color][color=lightblue] конопля / потенция 80+ / здоровье 95+ / 288-303 K / радость доктора / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -192,7 +192,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]РАДУЖНАЯ КОНОПЛЯ:[/color] конопля / потенция 70+ / здоровье 50- / 288-303 K / ТГК
+      [color=green]РАДУЖНАЯ КОНОПЛЯ:[/color][color=lightblue] конопля / потенция 70+ / здоровье 50- / 288-303 K / ТГК[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -202,7 +202,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КРАПИВА СМЕРТИ:[/color] крапива / потенция 70+ / здоровье 80+ / 273-313 K / нестабильный мутаген
+      [color=green]КРАПИВА СМЕРТИ:[/color][color=lightblue] крапива / потенция 70+ / здоровье 80+ / 273-313 K / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -212,7 +212,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ПЛОТЬ:[/color] крапива / потенция 50+ / здоровье 90+ / 273-313 K / кровь / нестабильный мутаген
+      [color=green]ПЛОТЬ:[/color][color=lightblue] крапива / потенция 50+ / здоровье 90+ / 273-313 K / кровь / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -222,7 +222,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КРОВАВЫЙ ТОМАТ:[/color] томат / потенция 50+ / здоровье 60+ / 283-303 K / кровь / нестабильный мутаген
+      [color=green]КРОВАВЫЙ ТОМАТ:[/color][color=lightblue] томат / потенция 50+ / здоровье 60+ / 283-303 K / кровь / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -232,7 +232,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ГОЛУБОЙ ТОМАТ:[/color] томат / потенция 50+ / здоровье 60+ / 283-303 K / космическая смазка / нестабильный мутаген
+      [color=green]ГОЛУБОЙ ТОМАТ:[/color][color=lightblue] томат / потенция 50+ / здоровье 60+ / 283-303 K / космическая смазка / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -242,7 +242,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ТОМАТ-УБИЙЦА:[/color] кровяной томат / потенция 70+ / здоровье 80+ / 283-303 K / кровь / нестабильный мутаген
+      [color=green]ТОМАТ-УБИЙЦА:[/color][color=lightblue] кровяной томат / потенция 70+ / здоровье 80+ / 283-303 K / кровь / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -252,7 +252,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЛЕМОНКА:[/color] лемон / потенция 70-100 / здоровье 80+ / 273-313 K / CLF3 / нестабильный мутаген
+      [color=green]ЛЕМОНКА:[/color][color=lightblue] лемон / потенция 70-100 / здоровье 80+ / 273-313 K / CLF3 / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -262,7 +262,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЛИЛУН:[/color] лемон / потенция 50-100 / здоровье 60+ / 273-313 K / молоко / нестабильный мутаген
+      [color=green]ЛИЛУН:[/color][color=lightblue] лемон / потенция 50-100 / здоровье 60+ / 273-313 K / молоко / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -272,7 +272,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ГАТФРУКТ:[/color] лемонка / потенция 70-100 / здоровье 80+ / 273-313 K / CLF3 / нестабильный мутаген
+      [color=green]ГАТФРУКТ:[/color][color=lightblue] лемонка / потенция 70-100 / здоровье 80+ / 273-313 K / CLF3 / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -282,7 +282,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]АРМАТУРНИК:[/color] сахарный тростник / потенция 50+ / здоровье 60+ / 278-303 K / железо / нестабильный мутаген
+      [color=green]АРМАТУРНИК:[/color][color=lightblue] сахарный тростник / потенция 50+ / здоровье 60+ / 278-303 K / железо / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -292,7 +292,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]СТАЛЕШЛЯПНИК:[/color] грибошляпник / потенция 50+ / здоровье 60+ / 283-303 K / железо / нестабильный мутаген
+      [color=green]СТАЛЕШЛЯПНИК:[/color][color=lightblue] грибошляпник / потенция 50+ / здоровье 60+ / 283-303 K / железо / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -302,7 +302,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]СТЕКЛОШЛЯПНИК:[/color] грибошляпник / потенция 50+ / здоровье 60+ / 283-303 K / кремний / нестабильный мутаген
+      [color=green]СТЕКЛОШЛЯПНИК:[/color][color=lightblue] грибошляпник / потенция 50+ / здоровье 60+ / 283-303 K / кремний / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -312,7 +312,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ПЛАСТОШЛЯПНИК:[/color] сталешляпник / потенция 70+ / здоровье 80+ / 283-303 K / плазма / нестабильный мутаген
+      [color=green]ПЛАСТОШЛЯПНИК:[/color][color=lightblue] сталешляпник / потенция 70+ / здоровье 80+ / 283-303 K / плазма / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -322,7 +322,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ДЮРАХЛОПОК:[/color] хлопок / потенция 70+ / здоровье 80+ / 283-303 K / плазма / нестабильный мутаген
+      [color=green]ДЮРАХЛОПОК:[/color][color=lightblue] хлопок / потенция 70+ / здоровье 80+ / 283-303 K / плазма / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -332,7 +332,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ПИРОХЛОПОК:[/color] хлопок / потенция 70+ / здоровье 80+ / 283-303 K / фогистон / нестабильный мутаген
+      [color=green]ПИРОХЛОПОК:[/color][color=lightblue] хлопок / потенция 70+ / здоровье 80+ / 283-303 K / фогистон / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -342,7 +342,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]СВЕТОГРИБ:[/color] лисички / потенция 50+ / здоровье 80-150 / 283-303 K / хлоральгидрат / нестабильный мутаген 
+      [color=green]СВЕТОГРИБ:[/color][color=lightblue] лисички / потенция 50+ / здоровье 80-150 / 283-303 K / хлоральгидрат / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -352,7 +352,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]БЕЛЫЙ ГРИБ:[/color] лисички / потенция 50+ / здоровье 95-150 / 283-303 K / нутрименты / нестабильный мутаген
+      [color=green]БЕЛЫЙ ГРИБ:[/color][color=lightblue] лисички / потенция 50+ / здоровье 95-150 / 283-303 K / нутрименты / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -362,7 +362,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]МУХОМОРЫ:[/color] лисички / потенция 50+ / здоровье 30- / 283-303 K / нестабильный мутаген
+      [color=green]МУХОМОРЫ:[/color][color=lightblue] лисички / потенция 50+ / здоровье 30- / 283-303 K / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -372,7 +372,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]БЕЗЫМЯННЫЙ ГРИБ:[/color] линчжи / потенция 50+ / здоровье 30- / 283-303 K / космические наркотики / нестабильный мутаген
+      [color=green]БЕЗЫМЯННЫЙ ГРИБ:[/color][color=lightblue] линчжи / потенция 50+ / здоровье 30- / 283-303 K / космические наркотики / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -382,7 +382,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]БЛЮСПЕЙСИНКА:[/color] ягоды / потенция 80+ / здоровье 80+ / 173-223 K / лепоразин / нестабильный мутаген
+      [color=green]БЛЮСПЕЙСИНКА:[/color][color=lightblue] ягоды / потенция 80+ / здоровье 80+ / 173-223 K / лепоразин / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -392,7 +392,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]СМЕРТОВИЦА:[/color] ягоды / потенция 80+ / здоровье 80+ / 288-313 K / карпотоксин / нестабильный мутаген
+      [color=green]СМЕРТОВИЦА:[/color][color=lightblue] ягоды / потенция 80+ / здоровье 80+ / 288-313 K / карпотоксин / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -402,7 +402,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЛЕДОВИЦА:[/color] ягоды / потенция 80+ / здоровье 80+ / 173-223 K / криптобиолин / нестабильный мутаген
+      [color=green]ЛЕДОВИЦА:[/color][color=lightblue] ягоды / потенция 80+ / здоровье 80+ / 173-223 K / криптобиолин / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -412,7 +412,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ОГНЕВИЦА:[/color] ягоды / потенция 80+ / здоровье 80+ / 323-373 K / плазма / нестабильный мутаген
+      [color=green]ОГНЕВИЦА:[/color][color=lightblue] ягоды / потенция 80+ / здоровье 80+ / 323-373 K / плазма / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -422,7 +422,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОФЕ ЛИБЕРИКА:[/color] кофе арабика / потенция 50+ / здоровье 60+ / 288-303 / кофе / нестабильный мутаген
+      [color=green]КОФЕ ЛИБЕРИКА:[/color][color=lightblue] кофе арабика / потенция 50+ / здоровье 60+ / 288-303 / кофе / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -432,7 +432,7 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОФЕ РОБУСТА:[/color] кофе арабика / потенция 50+ / здоровье 60+ / 288-303 / кофейный ликер / нестабильный мутаген
+      [color=green]КОФЕ РОБУСТА:[/color][color=lightblue] кофе арабика / потенция 50+ / здоровье 60+ / 288-303 / кофейный ликер / нестабильный мутаген[/color]
     </Box>
   </ColorBox>
 </Table>
