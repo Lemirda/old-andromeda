@@ -27,7 +27,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]АЛОЭ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color][color=lightblue] алоэ(1-10) дермалин(1-10)[/color]
+      [color=green]АЛОЭ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] алоэ(1-10) дермалин(1-10)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -42,7 +43,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]АМБРОЗИЯ ВУЛГАРИС: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-2) бикаридин(1-5) келотан(1-5) дезоксиэфедрин(1-10) витамин(1-2)[/color]
+      [color=green]АМБРОЗИЯ ВУЛГАРИС: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-2) бикаридин(1-5) келотан(1-5) дезоксиэфедрин(1-10) витамин(1-2)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -52,12 +54,13 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
-      <GuideEntityEmbed Entity="GuideFoodAmbrosiaVulgaris"/>
+      <GuideEntityEmbed Entity="GuideFoodAmbrosiaDeus"/>
     </Box>
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]АМБРОЗИЯ ДЕУС: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-2) омнизин(1-3) космические наркотики(1-5) дезоксиэфедрин(1-10)[/color]
+      [color=green]АМБРОЗИЯ ДЕУС: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-2) омнизин(1-3) космические наркотики(1-5) дезоксиэфедрин(1-10)[/color]
       [color=green] условия мутации: амброзия вулгарис потенция 50+ здоровье 60+ 273-313K бикаридин нестабильный мутаген[/color]
     </Box>
   </ColorBox>
@@ -73,7 +76,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЯБЛОНЯ: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-10) витамины(1-4)[/color]
+      [color=green]ЯБЛОНЯ: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-10) витамины(1-4)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -88,7 +92,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]БАНАНЫ: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(2) потенция(10)[/color][color=lightblue] питательные вещества(1-2) витамины(1-4)[/color]
+      [color=green]БАНАНЫ: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-2) витамины(1-4)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -103,7 +108,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЯГОДЫ: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] питательные вещества(2-5) витамины(1-4)[/color]
+      [color=green]ЯГОДЫ: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color]
+      [color=lightblue] питательные вещества(2-5) витамины(1-4)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -118,7 +124,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]БЛЮСПЕЙСИНКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] барозин(1-2) лепоразин(1-10)[/color]
+      [color=green]БЛЮСПЕЙСИНКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color]
+      [color=lightblue] барозин(1-2) лепоразин(1-10)[/color]
       [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 173-223K лепоразин нестабильный мутаген[/color]
     </Box>
   </ColorBox>
@@ -134,7 +141,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]СМЕРТОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] свинец(1-10)[/color]
+      [color=green]СМЕРТОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color]
+      [color=lightblue] свинец(1-10)[/color]
       [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 288-313K карпотоксин нестабильный мутаген[/color]
     </Box>
   </ColorBox>
@@ -150,8 +158,9 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ТЕПЛОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] пиразин(1-3) инсузин (1-3) лепоразин (1-5)[/color][color=red] выделяет плазму[/color]
-      [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 323-373K плазма нестабильный мутаген[/color]      
+      [color=green]ТЕПЛОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color]
+      [color=lightblue] пиразин(1-3) инсузин (1-3) лепоразин (1-5)[/color][color=red] выделяет плазму[/color]
+      [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 323-373K плазма нестабильный мутаген[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -166,7 +175,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЛЕДОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color][color=lightblue] фризиум(1-5) ледяное масло(1-10)[/color][color=red] выделяет фрезон[/color]
+      [color=green]ЛЕДОВИЦА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(4) потенция(10)[/color]
+      [color=lightblue] фризиум(1-5) ледяное масло(1-10)[/color][color=red] выделяет фрезон[/color]
       [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 173-223K криптобиолин нестабильный мутаген[/color]
     </Box>
   </ColorBox>
@@ -182,7 +192,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]БУНГО: [/color][color=lightgreen]жизнь(50ц) рост(8ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-10) энзим(1-10)[/color]
+      [color=green]БУНГО: [/color][color=lightgreen]жизнь(50ц) рост(8ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-10) энзим(1-10)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -197,7 +208,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КАПУСТА: [/color][color=lightgreen]жизнь(50ц) рост(7ц) созревание(5ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-10) витамины(1-4)[/color]
+      [color=green]КАПУСТА: [/color][color=lightgreen]жизнь(50ц) рост(7ц) созревание(5ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-10) витамины(1-4)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -212,7 +224,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОНОПЛЯ: [/color][color=lightgreen]жизнь(75ц) рост(8ц) созревание(12ц) урожайность(2) потенция(20)[/color][color=lightblue] ТГК(1-10)[/color]
+      [color=green]КОНОПЛЯ: [/color][color=lightgreen]жизнь(75ц) рост(8ц) созревание(12ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] ТГК(1-10)[/color]
       [color=green] условия мутации: галачертополох потенция 50+ здоровье 30- 283-303K нестабильный мутаген[/color]
     </Box>
   </ColorBox>
@@ -228,7 +241,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]МОРКОВЬ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color][color=lightblue] морковный сок(1-5) окулин(2-6) витамины(1-4)[/color]
+      [color=green]МОРКОВЬ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] морковный сок(1-5) окулин(2-6) витамины(1-4)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -243,7 +257,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЧИЛИ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(2) потенция(20)[/color][color=lightblue] капсациновое масло(1-10) питательные вещества(1-4) витамины(1-4)[/color]
+      [color=green]ЧИЛИ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] капсациновое масло(1-10) питательные вещества(1-4) витамины(1-4)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -258,7 +273,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]ЧИЛЛИ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(2) потенция(20)[/color][color=lightblue] ледяное масло(1-10) питательные вещества(1-4) витамины(1-4)[/color]
+      [color=green]ЧИЛЛИ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] ледяное масло(1-10) питательные вещества(1-4) витамины(1-4)[/color]
       [color=green] условия мутации: чили потенция 50+ здоровье 60+ 283-308K азот нестабильный мутаген[/color]
     </Box>
   </ColorBox>
@@ -274,7 +290,8 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КАКАО: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(6) потенция(10)[/color][color=lightblue] витамины(1) питательные вещества(2) какао порошок(1)[/color]
+      [color=green]КАКАО: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(6) потенция(10)[/color]
+      [color=lightblue] витамины(1) питательные вещества(2) какао порошок(1)[/color]
     </Box>
   </ColorBox>
   <ColorBox>
@@ -284,15 +301,15 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
-      <GuideEntityEmbed Entity="GuideFoodCoffeearabicaRaw3"/>
+      <GuideEntityEmbed Entity="GuideFoodCoffeearabicaRaw"/>
     </Box>
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОФЕ АРАБИКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе арабики(1-10)[/color]
+      [color=green]КОФЕ АРАБИКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе арабики(1-10)[/color]
     </Box>
   </ColorBox>
-
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
       <GuideEntityEmbed Entity="GuideСoffeeliberica"/>
@@ -300,16 +317,16 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
-      <GuideEntityEmbed Entity="GuideFoodCoffeelibericaRaw3"/>
+      <GuideEntityEmbed Entity="GuideFoodCoffeelibericaRaw"/>
     </Box>
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОФЕ ЛИБЕРИКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе либерики(1-10)[/color]
+      [color=green]КОФЕ ЛИБЕРИКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе либерики(1-10)[/color]
       [color=green] условия мутации: кофе арабика потенция 50+ здоровье 60+ 288-303K кофе нестабильный мутаген[/color]
     </Box>
   </ColorBox>
-
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
       <GuideEntityEmbed Entity="GuideСoffeerobusta"/>
@@ -317,13 +334,580 @@
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
-      <GuideEntityEmbed Entity="GuideFoodCoffeerobustaRaw3"/>
+      <GuideEntityEmbed Entity="GuideFoodCoffeerobustaRaw"/>
     </Box>
   </ColorBox>
   <ColorBox>
     <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
-      [color=green]КОФЕ РОБУСТА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе робуста(1-10)[/color]
+      [color=green]КОФЕ РОБУСТА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе робуста(1-10)[/color]
       [color=green] условия мутации: кофе арабика потенция 50+ здоровье 60+ 288-303K кофейный ликер нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCoi"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodKoibean"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОИ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-2)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideСolina"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideDrinkColaCan"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОЛИНА: [/color][color=lightgreen]жизнь(100ц) рост(10ц) созревание(2ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] кола(25-35)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideСorn"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodCorn"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КУКУРУЗА: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] кукурузная мука(1-15) питательные вещества(1-5)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCotton"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCottonBol"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ХЛОПОК: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] волокно(1-10)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideDeathweed"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideDeathweedLeaves"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СМЕРТЕТРАВ: [/color][color=lightgreen]жизнь(50ц) рост(8ц) созревание(12ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] токсин(1-10) хлоральгидрат(1-5)[/color][color=red] выделяет тритий[/color]
+      [color=green] условия мутации: конопля потенция 80+ здоровье 50- 288-303K хлораль[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideDurotton"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideDurottonBol"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ДЮРАХЛОПОК: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(3ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] масло(1-5) фосфор(1-5)[/color]
+      [color=green] условия мутации: хлопок потенция 70+ здоровье 80+ 283-303K плазма нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideEggplant"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodEggplant"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БАКЛАЖАН: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-10) витамин(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideEggs"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodEggBoiled"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЯЙЦЕФРУКТ: [/color][color=lightgreen]жизнь(75ц) рост(6ц) созревание(12ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] яйцо(1-10)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGalaxythistle"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodGalaxythistle"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ГАЛАЧЕРТОПОЛОХ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] стеллибинин(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGarlic"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodGarlic"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЧЕСНОК: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(5ц) урожайность(3) потенция(25)[/color]
+      [color=lightblue] питательные вещества(1-10) витамин(1-4) аллицин(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGatfruit"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodGatfruit"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ГАТФРУКТ: [/color][color=lightgreen]жизнь(65ц) рост(25ц) созревание(25ц) урожайность(1) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-5) порох(1-5)[/color]
+      [color=green] условия мутации: лемонка потенция 70+ здоровье 80+ 273-313K CLF3 нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGlasscap"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGlassLog"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СТЕКЛОШЛЯПНИК: [/color][color=lightgreen]жизнь(80ц) рост(15ц) созревание(3ц) урожайность(5) потенция(1)[/color]
+      [color=red] источник стекла[/color]
+      [color=green] условия мутации: грибошляпник потенция 50+ здоровье 60+ 283-303K кремний нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGrape"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodGrape"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ВИНОГРАД: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(5ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-5) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideHop"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodWineshopCones"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ХМЕЛЬ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] этанол(1-10)[/color]
+      [color=green] условия мутации: пшеница потенция 50+ здоровье 60+ 283-303K кремний нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideRainbowweed"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLeavesCannabisRainbow"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]РАДУЖНАЯ КОНОПЛЯ: [/color][color=lightgreen]жизнь(75ц) рост(8ц) созревание(12ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] космические наркотики(1-10) липолицид(1-10) токсин майндбрейкер(1-5) счастье(1-5) псикодин(1-3)[/color]
+      [color=green] условия мутации: конопля потенция 70+ здоровье 50- 288-303K ТГК[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLemonka"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLemonKa"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛЕМОНКА: [/color][color=lightgreen]жизнь(80ц) рост(12ц) созревание(8ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] CLF3(1-2) уксус(1-4) калий(1-4)[/color]
+      [color=green] условия мутации: лемон потенция 70+ здоровье 80+ 273-313K CLF3 нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLemoon"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodLemoon"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛИЛУН: [/color][color=lightgreen]жизнь(90ц) рост(8ц) созревание(6ц) урожайность(4) потенция(10)[/color]
+      [color=lightblue] витамин(1-4) молоко(8-20)[/color]
+      [color=green] условия мутации: лемон потенция 50+ здоровье 60+ 273-313K молоко нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLifeweed"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLifeweedLeaves"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЖИЗНЕТРАВ: [/color][color=lightgreen]жизнь(40ц) рост(8ц) созревание(12ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] омнизин(1-20)[/color]
+      [color=red] потребляет кислород[/color]
+      [color=green] условия мутации: конопля потенция 80+ здоровье 95+ 288-303K радость доктора нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLime"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodLime"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛАЙМ: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-5) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMeatwheat"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMeatWheatBushel"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МЯСНАЯ ПШЕНИЦА: [/color][color=lightgreen]жизнь(25ц) рост(9ц) созревание(3ц) урожайность(2) потенция(5)[/color]
+      [color=lightblue] питательные вещества(1-20)[/color]
+      [color=red] источник мяса[/color]
+      [color=green] условия мутации: пшеница потенция 50+ здоровье 80+ 283-303K НЖП нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMimana"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodMimana"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МИМАН: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] витамин(1-2) токсин немоты(1-5)[/color]
+      [color=green] условия мутации: банан потенция 70+ здоровье 80+ 273-323K токсин немоты нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMint"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMintPlantLeaves"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МЯТА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] экстракт мяты(1-10)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMintcatnip"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCatNipLeaves"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОТОВИК: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] экстракт котовика(1-10)[/color]
+      [color=green] условия мутации: мята потенция 70+ здоровье 80+ 273-313K лимонный сок нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMoney"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSpaceCash"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ДЕНЕЖНОЕ ДЕРЕВО: [/color][color=lightgreen]жизнь(30ц) рост(6ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=red] источник денег[/color]
+      [color=green] условия мутации: яблоня потенция 50+ здоровье 60+ 273-323K бомба синдиката нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroomchanterelle"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodMushroom"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛИСИЧКИ: [/color][color=lightgreen]жизнь(35ц) рост(10ц) созревание(7ц) урожайность(5) потенция(1)[/color]
+      [color=lightblue] питательные вещества(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroomflyamarita"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodFlyAmanita"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МУХОМОРЫ: [/color][color=lightgreen]жизнь(25ц) рост(12ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-5) аматоксин(1-25)[/color]
+      [color=green] условия мутации: лисички потенция 50+ здоровье 30- 283-303K нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroomlingzhi"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodLingzhi"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛИНЧЖИ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] ультраваскулин(1-20) эпинефрин(1-20)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroommicena"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodLightmushroom"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СВЕТОГРИБ: [/color][color=lightgreen]жизнь(35ц) рост(10ц) созревание(7ц) урожайность(5) потенция(1)[/color]
+      [color=lightblue] питательные вещества(1-10) ноктюрин(1-2)[/color]
+      [color=green] условия мутации: лисички потенция 50+ здоровье 80+ 283-303K хлоральгидрат нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroomnameless"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodNamelessMushroom"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БЕЗЫМЯННЫЙ ГРИБ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(2ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] зумиум(5-10)[/color]
+      [color=green] условия мутации: линчжи потенция 50+ здоровье 30- 283-303K космические наркотики нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMushroomwhite"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodWhitemushroom"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БЕЛЫЙ ГРИБ: [/color][color=lightgreen]жизнь(35ц) рост(10ц) созревание(7ц) урожайность(5) потенция(1)[/color]
+      [color=lightblue] питательные вещества(1-33)[/color]
+      [color=green] условия мутации: лисички потенция 50+ здоровье 95-150 283-303K нутрименты нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideNettle"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodNettle"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КРАПИВА: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] гистамин(1-25)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideNettledeath"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodDeathNettle"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СМЕРТОКРАПИВА: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] серная кислота(1-15) фторсульфоновая кислота(1-15)[/color]
+      [color=green] условия мутации: крапива потенция 70+ здоровье 80+ 273-313K нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideNettleflesh"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMaterialBiomass"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПЛОТЬ: [/color][color=lightgreen]жизнь(30ц) рост(14ц) созревание(3ц) урожайность(1) потенция(20)[/color]
+      [color=lightblue] протеин(10-30)[/color]
+      [color=red] источник биомассы[/color]
+      [color=green] условия мутации: крапива потенция 50+ здоровье 90+ 273-313K кровь нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideOat"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideOatBushel"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ОВЕС: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-20) овес(1-20)[/color]
     </Box>
   </ColorBox>
 
@@ -335,6 +919,466 @@
 
 
 
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideOnion"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodOnion"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛУК: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] питательные вещества(1-10) витамины(1-4) аллицин(1-4)[/color]
+    </Box>
+  </ColorBox>
 
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideOnionred"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodOnionRed"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КРАСНЫЙ ЛУК: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(2) потенция(20)[/color]
+      [color=lightblue] питательные вещества(1-10) витамины(1-4) аллицин(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideOrange"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodOrange"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АПЕЛЬСИН: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-5) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePea"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodPeaPod"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ГОРОШЕК: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(3) потенция(25)[/color]
+      [color=lightblue] питательные вещества(1-3) витамины(1-2)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePealaughing"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodLaughinPeaPod"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СМЕЮЩИЙСЯ ГОРОШЕК: [/color][color=lightgreen]жизнь(25ц) рост(7ц) созревание(5ц) урожайность(3) потенция(20)[/color]
+      [color=lightblue] питательные вещества(1-3) сахар(1-10) смех(1-10)[/color]
+      [color=green] условия мутации: горошек потенция 50+ здоровье 80+ 288-313K сахар нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePineapple"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodPineapple"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АНАНАС: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-5) вода(1-4) витамины(1-2)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePizza"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodPizzaPineapple"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПИЦЦЕВИК: [/color][color=lightgreen]жизнь(55ц) рост(6ц) созревание(6ц) урожайность(1) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-20)[/color]
+      [color=green] условия мутации: ананас потенция 70+ здоровье 80+ 288-303K мука нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePlasteelcap"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePlastSteelLog"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПЛАСТОШЛЯПНИК: [/color][color=lightgreen]жизнь(80ц) рост(15ц) созревание(3ц) урожайность(3) потенция(1)[/color]
+      [color=red] источник пластстали[/color]
+      [color=green] условия мутации: сталешляпник потенция 70+ здоровье 80+ 283-303K плазма нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePoppy"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodPoppy"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МАК: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-2) бикаридин(1-20)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePoppylilly"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodLily"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЛИЛИЯ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-2) бикаридин(1-20)[/color]
+      [color=green] условия мутации: мак потенция 50+ здоровье 60+ 283-303K бикаридин нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePoppyspacemanstrumpet"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodSpacemansTrumpet"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОСМОНАВТСКАЯ ТРУБА: [/color][color=lightgreen]жизнь(20ц) рост(14ц) созревание(3ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-5) олигомеры полипирилия(1-15)[/color]
+      [color=green] условия мутации: лили потенция 70+ здоровье 80+ 283-303K бикаридин нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePotato"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodPotato"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КАРТОФЕЛЬ: [/color][color=lightgreen]жизнь(30ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-10) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePumpkin"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodPumpkin"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ТЫКВА: [/color][color=lightgreen]жизнь(55ц) рост(10ц) созревание(4ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] мякоть тыквы(1-20) витамины(1-5)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePyrotton"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePyrottonBol"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПИРОХЛОПОК: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(3ц) урожайность(2) потенция(5)[/color]
+      [color=lightblue] волокно(5-10) фогистон(4-8)[/color]
+      [color=green] условия мутации: хлопок потенция 70+ здоровье 80+ 283-303K фогистон нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideRice"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideRiceBushel"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]РИС: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(3ц) урожайность(3) потенция(5)[/color]
+      [color=lightblue] питательные вещества(1-5) рис(5-10)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSlippery"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSlipperyBlob"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЖИЖЕВИК: [/color][color=lightgreen]жизнь(30ц) рост(12ц) созревание(2ц) урожайность(4) потенция(10)[/color]
+      [color=lightblue] космическая смазка(10-20)[/color]
+      [color=green] условия мутации: картофель потенция 50+ здоровье 60+ 278-303K сварочное топливо нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSoy"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideGuideFoodSoybeans"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СОЯ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(3) потенция(5)[/color]
+      [color=lightblue] питательные вещества(1-2)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSteelcane"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuidePartRodMetal"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АРМАТУРНИК: [/color][color=lightgreen]жизнь(160ц) рост(5ц) созревание(10ц) урожайность(4) потенция(1)[/color]
+      [color=red] источник арматуры[/color]
+      [color=green] условия мутации: сахарный тростник потенция 50+ здоровье 60+ 278-303K железо нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSteelcap"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSteelLog"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]СТАЛЕШЛЯПНИК: [/color][color=lightgreen]жизнь(80ц) рост(15ц) созревание(3ц) урожайность(3) потенция(1)[/color]
+      [color=red] источник стали[/color]
+      [color=green] условия мутации: грибошляпник потенция 50+ здоровье 60+ 283-303K железо нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideSugarcane"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodSugarcane"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]САХАРНЫЙ ТРОСТНИК: [/color][color=lightgreen]жизнь(60ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color]
+      [color=lightblue] сахар(4-5)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTobacco"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLeavesTobacco"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ТАБАК: [/color][color=lightgreen]жизнь(75ц) рост(5ц) созревание(5ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] никотин(1-10)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTomato"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodTomato"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ТОМАТ: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-7) витамины(1-3) вода(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTomatoblood"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBloodTomato"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КРОВАВЫЙ ТОМАТ: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] кровь(1-10) витамины(1-4)[/color]
+      [color=green] условия мутации: томат / потенция 50+ / здоровье 60+ / 283-303 K / кровь / нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTomatoblue"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBlueTomato"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ГОЛУБОЙ ТОМАТ: [/color][color=lightgreen]жизнь(25ц) рост(8ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] питательные вещества(1-5) космическая смазка(5-15) витамины(1-4)[/color]
+      [color=green] условия мутации: томат потенция 50+ здоровье 60+ 283-303K космическая смазка нестабильный мутаген[/color]
+  </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTomatokiller"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideMobTomatoKiller"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ТОМАТ-УБИЙЦА: [/color][color=lightgreen]жизнь(25ц) рост(15ц) созревание(6ц) урожайность(2) потенция(10)[/color]
+      [color=lightblue] кровь(1-10) томатный сок(1-4)[/color]
+      [color=green] условия мутации: кровяной томат потенция 70+ здоровье 80+ 283-303K кровь нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideTreecap"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideWoodLog"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ДРЕВОШЛЯПНИК: [/color][color=lightgreen]жизнь(80ц) рост(15ц) созревание(3ц) урожайность(5) потенция(1)[/color]
+      [color=red] источник древесины[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideWatermellon"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodWatermelon"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]АРБУЗ: [/color][color=lightgreen]жизнь(55ц) рост(12ц) созревание(3ц) урожайность(1) потенция(1)[/color]
+      [color=lightblue] питательные вещества(1-10) вода(1-10) витамин(1-5)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideWheat"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideWheatBushel"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ПШЕНИЦА: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(3ц) урожайность(3) потенция(5)[/color]
+      [color=lightblue] питательные вещества(1-20) мука(5-20)[/color]
+    </Box>
+  </ColorBox>
 </Table>
 </Document>

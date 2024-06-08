@@ -30,6 +30,16 @@
       state: ambroziadeus
 
 - type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodAmbrosiaDeus
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
+  - type: Produce
+    seedId: ambrosiaDeus
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -82,6 +92,7 @@
       state: banana
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideFoodBanana
@@ -102,6 +113,7 @@
       state: berry
 
 - type: entity
+  noSpawn: true
   name: 
   parent: FoodProduceBase
   id: GuideFoodBerries
@@ -143,6 +155,7 @@
       state: berriesdeath
 
 - type: entity
+  noSpawn: true
   name: 
   parent: FoodProduceBase
   id: GuideFoodBerriesdeath
@@ -163,6 +176,7 @@
       state: berriesflame
 
 - type: entity
+  noSpawn: true
   name: 
   parent: FoodProduceBase
   id: GuideFoodBerriesflame
@@ -183,6 +197,7 @@
       state: berriesice
 
 - type: entity
+  noSpawn: true
   name: 
   parent: FoodProduceBase
   id: GuideFoodBerriesice
@@ -329,6 +344,7 @@
       state: cocoa
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideFoodCocoaPod
@@ -352,11 +368,12 @@
   noSpawn: true
   name:
   parent: FoodProduceBase
-  id: GuideFoodCoffeearabicaRaw3
+  id: GuideFoodCoffeearabicaRaw
   components:
   - type: Sprite
     sprite: Andromeda/Evil/plants/coffeearabica.rsi
-    state: produceroasted
+  - type: Produce
+    seedId: сoffeearabica
 
 - type: entity
   noSpawn: true
@@ -372,11 +389,12 @@
   noSpawn: true
   name:
   parent: FoodProduceBase
-  id: GuideFoodCoffeelibericaRaw3
+  id: GuideFoodCoffeelibericaRaw
   components:
   - type: Sprite
     sprite: Andromeda/Evil/plants/coffeeliberica.rsi
-    state: produceroasted
+  - type: Produce
+    seedId: сoffeeliberica
 
 - type: entity
   noSpawn: true
@@ -389,30 +407,37 @@
       state: coffeerobusta
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
-  id: GuideFoodCoffeerobustaRaw3
+  id: GuideFoodCoffeerobustaRaw
   components:
   - type: Sprite
     sprite: Andromeda/Evil/plants/coffeerobusta.rsi
-    state: produceroasted
-
-
-
-
-
-
-
+  - type: Produce
+    seedId: сoffeerobusta
 
 - type: entity
   noSpawn: true
   parent: SeedBase
   name:
-  id: GuideСoi
+  id: GuideCoi
   components:
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: coi
+
+- type: entity
+  noSpawn: true
+  name:
+  description:
+  id: GuideFoodKoibean
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/koibean.rsi
+  - type: Produce
+    seedId: koibean
 
 - type: entity
   noSpawn: true
@@ -426,6 +451,17 @@
 
 - type: entity
   noSpawn: true
+  parent: DrinkCanBaseFull
+  id: GuideDrinkColaCan
+  name:
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/cola.rsi
+  - type: Item
+    sprite: Objects/Consumable/Drinks/cola.rsi
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideСorn
@@ -433,6 +469,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: corn
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodCorn
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/corn.rsi
+  - type: Produce
+    seedId: corn
 
 - type: entity
   noSpawn: true
@@ -446,6 +493,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  id: GuideCottonBol
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/cotton.rsi
+  - type: Produce
+    seedId: cotton
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideDeathweed
@@ -453,6 +511,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: deathweed
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: ProduceBase
+  id: GuideDeathweedLeaves
+  components:
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/deathweed.rsi
+    - type: Produce
+      seedId: deathweed
 
 - type: entity
   noSpawn: true
@@ -466,6 +535,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  id: GuideDurottonBol
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/durotton.rsi
+  - type: Produce
+    seedId: durotton
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideEggplant
@@ -473,6 +553,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: eggplant
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodEggplant
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/eggplant.rsi
+  - type: Produce
+    seedId: eggplant
 
 - type: entity
   noSpawn: true
@@ -486,6 +577,17 @@
 
 - type: entity
   noSpawn: true
+  parent: FoodEggBase
+  id: GuideFoodEggBoiled
+  name:
+  components:
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "enum.DamageStateVisualLayers.Base" ]
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideGalaxythistle
@@ -496,13 +598,35 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodGalaxythistle
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/galaxythistle.rsi
+  - type: Produce
+    seedId: galaxythistle
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
-  id: GuideGalric
+  id: GuideGarlic
   components:
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: galric
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodGarlic
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/garlic.rsi
+  - type: Produce
+    seedId: garlic
 
 - type: entity
   noSpawn: true
@@ -516,6 +640,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodGatfruit
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/gatfruit.rsi
+  - type: Produce
+    seedId: gatfruit
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideGlasscap
@@ -523,6 +658,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: glasscap
+
+- type: entity
+  noSpawn: true
+  name:
+  id: GuideGlassLog
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/glasscap.rsi
+  - type: Produce
+    seedId: glasscap
 
 - type: entity
   noSpawn: true
@@ -536,6 +682,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodGrape
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/grape.rsi
+  - type: Produce
+    seedId: grape
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideHop
@@ -543,6 +700,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: hop
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodWineshopCones
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/wineshop.rsi
+  - type: Produce
+    seedId: wineshop
 
 - type: entity
   noSpawn: true
@@ -556,6 +724,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideLeavesCannabisRainbow
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+  - type: Produce
+    seedId: rainbowCannabis
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideLemonka
@@ -563,6 +742,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: lemonka
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideLemonKa
+  components:
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/lemonka.rsi
+    - type: Produce
+      seedId: LemonkaSeeds
 
 - type: entity
   noSpawn: true
@@ -576,6 +766,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodLemoon
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/lemoon.rsi
+  - type: Produce
+    seedId: lemoon
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideLifeweed
@@ -583,6 +784,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: lifeweed
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: ProduceBase
+  id: GuideLifeweedLeaves
+  components:
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/lifeweed.rsi
+    - type: Produce
+      seedId: lifeweed
 
 - type: entity
   noSpawn: true
@@ -596,6 +808,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodLime
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/lime.rsi
+  - type: Produce
+    seedId: lime
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideMeatwheat
@@ -603,6 +826,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: meatwheat
+
+- type: entity
+  noSpawn: true
+  name:
+  id: GuideMeatWheatBushel
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/meatwheat.rsi
+  - type: Produce
+    seedId: meatwheat
 
 - type: entity
   noSpawn: true
@@ -616,6 +850,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodMimana
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/mimana.rsi
+  - type: Produce
+    seedId: mimana
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideMint
@@ -623,6 +868,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: mint
+
+- type: entity
+  noSpawn: true
+  name:
+  id: GuideMintPlantLeaves
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/mint.rsi
+  - type: Produce
+    seedId: mintplant
 
 - type: entity
   noSpawn: true
@@ -636,6 +892,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  id: GuideCatNipLeaves
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/catnip.rsi
+  - type: Produce
+    seedId: catnip
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideMoney
@@ -643,6 +910,19 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: money
+
+- type: entity
+  noSpawn: true
+  parent: BaseItem
+  id: GuideSpaceCash
+  name:
+  components:
+  - type: Sprite
+    sprite: Objects/Economy/cash.rsi
+    state: cash
+    layers:
+    - state: cash
+      map: ["base"]
 
 - type: entity
   noSpawn: true
@@ -656,6 +936,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodMushroom
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/chanterelle.rsi
+  - type: Produce
+    seedId: chanterelle
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideMushroomflyamarita
@@ -663,6 +954,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: mushroomflyamarita
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodFlyAmanita
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/fly_amanita.rsi
+  - type: Produce
+    seedId: flyAmanita
 
 - type: entity
   noSpawn: true
@@ -676,6 +978,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodLingzhi
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/lingzhi.rsi
+  - type: Produce
+    seedId: lingzhi
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideMushroommicena
@@ -683,6 +996,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: mushroommicena
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodLightmushroom
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/lightmushroom.rsi
+  - type: Produce
+    seedId: lightmushroom
 
 - type: entity
   noSpawn: true
@@ -696,6 +1020,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodNamelessMushroom
+  components:
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/namelessmushroom.rsi
+    - type: Produce
+      seedId: namelessmushroom
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideMushroomwhite
@@ -703,6 +1038,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: mushroomwhite
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodWhitemushroom
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/whitemushroom.rsi
+  - type: Produce
+    seedId: whitemushroom
 
 - type: entity
   noSpawn: true
@@ -715,6 +1061,16 @@
       state: nettle
 
 - type: entity
+  name:
+  id: GuideFoodNettle
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/nettle.rsi
+  - type: Produce
+    seedId: nettle
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -723,6 +1079,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: nettledeath
+
+- type: entity
+  name:
+  id: GuideFoodDeathNettle
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/death_nettle.rsi
+  - type: Produce
+    seedId: deathNettle
 
 - type: entity
   noSpawn: true
@@ -735,6 +1101,16 @@
       state: nettleflesh
 
 - type: entity
+  parent: MaterialBase
+  id: GuideMaterialBiomass
+  name:
+  components:
+  - type: Sprite
+    sprite: /Textures/Objects/Misc/monkeycube.rsi
+    state: cube
+    color: "#8A9A5B"
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -743,6 +1119,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: oat
+
+- type: entity
+  name:
+  id: GuideOatBushel
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/oat.rsi
+  - type: Produce
+    seedId: oat
 
 - type: entity
   noSpawn: true
@@ -755,6 +1141,16 @@
       state: onion
 
 - type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodOnion
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/onion.rsi
+  - type: Produce
+    seedId: onion
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -763,6 +1159,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: onionred
+
+- type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodOnionRed
+  description: Purple despite the name.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/onion_red.rsi
+  - type: Produce
+    seedId: onionred
 
 - type: entity
   noSpawn: true
@@ -775,6 +1182,16 @@
       state: orange
 
 - type: entity
+  name:
+  parent: ProduceBase
+  id: GuideFoodOrange
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/orange.rsi
+  - type: Produce
+    seedId: orange
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -783,6 +1200,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: pea
+
+- type: entity
+  parent: FoodProduceBase
+  id: GuideFoodPeaPod
+  name:
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pea.rsi
+  - type: Produce
+    seedId: pea
 
 - type: entity
   noSpawn: true
@@ -795,6 +1222,16 @@
       state: pealaughing
 
 - type: entity
+  parent: FoodProduceBase
+  id: GuideFoodLaughinPeaPod
+  name:
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
+  - type: Produce
+    seedId: laughinPea
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -803,6 +1240,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: pineapple
+
+- type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodPineapple
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pineapple.rsi
+  - type: Produce
+    seedId: pineapple
 
 - type: entity
   noSpawn: true
@@ -815,6 +1262,16 @@
       state: pizza
 
 - type: entity
+  name:
+  parent: FoodInjectableBase
+  id: GuideFoodPizzaPineapple
+  components:
+  - type: Sprite
+    sprite: Objects/Consumable/Food/Baked/pizza.rsi
+    layers:
+    - state: pineapple
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -823,6 +1280,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: plasteelcap
+
+- type: entity
+  name:
+  id: GuidePlastSteelLog
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/plaststeelcap.rsi
+  - type: Produce
+    seedId: plaststeelcap
 
 - type: entity
   noSpawn: true
@@ -835,6 +1302,16 @@
       state: poppy
 
 - type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodPoppy
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/poppy.rsi
+  - type: Produce
+    seedId: poppy
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -843,6 +1320,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: poppylilly
+
+- type: entity
+  name:
+  parent: ProduceBase
+  id: GuideFoodLily
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/lily.rsi
+  - type: Produce
+    seedId: lily
 
 - type: entity
   noSpawn: true
@@ -855,6 +1342,16 @@
       state: poppyspacemanstrumpet
 
 - type: entity
+  name:
+  id: GuideFoodSpacemansTrumpet
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/spacemans_trumpet.rsi
+  - type: Produce
+    seedId: spacemansTrumpet
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -863,6 +1360,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: potato
+
+- type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodPotato
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/potato.rsi
+  - type: Produce
+    seedId: potato
 
 - type: entity
   noSpawn: true
@@ -875,6 +1382,16 @@
       state: pumpkin
 
 - type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodPumpkin
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pumpkin.rsi
+  - type: Produce
+    seedId: pumpkin
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -883,6 +1400,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: pyrotton
+
+- type: entity
+  name:
+  id: GuidePyrottonBol
+  parent: FoodProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pyrotton.rsi
+  - type: Produce
+    seedId: pyrotton
 
 - type: entity
   noSpawn: true
@@ -895,6 +1422,16 @@
       state: rice
 
 - type: entity
+  name:
+  id: GuideRiceBushel
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Andromeda/Objects/Specific/Hydroponics/rice.rsi
+  - type: Produce
+    seedId: rice
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -903,6 +1440,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: slippery
+
+- type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideSlipperyBlob
+  components:
+    - type: Sprite
+      sprite: Andromeda/Objects/Specific/Hydroponics/slipperyblob.rsi
+    - type: Produce
+      seedId: SlipperyBlobSeeds
 
 - type: entity
   noSpawn: true
@@ -915,6 +1462,17 @@
       state: soy
 
 - type: entity
+  name:
+  description:
+  id: GuideGuideFoodSoybeans
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/soybeans.rsi
+  - type: Produce
+    seedId: soybeans
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -923,6 +1481,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: steelcane
+
+- type: entity
+  parent: PartBase
+  id: GuidePartRodMetal
+  name:
+  components:
+  - type: Sprite
+    state: rods_5
+    layers:
+    - state: rods_5
+      map: ["base"]
 
 - type: entity
   noSpawn: true
@@ -935,6 +1504,16 @@
       state: steelcap
 
 - type: entity
+  name:
+  id: GuideSteelLog
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/steelcap.rsi
+  - type: Produce
+    seedId: steelcap
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -945,6 +1524,16 @@
       state: sugarcane
 
 - type: entity
+  name:
+  id: GuideFoodSugarcane
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/sugarcane.rsi
+  - type: Produce
+    seedId: sugarcane
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -953,6 +1542,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: tobacco
+
+- type: entity
+  name:
+  parent: ProduceBase
+  id: GuideLeavesTobacco
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/tobacco.rsi
+  - type: Produce
+    seedId: tobacco
 
 - type: entity
   noSpawn: true
@@ -975,6 +1574,16 @@
       state: tomato
 
 - type: entity
+  name:
+  parent: [FoodProduceBase, ItemHeftyBase]
+  id: GuideFoodTomato
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/tomato.rsi
+  - type: Produce
+    seedId: tomato
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -983,6 +1592,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: tomatoblood
+
+- type: entity
+  name:
+  parent: ProduceBase
+  id: GuideFoodBloodTomato
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/blood_tomato.rsi
+  - type: Produce
+    seedId: bloodTomato
 
 - type: entity
   noSpawn: true
@@ -995,6 +1614,16 @@
       state: tomatoblue
 
 - type: entity
+  name:
+  parent: ProduceBase
+  id: GuideFoodBlueTomato
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/blue_tomato.rsi
+  - type: Produce
+    seedId: blueTomato
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -1003,6 +1632,23 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: tomatokiller
+
+- type: entity
+  id: GuideMobTomatoKiller
+  parent: 
+  - BaseSimpleMob
+  - MobDamageable
+  - MobBloodstream
+  - MobFlammable
+  - MobCombat
+  name:
+  components:
+  - type: Sprite
+    sprite: Mobs/Demons/tomatokiller.rsi 
+    noRot: true
+    layers:
+      - map: [ "enum.DamageStateVisualLayers.Base" ]
+        state: alive
 
 - type: entity
   noSpawn: true
@@ -1015,6 +1661,16 @@
       state: treecap
 
 - type: entity
+  name:
+  id: GuideWoodLog
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/towercap.rsi
+  - type: Produce
+    seedId: towercap
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -1025,6 +1681,16 @@
       state: watermellon
 
 - type: entity
+  name:
+  parent: [FoodProduceBase, ItemHeftyBase]
+  id: GuideFoodWatermelon
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/watermelon.rsi
+  - type: Produce
+    seedId: watermelon
+
+- type: entity
   noSpawn: true
   parent: SeedBase
   name:
@@ -1033,3 +1699,13 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: wheat
+
+- type: entity
+  name:
+  id: GuideWheatBushel
+  parent: ProduceBase
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/wheat.rsi
+  - type: Produce
+    seedId: wheat
