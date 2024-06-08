@@ -154,7 +154,6 @@
       [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 323-373K плазма нестабильный мутаген[/color]      
     </Box>
   </ColorBox>
-
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
       <GuideEntityEmbed Entity="GuideBerriesice"/>
@@ -171,5 +170,171 @@
       [color=green] условия мутации: ягоды потенция 80+ здоровье 80+ 173-223K криптобиолин нестабильный мутаген[/color]
     </Box>
   </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideBungo"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodBungo"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]БУНГО: [/color][color=lightgreen]жизнь(50ц) рост(8ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-10) энзим(1-10)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCabbage"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodCabbage"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КАПУСТА: [/color][color=lightgreen]жизнь(50ц) рост(7ц) созревание(5ц) урожайность(3) потенция(10)[/color][color=lightblue] питательные вещества(1-10) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCannabis"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideLeavesCannabis"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОНОПЛЯ: [/color][color=lightgreen]жизнь(75ц) рост(8ц) созревание(12ц) урожайность(2) потенция(20)[/color][color=lightblue] ТГК(1-10)[/color]
+      [color=green] условия мутации: галачертополох потенция 50+ здоровье 30- 283-303K нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCarrot"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodCarrot"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]МОРКОВЬ: [/color][color=lightgreen]жизнь(25ц) рост(10ц) созревание(3ц) урожайность(3) потенция(10)[/color][color=lightblue] морковный сок(1-5) окулин(2-6) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideChili"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodChiliPepper"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЧИЛИ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(2) потенция(20)[/color][color=lightblue] капсациновое масло(1-10) питательные вещества(1-4) витамины(1-4)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideChilli"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodChillyPepper"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]ЧИЛЛИ: [/color][color=lightgreen]жизнь(25ц) рост(6ц) созревание(6ц) урожайность(2) потенция(20)[/color][color=lightblue] ледяное масло(1-10) питательные вещества(1-4) витамины(1-4)[/color]
+      [color=green] условия мутации: чили потенция 50+ здоровье 60+ 283-308K азот нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCocoa"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodCocoaPod"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КАКАО: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(6) потенция(10)[/color][color=lightblue] витамины(1) питательные вещества(2) какао порошок(1)[/color]
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideCoffeearabica"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodCoffeearabicaRaw3"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОФЕ АРАБИКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе арабики(1-10)[/color]
+    </Box>
+  </ColorBox>
+
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideСoffeeliberica"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodCoffeelibericaRaw3"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОФЕ ЛИБЕРИКА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе либерики(1-10)[/color]
+      [color=green] условия мутации: кофе арабика потенция 50+ здоровье 60+ 288-303K кофе нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideСoffeerobusta"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
+      <GuideEntityEmbed Entity="GuideFoodCoffeerobustaRaw3"/>
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Left" VerticalAlignment="Center" Margin="2">
+      [color=green]КОФЕ РОБУСТА: [/color][color=lightgreen]жизнь(50ц) рост(6ц) созревание(6ц) урожайность(3) потенция(10)[/color][color=lightblue] витамины(1-2) питательные вещества(1-4) порошок кофе робуста(1-10)[/color]
+      [color=green] условия мутации: кофе арабика потенция 50+ здоровье 60+ 288-303K кофейный ликер нестабильный мутаген[/color]
+    </Box>
+  </ColorBox>
+
+
+
+
+
+
+
+
+
+
 </Table>
 </Document>

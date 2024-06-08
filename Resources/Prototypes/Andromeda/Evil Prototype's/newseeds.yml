@@ -332,7 +332,7 @@
   lifespan: 50
   maturation: 6
   production: 6
-  yield: 6
+  yield: 3
   idealLight: 7
   waterConsumption: 1
   nutrientConsumption: 0.8
@@ -383,7 +383,7 @@
   lifespan: 50
   maturation: 6
   production: 6
-  yield: 6
+  yield: 3
   idealLight: 7
   waterConsumption: 1
   nutrientConsumption: 0.8
@@ -415,7 +415,7 @@
   lifespan: 50
   maturation: 6
   production: 6
-  yield: 6
+  yield: 3
   idealLight: 7
   waterConsumption: 1
   nutrientConsumption: 0.8

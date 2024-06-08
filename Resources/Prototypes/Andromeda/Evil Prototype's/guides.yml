@@ -187,20 +187,10 @@
   parent: FoodProduceBase
   id: GuideFoodBerriesice
   components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 15
-        reagents:
-        - ReagentId: Fresium
-          Quantity: 5
-        - ReagentId: Frostoil
-          Quantity: 10
   - type: Sprite
     sprite: Andromeda/Evil/plants/berriesice.rsi
   - type: Produce
     seedId: berriesice
-
 
 - type: entity
   noSpawn: true
@@ -214,6 +204,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodBungo
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/bungo.rsi
+  - type: Produce
+    seedId: bungo
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideCabbage
@@ -221,6 +222,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: cabbage
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodCabbage
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/cabbage.rsi
+  - type: Produce
+    seedId: cabbage
 
 - type: entity
   noSpawn: true
@@ -234,6 +246,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: ProduceBase
+  id: GuideLeavesCannabis
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/cannabis.rsi
+  - type: Produce
+    seedId: cannabis
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideCarrot
@@ -241,6 +264,17 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: carrot
+
+- type: entity
+  noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodCarrot
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/carrot.rsi
+  - type: Produce
+    seedId: carrots
 
 - type: entity
   noSpawn: true
@@ -254,6 +288,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodChiliPepper
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/chili.rsi
+    - type: Produce
+      seedId: chili
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideChilli
@@ -264,6 +309,17 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodChillyPepper
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/chilly.rsi
+    - type: Produce
+      seedId: chilly
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideCocoa
@@ -271,6 +327,16 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: cocoa
+
+- type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodCocoaPod
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/cocoa.rsi
+  - type: Produce
+    seedId: cocoa
 
 - type: entity
   noSpawn: true
@@ -284,6 +350,16 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodCoffeearabicaRaw3
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeearabica.rsi
+    state: produceroasted
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideСoffeeliberica
@@ -294,6 +370,16 @@
 
 - type: entity
   noSpawn: true
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodCoffeelibericaRaw3
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeeliberica.rsi
+    state: produceroasted
+
+- type: entity
+  noSpawn: true
   parent: SeedBase
   name:
   id: GuideСoffeerobusta
@@ -301,6 +387,22 @@
     - type: Sprite
       sprite: Andromeda/Evil/guides/guidebothany.rsi
       state: coffeerobusta
+
+- type: entity
+  name:
+  parent: FoodProduceBase
+  id: GuideFoodCoffeerobustaRaw3
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plants/coffeerobusta.rsi
+    state: produceroasted
+
+
+
+
+
+
+
 
 - type: entity
   noSpawn: true
