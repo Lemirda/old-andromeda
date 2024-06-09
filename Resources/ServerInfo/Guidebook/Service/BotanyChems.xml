@@ -1,0 +1,25 @@
+<Document>
+
+## Химикаты, воздействующие на растения
+
+<GuideReagentEmbed Reagent="Water"/>
+<GuideReagentEmbed Reagent="EZNutrient"/>
+<GuideReagentEmbed Reagent="BaseAlcohol"/>
+
+<GuideReagentEmbed Reagent="Diethylamine"/>
+<GuideReagentEmbed Reagent="RobustHarvest"/>
+<GuideReagentEmbed Reagent="PlantBooster"/>
+
+<GuideReagentEmbed Reagent="Nutriment"/>
+<GuideReagentEmbed Reagent="Vitamin"/>
+<GuideReagentEmbed Reagent="PumpkinFlesh"/>
+<GuideReagentEmbed Reagent="Dylovene"/>
+<GuideReagentEmbed Reagent="Cryoxadone"/>
+<GuideReagentEmbed Reagent="Necrosol"/>
+
+<GuideReagentEmbed Reagent="Phalanximine"/>
+
+<GuideReagentEmbed Reagent="UnstableMutagen"/>
+<GuideReagentEmbed Reagent="Left4Zed"/>
+
+</Document>

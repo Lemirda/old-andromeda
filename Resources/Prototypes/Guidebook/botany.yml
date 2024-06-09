@@ -4,16 +4,24 @@
   text: "/ServerInfo/Guidebook/Service/Botany.xml"
 # A-13 BothanyRenewal start
   children:
-  - Plants
-  - Mutations
+  - BotanyPlants
+  - BotanyMutations
+  - BotanyChems
 
 - type: guideEntry
-  id: Plants
+  id: BotanyPlants
   name: Растения
-  text: "/ServerInfo/Guidebook/Service/Plants.xml"
+  text: "/ServerInfo/Guidebook/Service/BotanyPlants.xml"
+  filterEnabled: True
 
 - type: guideEntry
-  id: Mutations
+  id: BotanyMutations
   name: Мутации
-  text: "/ServerInfo/Guidebook/Service/Mutations.xml"
+  text: "/ServerInfo/Guidebook/Service/BotanyMutations.xml"
+
+- type: guideEntry
+  id: BotanyChems
+  name: Химикаты
+  text: "/ServerInfo/Guidebook/Service/BotanyChems.xml"
+  filterEnabled: True
 # A-13 BothanyRenewal end

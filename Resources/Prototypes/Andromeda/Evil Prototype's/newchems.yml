@@ -1,7 +1,8 @@
 - type: reagent
   id: MintExtract
   name: экстракт мяты
-  parent: BaseJuice
+  group: Foods
+  # parent: BaseJuice
   desc: Приятно пахнущий мятный экстракт
   suffix: Андромеда
   physicalDesc: мятное
@@ -21,7 +22,8 @@
 - type: reagent
   id: CatNipExtract
   name: экстракт котовика
-  parent: BaseJuice
+  group: Foods
+  # parent: BaseJuice
   desc: Подозрительно муррчащий экстракт котовика
   suffix: Андромеда
   physicalDesc: котомятное
@@ -68,7 +70,8 @@
 
 - type: reagent
   id: MilkThatMakesYouMurr
-  name: милоко
+  name: Foods
+  # group: Drinks
   group: Special
   desc: Чистая сущность фелинидов. Заставляет вас Муррчать!
   suffix: Андромеда
