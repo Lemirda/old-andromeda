@@ -910,15 +910,6 @@
       [color=lightblue] питательные вещества(1-20) овес(1-20)[/color]
     </Box>
   </ColorBox>
-
-
-
-
-
-
-
-
-
   <ColorBox>
     <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2">
       <GuideEntityEmbed Entity="GuideOnion"/>

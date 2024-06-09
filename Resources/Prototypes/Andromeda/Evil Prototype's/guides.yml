@@ -1061,6 +1061,7 @@
       state: nettle
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideFoodNettle
   parent: ProduceBase
@@ -1081,6 +1082,7 @@
       state: nettledeath
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideFoodDeathNettle
   parent: ProduceBase
@@ -1101,6 +1103,7 @@
       state: nettleflesh
 
 - type: entity
+  noSpawn: true
   parent: MaterialBase
   id: GuideMaterialBiomass
   name:
@@ -1121,6 +1124,7 @@
       state: oat
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideOatBushel
   parent: ProduceBase
@@ -1141,6 +1145,7 @@
       state: onion
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideFoodOnion
@@ -1161,6 +1166,7 @@
       state: onionred
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideFoodOnionRed
@@ -1182,6 +1188,7 @@
       state: orange
 
 - type: entity
+  noSpawn: true
   name:
   parent: ProduceBase
   id: GuideFoodOrange
@@ -1202,6 +1209,7 @@
       state: pea
 
 - type: entity
+  noSpawn: true
   parent: FoodProduceBase
   id: GuideFoodPeaPod
   name:
@@ -1222,6 +1230,7 @@
       state: pealaughing
 
 - type: entity
+  noSpawn: true
   parent: FoodProduceBase
   id: GuideFoodLaughinPeaPod
   name:
@@ -1242,6 +1251,7 @@
       state: pineapple
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideFoodPineapple
@@ -1262,6 +1272,7 @@
       state: pizza
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodInjectableBase
   id: GuideFoodPizzaPineapple
@@ -1282,6 +1293,7 @@
       state: plasteelcap
 
 - type: entity
+  noSpawn: true
   name:
   id: GuidePlastSteelLog
   parent: ProduceBase
@@ -1302,6 +1314,7 @@
       state: poppy
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideFoodPoppy
@@ -1322,6 +1335,7 @@
       state: poppylilly
 
 - type: entity
+  noSpawn: true
   name:
   parent: ProduceBase
   id: GuideFoodLily
@@ -1342,6 +1356,7 @@
       state: poppyspacemanstrumpet
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideFoodSpacemansTrumpet
   parent: FoodProduceBase
@@ -1362,6 +1377,7 @@
       state: potato
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideFoodPotato
@@ -1382,6 +1398,7 @@
       state: pumpkin
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideFoodPumpkin
@@ -1402,6 +1419,7 @@
       state: pyrotton
 
 - type: entity
+  noSpawn: true
   name:
   id: GuidePyrottonBol
   parent: FoodProduceBase
@@ -1422,6 +1440,7 @@
       state: rice
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideRiceBushel
   parent: ProduceBase
@@ -1442,6 +1461,7 @@
       state: slippery
 
 - type: entity
+  noSpawn: true
   name:
   parent: FoodProduceBase
   id: GuideSlipperyBlob
@@ -1462,6 +1482,7 @@
       state: soy
 
 - type: entity
+  noSpawn: true
   name:
   description:
   id: GuideGuideFoodSoybeans
@@ -1483,6 +1504,7 @@
       state: steelcane
 
 - type: entity
+  noSpawn: true
   parent: PartBase
   id: GuidePartRodMetal
   name:
@@ -1504,6 +1526,7 @@
       state: steelcap
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideSteelLog
   parent: ProduceBase
@@ -1524,6 +1547,7 @@
       state: sugarcane
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideFoodSugarcane
   parent: ProduceBase
@@ -1544,6 +1568,7 @@
       state: tobacco
 
 - type: entity
+  noSpawn: true
   name:
   parent: ProduceBase
   id: GuideLeavesTobacco
@@ -1574,6 +1599,7 @@
       state: tomato
 
 - type: entity
+  noSpawn: true
   name:
   parent: [FoodProduceBase, ItemHeftyBase]
   id: GuideFoodTomato
@@ -1614,6 +1640,7 @@
       state: tomatoblue
 
 - type: entity
+  noSpawn: true
   name:
   parent: ProduceBase
   id: GuideFoodBlueTomato
@@ -1634,6 +1661,7 @@
       state: tomatokiller
 
 - type: entity
+  noSpawn: true
   id: GuideMobTomatoKiller
   parent: 
   - BaseSimpleMob
@@ -1661,6 +1689,7 @@
       state: treecap
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideWoodLog
   parent: ProduceBase
@@ -1681,6 +1710,7 @@
       state: watermellon
 
 - type: entity
+  noSpawn: true
   name:
   parent: [FoodProduceBase, ItemHeftyBase]
   id: GuideFoodWatermelon
@@ -1701,6 +1731,7 @@
       state: wheat
 
 - type: entity
+  noSpawn: true
   name:
   id: GuideWheatBushel
   parent: ProduceBase
