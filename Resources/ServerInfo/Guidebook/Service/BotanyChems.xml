@@ -2,9 +2,9 @@
 
 ## Химикаты, воздействующие на растения
 
-<GuideReagentEmbed Reagent="Water"/>
+<GuideReagentEmbed Reagent="GuideWater"/>
 <GuideReagentEmbed Reagent="EZNutrient"/>
-<GuideReagentEmbed Reagent="BaseAlcohol"/>
+<GuideReagentEmbed Reagent="GuideBaseAlcohol"/>
 
 <GuideReagentEmbed Reagent="Diethylamine"/>
 <GuideReagentEmbed Reagent="RobustHarvest"/>

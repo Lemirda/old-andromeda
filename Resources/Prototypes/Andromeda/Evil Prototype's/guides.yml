@@ -1740,3 +1740,27 @@
     sprite: Objects/Specific/Hydroponics/wheat.rsi
   - type: Produce
     seedId: wheat
+
+- type: reagent
+  id: GuideBaseAlcohol
+  noSpawn: true
+  name: Алкоголь
+  parent: BaseAlcohol
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: vermouth
+  color: "#4CB7E3"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/vermouthglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+
+- type: reagent
+  id: GuideWater
+  noSpawn: true
+  name: Вода и жидкости
+  parent: BaseJuice
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: banana
+  color: "#4CB7E3"
