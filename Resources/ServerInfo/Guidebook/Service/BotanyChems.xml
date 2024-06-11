@@ -1,25 +1,91 @@
 <Document>
-
-## Химикаты, воздействующие на растения
-
+## Базовые химикаты
 <GuideReagentEmbed Reagent="GuideWater"/>
-<GuideReagentEmbed Reagent="EZNutrient"/>
 <GuideReagentEmbed Reagent="GuideBaseAlcohol"/>
-
+<GuideReagentEmbed Reagent="EZNutrient"/>
+## Увеличители роста и потенции
 <GuideReagentEmbed Reagent="Diethylamine"/>
 <GuideReagentEmbed Reagent="RobustHarvest"/>
 <GuideReagentEmbed Reagent="PlantBooster"/>
-
+## Исцеляющие химикаты
 <GuideReagentEmbed Reagent="Nutriment"/>
 <GuideReagentEmbed Reagent="Vitamin"/>
 <GuideReagentEmbed Reagent="PumpkinFlesh"/>
 <GuideReagentEmbed Reagent="Dylovene"/>
 <GuideReagentEmbed Reagent="Cryoxadone"/>
 <GuideReagentEmbed Reagent="Necrosol"/>
-
+## Корректирующие химикаты
 <GuideReagentEmbed Reagent="Phalanximine"/>
-
+## Мутирующие химикаты
 <GuideReagentEmbed Reagent="UnstableMutagen"/>
 <GuideReagentEmbed Reagent="Left4Zed"/>
-
+## Химикаты, получаемые из растений
+<GuideReagentEmbed Reagent="Flour"/>
+<GuideReagentEmbed Reagent="Oats"/>
+<GuideReagentEmbed Reagent="MuteToxin"/>
+<GuideReagentEmbed Reagent="JuiceCarrot"/>
+<GuideReagentEmbed Reagent="Oculine"/>
+<GuideReagentEmbed Reagent="Laughter"/>
+<GuideReagentEmbed Reagent="Milk"/>
+<GuideReagentEmbed Reagent="Sugar"/>
+<GuideReagentEmbed Reagent="JuiceTomato"/>
+<GuideReagentEmbed Reagent="Cornmeal"/>
+<GuideReagentEmbed Reagent="Allicin"/>
+<GuideReagentEmbed Reagent="Egg"/>
+<GuideReagentEmbed Reagent="THC"/>
+<GuideReagentEmbed Reagent="Lipolicide"/>
+<GuideReagentEmbed Reagent="MindbreakerToxin"/>
+<GuideReagentEmbed Reagent="Happiness"/>
+<GuideReagentEmbed Reagent="Psicodine"/>
+<GuideReagentEmbed Reagent="Nicotine"/>
+<GuideReagentEmbed Reagent="Histamine"/>
+<GuideReagentEmbed Reagent="SulfuricAcid"/>
+<GuideReagentEmbed Reagent="FluorosulfuricAcid"/>
+<GuideReagentEmbed Reagent="CapsaicinOil"/>
+<GuideReagentEmbed Reagent="Aloe"/>
+<GuideReagentEmbed Reagent="Dermaline"/>
+<GuideReagentEmbed Reagent="Ultravasculine"/>
+<GuideReagentEmbed Reagent="Epinephrine"/>
+<GuideReagentEmbed Reagent="Bicaridine"/>
+<GuideReagentEmbed Reagent="Kelotane"/>
+<GuideReagentEmbed Reagent="Omnizine"/>
+<GuideReagentEmbed Reagent="SpaceDrugs"/>
+<GuideReagentEmbed Reagent="Desoxyephedrine"/>
+<GuideReagentEmbed Reagent="Stellibinin"/>
+<GuideReagentEmbed Reagent="Amatoxin"/>
+<GuideReagentEmbed Reagent="Sulfur"/>
+<GuideReagentEmbed Reagent="Rice"/>
+<GuideReagentEmbed Reagent="PolypyryliumOligomers"/>
+<GuideReagentEmbed Reagent="CarpoToxin"/>
+<GuideReagentEmbed Reagent="Enzyme"/>
+<GuideReagentEmbed Reagent="Phlogiston"/>
+<GuideReagentEmbed Reagent="Omnizine"/>
+<GuideReagentEmbed Reagent="Toxin"/>
+<GuideReagentEmbed Reagent="ChloralHydrate"/>
+<GuideReagentEmbed Reagent="SpaceLube"/>
+<GuideReagentEmbed Reagent="ChlorineTrifluoride"/>
+<GuideReagentEmbed Reagent="Vinegar"/>
+<GuideReagentEmbed Reagent="Potassium"/>
+<GuideReagentEmbed Reagent="Iron"/>
+<GuideReagentEmbed Reagent="Zoomium"/>
+<GuideReagentEmbed Reagent="Cola"/>
+<GuideReagentEmbed Reagent="Blood"/>
+<GuideReagentEmbed Reagent="Protein"/>
+<GuideReagentEmbed Reagent="Phosphorus"/>
+<GuideReagentEmbed Reagent="Fiber"/>
+<GuideReagentEmbed Reagent="CoffeerobustaPowder"/>
+<GuideReagentEmbed Reagent="CoffeelibericaPowder"/>
+<GuideReagentEmbed Reagent="CoffeearabicaPowder"/>
+<GuideReagentEmbed Reagent="Ethanol"/>
+<GuideReagentEmbed Reagent="Nocturine"/>
+<GuideReagentEmbed Reagent="Leporazine"/>
+<GuideReagentEmbed Reagent="Insuzine"/>
+<GuideReagentEmbed Reagent="Pyrazine"/>
+<GuideReagentEmbed Reagent="Frostoil"/>
+<GuideReagentEmbed Reagent="Fresium"/>
+<GuideReagentEmbed Reagent="Lead"/>
+<GuideReagentEmbed Reagent="Barozine"/>
+<GuideReagentEmbed Reagent="Leporazine"/>
+<GuideReagentEmbed Reagent="MintExtract"/>
+<GuideReagentEmbed Reagent="CatNipExtract"/>
 </Document>

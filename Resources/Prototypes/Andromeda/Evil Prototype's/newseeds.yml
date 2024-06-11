@@ -436,14 +436,15 @@
 
 - type: seed
   id: durotton
-  name: дюрапластик
+  name: дюрахлопок
   noun: seeds-noun-seeds
-  displayName: куст дюрапластика
+  displayName: куст дюрахлопка
   suffix: Андромеда
   plantRsi: Andromeda/Evil/plants/durotton.rsi
   packetPrototype: DurottonSeeds
   productPrototypes:
     - DurottonBol
+  harvestRepeat: NoRepeat
   lifespan: 25
   maturation: 8
   production: 3

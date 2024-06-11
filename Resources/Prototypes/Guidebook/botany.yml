@@ -5,19 +5,18 @@
 # A-13 BothanyRenewal start
   children:
   - BotanyPlants
-  - BotanyMutations
+  - BotanyGenetics
   - BotanyChems
 
 - type: guideEntry
   id: BotanyPlants
   name: Растения
   text: "/ServerInfo/Guidebook/Service/BotanyPlants.xml"
-  filterEnabled: True
 
 - type: guideEntry
-  id: BotanyMutations
-  name: Мутации
-  text: "/ServerInfo/Guidebook/Service/BotanyMutations.xml"
+  id: BotanyGenetics
+  name: Генетика
+  text: "/ServerInfo/Guidebook/Service/BotanyGenetics.xml"
 
 - type: guideEntry
   id: BotanyChems

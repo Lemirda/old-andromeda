@@ -1,0 +1,379 @@
+<Document>
+
+## Мутации
+Растения, обработанные [color=cyan]нестабильным мутагеном[/color], подвергнутся случайным генетическим мутациям, которые изменят их гены и вызовут изменения в их признаках. Вы можете сохранить растения с нужными вам мутациями, собрав их семена.
+Чем больше нестабильного мутагена вы используете, тем больше мутаций вы получите. Поскольку многие гены важны для выживания, большинство мутаций приведут к гибели растения.
+
+<Table Columns="2">
+  <ColorBox Color="#147712">
+    <Box>
+      .№.
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box>
+      ХАРАКТЕРИСТИКИ
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ...
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      СОПРОТИВЛЕНИЯ (55 генов)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Питательные вещества (потребление)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.2
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Вода (потребление)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.3
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Температура (идеальная)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.4
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Температура (сопротивление)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.5
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Токсины (сопротивление)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.6
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Давление (нижний порог)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.6
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Давление (верхний порог)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.7
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Вредители (сопротивление)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      1.8
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Сорняки (сопротивление)
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ...
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ХАРАКТЕРИСТИКИ (60 генов)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      2.1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Выносливость
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      2.2
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Количество плодов
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      2.3
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Время жизни
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      2.4
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Скорость созревания растения
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      2.5
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Скорость созревания плода
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      2.6
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ПОТЕНЦИЯ
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ...
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      СМЕРТЬ РАСТЕНИЯ (30 генов)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      3.1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Смерть растения
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ...
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ВЕСЕЛЬЕ (90 генов)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      4.1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Безсемянное
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      4.2
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Подскальзывание
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      4.3
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Разумное
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      4.4
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Светящееся
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      4.5
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Биолюминесцентное
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      4.6
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Превращение в кудзу
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      4.7
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Крик
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ...
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      СМЕНА ТИПА (10 генов)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      5.1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Смена типа растения
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ...
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ГАЗЫ (5 генов)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      6.1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Выделение газа (кислород, водород, диоксид углерода, плазма, тритий, водяные пары, аммиак, оксид азота, фрезон)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      6.2
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Потребление газа (кислород, водород, диоксид углерода, плазма, тритий, водяные пары, аммиак, оксид азота, фрезон)
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ...
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ХИМИКАТЫ (20 генов)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      7.1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Добавление химикатов в плоды (96 видов)
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      ...
+    </Box>
+  </ColorBox>
+  <ColorBox Color="#147712">
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      СМЕНА ВИДА (10 генов)
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      8.1
+    </Box>
+  </ColorBox>
+  <ColorBox>
+    <Box HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+      Изменение вида растения (не работает, из-за особенности Андромедовской сборки, у нас другой тип мутации).
+    </Box>
+  </ColorBox>
+</Table>
+</Document>
