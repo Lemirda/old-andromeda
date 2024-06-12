@@ -368,6 +368,16 @@ namespace Content.Server.RoundEnd
                 SetAutoCallTime();
             }
         }
+
+        // A-13 PDA shift time start
+        public TimeSpan TimeToCallShuttle()
+        {
+            var autoCalledBefore = _autoCalledBefore
+                ? _cfg.GetCVar(CCVars.EmergencyShuttleAutoCallExtensionTime)
+                : _cfg.GetCVar(CCVars.EmergencyShuttleAutoCallTime);
+            return AutoCallStartTime + TimeSpan.FromMinutes(autoCalledBefore);
+        }
+        // A-13 PDA shift time end
     }
 
     public sealed class RoundEndSystemChangedEvent : EntityEventArgs

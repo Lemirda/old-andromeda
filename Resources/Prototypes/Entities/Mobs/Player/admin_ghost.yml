@@ -93,7 +93,7 @@
     prototypes: [ MobAghostGear ]
   - type: BypassInteractionChecks
   # A-13 hug moment start
-    - type: InteractionPopup
+  - type: InteractionPopup
     successChance: 1.0
     interactSuccessString: petting-success-cat
     interactFailureString: petting-failure-generic
