@@ -1,9 +1,9 @@
 - type: entity
-  suffix: Andromeda
+  suffix: Андромеда
   parent: ClothingOuterWinterCoatToggleable
   id: ClothingOuterErrorAdminWho
   name: накидка незнакомца
-  description: Тёмное пальто, выглядит жутко. Оно скрывает своего владельца
+  description: Тёмное пальто, выглядит жутко. Оно скрывает своего владельца.
   components:
   - type: Sprite
     sprite: Andromeda/NIKforest/erroadmwho.rsi
