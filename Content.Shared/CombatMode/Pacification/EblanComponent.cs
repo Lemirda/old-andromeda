@@ -1,4 +1,6 @@
+using Content.Shared.Alert;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 
 namespace Content.Shared.CombatMode.Pacification;
 
@@ -40,5 +42,8 @@ public sealed partial class EblanComponent : Component
     /// </summary>
     [DataField]
     public EntityUid? LastAttackedEntity2 = null;
+
+    [DataField]
+    public ProtoId<AlertPrototype> PacifiedAlert2 = "Pacified";
 
 }

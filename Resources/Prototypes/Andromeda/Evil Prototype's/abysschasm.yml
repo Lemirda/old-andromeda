@@ -1,0 +1,78 @@
+- type: Tag
+  id: CarpetAbyss
+
+- type: entity
+  id: CarpetAbyss
+  name: бездна
+  description: Вы ощущаете на себе взор тысяч голодных глаз...
+  parent: CarpetBase
+  suffix: Андромеда
+  components:
+  - type: Clickable
+  - type: IconSmooth
+    key: full
+    base: chasm
+  - type: Sprite
+    sprite: Andromeda/Evil/floor/basalt_carpet.rsi
+  - type: Icon
+    sprite: Andromeda/Evil/floor/basalt_carpet.rsi
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 10
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              FloorCarpetItemAbyss:
+                min: 1
+                max: 1
+
+- type: stack
+  id: FloorCarpetAbyss
+  name: бездонный стак
+  spawn: FloorCarpetItemAbyss
+  maxCount: 10
+  itemSize: 5                
+
+- type: entity
+  name: бездонный ковер (10)
+  parent: FloorCarpetItemAbyss
+  id: FloorCarpetItemAbyss10
+  components:
+  - type: Stack
+    count: 10
+
+- type: entity
+  name: бездонный ковер
+  description: Иногда ковер начинает всматриваться в вас...
+  parent: FloorTileItemBase
+  id: FloorCarpetItemAbyss
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/floor/basalt_carpet_small.rsi
+    state: small
+  - type: Item
+    sprite: Andromeda/Evil/floor/basalt_carpet_small.rsi
+    size: Normal
+  - type: FloorTile
+    outputs:
+      - Plating
+  - type: Stack
+    stackType: FloorCarpetAbyss
+  - type: Tag
+    tags:
+    - CarpetAbyss
+  - type: SpawnAfterInteract
+    prototype: CarpetAbyss
+    doAfter: 0.5
+    removeOnInteract: true

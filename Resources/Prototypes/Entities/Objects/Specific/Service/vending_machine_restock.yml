@@ -135,6 +135,7 @@
     - ViroDrobeInventory
     - WinterDrobeInventory
     - CuraDrobeInventory
+    - VendingMachineUnderwearMatteInventory #A-13 UnderwearMatte
   - type: Sprite
     layers:
     - state: base

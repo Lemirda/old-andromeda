@@ -1,0 +1,149 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineUnderwearMatte
+  name: нижнемат
+  description: Будьте осторожны в вашем выборе...!
+  suffix: Андромеда
+  components:
+  - type: VendingMachine
+    pack: VendingMachineUnderwearMatteInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Advertise
+    pack: VendingMachineUnderwearMatteAds
+  - type: SpeakOnUIClosed
+    pack: VendingMachineUnderwearMatteThx
+  - type: Speech
+  - type: Sprite
+    sprite: Andromeda/Evil/clothing/vendingmachineunderwearmatte.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+
+- type: messagePack
+  id: VendingMachineUnderwearMatteAds
+  messages:
+    - Защити своё хозяйство!
+    - Поройся в чужом белье!
+    - Делай вид, что не смотришь на эти трусики...
+    - Ради них Синдикат пойдёт на всё!
+    - Не будь трусом! Хватай трусы! 
+    - Подтянут форму и мужское настроение!
+    - Пояс верности НЕ ПРОДАЕМ!
+    - Поддержка лучше чем у психолога!
+    - С нашей продукцией распускать руки ещё приятней!
+    - Приятно надевать... Но снимать всë же приятней!
+    - Таких даже у ЦК нет!
+
+- type: messagePack
+  id: VendingMachineUnderwearMatteThx
+  messages:
+    - Смотрите и лапайте!
+    - Не забудьте оставить отзыв! Можно с прикреплëнным фото...
+    - Не мешают движениям и вашим вульгарным мыслишкам!
+    - Эй! Ну не прямо перед автоматом же!
+    - Мы не осуждаем...
+    - Оу... У вас утонченный вкус!
+
+- type: vendingMachineInventory
+  id: VendingMachineUnderwearMatteInventory
+  startingInventory:
+    ClothingUnderwearBottomBoxersWhite: 10
+    ClothingUnderwearBottomBoxersSpaceNinja: 10
+    ClothingUnderwearBottomBoxersLong: 10
+    ClothingUnderwearBottomPantiesWhite: 10
+    ClothingUnderwearBottomPantiesThong: 10
+    ClothingUnderwearBottomPantiesNeko: 10
+    ClothingUnderwearBottomPantiesLace: 10
+    ClothingUnderwearBottomPantiesSpaceNinja: 10
+    ClothingUnderwearBottomPantiesLemird: 5
+    ClothingUnderwearBottomPantiesMeFree: 5
+    ClothingUnderwearTopBraWhite: 10
+    ClothingUnderwearTopBraSports: 10
+    ClothingUnderwearTopBraSportsAlternative: 10
+    ClothingUnderwearTopNekoBra: 10
+    ClothingUnderwearToplaceBra: 10
+    ClothingUnderwearTopSpaceNinja: 10
+    ClothingUnderwearSocksHigh: 10
+    ClothingUnderwearSocksNormal: 10
+    ClothingUnderwearSocksShort: 10
+    ClothingUnderwearSocksThigh: 10
+    ClothingUnderwearSocksFishnettights: 10
+    ClothingUnderwearSocksPantyhose: 10
+    ClothingUnderwearSocksGarters: 10
+    ClothingUnderwearSocksRich: 10
+  emaggedInventory:
+    ClothingUnderwearBottomBoxersCap: 2
+    ClothingUnderwearBottomBoxersCE: 2
+    ClothingUnderwearBottomBoxersCMO: 2
+    ClothingUnderwearBottomBoxersHOP: 2
+    ClothingUnderwearBottomBoxersHOS: 2
+    ClothingUnderwearBottomBoxersQM: 2
+    ClothingUnderwearBottomBoxersRD: 2
+    ClothingUnderwearBottomPantiesCap: 2
+    ClothingUnderwearBottomPantiesCE: 2
+    ClothingUnderwearBottomPantiesCMO: 2
+    ClothingUnderwearBottomPantiesHOP: 2
+    ClothingUnderwearBottomPantiesHOS: 2
+    ClothingUnderwearBottomPantiesQM: 2
+    ClothingUnderwearBottomPantiesRD: 2
+    ClothingUnderwearTopBraCap: 2
+    ClothingUnderwearTopBraCE: 2
+    ClothingUnderwearTopBraCMO: 2
+    ClothingUnderwearTopBraHOP: 2
+    ClothingUnderwearTopBraHOS: 2
+    ClothingUnderwearTopBraQM: 2
+    ClothingUnderwearTopBraRD: 2
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomBoxersLong
+  name: удлиненные боксеры
+  suffix: Андромеда
+  description: Стандартное нижнее белье Nanotrasen для сотрудников станции. Окрашено в белый цвет.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/clothing/boxerslong.rsi
+  - type: StealTarget
+    stealGroup: Panties
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesLemird
+  name: пятнистые трусики
+  suffix: Андромеда
+  description: Удобные и красивые трусики, марки Lemird, пятнистой расскраски и с небольшим хвостиком. И нет - это не пробка...
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/clothing/pantieslemird.rsi
+  - type: StealTarget
+    stealGroup: Panties
+
+- type: entity
+  parent: ClothingUnderwearBottomBase
+  id: ClothingUnderwearBottomPantiesMeFree
+  name: киберспортивные трусики
+  suffix: Андромеда
+  description: Высококачественные трусики марки MeFree. Сделанны специально для бойких девушек. Их легко очистить от пятен пива.
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/clothing/pantiesmiifrii.rsi
+  - type: StealTarget
+    stealGroup: Panties
+
+- type: cargoProduct
+  name: НижнеМат
+  id: VendingMachineUnderwearMatte
+  icon:
+    sprite: Andromeda/Evil/clothing/vendingmachineunderwearmatte.rsi
+    state: off
+  product: VendingMachineUnderwearMatte
+  cost: 8000
+  category: cargoproduct-category-name-service
+  group: market

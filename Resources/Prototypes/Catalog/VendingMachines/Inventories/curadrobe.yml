@@ -3,6 +3,7 @@
   startingInventory:
     BooksBag: 2
     BriefcaseBrown: 2
+    BriefcaseBlack: 2 # A-13 clothing upgrade
     HandLabeler: 2
     Cane: 3
     ClothingEyesGlasses: 2

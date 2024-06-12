@@ -1,0 +1,12 @@
+- type: entity
+  parent: BriefcaseBrown
+  id: BriefcaseBlack
+  name: черный чемодан
+  description: Пригодится для переноски предметов в руках.
+  suffix: Андромеда, Пустой
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/clothing/blackcase.rsi
+    state: icon
+  - type: Item
+    sprite: Andromeda/Evil/clothing/blackcase.rsi

@@ -1068,7 +1068,9 @@
     state: slice
   - type: Extractable
     grindableSolutionName: food
-  - type: DestroyableOnBoil
+  - type: Tag
+    tags:
+    - Slice
 
 - type: entity
   name: pineapple slice
@@ -1089,6 +1091,7 @@
   - type: Tag
     tags:
     - Fruit
+    - Slice
 
 - type: entity
   name: onion slice
@@ -1112,6 +1115,10 @@
           Quantity: 1
         - ReagentId: Vitamin
           Quantity: 1
+  - type: Tag
+    tags:
+    - Vegetable
+    - Slice
 
 - type: entity
   name: red onion slice
@@ -1135,6 +1142,10 @@
           Quantity: 1
         - ReagentId: Vitamin
           Quantity: 1
+  - type: Tag
+    tags:
+    - Vegetable
+    - Slice
 
 - type: entity
   name: chili pepper
@@ -1664,6 +1675,10 @@
       reagents:
       - ReagentId: JuiceWatermelon
         Quantity: 4
+  - type: Tag
+    tags:
+    - Fruit
+    - Slice
 
 - type: entity
   name: grapes

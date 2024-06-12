@@ -21,7 +21,6 @@
     - alertType: Bleed
     - category: Temperature
     - category: Hunger
-    - category: Fatigue #A-13 Fatigue
     - category: Thirst
     - alertType: Magboots
     - alertType: Pacified
@@ -29,7 +28,7 @@
 
 - type: entity
   id: AlertSpriteView
-  categories: [ hideSpawnMenu ]
+  categories: [ HideSpawnMenu  ]
   components:
   - type: Sprite
     layers:
@@ -484,50 +483,3 @@
     state: deflecting0
   name: alerts-deflecting-name
   description: alerts-deflecting-desc
-
-#A-13 Fatigue start
-- type: alert
-  id: Fatigue1
-  category: Fatigue
-  icons:
-  - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
-    state: fatigue-1
-  name: Бодрость
-  description: Вы полны сил! Бегайте, прыгайте, хонкайте!
-
-- type: alert
-  id: Fatigue2
-  category: Fatigue
-  icons:
-  - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
-    state: fatigue-2
-  name: Сонливость
-  description: Вы чувствуете что немного устали и были бы не против поспать, но кажется всё ещё хорошо.
-
-- type: alert
-  id: Fatigue3
-  category: Fatigue
-  icons:
-  - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
-    state: fatigue-3
-  name: Усталость
-  description: Вы чувствуете то что начинаете чаще втыкать в одну точку, а ноги уже буквально подкашиваются...
-
-- type: alert
-  id: Fatigue4
-  category: Fatigue
-  icons:
-  - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
-    state: fatigue-4
-  name: Сильная усталость
-  description: Вы чувствуете как глаза буквально закрываются сами, а голова уже начинает плохо работать...
-
-- type: alert
-  id: Fatigue5
-  category: Fatigue
-  icons:
-  - sprite: /Textures/Andromeda/Lemird/fatigue.rsi
-    state: fatigue-5
-  name: Истощение сил
-  description: Вы слишком устали даже для того чтобы двигаться... Кажется, вы уже спите...
-#A-13 Fatigue end

@@ -19,12 +19,10 @@
     modifiers:
       coefficients:
         Blunt: 0.8
-        Slash: 0.7
+        Slash: 0.8
         Piercing: 0.8
         Heat: 0.7
         Radiation: 0.20
-        Caustic: 0.7
-  - type: ExplosionResistance
-    damageCoefficient: 0.8
+        Caustic: 0.8
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitCargo

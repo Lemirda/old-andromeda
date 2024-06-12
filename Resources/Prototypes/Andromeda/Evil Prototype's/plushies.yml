@@ -3,6 +3,11 @@
   files:
   - /Audio/Andromeda/Evil/SoundCollection/PlushiePaintor/karandash.ogg
 
+- type: soundCollection
+  id: InquizitorUse
+  files:
+  - /Audio/Andromeda/Evil/SoundCollection/PlushieInquizitor/halt_1.ogg
+
 - type: entity
   parent: BasePlushie
   id: PlushiePaintor
@@ -11,11 +16,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushiepaintor.rsi
+    sprite: Andromeda/Evil/plushies/plushiepaintor.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushiepaintor.rsi
+    sprite: Andromeda/Evil/plushies/plushiepaintor.rsi
   - type: Storage
     maxItemSize: Small
     grid:
@@ -57,7 +62,7 @@
       collection: PaintorUse
   - type: Clothing
     quickEquip: false
-    sprite: Andromeda/Evil/plushiepaintor.rsi
+    sprite: Andromeda/Evil/plushies/plushiepaintor.rsi
     slots:
     - HEAD
 
@@ -69,11 +74,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushieselectionist.rsi
+    sprite: Andromeda/Evil/plushies/plushieselectionist.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushieselectionist.rsi
+    sprite: Andromeda/Evil/plushies/plushieselectionist.rsi
   - type: Storage
     maxItemSize: Small
     grid:
@@ -104,11 +109,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushiecadet.rsi
+    sprite: Andromeda/Evil/plushies/plushiecadet.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushiecadet.rsi
+    sprite: Andromeda/Evil/plushies/plushiecadet.rsi
 
 - type: entity
   parent: BasePlushie
@@ -118,11 +123,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushieadv.rsi
+    sprite: Andromeda/Evil/plushies/plushieadv.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushieadv.rsi
+    sprite: Andromeda/Evil/plushies/plushieadv.rsi
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Andromeda/Voice/Talk/vulp_exclaim.ogg
@@ -147,11 +152,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushiefelsci.rsi
+    sprite: Andromeda/Evil/plushies/plushiefelsci.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushiefelsci.rsi
+    sprite: Andromeda/Evil/plushies/plushiefelsci.rsi
 
 - type: entity
   parent: BasePlushie
@@ -161,11 +166,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushnukies/plushienukemar.rsi
+    sprite: Andromeda/Evil/plushies/plushienukemar.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushnukies/plushienukemar.rsi
+    sprite: Andromeda/Evil/plushies/plushienukemar.rsi
   - type: PointLight
     netsync: false
     radius: 1.5
@@ -180,11 +185,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushnukies/plushienukecom.rsi
+    sprite: Andromeda/Evil/plushies/plushienukecom.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushnukies/plushienukecom.rsi
+    sprite: Andromeda/Evil/plushies/plushienukecom.rsi
   - type: PointLight
     netsync: false
     radius: 1.5
@@ -199,11 +204,11 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushnukies/plushienukemed.rsi
+    sprite: Andromeda/Evil/plushies/plushienukemed.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushnukies/plushienukemed.rsi
+    sprite: Andromeda/Evil/plushies/plushienukemed.rsi
   - type: PointLight
     netsync: false
     radius: 1.5
@@ -218,13 +223,53 @@
   suffix: Андромеда
   components:
   - type: Sprite
-    sprite: Andromeda/Evil/plushnukies/plushienukejagg.rsi
+    sprite: Andromeda/Evil/plushies/plushienukejagg.rsi
     state: icon
   - type: Item
     size: Small
-    sprite: Andromeda/Evil/plushnukies/plushienukejagg.rsi
+    sprite: Andromeda/Evil/plushies/plushienukejagg.rsi
   - type: PointLight
     netsync: false
     radius: 1.5
     energy: 1.0
     color: "#f53711"
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieInquizitor
+  name: плюшевый инквизитор
+  description: Этот мягкий садист-инквизитор против ваших еретических мыслей!!! На этикетке заметна красная надпись "Теперь на 93% из взрывчатки". Кажется оно тикает...
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushies/plushieinquizitor.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushies/plushieinquizitor.rsi
+  - type: EmitSoundOnLand
+    sound:
+      collection: InquizitorUse
+  - type: EmitSoundOnActivate
+    sound:
+      collection: InquizitorUse
+  - type: EmitSoundOnUse
+    sound:
+      collection: InquizitorUse
+  - type: EmitSoundOnCollide
+    sound:
+      collection: InquizitorUse
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieDivers
+  name: плюшевый диверсант
+  description: Ему точно можно доверить диск Ядерной Аутентификации...
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Evil/plushies/plushiedivers.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: Andromeda/Evil/plushies/plushiedivers.rsi

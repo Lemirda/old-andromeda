@@ -65,6 +65,7 @@
       amount: 5
   - type: LizardAccent
   - type: Puller
+    needsHands: false
   - type: CanHostGuardian
   - type: NPCRetaliation
     attackMemoryLength: 10
@@ -103,6 +104,19 @@
         clownedon:
           True: {visible: true}
           False: {visible: false}
+  - type: Tool
+    speed: 1.5
+    qualities:
+      - Prying
+    useSound:
+      path: /Audio/Items/crowbar.ogg
+  - type: Prying
+    pryPowered: !type:Bool
+        true
+    force: !type:Bool
+      true
+    useSound:
+      path: /Audio/Items/crowbar.ogg
 
 - type: entity
   name: Хвостик
@@ -130,6 +144,7 @@
     tags:
     - CannotSuicide
     - DoorBumpOpener
+    - FootstepSound
   - type: Loadout
     prototypes: [ MobKsenoFamleGear ]
   - type: Grammar
@@ -179,23 +194,21 @@
   - name: head
     slotTexture: head
     slotFlags: HEAD
-    slotGroup: MainHotbar
-    uiWindowPos: 0,0
+    uiWindowPos: 0,1
     strippingWindowPos: 0,0
     displayName: Head
   - name: ears
     slotTexture: ears
     slotFlags: EARS
-    slotGroup: MainHotbar
     stripTime: 3
-    uiWindowPos: 1,2
+    uiWindowPos: 1,1
     strippingWindowPos: 1,2
     displayName: Ears
   - name: jumpsuit
     slotTexture: uniform
     slotFlags: INNERCLOTHING
     stripTime: 6
-    uiWindowPos: 0,2
+    uiWindowPos: 1,0
     strippingWindowPos: 0,2
     displayName: Jumpsuit
   - name: id

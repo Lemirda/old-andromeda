@@ -327,7 +327,7 @@ namespace Content.Server.Voting.Managers
             timeSpan = default;
 
             // Admins can always call votes.
-            if (_adminMgr.HasAdminFlag(initiator, AdminFlags.Admin))
+            if (_adminMgr.HasAdminFlag(initiator, AdminFlags.Moderator))
             {
                 isAdmin = true;
                 hasExtraPermissions = _adminMgr.HasAdminFlag(initiator, AdminFlags.Permissions); // A-13 admin vote restriction

@@ -1,0 +1,27 @@
+# God Time
+- type: loadoutEffectGroup
+  id: GodOfficer
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobHeadOfSecurity
+      time: 72000 #20 hrs # Corvax-RoleTime
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:DepartmentTimeRequirement
+      department: Security
+      time: 216000 # 60 hrs
+
+
+- type: loadout
+  id: GodOfficerCloak
+  equipment: GodOfficerCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GodOfficer
+
+- type: startingGear
+  id: GodOfficerCloak
+  equipment:
+    id: ClothingNeckCloakSec

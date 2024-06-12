@@ -110,7 +110,7 @@
   - Boxer
   - Reporter
   - Zookeeper
-  - Psychologist
+  #- Psychologist # A-13 upgraded chat system
   primary: false
 
 # A-13 Ghost roles bans

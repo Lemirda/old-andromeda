@@ -91,6 +91,8 @@
     PlushieAdv: 1
     PlushieCadet: 1
     PlushieSelectionist: 1
+    PlushieAmmaYakiama: 1
+    PlushieInquizitor: 1
     ToyMouse: 2
     Basketball: 2
     Football: 2
@@ -105,10 +107,46 @@
     PonderingOrb: 2
     CrayonBox: 3
     CrayonRainbow: 2
-    PlushieAmmaYakiama: 1
   emaggedInventory:
     PlushieNuke: 1
     PlushieNukeMar: 1
     PlushieNukeCom: 1
     PlushieNukeMed: 1
     PlushieNukeJagg: 1
+    PlushieDivers: 1
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachinePlushieToysRestock
+  name: набор пополнения ОбниМата
+  description: Пополните ваш ОбниМат новыми плюшками!
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - VendingMachinePlushieToysInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_custom
+
+- type: entity
+  id: CrateVendingMachinePlushieToysRestockFilled
+  parent: CratePlastic
+  name: ящик пополнения ОбниМата
+  description: Содержит набор для пополнения ОбниМата.
+  components:
+  - type: StorageFill
+    contents:
+      - id: VendingMachinePlushieToysRestock
+
+- type: cargoProduct
+  id: CrateVendingMachinePlushieToysRestock
+  icon:
+    sprite: Objects/Specific/Service/vending_machine_restock.rsi
+    state: base
+  product: CrateVendingMachinePlushieToysRestockFilled
+  cost: 3000
+  category: cargoproduct-category-name-service
+  group: market

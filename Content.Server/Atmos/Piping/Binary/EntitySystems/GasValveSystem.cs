@@ -53,6 +53,9 @@ namespace Content.Server.Atmos.Piping.Binary.EntitySystems
 
         private void OnActivate(EntityUid uid, GasValveComponent component, ActivateInWorldEvent args)
         {
+            if (args.Handled || !args.Complex)
+                return;
+
             //A-13 Eblan system update start
             if (HasComp<EblanComponent>(args.User))
                 return;
@@ -60,6 +63,7 @@ namespace Content.Server.Atmos.Piping.Binary.EntitySystems
 
             Toggle(uid, component);
             _audio.PlayPvs(component.ValveSound, uid, AudioParams.Default.WithVariation(0.25f));
+            args.Handled = true;
         }
 
         public void Set(EntityUid uid, GasValveComponent component, bool value)

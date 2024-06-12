@@ -26,7 +26,6 @@ public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
         SubscribeLocalEvent<ThiefRuleComponent, AfterAntagEntitySelectedEvent>(AfterAntagSelected);
 
         SubscribeLocalEvent<ThiefRoleComponent, GetBriefingEvent>(OnGetBriefing);
-        SubscribeLocalEvent<ThiefRuleComponent, ObjectivesTextGetInfoEvent>(OnObjectivesTextGetInfo);
     }
 
     private void AfterAntagSelected(Entity<ThiefRuleComponent> ent, ref AfterAntagEntitySelectedEvent args)
@@ -55,39 +54,7 @@ public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
         //A-13 disable end
 
         //Generate objectives
-        GenerateObjectives(mindId, mind, ent);
         _antag.SendBriefing(args.EntityUid, MakeBriefing(args.EntityUid), null, null);
-    }
-
-    private void GenerateObjectives(EntityUid mindId, MindComponent mind, ThiefRuleComponent thiefRule)
-    {
-        // Give thieves their objectives
-        var difficulty = 0f;
-
-        if (_random.Prob(thiefRule.BigObjectiveChance)) // 70% chance to 1 big objective (structure or animal)
-        {
-            var objective = _objectives.GetRandomObjective(mindId, mind, thiefRule.BigObjectiveGroup);
-            if (objective != null)
-            {
-                _mindSystem.AddObjective(mindId, mind, objective.Value);
-                difficulty += Comp<ObjectiveComponent>(objective.Value).Difficulty;
-            }
-        }
-
-        for (var i = 0; i < thiefRule.MaxStealObjectives && thiefRule.MaxObjectiveDifficulty > difficulty; i++)  // Many small objectives
-        {
-            var objective = _objectives.GetRandomObjective(mindId, mind, thiefRule.SmallObjectiveGroup);
-            if (objective == null)
-                continue;
-
-            _mindSystem.AddObjective(mindId, mind, objective.Value);
-            difficulty += Comp<ObjectiveComponent>(objective.Value).Difficulty;
-        }
-
-        //Escape target
-        var escapeObjective = _objectives.GetRandomObjective(mindId, mind, thiefRule.EscapeObjectiveGroup);
-        if (escapeObjective != null)
-            _mindSystem.AddObjective(mindId, mind, escapeObjective.Value);
     }
 
     //Add mind briefing
@@ -108,11 +75,5 @@ public sealed class ThiefRuleSystem : GameRuleSystem<ThiefRuleComponent>
 
         briefing += "\n \n" + Loc.GetString("thief-role-greeting-equipment") + "\n";
         return briefing;
-    }
-
-    private void OnObjectivesTextGetInfo(Entity<ThiefRuleComponent> ent, ref ObjectivesTextGetInfoEvent args)
-    {
-        args.Minds = _antag.GetAntagMindEntityUids(ent.Owner);
-        args.AgentName = Loc.GetString("thief-round-end-agent-name");
     }
 }

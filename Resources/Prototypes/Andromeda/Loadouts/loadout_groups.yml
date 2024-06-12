@@ -14,3 +14,97 @@
   minLimit: 0
   loadouts:
   - CaptainGoldenBoots
+
+- type: loadoutGroup
+  id: CaptainUnderwearBottom
+  name: Капитан, трусы
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CaptainBoxers
+  - CaptainPanties
+
+- type: loadoutGroup
+  id: CaptainUnderwearTop
+  name: Капитан, бра
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - CaptainBra
+
+- type: loadoutGroup
+  id: HoPUnderwearBottom
+  name: Глава персонала, трусы
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - HoPBoxers
+  - HoPPanties
+
+- type: loadoutGroup
+  id: HoPUnderwearTop
+  name: Глава персонала, бра
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - HoPBra
+  
+# Civilian
+
+- type: loadoutGroup
+  id: BasicUnderwearBottom
+  name: Общие, трусы
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - WhiteBoxers
+  - WhitePanties
+  - WhitePantiesNeko
+  - PantiesLace
+  - PantiesThong
+  - PantiesElegant
+
+- type: loadoutGroup
+  id: BasicUnderwearTop
+  name: Общие, бра
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - BraSports
+  - BraNeko
+  - BraLace
+  - BraSportsAlt
+  - BraWarm
+
+- type: loadoutGroup
+  id: BasicUnderwearSocks
+  name: Общие, носки
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - SocksNormal
+  - SocksHigh
+  - SocksShort
+  - SocksBee
+  - SocksCoder
+  - SocksPantyhose
+  - StockingsWarms
+  - SocksFishnettights
+  - SocksGarters
+  - SocksRich
+
+- type: loadoutGroup
+  id: SecurityNeck
+  name: Офицер, плащ
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - GodOfficerCloak
+
+- type: loadoutGroup
+  id: BotanistNeck
+  name: Ботаник, плащ
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - DruidBotanistCloak

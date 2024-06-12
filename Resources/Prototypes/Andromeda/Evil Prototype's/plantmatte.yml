@@ -118,3 +118,39 @@
     SusPlant1: 2
     SusPlant2: 2
     SusPlant3: 2
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachinePottedPlantRestock
+  name: набор пополнения ЦветоМата
+  description: Пополните ваш ЦветоМат новыми растениями!
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - VendingMachinePottedPlantInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_custom
+
+- type: entity
+  id: CrateVendingMachinePottedPlantRestockFilled
+  parent: CratePlastic
+  name: ящик пополнения ЦветоМата
+  description: Содержит набор для пополнения ЦветоМата.
+  components:
+  - type: StorageFill
+    contents:
+      - id: VendingMachinePottedPlantRestock
+
+- type: cargoProduct
+  id: CrateVendingMachinePottedPlantRestock
+  icon:
+    sprite: Objects/Specific/Service/vending_machine_restock.rsi
+    state: base
+  product: CrateVendingMachinePottedPlantRestockFilled
+  cost: 2500
+  category: cargoproduct-category-name-service
+  group: market

@@ -4,5 +4,10 @@
   - LawyerNeck
   - LawyerJumpsuit
   - CommonBackpack
+  # A-13 Loadouts start
+  - BasicUnderwearBottom
+  - BasicUnderwearTop
+  - BasicUnderwearSocks
+  # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts

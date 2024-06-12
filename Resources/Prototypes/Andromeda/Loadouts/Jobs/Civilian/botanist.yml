@@ -1,0 +1,22 @@
+# Druid Time
+- type: loadoutEffectGroup
+  id: DruidBotanist
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobBotanist
+      time: 360000 #100 hrs 
+
+
+- type: loadout
+  id: DruidBotanistCloak
+  equipment: DruidBotanistCloak
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: DruidBotanist
+
+- type: startingGear
+  id: DruidBotanistCloak
+  equipment:
+    id: ClothingNeckCloakBotanistCloak

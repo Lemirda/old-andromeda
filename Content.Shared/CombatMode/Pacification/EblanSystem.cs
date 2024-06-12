@@ -127,7 +127,7 @@ public sealed class EblanSystem : EntitySystem
             _combatSystem.SetCanDisarm(uid, true, combatMode);
 
         _actionsSystem.SetEnabled(combatMode.CombatToggleActionEntity, true);
-        _alertsSystem.ClearAlert(uid, AlertType.Pacified);
+        _alertsSystem.ClearAlert(uid, component.PacifiedAlert2);
     }
 
     private void OnBeforeThrow(Entity<EblanComponent> ent, ref BeforeThrowEvent args)

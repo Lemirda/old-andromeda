@@ -32,6 +32,7 @@
     id: IAAPDA
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA
+    pocket2: HyperLinkBookCorporateLaw
     underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
   underweart: ClothingUnderwearToplaceBra # Andromeda-Underwear
   underwearb: ClothingUnderwearBottomPantiesLace # Andromeda-Underwear

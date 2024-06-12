@@ -79,7 +79,6 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - GlassesNearsight #A-13 Nearsight
 
 - type: entity
   parent: ClothingEyesBase

@@ -164,9 +164,6 @@
 
 # Nuggets
 
-- type: Tag
-  id: Nugget
-
 - type: entity
   name: chicken nugget
   parent: FoodBakedBase
@@ -531,6 +528,9 @@
           Quantity: 5
         - ReagentId: Theobromine
           Quantity: 3
+  - type: Tag
+    tags:
+    - Slice
 
 - type: entity
   name: special brownies
@@ -586,6 +586,9 @@
           Quantity: 3
         - ReagentId: THC
           Quantity: 25
+  - type: Tag
+    tags:
+    - Slice
 
 - type: entity
   name: onion rings
