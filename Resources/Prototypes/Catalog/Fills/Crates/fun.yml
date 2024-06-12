@@ -306,6 +306,7 @@
       - id: ClothingHeadHatMagician
       - id: BeachBall
       - id: ClothingShoesSkates
+      - id: ClownCuffs # A-13
 
 - type: entity
   id: CrateFunBikeHornImplants
@@ -347,4 +348,3 @@
       - id: BoxDarts
         amount: 1
         prob: 0.05
-
