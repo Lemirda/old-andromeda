@@ -6,9 +6,8 @@
 
 - type: startingGear
   id: WhiteBoxers
-  storage:
-    back:
-    - ClothingUnderwearBottomBoxersWhite
+  equipment:
+    underwearb: ClothingUnderwearBottomBoxersWhite
 
 
 - type: loadout
@@ -17,9 +16,8 @@
 
 - type: startingGear
   id: WhitePanties
-  storage:
-    back:
-    - ClothingUnderwearBottomPantiesWhite
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesWhite
 
 
 - type: loadout
@@ -28,9 +26,8 @@
 
 - type: startingGear
   id: WhitePantiesNeko
-  storage:
-    back:
-    - ClothingUnderwearBottomPantiesNeko
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesNeko
 
 
 - type: loadout
@@ -39,9 +36,8 @@
 
 - type: startingGear
   id: PantiesLace
-  storage:
-    back:
-    - ClothingUnderwearBottomPantiesLace
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesLace
 
 
 - type: loadout
@@ -50,9 +46,8 @@
 
 - type: startingGear
   id: PantiesThong
-  storage:
-    back:
-    - ClothingUnderwearBottomPantiesThong
+  equipment:
+    underwearb: ClothingUnderwearBottomPantiesThong
 
 
 - type: loadout
@@ -61,12 +56,20 @@
 
 - type: startingGear
   id: PantiesElegant
-  storage:
-    back:
-    - ClothingUnderwearBottomElegantpanties
+  equipment:
+    underwearb: ClothingUnderwearBottomElegantpanties
 
 
 # Bra
+
+- type: loadout
+  id: BraWhite
+  equipment: BraWhite
+
+- type: startingGear
+  id: BraWhite
+  equipment:
+    underweart: ClothingUnderwearTopBraWhite
 
 
 - type: loadout
@@ -75,9 +78,8 @@
 
 - type: startingGear
   id: BraSports
-  storage:
-    back:
-    - ClothingUnderwearTopBraSports
+  equipment:
+    underweart: ClothingUnderwearTopBraSports
 
   
 - type: loadout
@@ -86,9 +88,8 @@
 
 - type: startingGear
   id: BraNeko
-  storage:
-    back:
-    - ClothingUnderwearTopNekoBra
+  equipment:
+    underweart: ClothingUnderwearTopNekoBra
 
 
 - type: loadout
@@ -97,9 +98,8 @@
 
 - type: startingGear
   id: BraLace
-  storage:
-    back:
-    - ClothingUnderwearToplaceBra
+  equipment:
+    underweart: ClothingUnderwearToplaceBra
 
 
 - type: loadout
@@ -108,9 +108,8 @@
 
 - type: startingGear
   id: BraSportsAlt
-  storage:
-    back:
-    - ClothingUnderwearTopBraSportsAlternative
+  equipment:
+    underweart: ClothingUnderwearTopBraSportsAlternative
 
 
 - type: loadout
@@ -119,9 +118,8 @@
 
 - type: startingGear
   id: BraWarm
-  storage:
-    back:
-    - ClothingUnderwearWarmbra
+  equipment:
+    underweart: ClothingUnderwearWarmbra
 
 
 #Socks

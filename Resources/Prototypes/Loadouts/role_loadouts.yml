@@ -10,9 +10,9 @@
   # A-13 Loadouts start
   - CaptainShoes
   - CaptainGloves
-  # - BasicUnderwearBottom
-  # - BasicUnderwearTop
-  # - BasicUnderwearSocks
+  - CaptainUnderwearTop
+  - CaptainUnderwearBottom
+  - BasicUnderwearSocks
   # A-13 Loadouts end
   - Trinkets
   - Inventory # Corvax-Loadouts
@@ -26,8 +26,8 @@
   - HoPBackpack
   - HoPOuterClothing
   # A-13 Loadouts start
-  - BasicUnderwearBottom
-  - BasicUnderwearTop
+  - HoPUnderwearTop
+  - HoPUnderwearBottom
   - BasicUnderwearSocks
   # A-13 Loadouts end
   - Glasses
@@ -240,8 +240,8 @@
   - QuartermasterOuterClothing
   - QuartermasterShoes
   # A-13 Loadouts start
-  - BasicUnderwearBottom
-  - BasicUnderwearTop
+  - QMUnderwearTop
+  - QMUnderwearBottom
   - BasicUnderwearSocks
   # A-13 Loadouts end
   - Glasses
@@ -291,8 +291,8 @@
   - ChiefEngineerOuterClothing
   - ChiefEngineerShoes
   # A-13 Loadouts start
-  - BasicUnderwearBottom
-  - BasicUnderwearTop
+  - CEUnderwearTop
+  - CEUnderwearBottom
   - BasicUnderwearSocks
   # A-13 Loadouts end
   - Trinkets
@@ -355,8 +355,8 @@
   - ScientistGloves
   - ResearchDirectorShoes
   # A-13 Loadouts start
-  - BasicUnderwearBottom
-  - BasicUnderwearTop
+  - RDUnderwearTop
+  - RDUnderwearBottom
   - BasicUnderwearSocks
   # A-13 Loadouts end
   - Glasses
@@ -409,8 +409,8 @@
   - HeadofSecurityOuterClothing
   - SecurityShoes
   # A-13 Loadouts start
-  - BasicUnderwearBottom
-  - BasicUnderwearTop
+  - HOSUnderwearTop
+  - HOSUnderwearBottom
   - BasicUnderwearSocks
   # A-13 Loadouts end
   - Trinkets
@@ -495,8 +495,8 @@
   - ChiefMedicalOfficerNeck
   - ChiefMedicalOfficerShoes
   # A-13 Loadouts start
-  - BasicUnderwearBottom
-  - BasicUnderwearTop
+  - CMOUnderwearTop
+  - CMOUnderwearBottom
   - BasicUnderwearSocks
   # A-13 Loadouts end
   - Glasses

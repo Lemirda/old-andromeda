@@ -38,8 +38,8 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - HoPBoxers
-  - HoPPanties
+  - HOPBoxers
+  - HOPPanties
 
 - type: loadoutGroup
   id: HoPUnderwearTop
@@ -47,8 +47,93 @@
   minLimit: 0
   maxLimit: 1
   loadouts:
-  - HoPBra
-  
+  - HOPBra
+
+- type: loadoutGroup
+  id: QMUnderwearBottom
+  name: Квартирмейстер, трусы
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - QMBoxers
+  - QMPanties
+
+- type: loadoutGroup
+  id: QMUnderwearTop
+  name: Квартирмейстер, бра
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - QMBra
+
+- type: loadoutGroup
+  id: CEUnderwearBottom
+  name: Старший инженер, трусы
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CEBoxers
+  - CEPanties
+
+- type: loadoutGroup
+  id: CEUnderwearTop
+  name: Старший инженер, бра
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - CEBra
+
+- type: loadoutGroup
+  id: CMOUnderwearBottom
+  name: Главный врач, трусы
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CMOBoxers
+  - CMOPanties
+
+- type: loadoutGroup
+  id: CMOUnderwearTop
+  name: Главный врач, бра
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - CMOBra
+
+- type: loadoutGroup
+  id: RDUnderwearBottom
+  name: Научный руководитель, трусы
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - RDBoxers
+  - RDPanties
+
+- type: loadoutGroup
+  id: RDUnderwearTop
+  name: Научный руководитель, бра
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - RDBra
+
+- type: loadoutGroup
+  id: HOSUnderwearBottom
+  name: Глава службы безопасности, трусы
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - HOSBoxers
+  - HOSPanties
+
+- type: loadoutGroup
+  id: HOSUnderwearTop
+  name: Глава службы безопасности, бра
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - HOSBra
+
 # Civilian
 
 - type: loadoutGroup
@@ -70,6 +155,7 @@
   minLimit: 0
   maxLimit: 1
   loadouts:
+  - BraWhite
   - BraSports
   - BraNeko
   - BraLace

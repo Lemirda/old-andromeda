@@ -15,9 +15,6 @@
       uiWindowPos: 3,0
       strippingWindowPos: 2,4
       displayName: Socks
-      whitelist:
-        tags:
-          - socks
     - name: underwearb # Andromeda-Underwear
       slotTexture: underwearb
       slotFlags: UNDERWEARB
@@ -25,9 +22,6 @@
       uiWindowPos: 3,1
       strippingWindowPos: 0,4
       displayName: Panties
-      whitelist:
-        tags:
-          - underwearb
     - name: underweart # Andromeda-Underwear
       slotTexture: underweart
       slotFlags: UNDERWEART
@@ -35,9 +29,6 @@
       uiWindowPos: 3,2
       strippingWindowPos: 1,4
       displayName: Bra
-      whitelist:
-        tags:
-          - underweart
     - name: jumpsuit
       slotTexture: uniform
       slotFlags: INNERCLOTHING

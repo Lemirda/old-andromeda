@@ -18,6 +18,3 @@
     ears: ClothingHeadsetService
     pocket1: d10Dice
     pocket2: HandLabeler # for making named bestsellers
-    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear

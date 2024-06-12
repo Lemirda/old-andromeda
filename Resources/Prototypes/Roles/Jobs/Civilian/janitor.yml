@@ -22,9 +22,6 @@
     id: JanitorPDA
     ears: ClothingHeadsetService
     belt: ClothingBeltJanitorFilled
-    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
 
 - type: startingGear
   id: JanitorMaidGear
@@ -35,6 +32,3 @@
     head: ClothingHeadHatCatEars
     ears: ClothingHeadsetService
     belt: ClothingBeltJanitorFilled
-    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear

@@ -26,9 +26,9 @@ public enum SlotFlags
     LEGS = 1 << 13,
     FEET = 1 << 14,
     SUITSTORAGE = 1 << 15,
-    UNDERWEART = 1 << 10, // Andromeda-Underwear
-    UNDERWEARB = 1 << 10, // Andromeda-Underwear
-    SOCKS = 1 << 10, // Andromeda-Underwear
+    UNDERWEART = 1 << 16, // Andromeda-Underwear
+    UNDERWEARB = 1 << 17, // Andromeda-Underwear
+    SOCKS = 1 << 18, // Andromeda-Underwear
     All = ~NONE,
 
     WITHOUT_POCKET = All & ~POCKET

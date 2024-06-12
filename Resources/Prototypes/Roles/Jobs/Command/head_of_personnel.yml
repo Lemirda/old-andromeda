@@ -64,6 +64,3 @@
     gloves: ClothingHandsGlovesHop
     ears: ClothingHeadsetAltCommand
     belt: BoxFolderClipboard
-    underwearb: ClothingUnderwearBottomBoxersHOP # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraHOP # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesHOP # Andromeda-Underwear
