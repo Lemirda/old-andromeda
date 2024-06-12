@@ -1,6 +1,7 @@
 - type: entity
   name: клоунские наручники
-  description: Использовать их во имя добра или же зла? Это решит Хонкматерь. Хонк!
+  suffix: Андромеда
+  description: Использовать их во имя добра или же зла? Это решит Хонкоматерь. Хонк!
   id: ClownCuffs
   parent: Handcuffs
   components:
@@ -12,15 +13,21 @@
     cuffedRSI: Andromeda/Objects/Fun/clowncuffs.rsi
     bodyIconState: body-overlay
     startCuffSound:
-      path: /Audio/Andromeda/Misc/honkalarm.ogg
+      path: /Audio/Andromeda/Misc/ducky.ogg
+      params:
+        volume: -6
     endCuffSound:
       path: /Audio/Items/bikehorn.ogg
     startUncuffSound:
       path: /Audio/Andromeda/Misc/ducky.ogg
+      params:
+        volume: -6
     endUncuffSound:
       path: /Audio/Items/bikehorn.ogg
     startBreakoutSound:
       path: /Audio/Andromeda/Misc/ducky.ogg
+      params:
+        volume: -6
   - type: Sprite
     sprite: Andromeda/Objects/Fun/clowncuffs.rsi
     state: icon
