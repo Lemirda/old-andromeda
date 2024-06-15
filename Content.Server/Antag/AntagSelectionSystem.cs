@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server.Andromeda.AndromedaSponsorService; // A-13 SponsorAntag
 using Content.Server.Antag.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
@@ -27,8 +28,6 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using Content.Server.Andromeda.AndromedaSponsorService; //A-13 SponsorAntag
-using Content.Server.Andromeda.Roles; //A-13 SponsorAntag
 
 namespace Content.Server.Antag;
 
@@ -45,8 +44,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
-    [Dependency] private readonly AndromedaSponsorManager _sponsorsManager = default!; //A-13 SponsorAntag
-    [Dependency] private readonly IPlayerManager _playerSystem = default!; //A-13 SponsorAntag
+    [Dependency] private readonly AndromedaSponsorManager _sponsorsManager = default!; // A-13 SponsorAntag
 
     // arbitrary random number to give late joining some mild interest.
     public const float LateJoinRandomChance = 0.5f;
@@ -210,12 +208,49 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     /// </summary>
     public void ChooseAntags(Entity<AntagSelectionComponent> ent, IList<ICommonSession> pool, AntagSelectionDefinition def)
     {
+        Log.Info($"ChooseAntags: Начало для entity: {ent}"); // A-13 Full logging for error detection
         var playerPool = GetPlayerPool(ent, pool, def);
         var count = GetTargetAntagCount(ent, GetTotalPlayerCount(pool), def);
+        // A-13 SponsorAntag start
+        var totalAntagCount = 0;
 
-        // if there is both a spawner and players getting picked, let it fall back to a spawner.
+        Log.Info($"ChooseAntags: Начинается проверка на спонсора entity: {ent}");
+
+        foreach (var session in pool.Where(s => _sponsorsManager.IsSponsor(s.UserId)))
+        {
+            if (totalAntagCount >= count)
+            {
+                Log.Error($"ChooseAntags: Мест для спонсоров не осталось"); // A-13 SponsorAntag
+                break;
+            }
+
+            bool allowedAntag = _sponsorsManager.GetSponsorAllowedAntag(session.UserId);
+
+            if (!allowedAntag)
+            {
+                Log.Error($"ChooseAntags: Спонсор {session} не может быть выбран из за отсутствия allowedAntag");
+                break;
+            }
+
+            if (!TryMakeAntag(ent, session, def))
+            {
+                Log.Error($"MakeAntag: Не удалось создать антаг для сущности {ent} и определения {def}");
+                continue;
+            }
+            else
+            {
+                Log.Info($"MakeAntag: Создан антаг для сущности {ent} и определения {def}");
+                totalAntagCount++;
+            }
+
+            Log.Info($"ChooseAntags: В ходе добавления спонсора, totalAntagCount = {totalAntagCount}");
+        }
+        // A-13 SponsorAntag end
+
+        Log.Info($"ChooseAntags: Начинается проверка для игроков entity: {ent}"); // A-13 Full logging for error detection
+
         var noSpawner = def.SpawnerPrototype == null;
-        for (var i = 0; i < count; i++)
+        for (var i = totalAntagCount; i < count; i++) // A-13 SponsorAntag
         {
             var session = (ICommonSession?) null;
             if (def.PickPlayer)
@@ -226,6 +261,19 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
                     break;
                 }
 
+                // A-13 SponsorAntag start
+                if (session != null)
+                {
+                    bool allowedAntag = _sponsorsManager.GetSponsorAllowedAntag(session.UserId);
+
+                    if (_sponsorsManager.IsSponsor(session.UserId) && allowedAntag)
+                    {
+                        Log.Warning($"ChooseAntags: Мы не можем выбирать этого игрока: {session.Name}, так как он уже должен быть спонсорским антаганистом.");
+                        return;
+                    }
+                }
+                // A-13 SponsorAntag end
+
                 if (session != null && ent.Comp.SelectedSessions.Contains(session))
                 {
                     Log.Warning($"Somehow picked {session} for an antag when this rule already selected them previously");
@@ -235,6 +283,8 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
             MakeAntag(ent, session, def);
         }
+
+        Log.Info($"ChooseAntags: Закончеы проверки для: {ent}, totalAntagCount = {totalAntagCount}"); // A-13 Full logging for error detection
     }
 
     /// <summary>
@@ -243,10 +293,16 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     public bool TryMakeAntag(Entity<AntagSelectionComponent> ent, ICommonSession? session, AntagSelectionDefinition def, bool ignoreSpawner = false, bool checkPref = true)
     {
         if (checkPref && !HasPrimaryAntagPreference(session, def))
+        {
+            Log.Error($"MakeAntag: {session} does not have primary preference for {def}"); // A-13 Full logging for error detection
             return false;
+        }
 
         if (!IsSessionValid(ent, session, def) || !IsEntityValid(session?.AttachedEntity, def))
+        {
+            Log.Error($"MakeAntag: {session} is not valid for {def}"); // A-13 Full logging for error detection
             return false;
+        }
 
         MakeAntag(ent, session, def, ignoreSpawner);
         return true;
@@ -257,8 +313,6 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     /// </summary>
     public void MakeAntag(Entity<AntagSelectionComponent> ent, ICommonSession? session, AntagSelectionDefinition def, bool ignoreSpawner = false)
     {
-        Log.Debug($"MakeAntag: ent={ent}, session={session}, def={def}, ignoreSpawner={ignoreSpawner}"); //A-13 Полное логирование
-
         var antagEnt = (EntityUid?) null;
         var isSpawner = false;
 
@@ -283,7 +337,6 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
             if (!getEntEv.Handled)
             {
-                Log.Error($"Attempted to make {session} antagonist in gamerule {ToPrettyString(ent)} but there was no valid entity for player."); //A-13 Полное логирование
                 throw new InvalidOperationException($"Attempted to make {session} antagonist in gamerule {ToPrettyString(ent)} but there was no valid entity for player.");
             }
 
@@ -302,9 +355,22 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             _transform.SetMapCoordinates((player, playerXform), pos);
         }
 
-        // The following is where we apply components, equipment, and other changes to our antagonist entity.
-        Log.Debug($"Applying components to antag entity: {antagEnt}"); //A-13 Полное логирование
+        // If we want to just do a ghost role spawner, set up data here and then return early.
+        // This could probably be an event in the future if we want to be more refined about it.
+        if (isSpawner)
+        {
+            if (!TryComp<GhostRoleAntagSpawnerComponent>(player, out var spawnerComp))
+            {
+                Log.Error($"Antag spawner {player} does not have a GhostRoleAntagSpawnerComponent.");
+                return;
+            }
 
+            spawnerComp.Rule = ent;
+            spawnerComp.Definition = def;
+            return;
+        }
+
+        // The following is where we apply components, equipment, and other changes to our antagonist entity.
         EntityManager.AddComponents(player, def.Components);
         _stationSpawning.EquipStartingGear(player, def.StartingGear);
 
@@ -317,15 +383,11 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
                 _mind.SetUserId(curMind.Value, session.UserId);
             }
 
-            Log.Debug($"Transferring mind to antag entity: {antagEnt}"); //A-13 Полное логирование
-
             _mind.TransferTo(curMind.Value, antagEnt, ghostCheckOverride: true);
             _role.MindAddRoles(curMind.Value, def.MindComponents);
             ent.Comp.SelectedMinds.Add((curMind.Value, Name(player)));
             SendBriefing(session, def.Briefing);
         }
-
-        Log.Debug($"Start apply logic to antag entity: {antagEnt}"); //A-13 Полное логирование
 
         var afterEv = new AfterAntagEntitySelectedEvent(session, player, ent, def);
         RaiseLocalEvent(ent, ref afterEv, true);
@@ -338,36 +400,11 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     {
         var preferredList = new List<ICommonSession>();
         var fallbackList = new List<ICommonSession>();
-        /* A-13 disable
-        var unwantedList = new List<ICommonSession>();
-        var invalidList = new List<ICommonSession>();
-        var sponsorPrefList = new List<ICommonSession>(); // A-13 SponsorAntag
-        */ 
         foreach (var session in sessions)
         {
             if (!IsSessionValid(ent, session, def) || !IsEntityValid(session.AttachedEntity, def))
                 continue;
-            /* A-13 disable
-            // A-13 SponsorAntag start
-            if (_sponsorsManager.IsSponsor(session.UserId))
-            {
-                bool allowedAntag = _sponsorsManager.GetSponsorAllowedAntag(session.UserId);
 
-                if (allowedAntag)
-                {
-                    sponsorPrefList.Add(session);
-                    Log.Info($"Added sponsor: {session}");
-                }
-            }
-            else
-            {
-                Log.Info($"Skipped: {session}");
-            }
-            // A-13 SponsorAntag end
-
-            var pref = (HumanoidCharacterProfile) _pref.GetPreferences(session.UserId).SelectedCharacter;
-            if (def.PrefRoles.Count != 0 && pref.AntagPreferences.Any(p => def.PrefRoles.Contains(p)))
-            */
             if (HasPrimaryAntagPreference(session, def))
             {
                 preferredList.Add(session);
@@ -377,17 +414,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
                 fallbackList.Add(session);
             }
         }
-        /* A-13 disable
-        // A-13 SponsorAntag start
-        if (sponsorPrefList.Count > 0)
-        {
-            Log.Info($"Added sponsor pool: {sponsorPrefList.Count}");
-            preferredList.AddRange(sponsorPrefList);
-        }
-        // A-13 SponsorAntag end
 
-        return new AntagSelectionPlayerPool(new() { preferredList, fallbackList, unwantedList, invalidList });
-        */
         return new AntagSelectionPlayerPool(new() { preferredList, fallbackList });
     }
 
