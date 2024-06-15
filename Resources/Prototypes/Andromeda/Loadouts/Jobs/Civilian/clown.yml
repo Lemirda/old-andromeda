@@ -1,0 +1,46 @@
+# Golden clown
+- type: loadoutEffectGroup
+  id: GoldenClown
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobClown
+      time: 180000 # 50 hrs
+
+
+- type: loadout
+  id: GoldClownSuit
+  equipment: GoldClownSuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GoldenClown
+
+- type: startingGear
+  id: GoldClownSuit
+  equipment:
+    id: ClothingGoldClownSuit
+
+- type: loadout
+  id: GoldClownShoes
+  equipment: GoldClownShoes
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GoldenClown
+
+- type: startingGear
+  id: GoldClownShoes
+  equipment:
+    id: ClothingGoldClownShoes
+
+- type: loadout
+  id: GoldClownMask
+  equipment: GoldClownMask
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: GoldenClown
+
+- type: startingGear
+  id: GoldClownMask
+  equipment:
+    id: ClothingGoldClownMask

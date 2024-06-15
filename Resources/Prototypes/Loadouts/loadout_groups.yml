@@ -398,6 +398,7 @@
   minLimit: 0
   loadouts:
   - JesterHat
+  - GoldClownMask # A-13
 
 - type: loadoutGroup
   id: ClownJumpsuit
@@ -405,6 +406,7 @@
   loadouts:
   - ClownSuit
   - JesterSuit
+  - GoldClownSuit # A-13
 
 - type: loadoutGroup
   id: ClownBackpack
@@ -428,6 +430,7 @@
   loadouts:
   - ClownShoes
   - JesterShoes
+  - GoldClownShoes # A-13
 
 - type: loadoutGroup
   id: MimeHead
