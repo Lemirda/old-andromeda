@@ -48,6 +48,3 @@
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltSecurity
     pocket1: WeaponPistolMk58
-    underwearb: ClothingUnderwearBottomBoxersHOS # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraHOS # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesHOS # Andromeda-Underwear

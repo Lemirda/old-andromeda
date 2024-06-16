@@ -14,7 +14,6 @@
     pack: VendingMachineUnderwearMatteAds
   - type: SpeakOnUIClosed
     pack: VendingMachineUnderwearMatteThx
-  - type: Speech
   - type: Sprite
     sprite: Andromeda/Evil/clothing/vendingmachineunderwearmatte.rsi
     layers:
@@ -26,30 +25,17 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
-- type: messagePack
+- type: localizedDataset
   id: VendingMachineUnderwearMatteAds
-  messages:
-    - Защити своё хозяйство!
-    - Поройся в чужом белье!
-    - Делай вид, что не смотришь на эти трусики...
-    - Ради них Синдикат пойдёт на всё!
-    - Не будь трусом! Хватай трусы! 
-    - Подтянут форму и мужское настроение!
-    - Пояс верности НЕ ПРОДАЕМ!
-    - Поддержка лучше чем у психолога!
-    - С нашей продукцией распускать руки ещё приятней!
-    - Приятно надевать... Но снимать всë же приятней!
-    - Таких даже у ЦК нет!
+  values:
+    prefix: advertisement-underwearmatte-
+    count: 11
 
-- type: messagePack
+- type: localizedDataset
   id: VendingMachineUnderwearMatteThx
-  messages:
-    - Смотрите и лапайте!
-    - Не забудьте оставить отзыв! Можно с прикреплëнным фото...
-    - Не мешают движениям и вашим вульгарным мыслишкам!
-    - Эй! Ну не прямо перед автоматом же!
-    - Мы не осуждаем...
-    - Оу... У вас утонченный вкус!
+  values:
+    prefix: thankyou-underwearmatte-
+    count: 6
 
 - type: vendingMachineInventory
   id: VendingMachineUnderwearMatteInventory
@@ -110,8 +96,6 @@
   components:
   - type: Sprite
     sprite: Andromeda/Evil/clothing/boxerslong.rsi
-  - type: StealTarget
-    stealGroup: Panties
 
 - type: entity
   parent: ClothingUnderwearBottomBase
@@ -122,8 +106,6 @@
   components:
   - type: Sprite
     sprite: Andromeda/Evil/clothing/pantieslemird.rsi
-  - type: StealTarget
-    stealGroup: Panties
 
 - type: entity
   parent: ClothingUnderwearBottomBase
@@ -134,8 +116,6 @@
   components:
   - type: Sprite
     sprite: Andromeda/Evil/clothing/pantiesmiifrii.rsi
-  - type: StealTarget
-    stealGroup: Panties
 
 - type: cargoProduct
   name: НижнеМат

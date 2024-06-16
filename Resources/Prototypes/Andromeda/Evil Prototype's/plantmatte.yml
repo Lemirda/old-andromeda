@@ -13,7 +13,7 @@
   - type: Advertise
     pack: VendingMachinePottedPlantAds
   - type: SpeakOnUIClosed
-    pack: VendingMachinePottedPlantThx
+    pack: VendingMachinePottedPlantGoodbyes
   - type: Speech
   - type: Sprite
     sprite: Andromeda/Evil/plantmatte.rsi
@@ -26,25 +26,17 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
-- type: messagePack
+- type: localizedDataset
   id: VendingMachinePottedPlantAds
-  messages:
-    - Мы точно не торгуем контрабандными видами!
-    - Ощути себя садовником!
-    - У нас растения на вынос – буквально!
+  values:
+    prefix: advertisement-pottedplant-
+    count: 3
 
-- type: messagePack
-  id: VendingMachinePottedPlantThx
-  messages:
-    - Растения – цветы жизни!
-    - Тебе грустно? Полей росток!
-    - Ставка на зелёное!
-    - Чёрт возьми, ДА!
-    - Можно использовать вместо баллона с кислородом!
-    - Трава, детка!
-    - Смерть зомби!
-    - Пока без ГМО!
-    - Замена скучной лампе в допросной!
+- type: localizedDataset
+  id: VendingMachinePottedPlantGoodbyes
+  values:
+    prefix: thankyou-pottedplant-
+    count: 9
 
 - type: entity
   id: SusPlant1

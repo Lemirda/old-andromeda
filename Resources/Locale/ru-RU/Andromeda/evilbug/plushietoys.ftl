@@ -1,0 +1,14 @@
+advertisement-plushietoys-1 = Надеюсь, никто не попросит у меня чёртову чашку чая...
+advertisement-plushietoys-2 = Алкоголь - друг человечества. Вы бы отказались от друга?
+advertisement-plushietoys-3 = Очень рад вас обслужить!
+advertisement-plushietoys-4 = Никто на этой станции не хочет выпить?
+advertisement-plushietoys-5 = Выпьем!
+thankyou-plushietoys-1 = Смотрите и лапайте!
+thankyou-plushietoys-2 = Смотрите не умрите от милоты!
+thankyou-plushietoys-3 = Слышали их стоны?
+thankyou-plushietoys-4 = Наши игрушки на девяносто процентов состоят из доброты и на десять - из плутония! ... Наверное!
+thankyou-plushietoys-5 = Никаких мстительных духов внутри плюшевки!
+thankyou-plushietoys-6 = Отталкивают грязь, воду, кровь, кровь, пыль!
+thankyou-plushietoys-7 = Мягче только стены комнаты!
+thankyou-plushietoys-8 = Широкая палитра цветов от FFFAFA до 808080!
+thankyou-plushietoys-9 = Безбашенно восхитительны!

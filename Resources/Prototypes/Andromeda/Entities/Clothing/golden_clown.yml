@@ -1,0 +1,40 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingGoldClownSuit
+  name: золотой костюм клоуна
+  description: Ля какая блестяшка, Хонкоматерь одобряет!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/goldclownsuit.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Uniforms/Jumpsuit/goldclownsuit.rsi
+
+- type: entity
+  parent: ClothingShoesClownBase
+  id: ClothingGoldClownShoes
+  name: золотые клоунские туфли
+  description: Ты посмотри как блестят, уууф!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Shoes/goldclownboots.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Shoes/goldclownboots.rsi
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepClown
+
+- type: entity
+  parent: ClothingMaskBase
+  id: ClothingGoldClownMask
+  name: золотая маска клоуна
+  description: Увеличивает шанс сказать элитный смехуёчек на 69%!
+  suffix: Андромеда
+  components:
+  - type: Sprite
+    sprite: Andromeda/Clothing/Mask/goldclownmask.rsi
+  - type: Clothing
+    sprite: Andromeda/Clothing/Mask/goldclownmask.rsi
+  - type: BreathMask
+  - type: IdentityBlocker

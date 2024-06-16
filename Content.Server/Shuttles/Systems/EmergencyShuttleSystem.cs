@@ -37,6 +37,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Server.GameTicking; // A-13 PDA shift time
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -71,6 +72,8 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
     private const float ShuttleSpawnBuffer = 1f;
 
+    public TimeSpan? DockTime; // A-13 PDA shift time
+
     private bool _emergencyShuttleEnabled;
 
     [ValidatePrototypeId<TagPrototype>]
@@ -91,8 +94,16 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         SubscribeLocalEvent<EmergencyShuttleComponent, FTLStartedEvent>(OnEmergencyFTL);
         SubscribeLocalEvent<EmergencyShuttleComponent, FTLCompletedEvent>(OnEmergencyFTLComplete);
         SubscribeNetworkEvent<EmergencyShuttleRequestPositionMessage>(OnShuttleRequestPosition);
+        SubscribeLocalEvent<RoundEndTextAppendEvent>(OnRoundEnded); // A-13 PDA shift time
         InitializeEmergencyConsole();
     }
+
+    // SA-13 PDA shift time start
+    private void OnRoundEnded(RoundEndTextAppendEvent ev)
+    {
+        DockTime = null;
+    }
+    // A-13 PDA shift time end
 
     private void OnRoundStart(RoundStartingEvent ev)
     {
@@ -270,6 +281,8 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
         }
 
         var targetGrid = _station.GetLargestGrid(Comp<StationDataComponent>(stationUid));
+
+        DockTime = _timing.CurTime; // A-13 PDA shift time
 
         // UHH GOOD LUCK
         if (targetGrid == null)

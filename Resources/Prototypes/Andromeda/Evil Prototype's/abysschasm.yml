@@ -40,8 +40,7 @@
   id: FloorCarpetAbyss
   name: бездонный стак
   spawn: FloorCarpetItemAbyss
-  maxCount: 10
-  itemSize: 5                
+  maxCount: 10           
 
 - type: entity
   name: бездонный ковер (10)

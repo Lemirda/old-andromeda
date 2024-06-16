@@ -2119,7 +2119,6 @@
   icon: { sprite: "/Andromeda/Evil/pokerchipsv.rsi", state: poker5 }
   spawn: PokerChipsVStack1
   maxCount: 5
-  itemSize: 1
 
 - type: stack
   id: PokerChipsXStack
@@ -2128,7 +2127,6 @@
   icon: { sprite: "/Andromeda/Evil/pokerchipsx.rsi", state: poker5 }
   spawn: PokerChipsXStack1
   maxCount: 5
-  itemSize: 1
 
 - type: stack
   id: PokerChipsLStack
@@ -2137,7 +2135,6 @@
   icon: { sprite: "/Andromeda/Evil/pokerchipsl.rsi", state: poker5 }
   spawn: PokerChipsLStack1
   maxCount: 5
-  itemSize: 1
 
 - type: stack
   id: PokerChipsCStack
@@ -2146,7 +2143,6 @@
   icon: { sprite: "/Andromeda/Evil/pokerchipsc.rsi", state: poker5 }
   spawn: PokerChipsCStack1
   maxCount: 5
-  itemSize: 1
 
 - type: stack
   id: PokerChipsDStack
@@ -2155,7 +2151,6 @@
   icon: { sprite: "/Andromeda/Evil/pokerchipsd.rsi", state: poker5 }
   spawn: PokerChipsDStack1
   maxCount: 5
-  itemSize: 1
 
 - type: stack
   id: PokerChipsMStack
@@ -2164,7 +2159,6 @@
   icon: { sprite: "/Andromeda/Evil/pokerchipsm.rsi", state: poker5 }
   spawn: PokerChipsMStack1
   maxCount: 5
-  itemSize: 1
 
 - type: entity
   id: PokerChipsV

@@ -26,7 +26,7 @@
   - завывает!
 
 - type: emote
-  id: Growl
+  id: GrowlVulp
   name: chat-emote-name-growl
   category: Vocal
   available: false

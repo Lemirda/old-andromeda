@@ -49,5 +49,16 @@ namespace Content.Shared.PDA
         public string? JobTitle;
         public string? StationAlertLevel;
         public Color StationAlertColor;
+        public TimeSpan? EvacShuttleTime; // A-13 PDA shift time
+        public EvacShuttleStatus EvacShuttleStatus; // A-13 PDA shift time
     }
+
+    // A-13 PDA shift time start
+    public enum EvacShuttleStatus
+    {
+        WaitingToCall,
+        WaitingToArrival,
+        WaitingToLaunch
+    }
+    // A-13 PDA shift time end
 }

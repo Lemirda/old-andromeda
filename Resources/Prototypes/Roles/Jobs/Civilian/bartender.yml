@@ -24,6 +24,3 @@
     shoes: ClothingShoesColorBlack
     id: BartenderPDA
     ears: ClothingHeadsetService
-    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear

@@ -39,6 +39,10 @@ public sealed partial class EmergencyShuttleSystem
     /// </summary>
     private float _consoleAccumulator = float.MinValue;
 
+    // A-13 PDA shift time start
+    public float СonsoleAccumulator => _consoleAccumulator;
+    // A-13 PDA shift time end
+
     /// <summary>
     /// How long after the transit is over to end the round.
     /// </summary>

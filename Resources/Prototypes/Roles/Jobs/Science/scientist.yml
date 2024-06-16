@@ -18,7 +18,3 @@
   id: ScientistGear
   equipment:
     ears: ClothingHeadsetScience
-    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
-

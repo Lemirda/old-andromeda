@@ -40,5 +40,7 @@ namespace Content.Shared.PDA
         [ViewVariables] public string? StationName;
         [ViewVariables] public string? StationAlertLevel;
         [ViewVariables] public Color StationAlertColor = Color.White;
+        [ViewVariables] public TimeSpan? ShuttleTime; // A-13 PDA shift time
+        [ViewVariables] public EvacShuttleStatus ShuttleStatus; // A-13 PDA shift time
     }
 }

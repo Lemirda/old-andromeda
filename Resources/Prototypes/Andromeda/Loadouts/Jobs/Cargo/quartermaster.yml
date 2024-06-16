@@ -2,7 +2,7 @@
 
 - type: loadout
   id: QMBoxers
-  equipment: CaptainBoxers
+  equipment: QMBoxers
 
 - type: startingGear
   id: QMBoxers

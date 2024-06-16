@@ -32,7 +32,12 @@ namespace Content.Client.PDA
         private string _stationName = Loc.GetString("comp-pda-ui-unknown");
         private string _alertLevel = Loc.GetString("comp-pda-ui-unknown");
         private string _instructions = Loc.GetString("comp-pda-ui-unknown");
-        
+
+        // A-13 PDA shift time start
+        private TimeSpan? _evacShuttleTime;
+        private EvacShuttleStatus _evacShuttleStatus;
+        // A-13 PDA shift time end
+
 
         private int _currentView;
 
@@ -125,7 +130,7 @@ namespace Content.Client.PDA
                 _clipboard.SetText(_instructions);
             };
 
-            
+
 
 
             HideAllViews();
@@ -135,6 +140,11 @@ namespace Content.Client.PDA
         public void UpdateState(PdaUpdateState state)
         {
             FlashLightToggleButton.IsActive = state.FlashlightEnabled;
+
+            // A-13 PDA shift time start
+            _evacShuttleTime = state.PdaOwnerInfo.EvacShuttleTime;
+            _evacShuttleStatus = state.PdaOwnerInfo.EvacShuttleStatus;
+            // A-13 PDA shift time end
 
             if (state.PdaOwnerInfo.ActualOwnerName != null)
             {
@@ -160,12 +170,24 @@ namespace Content.Client.PDA
             _stationName = state.StationName ?? Loc.GetString("comp-pda-ui-unknown");
             StationNameLabel.SetMarkup(Loc.GetString("comp-pda-ui-station",
                 ("station", _stationName)));
-            
+
 
             var stationTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
 
             StationTimeLabel.SetMarkup(Loc.GetString("comp-pda-ui-station-time",
                 ("time", stationTime.ToString("hh\\:mm\\:ss"))));
+
+            // A-13 PDA shift time start
+            var remaining = TimeSpan.Zero;
+
+            if (state.PdaOwnerInfo.EvacShuttleTime != null)
+                remaining = TimeSpan.FromSeconds(Math.Max((state.PdaOwnerInfo.EvacShuttleTime.Value - _gameTiming.CurTime).TotalSeconds, 0));
+
+            var statusText = EvacShuttleTitle(_evacShuttleStatus);
+
+            ShuttleTimeLabel.SetMarkup(Loc.GetString(statusText,
+                ("time", remaining.ToString("hh\\:mm\\:ss"))));
+            // A-13 PDA shift time start
 
             var alertLevel = state.PdaOwnerInfo.StationAlertLevel;
             var alertColor = state.PdaOwnerInfo.StationAlertColor;
@@ -332,6 +354,23 @@ namespace Content.Client.PDA
             }
         }
 
+        // A-13 PDA shift time start
+        private string EvacShuttleTitle(EvacShuttleStatus status)
+        {
+            switch (status)
+            {
+                case EvacShuttleStatus.WaitingToLaunch:
+                    return "comp-pda-ui-shuttle-launch-time";
+                case EvacShuttleStatus.WaitingToArrival:
+                    return "comp-pda-ui-shuttle-arrival-time";
+                case EvacShuttleStatus.WaitingToCall:
+                    return "comp-pda-ui-shuttle-call-time";
+                default:
+                    return "comp-pda-ui-shuttle-call-time";
+            }
+        }
+        // A-13 PDA shift time end
+
         protected override void Draw(DrawingHandleScreen handle)
         {
             base.Draw(handle);
@@ -340,6 +379,18 @@ namespace Content.Client.PDA
 
             StationTimeLabel.SetMarkup(Loc.GetString("comp-pda-ui-station-time",
                 ("time", stationTime.ToString("hh\\:mm\\:ss"))));
+
+            // A-13 PDA shift time start
+            var remaining = TimeSpan.Zero;
+
+            if (_evacShuttleTime != null)
+                remaining = TimeSpan.FromSeconds(Math.Max((_evacShuttleTime.Value - _gameTiming.CurTime).TotalSeconds, 0));
+
+            var statusText = EvacShuttleTitle(_evacShuttleStatus);
+
+            ShuttleTimeLabel.SetMarkup(Loc.GetString(statusText,
+                ("time", remaining.ToString("hh\\:mm\\:ss"))));
+            // A-13 PDA shift time start
         }
     }
 }

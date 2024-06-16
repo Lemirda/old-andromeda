@@ -2,41 +2,8 @@
   parent: BaseItem
   id: Blyat
   name: голо-знак 'БЛЯТЬ'
-  description: Выдается лучшим сотрудникам, нашедшим ошибки в системе NT(вместо зарплаты). На данном знаке выгравировано имя 'Азамат'.
-  components:
-  - type: Sprite
-    sprite: Andromeda/Objects/Fun/blyat.rsi
-    state: error
-  - type: Slippery
-    launchForwardsMultiplier: 3
-  - type: StepTrigger
-    intersectRatio: 0.2
-  - type: CollisionWake
-    enabled: false
-  - type: Physics
-    bodyType: Dynamic
-  - type: Fixtures
-    fixtures:
-      slips:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        hard: false
-        layer:
-        - SlipLayer
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        density: 30
-        mask:
-        - ItemMask
-
-- type: entity
-  parent: BaseItem
-  id: Blyat2
-  name: голо-знак 'БЛЯТЬ'
   description: Выдается лучшим сотрудникам, нашедшим ошибки в системе NT(вместо зарплаты).
+  suffix: Андромеда
   components:
   - type: Sprite
     sprite: Andromeda/Objects/Fun/blyat.rsi

@@ -22,6 +22,7 @@
       Female: FemaleVulpkanin
       Unsexed: FemaleVulpkanin # Andromeda edit end
   - type: Speech
+    allowedEmotes: ['GrowlVulp']
     speechSounds: Vulpkanin
   - type: Sprite
     netsync: false

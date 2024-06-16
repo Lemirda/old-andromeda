@@ -1,9 +1,9 @@
 - type: entity
-  suffix: Andromeda
+  suffix: Андромеда
   parent: ClothingHeadHatHoodWinterBase
   id: ClothingHeadHatHoodErrorAdminWho
   noSpawn: true
-  name: Капюшон незнакомца
+  name: капюшон незнакомца
   components:
   - type: Sprite
     sprite: Andromeda/NIKforest/headerroradminwho.rsi

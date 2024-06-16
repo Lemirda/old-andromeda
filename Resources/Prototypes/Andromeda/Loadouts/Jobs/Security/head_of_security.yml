@@ -2,7 +2,7 @@
 
 - type: loadout
   id: HOSBoxers
-  equipment: CaptainBoxers
+  equipment: HOSBoxers
 
 - type: startingGear
   id: HOSBoxers

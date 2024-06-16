@@ -13,7 +13,7 @@
   - type: Advertise
     pack: VendingMachinePlushieToysAds
   - type: SpeakOnUIClosed
-    pack: VendingMachinePlushieToysThx
+    pack: VendingMachinePlushieToysGoodbyes
   - type: Speech
   - type: Sprite
     sprite: Andromeda/Evil/vendingmachineplushietoys.rsi
@@ -26,27 +26,17 @@
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
 
-- type: messagePack
+- type: localizedDataset
   id: VendingMachinePlushieToysAds
-  messages:
-    - Подходят для не шуточной драки!
-    - Мягче подушки!
-    - Лучший друг или лучшая подруга для сна!
-    - Порадуйте других людей этой умилительной плюшевой куклой!
-    - Вы должны их взять лишь потому что их можно жмякать!
+  values:
+    prefix: advertisement-plushietoys-
+    count: 5
 
-- type: messagePack
-  id: VendingMachinePlushieToysThx
-  messages:
-    - Смотрите и лапайте!
-    - Смотрите не умрите от милоты!
-    - Слышали их стоны?
-    - Наши игрушки на девяносто процентов состоят из доброты и на десять - из плутония! ... Наверное!
-    - Никаких мстительных духов внутри плюшевки!
-    - Отталкивают грязь, воду, кровь, кровь, пыль!
-    - Мягче только стены комнаты!
-    - Широкая палитра цветов от FFFAFA до 808080!
-    - Безбашенно восхитительны!
+- type: localizedDataset
+  id: VendingMachinePlushieToysGoodbyes
+  values:
+    prefix: thankyou-plushietoys-
+    count: 9
 
 - type: vendingMachineInventory
   id: VendingMachinePlushieToysInventory

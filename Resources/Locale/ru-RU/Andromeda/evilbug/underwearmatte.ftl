@@ -1,0 +1,17 @@
+advertisement-underwearmatte-1 = Защити своё хозяйство!
+advertisement-underwearmatte-2 = Поройся в чужом белье!
+advertisement-underwearmatte-3 = Делай вид, что не смотришь на эти трусики...
+advertisement-underwearmatte-4 = Ради них Синдикат пойдёт на всё!
+advertisement-underwearmatte-5 = Не будь трусом! Хватай трусы! 
+advertisement-underwearmatte-6 = Подтянут форму и мужское настроение!
+advertisement-underwearmatte-7 = Пояс верности НЕ ПРОДАЕМ!
+advertisement-underwearmatte-8 = Поддержка лучше чем у психолога!
+advertisement-underwearmatte-9 = С нашей продукцией распускать руки ещё приятней!
+advertisement-underwearmatte-10 = Приятно надевать... Но снимать всë же приятней!
+advertisement-underwearmatte-11 = Таких даже у ЦК нет!
+thankyou-underwearmatte-1 = Смотрите и лапайте!
+thankyou-underwearmatte-2 = Не забудьте оставить отзыв! Можно с прикреплëнным фото...
+thankyou-underwearmatte-3 = Не мешают движениям и вашим вульгарным мыслишкам!
+thankyou-underwearmatte-4 = Эй! Ну не прямо перед автоматом же!
+thankyou-underwearmatte-5 = Мы не осуждаем...
+thankyou-underwearmatte-6 = Оу... У вас утонченный вкус!

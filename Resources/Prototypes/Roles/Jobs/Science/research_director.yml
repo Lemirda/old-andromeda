@@ -35,6 +35,3 @@
   equipment:
     id: RnDPDA
     ears: ClothingHeadsetRD
-    underwearb: ClothingUnderwearBottomBoxersRD # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraRD # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesRD # Andromeda-Underwear

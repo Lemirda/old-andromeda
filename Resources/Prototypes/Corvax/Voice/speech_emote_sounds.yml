@@ -5,13 +5,13 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: MaleScreams
+      path: /Audio/Andromeda/Voice/Vulpkanin/howl.ogg
     Laugh:
       collection: MaleLaugh
-    Growl:
-      collection: Growl
-    Howl:
-      path: /Audio/Corvax/Effects/howl.ogg
+    GrowlVulp:
+      collection: GrowlVulp
+    #Howl:
+    #  path: /Audio/Corvax/Effects/howl.ogg
     Sneeze:
       collection: MaleSneezes
     Cough:
@@ -39,13 +39,13 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: FemaleScreams
+      path: /Audio/Andromeda/Voice/Vulpkanin/howl.ogg
     Laugh:
       collection: FemaleLaugh
-    Growl:
-      collection: Growl
-    Howl:
-      path: /Audio/Corvax/Effects/howl.ogg
+    GrowlVulp:
+      collection: GrowlVulp
+    #Howl:
+    #  path: /Audio/Corvax/Effects/howl.ogg
     Sneeze:
       collection: FemaleSneezes
     Cough:

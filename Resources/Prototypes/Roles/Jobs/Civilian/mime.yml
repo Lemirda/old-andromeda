@@ -28,9 +28,6 @@
     pocket2: Paper
     id: MimePDA
     ears: ClothingHeadsetService
-    underwearb: ClothingUnderwearBottomBoxersWhite # Andromeda-Underwear
-  underweart: ClothingUnderwearTopBraWhite # Andromeda-Underwear
-  underwearb: ClothingUnderwearBottomPantiesWhite # Andromeda-Underwear
 
 - type: entity
   id: ActionMimeInvisibleWall

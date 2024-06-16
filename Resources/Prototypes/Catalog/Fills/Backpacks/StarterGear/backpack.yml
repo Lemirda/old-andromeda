@@ -17,6 +17,7 @@
       - id: BoxHug
       - id: RubberStampClown
       - id: CrayonRainbow
+      - id: ClownCuffs # A-13
 
 - type: entity
   noSpawn: true

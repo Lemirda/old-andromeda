@@ -304,54 +304,6 @@
       collection: Deathgasp
 
 - type: emoteSounds
-  id: MaleVulpkanin
-  params:
-    variation: 0.125
-  sounds:
-    Scream:
-      path: /Audio/Andromeda/Voice/Vulpkanin/howl.ogg
-    Laugh:
-      collection: MaleLaugh
-    Giggle:
-      collection: MaleLaugh
-    Cough:
-      collection: MaleCoughs
-    Yawn:
-      collection: MaleYawn
-    Sigh:
-      collection: MaleSigh
-    Crying:
-      collection: MaleCry
-    Whistle:
-      collection: Whistles
-    DefaultDeathgasp:
-      collection: Deathgasp
-
-- type: emoteSounds
-  id: FemaleVulpkanin
-  params:
-    variation: 0.125
-  sounds:
-    Scream:
-      path: /Audio/Andromeda/Voice/Vulpkanin/howl.ogg
-    Laugh:
-      collection: FemaleLaugh
-    Giggle:
-      collection: FemaleLaugh
-    Cough:
-      collection: FemaleCoughs
-    Yawn:
-      collection: FemaleYawn
-    Sigh:
-      collection: FemaleSigh
-    Crying:
-      collection: FemaleCry
-    Whistle:
-      collection: Whistles
-    DefaultDeathgasp:
-      collection: Deathgasp 
-
-- type: emoteSounds
   id: UnisexVox
   sounds:
     Scream:

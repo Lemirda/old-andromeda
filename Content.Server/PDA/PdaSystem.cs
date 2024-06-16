@@ -22,6 +22,12 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
+using Content.Server.RoundEnd; // A-13 PDA shift time
+using Content.Server.Shuttles.Components; // A-13 PDA shift time
+using Content.Server.Shuttles.Systems; // A-13 PDA shift time
+using Robust.Shared.Configuration; // A-13 PDA shift time
+using Content.Shared.CCVar; // A-13 PDA shift time
+using Robust.Shared.Timing; // A-13 PDA shift time
 
 namespace Content.Server.PDA
 {
@@ -36,6 +42,9 @@ namespace Content.Server.PDA
         [Dependency] private readonly UserInterfaceSystem _ui = default!;
         [Dependency] private readonly UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
         [Dependency] private readonly ContainerSystem _containerSystem = default!;
+        [Dependency] private readonly RoundEndSystem _roundEndSystem = default!; // A-13 PDA shift time
+        [Dependency] private readonly EmergencyShuttleSystem _emergencyShuttleSystem = default!; // A-13 PDA shift time
+        [Dependency] private readonly IGameTiming _gameTiming = default!; // A-13 PDA shift time
 
         public override void Initialize()
         {
@@ -67,6 +76,7 @@ namespace Content.Server.PDA
 
             UpdateAlertLevel(uid, pda);
             UpdateStationName(uid, pda);
+            UpdateEvacShuttle(uid, pda); // A-13 PDA shift time
         }
 
         protected override void OnItemInserted(EntityUid uid, PdaComponent pda, EntInsertedIntoContainerMessage args)
@@ -158,6 +168,7 @@ namespace Content.Server.PDA
 
             UpdateStationName(uid, pda);
             UpdateAlertLevel(uid, pda);
+            UpdateEvacShuttle(uid, pda); // A-13 PDA shift time
             // TODO: Update the level and name of the station with each call to UpdatePdaUi is only needed for latejoin players.
             // TODO: If someone can implement changing the level and name of the station when changing the PDA grid, this can be removed.
 
@@ -179,7 +190,9 @@ namespace Content.Server.PDA
                     IdOwner = id?.FullName,
                     JobTitle = id?.JobTitle,
                     StationAlertLevel = pda.StationAlertLevel,
-                    StationAlertColor = pda.StationAlertColor
+                    StationAlertColor = pda.StationAlertColor,
+                    EvacShuttleStatus = pda.ShuttleStatus, // A-13 PDA shift time
+                    EvacShuttleTime = pda.ShuttleTime // A-13 PDA shift time
                 },
                 pda.StationName,
                 showUplink,
@@ -265,6 +278,38 @@ namespace Content.Server.PDA
             var station = _station.GetOwningStation(uid);
             pda.StationName = station is null ? null : Name(station.Value);
         }
+
+        // A-13 PDA shift time start
+        private void UpdateEvacShuttle(EntityUid uid, PdaComponent pda)
+        {
+            TimeSpan? shuttleTime;
+            EvacShuttleStatus shuttleStatus;
+            if (_emergencyShuttleSystem.EmergencyShuttleArrived)
+            {
+                shuttleTime = _gameTiming.CurTime + TimeSpan.FromSeconds(_emergencyShuttleSystem.СonsoleAccumulator);
+                shuttleStatus = EvacShuttleStatus.WaitingToLaunch;
+            }
+            else
+            {
+                if (_roundEndSystem.ExpectedCountdownEnd != null)
+                {
+                    shuttleTime = _roundEndSystem.ExpectedCountdownEnd;
+                    shuttleStatus = EvacShuttleStatus.WaitingToArrival;
+                }
+                else
+                {
+                    shuttleTime = _roundEndSystem.TimeToCallShuttle();
+                    shuttleStatus = EvacShuttleStatus.WaitingToCall;
+                }
+            }
+            var station = _station.GetOwningStation(uid);
+            if (!TryComp<StationEmergencyShuttleComponent>(station, out var stationEmergencyShuttleComponent))
+                return;
+
+            pda.ShuttleStatus = shuttleStatus;
+            pda.ShuttleTime = shuttleTime;
+        }
+        // A-13 PDA shift time end
 
         private void UpdateAlertLevel(EntityUid uid, PdaComponent pda)
         {
